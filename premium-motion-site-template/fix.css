@@ -1,5 +1,6 @@
-.showreel-pin{justify-items:center}
-.showreel-inner{justify-self:center;margin:0}
+.showreel-pin{display:block;justify-items:initial}
+.showreel-inner{position:absolute;z-index:1;left:50%;top:50%;width:min(1180px,calc(100% - 36px));margin:0;transform:translate(-50%,-50%)}
 .showreel-top>div:first-child{min-width:0}
 .showreel-top h2{max-width:760px;overflow-wrap:anywhere}
 @media(max-width:620px){.showreel-inner{width:calc(100% - 24px)}.showreel-top h2{max-width:100%}}
+@media(prefers-reduced-motion:reduce){.showreel-inner{position:relative;left:auto;top:auto;transform:none;margin:0 auto}}
