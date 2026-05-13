@@ -11,7 +11,6 @@ GitHub Pagesで公開できる静的フォームです。
 - `script.js`: 入力チェック、送信処理、下書き保存
 - `apps-script/Code.gs`: Google Apps Scriptに貼り付ける追記処理
 - `github-publish.md`: GitHub Pages公開手順
-- `preview-desktop.png` / `preview-mobile.png`: 表示確認用スクリーンショット
 
 ## 使い方
 
