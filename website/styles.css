@@ -169,6 +169,60 @@ h1 {
   font-weight: 800;
 }
 
+.term-guide {
+  display: grid;
+  grid-template-columns: 220px minmax(0, 1fr);
+  gap: 20px;
+  margin-bottom: 24px;
+  padding: 22px;
+  border: 1px solid var(--line);
+  background: #eef5f6;
+  box-shadow: var(--shadow);
+}
+
+.term-guide h2,
+.term-guide h3,
+.term-guide p {
+  margin: 0;
+}
+
+.term-guide h2 {
+  font-size: 22px;
+  line-height: 1.25;
+}
+
+.term-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.term-grid div {
+  padding: 14px;
+  border: 1px solid #cddde0;
+  background: #ffffff;
+}
+
+.term-grid h3 {
+  color: var(--blue);
+  font-size: 15px;
+}
+
+.term-grid code {
+  padding: 1px 5px;
+  border: 1px solid #d7e4e7;
+  background: #f6fafb;
+  font-family: Consolas, "Courier New", monospace;
+  font-size: 12px;
+}
+
+.term-grid p {
+  margin-top: 6px;
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 700;
+}
+
 .form-layout {
   display: grid;
   grid-template-columns: 260px minmax(0, 1fr);
@@ -379,6 +433,7 @@ textarea {
 
 @media (max-width: 980px) {
   .summary,
+  .term-guide,
   .form-layout {
     grid-template-columns: 1fr;
   }
@@ -413,6 +468,7 @@ textarea {
   }
 
   .sheet-meta div,
+  .term-grid,
   .field-grid.two,
   .form-side,
   .option-grid {
