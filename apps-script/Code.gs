@@ -8,6 +8,7 @@ function doGet() {
     ok: true,
     message: "NosTechnology hearing form endpoint is active.",
     targetSheet: CONFIG.TARGET_SHEET_NAME,
+    supportedForms: ["store-operations", "website"],
   });
 }
 
@@ -25,7 +26,7 @@ function doPost(e) {
       throw new Error(`Target sheet not found: ${CONFIG.TARGET_SHEET_NAME}`);
     }
 
-    const row = buildHearingRow(payload);
+    const row = isWebsitePayload(payload) ? buildWebsiteRow(payload) : buildHearingRow(payload);
     sheet.appendRow(row);
 
     const appendedRow = sheet.getLastRow();
@@ -57,7 +58,15 @@ function parsePayload(e) {
 
 function validatePayload(payload) {
   if (!text(payload.storeName)) throw new Error("storeName is required.");
+  if (isWebsitePayload(payload)) {
+    if (!text(payload.purpose)) throw new Error("purpose is required.");
+    return;
+  }
   if (!text(payload.manualTask)) throw new Error("manualTask is required.");
+}
+
+function isWebsitePayload(payload) {
+  return text(payload.source) === "github-pages-website-hearing-form" || Boolean(text(payload.purpose));
 }
 
 function buildHearingRow(payload) {
@@ -114,6 +123,70 @@ function makeCaseId(date) {
   return `HF-${Utilities.formatDate(date, timezone, "yyyyMMdd-HHmmss")}`;
 }
 
+function makeWebsiteCaseId(date) {
+  const timezone = Session.getScriptTimeZone() || "Asia/Tokyo";
+  return `WS-${Utilities.formatDate(date, timezone, "yyyyMMdd-HHmmss")}`;
+}
+
+function buildWebsiteRow(payload) {
+  const now = new Date();
+  const needs = listText(payload.siteNeeds);
+  const priority = deriveWebsitePriority(payload);
+  const proposal = deriveWebsiteProposal(payload);
+  const materialSummary = [
+    fieldLine("写真", payload.photoStatus),
+    fieldLine("原稿", payload.textStatus),
+    fieldLine("ロゴ", payload.logoStatus),
+  ]
+    .filter(Boolean)
+    .join(" / ");
+  const memo = [
+    fieldLine("目的", payload.purpose),
+    fieldLine("困りごと", payload.currentIssue),
+    fieldLine("見てほしい相手", payload.targetAudience),
+    fieldLine("見せたい印象", payload.desiredImpression),
+    fieldLine("参考サイト", payload.references),
+    fieldLine("ドメイン", payload.domainStatus),
+    fieldLine("サーバー", payload.serverStatus),
+    fieldLine("追加メモ", payload.memo),
+  ]
+    .filter(Boolean)
+    .join("\n");
+
+  return [
+    makeWebsiteCaseId(now),
+    now,
+    text(payload.route) || "フォーム",
+    "見込み",
+    priority,
+    text(payload.storeName),
+    text(payload.industry) || "Webサイト制作",
+    text(payload.contactName),
+    text(payload.contact),
+    text(payload.currentSite),
+    text(payload.purpose),
+    text(payload.currentIssue),
+    "",
+    firstListItem(payload.siteNeeds) || "Webサイト制作",
+    text(payload.timeline) || "未定",
+    text(payload.budget) || "未定",
+    text(payload.maintenanceInterest) || "未確認",
+    materialSummary,
+    memo,
+    deriveWebsiteNextAction(payload),
+    "",
+    text(payload.owner) || "浦田",
+    proposal,
+    "",
+    "未判定",
+    "",
+    `送信元: ${text(payload.source) || "github-pages-website-hearing-form"} / 必要項目: ${
+      needs || "未選択"
+    }`,
+    now,
+  ];
+}
+
 function derivePriority(payload) {
   const timeline = text(payload.timeline);
   const budget = text(payload.budget);
@@ -136,6 +209,33 @@ function deriveNextAction(payload) {
   if (priority === "A") return "ミニ診断メモ送付";
   if (priority === "B") return "課題整理して追加ヒアリング";
   return "情報確認";
+}
+
+function deriveWebsitePriority(payload) {
+  const timeline = text(payload.timeline);
+  const budget = text(payload.budget);
+  const hasNearTimeline = ["急ぎ", "1週間以内", "1か月以内"].includes(timeline);
+  const hasBudget = Boolean(budget && !["未定", "3万円未満"].includes(budget));
+
+  if (hasNearTimeline && hasBudget) return "A";
+  if (hasNearTimeline || hasBudget || text(payload.purpose)) return "B";
+  return "C";
+}
+
+function deriveWebsiteProposal(payload) {
+  const needs = listText(payload.siteNeeds);
+  if (needs.includes("予約導線")) return "予約導線付きWebサイト制作";
+  if (needs.includes("問い合わせフォーム")) return "問い合わせ導線付きWebサイト制作";
+  if (needs.includes("採用ページ")) return "採用ページ付きWebサイト制作";
+  return "小規模Webサイト制作";
+}
+
+function deriveWebsiteNextAction(payload) {
+  const photo = text(payload.photoStatus);
+  const textStatus = text(payload.textStatus);
+  if (photo === "撮影が必要" || textStatus === "作成が必要") return "素材準備範囲を確認";
+  if (deriveWebsitePriority(payload) === "A") return "サイト構成案と概算見積を送付";
+  return "必要ページを整理して追加ヒアリング";
 }
 
 function fieldLine(label, value) {
