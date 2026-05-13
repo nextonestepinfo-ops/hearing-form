@@ -4,31 +4,38 @@
 
 - GitHubアカウント: `nextonestepinfo-ops`
 - リポジトリ名: `hearing-form`
-- 店内業務用URL: `https://nextonestepinfo-ops.github.io/hearing-form/`
-- Webサイト用URL: `https://nextonestepinfo-ops.github.io/hearing-form/website/`
+- 公開URLの想定: `https://nextonestepinfo-ops.github.io/hearing-form/`
 
-既存リポジトリに混ぜると営業用フォームの場所が分かりにくくなるため、ヒアリングフォーム系はこのリポジトリにまとめる。
+既存リポジトリに混ぜると営業用フォームの場所が分かりにくくなるため、基本は独立リポジトリで作る。
 
 ## 1. Apps Scriptを先に用意する
 
 1. 追記先スプレッドシートを開く。
 2. `拡張機能` → `Apps Script` を開く。
-3. 使うフォームに合わせて `apps-script/Code.gs` または `website/apps-script/Code.gs` の内容を貼り付ける。
+3. `apps-script/Code.gs` の内容を貼り付ける。この1本で店内業務用フォームとWebサイト用フォームの両方を受け付ける。
 4. `デプロイ` → `新しいデプロイ` → `ウェブアプリ` を選ぶ。
 5. 実行ユーザーは `自分`、アクセスできるユーザーはまず `全員` にする。
 6. WebアプリURLをコピーする。
 
 ## 2. フォーム側へURLを入れる
 
-対象フォームの `script.js` のここを差し替える。
+`script.js` と `website/script.js` のここを同じURLに差し替える。
 
 ```js
 appsScriptUrl: "PASTE_APPS_SCRIPT_WEB_APP_URL_HERE",
 ```
 
+例:
+
+```js
+appsScriptUrl: "https://script.google.com/macros/s/xxxxxxxxxxxxxxxx/exec",
+```
+
 ## 3. GitHubにアップロード
 
-主なファイル:
+GitHubで `nextonestepinfo-ops/hearing-form` を作成してから、下記をリポジトリ直下に入れる。
+
+アップロードするファイル:
 
 - `index.html`
 - `styles.css`
@@ -42,7 +49,19 @@ appsScriptUrl: "PASTE_APPS_SCRIPT_WEB_APP_URL_HERE",
 - `website/README.md`
 - `website/apps-script/Code.gs`
 
-## 4. テスト
+Codexから作業する場合は、リポジトリ作成後にこのフォルダの中身をそのままアップロードする。
+
+## 4. GitHub Pagesを有効化
+
+1. GitHubのリポジトリを開く。
+2. `Settings`
+3. `Pages`
+4. `Build and deployment`
+5. `Source` を `Deploy from a branch`
+6. `Branch` を `main` / `/root` にする。
+7. `Save`
+
+## 5. テスト
 
 1. 公開URLを開く。
 2. テスト回答を送信する。
