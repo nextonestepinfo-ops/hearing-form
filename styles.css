@@ -48,10 +48,14 @@ a {
   backdrop-filter: blur(12px);
 }
 
-.brand {
+.brand,
+.top-actions {
   display: inline-flex;
   align-items: center;
   gap: 12px;
+}
+
+.brand {
   color: var(--ink);
   font-weight: 900;
   text-decoration: none;
@@ -67,6 +71,7 @@ a {
   font-size: 18px;
 }
 
+.switch-link,
 .sync-state {
   display: inline-flex;
   align-items: center;
@@ -77,6 +82,11 @@ a {
   color: var(--muted);
   font-size: 13px;
   font-weight: 900;
+  text-decoration: none;
+}
+
+.switch-link {
+  color: var(--blue);
 }
 
 .sync-state.ready {
@@ -385,15 +395,18 @@ textarea {
 
 @media (max-width: 700px) {
   .topbar,
+  .top-actions,
   .submit-row {
     align-items: stretch;
     grid-template-columns: 1fr;
   }
 
-  .topbar {
+  .topbar,
+  .top-actions {
     flex-direction: column;
   }
 
+  .switch-link,
   .sync-state {
     justify-content: center;
     width: 100%;
