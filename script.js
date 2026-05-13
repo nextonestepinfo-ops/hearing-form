@@ -21,6 +21,26 @@ const endpointReady = /^https:\/\/script\.google\.com\/macros\/s\/.+\/exec$/.tes
 sheetLink.href = CONFIG.spreadsheetUrl;
 configStatus.textContent = endpointReady ? "スプレッドシート連携中" : "連携URL未設定";
 configStatus.classList.add(endpointReady ? "ready" : "demo");
+insertCommissionRulesField();
+
+function insertCommissionRulesField() {
+  if (form.elements.commissionRules) return;
+
+  const shiftField = form.querySelector('textarea[name="shiftManagement"]')?.closest("label");
+  if (!shiftField) return;
+
+  const label = document.createElement("label");
+  label.innerHTML = `
+    歩合・割合計算の細かいルール
+    <textarea
+      name="commissionRules"
+      rows="4"
+      placeholder="例: 売上帯で％が変わる、商品ごとに歩合率が違う、担当者ごとに条件がある など"
+    ></textarea>
+    <span class="field-hint">個人名や給与明細ではなく、計算ルールだけを記録します。</span>
+  `;
+  shiftField.insertAdjacentElement("afterend", label);
+}
 
 function getCheckedValues(name) {
   return [...form.querySelectorAll(`input[name="${name}"]:checked`)].map((input) => input.value);
@@ -55,6 +75,7 @@ function collectPayload() {
     monthlyWork: fields.monthlyWork?.trim() || "",
     inventoryManagement: fields.inventoryManagement?.trim() || "",
     shiftManagement: fields.shiftManagement?.trim() || "",
+    commissionRules: fields.commissionRules?.trim() || "",
     manualTask: fields.manualTask?.trim() || "",
     interests: getCheckedValues("interests"),
     budget: fields.budget || "未定",
