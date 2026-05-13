@@ -1,5 +1,6 @@
 const CONFIG = {
-  appsScriptUrl: "PASTE_APPS_SCRIPT_WEB_APP_URL_HERE",
+  appsScriptUrl:
+    "https://script.google.com/macros/s/AKfycby-OzGcHJEWcxmi2dAX_-BFCOZDhDeeqmciFLEyD39oZ9r7mb3ASAYUSLW_cMGJeEL8/exec",
   spreadsheetUrl:
     "https://docs.google.com/spreadsheets/d/1JnJ0YsQ1FhIbr-lmO0HW7Zlg1VdBtxF2pCLRapMir1M/edit#gid=1974068998",
 };
