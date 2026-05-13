@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>NosTechnology | 店内業務ミニヒアリング</title>
+    <meta
+      name="description"
+      content="NosTechnologyの店内業務ヒアリング入力フォーム。回答をGoogle Apps Script経由でGoogleスプレッドシートへ追記します。"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="../" aria-label="デモ一覧へ戻る">
+        <span class="brand-mark">N</span>
+        <span>NosTechnology</span>
+      </a>
+      <span class="sync-state" data-config-status>連携確認中</span>
+    </header>
+
+    <main class="page-shell">
+      <section class="summary" aria-labelledby="page-title">
+        <div>
+          <p class="eyebrow">Hearing Form</p>
+          <h1 id="page-title">店内業務ミニヒアリング</h1>
+          <p class="lead">
+            勤怠、給料計算、備品、在庫、シフトなど、最初の提案に必要な内容だけを記録します。
+          </p>
+        </div>
+        <dl class="sheet-meta" aria-label="連携先">
+          <div>
+            <dt>保存先</dt>
+            <dd>05_ヒアリングシート_実店舗テスト_2026-05</dd>
+          </div>
+          <div>
+            <dt>追記タブ</dt>
+            <dd>ヒアリング入力</dd>
+          </div>
+          <div>
+            <dt>入力注意</dt>
+            <dd>パスワード、給与明細、顧客個人情報は入れない</dd>
+          </div>
+        </dl>
+      </section>
+
+      <form class="form-layout" data-hearing-form>
+        <aside class="form-side" aria-label="進行状況">
+          <div class="progress-box">
+            <span>必須入力</span>
+            <strong data-required-count>0/3</strong>
+          </div>
+          <ol class="step-list">
+            <li>基本情報</li>
+            <li>今の管理方法</li>
+            <li>まず減らしたい手作業</li>
+          </ol>
+          <a class="sheet-link" data-sheet-link target="_blank" rel="noreferrer">
+            スプレッドシートを開く
+          </a>
+        </aside>
+
+        <div class="form-main">
+          <fieldset class="form-section">
+            <legend>基本情報</legend>
+            <div class="field-grid two">
+              <label>
+                店舗名・事業名 <span aria-hidden="true">*</span>
+                <input name="storeName" type="text" autocomplete="organization" required />
+              </label>
+              <label>
+                業種
+                <select name="industry">
+                  <option value="">選択してください</option>
+                  <option>美容院/サロン</option>
+                  <option>PC修理</option>
+                  <option>飲食</option>
+                  <option>小売</option>
+                  <option>整体/個人サービス</option>
+                  <option>その他</option>
+                </select>
+              </label>
+              <label>
+                回答元
+                <select name="route">
+                  <option>フォーム</option>
+                  <option>来店</option>
+                  <option>紹介</option>
+                  <option>DM</option>
+                  <option>電話</option>
+                  <option>その他</option>
+                </select>
+              </label>
+              <label>
+                現在の連絡導線
+                <input name="currentChannel" type="text" placeholder="例: LINE、Instagram、電話" />
+              </label>
+              <label>
+                担当者名
+                <input name="contactName" type="text" autocomplete="name" />
+              </label>
+              <label>
+                連絡先
+                <input name="contact" type="text" autocomplete="email" placeholder="任意" />
+              </label>
+            </div>
+          </fieldset>
+
+          <fieldset class="form-section" data-required-group="managementMethods">
+            <legend>現在の管理方法 <span aria-hidden="true">*</span></legend>
+            <div class="option-grid">
+              <label><input type="checkbox" name="managementMethods" value="紙" /> 紙</label>
+              <label><input type="checkbox" name="managementMethods" value="Excel" /> Excel</label>
+              <label>
+                <input
+                  type="checkbox"
+                  name="managementMethods"
+                  value="Googleスプレッドシート"
+                />
+                Googleスプレッドシート
+              </label>
+              <label><input type="checkbox" name="managementMethods" value="LINE" /> LINE</label>
+              <label><input type="checkbox" name="managementMethods" value="レジ" /> レジ</label>
+              <label>
+                <input type="checkbox" name="managementMethods" value="会計ソフト" />
+                会計ソフト
+              </label>
+              <label>
+                <input type="checkbox" name="managementMethods" value="手書きメモ" />
+                手書きメモ
+              </label>
+              <label>
+                <input type="checkbox" name="managementMethods" value="その他" />
+                その他
+              </label>
+            </div>
+            <p class="field-hint" data-group-error></p>
+          </fieldset>
+
+          <fieldset class="form-section">
+            <legend>今の作業</legend>
+            <div class="field-grid two">
+              <label>
+                スタッフ人数
+                <input name="staffCount" type="text" placeholder="例: アルバイト3名" />
+              </label>
+              <label>
+                月間工数
+                <input name="monthlyHours" type="text" placeholder="例: 月末に5時間くらい" />
+              </label>
+            </div>
+            <label>
+              月末に時間がかかる作業
+              <textarea
+                name="monthlyWork"
+                rows="3"
+                placeholder="勤怠集計、給与概算、売上集計など"
+              ></textarea>
+            </label>
+            <label>
+              備品や食材の管理方法
+              <textarea
+                name="inventoryManagement"
+                rows="3"
+                placeholder="誰がいつ確認、発注しているか"
+              ></textarea>
+            </label>
+            <label>
+              シフト希望や変更連絡の管理方法
+              <textarea name="shiftManagement" rows="3" placeholder="LINE、紙、口頭など"></textarea>
+            </label>
+            <label>
+              まず減らしたい手作業 <span aria-hidden="true">*</span>
+              <textarea name="manualTask" rows="3" required></textarea>
+            </label>
+          </fieldset>
+
+          <fieldset class="form-section">
+            <legend>提案につなげる情報</legend>
+            <div class="option-grid">
+              <label>
+                <input type="checkbox" name="interests" value="勤怠・給料計算補助" />
+                勤怠・給料計算補助
+              </label>
+              <label>
+                <input type="checkbox" name="interests" value="備品管理" />
+                備品管理
+              </label>
+              <label>
+                <input type="checkbox" name="interests" value="食材/在庫メモ" />
+                食材/在庫メモ
+              </label>
+              <label>
+                <input type="checkbox" name="interests" value="シフト管理" />
+                シフト管理
+              </label>
+              <label>
+                <input type="checkbox" name="interests" value="売上メモ集計" />
+                売上メモ集計
+              </label>
+              <label>
+                <input type="checkbox" name="interests" value="発注リスト" />
+                発注リスト
+              </label>
+              <label>
+                <input type="checkbox" name="interests" value="まだ未定" />
+                まだ未定
+              </label>
+            </div>
+            <div class="field-grid two">
+              <label>
+                予算感
+                <select name="budget">
+                  <option>未定</option>
+                  <option>1万円未満</option>
+                  <option>1-3万円</option>
+                  <option>3-10万円</option>
+                  <option>10-30万円</option>
+                  <option>30万円以上</option>
+                </select>
+              </label>
+              <label>
+                希望時期
+                <select name="timeline">
+                  <option>未定</option>
+                  <option>急ぎ</option>
+                  <option>1週間以内</option>
+                  <option>1か月以内</option>
+                  <option>2-3か月以内</option>
+                </select>
+              </label>
+              <label>
+                月額保守の興味
+                <select name="maintenanceInterest">
+                  <option>未確認</option>
+                  <option>あり</option>
+                  <option>条件次第</option>
+                  <option>なし</option>
+                </select>
+              </label>
+              <label>
+                営業担当
+                <select name="owner">
+                  <option>浦田</option>
+                  <option>渡邉</option>
+                  <option>未定</option>
+                </select>
+              </label>
+            </div>
+            <label>
+              追加メモ
+              <textarea name="memo" rows="4"></textarea>
+            </label>
+          </fieldset>
+
+          <div class="submit-row">
+            <button class="primary-button" type="submit" data-submit-button>
+              スプレッドシートへ送信
+            </button>
+            <p class="form-result" data-form-result aria-live="polite"></p>
+          </div>
+        </div>
+      </form>
+    </main>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
