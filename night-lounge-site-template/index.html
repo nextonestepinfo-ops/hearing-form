@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ナイトラウンジサイトテンプレート | NosTechnology Demo</title>
+  <style>
+    :root{--ink:#191722;--muted:#726c80;--paper:#fff;--base:#f7f5f6;--line:#e1d9df;--wine:#7d2032;--gold:#b88a44;--navy:#222b45}*{box-sizing:border-box}body{margin:0;color:var(--ink);background:var(--base);font-family:"Yu Gothic","Hiragino Kaku Gothic ProN",Meiryo,system-ui,sans-serif;line-height:1.7}a{color:inherit;text-decoration:none}.hero{min-height:88vh;display:grid;align-items:end;color:#fff;background:linear-gradient(180deg,rgba(25,23,34,.1),rgba(25,23,34,.78)),url('https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&w=1800&q=80') center/cover}.wrap{width:min(1120px,calc(100% - 36px));margin:0 auto}.hero .wrap{padding:34px 0 64px}.eyebrow{margin:0 0 9px;font-size:.78rem;font-weight:900;letter-spacing:.08em;text-transform:uppercase}.hero h1{margin:0;max-width:790px;font-size:clamp(2.35rem,7vw,5.2rem);line-height:1.04;letter-spacing:0}.lead{max-width:680px;margin:18px 0 24px;font-size:clamp(1rem,2vw,1.22rem)}.actions{display:flex;flex-wrap:wrap;gap:10px}.btn{display:inline-flex;align-items:center;justify-content:center;min-height:44px;border-radius:8px;padding:0 18px;background:#fff;color:var(--ink);font-weight:900}.btn.main{background:var(--wine);color:#fff}.section{padding:56px 0}.section h2{margin:0 0 18px;font-size:clamp(1.55rem,3vw,2.4rem)}.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}.card{border:1px solid var(--line);border-radius:8px;background:#fff;padding:20px;box-shadow:0 16px 36px rgba(25,23,34,.07)}.card h3{margin:0 0 8px}.price{color:var(--gold);font-size:1.45rem;font-weight:900}.band{border-block:1px solid var(--line);background:#fff}.two{display:grid;grid-template-columns:1fr 1fr;gap:18px}.list{display:grid;gap:10px}.row{display:flex;justify-content:space-between;border-bottom:1px solid var(--line);padding:12px 0}.muted{color:var(--muted)}footer{padding:32px 18px;text-align:center;color:#fff;background:#191722}@media(max-width:820px){.grid,.two{grid-template-columns:1fr}.hero{min-height:82vh}}
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="wrap">
+      <p class="eyebrow">Night Lounge Demo</p>
+      <h1>雰囲気・料金・予約導線を上品に整理。</h1>
+      <p class="lead">料金、出勤情報、店舗案内、問い合わせを落ち着いた見え方でまとめるナイトラウンジ向けテンプレートです。</p>
+      <div class="actions"><a class="btn main" href="#reserve">予約相談</a><a class="btn" href="#system">料金を見る</a></div>
+    </div>
+  </header>
+  <main>
+    <section id="system" class="section wrap"><h2>料金システム</h2><div class="grid"><article class="card"><h3>セット料金</h3><p class="muted">時間・曜日で差し替え可能。</p><p class="price">60分 6,000円</p></article><article class="card"><h3>指名・延長</h3><p class="muted">注意事項も同じ枠で整理。</p><p class="price">店舗設定に対応</p></article><article class="card"><h3>団体予約</h3><p class="muted">電話・LINE導線に接続。</p><p class="price">事前相談</p></article></div></section>
+    <div class="band"><section class="section wrap two"><div><h2>店舗情報</h2><p>営業時間: 20:00-25:00<br>定休日: 日曜日<br>エリア: 駅徒歩5分</p></div><div><h2>掲載できること</h2><div class="list"><div class="row"><strong>出勤情報</strong><span>日別に表示</span></div><div class="row"><strong>年齢確認</strong><span>注意事項掲載</span></div><div class="row"><strong>予約導線</strong><span>電話 / LINE</span></div></div></div></section></div>
+    <section id="reserve" class="section wrap"><h2>問い合わせ</h2><div class="card"><p>店舗のルールに合わせて、予約・採用・問い合わせの導線を分けて作れます。</p><a class="btn main" href="mailto:info@example.com">相談する</a></div></section>
+  </main>
+  <footer>NosTechnology demo template</footer>
+</body>
+</html>
