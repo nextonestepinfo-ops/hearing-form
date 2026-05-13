@@ -6,8 +6,9 @@ const CONFIG = {
 function doGet() {
   return jsonOutput({
     ok: true,
-    message: "NosTechnology website hearing form endpoint is active.",
+    message: "NosTechnology hearing form endpoint is active.",
     targetSheet: CONFIG.TARGET_SHEET_NAME,
+    supportedForms: ["store-operations", "website"],
   });
 }
 
@@ -25,7 +26,7 @@ function doPost(e) {
       throw new Error(`Target sheet not found: ${CONFIG.TARGET_SHEET_NAME}`);
     }
 
-    const row = buildWebsiteRow(payload);
+    const row = isWebsitePayload(payload) ? buildWebsiteRow(payload) : buildHearingRow(payload);
     sheet.appendRow(row);
 
     const appendedRow = sheet.getLastRow();
@@ -57,14 +58,81 @@ function parsePayload(e) {
 
 function validatePayload(payload) {
   if (!text(payload.storeName)) throw new Error("storeName is required.");
-  if (!text(payload.purpose)) throw new Error("purpose is required.");
+  if (isWebsitePayload(payload)) {
+    if (!text(payload.purpose)) throw new Error("purpose is required.");
+    return;
+  }
+  if (!text(payload.manualTask)) throw new Error("manualTask is required.");
+}
+
+function isWebsitePayload(payload) {
+  return text(payload.source) === "github-pages-website-hearing-form" || Boolean(text(payload.purpose));
+}
+
+function buildHearingRow(payload) {
+  const now = new Date();
+  const methods = listText(payload.managementMethods);
+  const interests = listText(payload.interests);
+  const firstInterest = firstListItem(payload.interests);
+  const priority = derivePriority(payload);
+  const proposal = deriveProposal(payload);
+  const memo = [
+    fieldLine("スタッフ人数", payload.staffCount),
+    fieldLine("現在の管理方法", methods),
+    fieldLine("備品/食材", payload.inventoryManagement),
+    fieldLine("シフト", payload.shiftManagement),
+    fieldLine("追加メモ", payload.memo),
+  ]
+    .filter(Boolean)
+    .join("\n");
+
+  return [
+    makeCaseId(now),
+    now,
+    text(payload.route) || "フォーム",
+    "見込み",
+    priority,
+    text(payload.storeName),
+    text(payload.industry),
+    text(payload.contactName),
+    text(payload.contact),
+    text(payload.currentChannel),
+    text(payload.manualTask),
+    text(payload.monthlyWork),
+    text(payload.monthlyHours),
+    firstInterest || text(payload.manualTask),
+    text(payload.timeline) || "未定",
+    text(payload.budget) || "未定",
+    text(payload.maintenanceInterest) || "未確認",
+    "",
+    memo,
+    deriveNextAction(payload),
+    "",
+    text(payload.owner) || "浦田",
+    proposal,
+    "",
+    "未判定",
+    "",
+    `送信元: ${text(payload.source) || "github-pages-hearing-form"} / 興味: ${interests || "未選択"}`,
+    now,
+  ];
+}
+
+function makeCaseId(date) {
+  const timezone = Session.getScriptTimeZone() || "Asia/Tokyo";
+  return `HF-${Utilities.formatDate(date, timezone, "yyyyMMdd-HHmmss")}`;
+}
+
+function makeWebsiteCaseId(date) {
+  const timezone = Session.getScriptTimeZone() || "Asia/Tokyo";
+  return `WS-${Utilities.formatDate(date, timezone, "yyyyMMdd-HHmmss")}`;
 }
 
 function buildWebsiteRow(payload) {
   const now = new Date();
   const needs = listText(payload.siteNeeds);
-  const priority = derivePriority(payload);
-  const proposal = deriveProposal(payload);
+  const priority = deriveWebsitePriority(payload);
+  const proposal = deriveWebsiteProposal(payload);
   const materialSummary = [
     fieldLine("写真", payload.photoStatus),
     fieldLine("原稿", payload.textStatus),
@@ -86,7 +154,7 @@ function buildWebsiteRow(payload) {
     .join("\n");
 
   return [
-    makeCaseId(now),
+    makeWebsiteCaseId(now),
     now,
     text(payload.route) || "フォーム",
     "見込み",
@@ -105,24 +173,45 @@ function buildWebsiteRow(payload) {
     text(payload.maintenanceInterest) || "未確認",
     materialSummary,
     memo,
-    deriveNextAction(payload),
+    deriveWebsiteNextAction(payload),
     "",
     text(payload.owner) || "浦田",
     proposal,
     "",
     "未判定",
     "",
-    `送信元: ${text(payload.source) || "github-pages-website-hearing-form"} / 必要項目: ${needs || "未選択"}`,
+    `送信元: ${text(payload.source) || "github-pages-website-hearing-form"} / 必要項目: ${
+      needs || "未選択"
+    }`,
     now,
   ];
 }
 
-function makeCaseId(date) {
-  const timezone = Session.getScriptTimeZone() || "Asia/Tokyo";
-  return `WS-${Utilities.formatDate(date, timezone, "yyyyMMdd-HHmmss")}`;
+function derivePriority(payload) {
+  const timeline = text(payload.timeline);
+  const budget = text(payload.budget);
+  const hasNearTimeline = ["急ぎ", "1週間以内", "1か月以内"].includes(timeline);
+  const hasBudget = Boolean(budget && !["未定", "1万円未満"].includes(budget));
+
+  if (hasNearTimeline && hasBudget) return "A";
+  if (hasNearTimeline || hasBudget || text(payload.manualTask)) return "B";
+  return "C";
 }
 
-function derivePriority(payload) {
+function deriveProposal(payload) {
+  const firstInterest = firstListItem(payload.interests);
+  if (firstInterest && firstInterest !== "まだ未定") return firstInterest;
+  return "店内業務ミニ診断メモ";
+}
+
+function deriveNextAction(payload) {
+  const priority = derivePriority(payload);
+  if (priority === "A") return "ミニ診断メモ送付";
+  if (priority === "B") return "課題整理して追加ヒアリング";
+  return "情報確認";
+}
+
+function deriveWebsitePriority(payload) {
   const timeline = text(payload.timeline);
   const budget = text(payload.budget);
   const hasNearTimeline = ["急ぎ", "1週間以内", "1か月以内"].includes(timeline);
@@ -133,7 +222,7 @@ function derivePriority(payload) {
   return "C";
 }
 
-function deriveProposal(payload) {
+function deriveWebsiteProposal(payload) {
   const needs = listText(payload.siteNeeds);
   if (needs.includes("予約導線")) return "予約導線付きWebサイト制作";
   if (needs.includes("問い合わせフォーム")) return "問い合わせ導線付きWebサイト制作";
@@ -141,11 +230,11 @@ function deriveProposal(payload) {
   return "小規模Webサイト制作";
 }
 
-function deriveNextAction(payload) {
+function deriveWebsiteNextAction(payload) {
   const photo = text(payload.photoStatus);
   const textStatus = text(payload.textStatus);
   if (photo === "撮影が必要" || textStatus === "作成が必要") return "素材準備範囲を確認";
-  if (derivePriority(payload) === "A") return "サイト構成案と概算見積を送付";
+  if (deriveWebsitePriority(payload) === "A") return "サイト構成案と概算見積を送付";
   return "必要ページを整理して追加ヒアリング";
 }
 
