@@ -238,6 +238,7 @@ function buildHearingRow(payload) {
     fieldLine("現在の管理方法", methods),
     fieldLine("備品/在庫", payload.inventoryManagement),
     fieldLine("シフト", payload.shiftManagement),
+    fieldLine("歩合・割合計算ルール", payload.commissionRules),
     fieldLine("追加メモ", payload.memo),
   ]
     .filter(Boolean)
