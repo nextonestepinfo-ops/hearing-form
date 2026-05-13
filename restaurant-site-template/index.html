@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>飲食店サイトテンプレート | NosTechnology Demo</title>
+  <style>
+    :root{--ink:#172033;--muted:#647088;--paper:#fff;--base:#f6f7f4;--line:#dce2da;--green:#245a46;--blue:#315f9d;--amber:#a86625}*{box-sizing:border-box}body{margin:0;color:var(--ink);background:var(--base);font-family:"Yu Gothic","Hiragino Kaku Gothic ProN",Meiryo,system-ui,sans-serif;line-height:1.7}a{color:inherit;text-decoration:none}img{max-width:100%;display:block}.hero{min-height:88vh;display:grid;align-items:end;background:linear-gradient(180deg,rgba(15,20,18,.12),rgba(15,20,18,.72)),url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1800&q=80') center/cover;color:#fff}.hero-inner{width:min(1120px,calc(100% - 36px));margin:0 auto;padding:34px 0 64px}.eyebrow{margin:0 0 10px;font-size:.78rem;font-weight:900;letter-spacing:.08em;text-transform:uppercase}.hero h1{margin:0;max-width:780px;font-size:clamp(2.5rem,7vw,5.6rem);line-height:1.02;letter-spacing:0}.lead{max-width:680px;margin:18px 0 24px;font-size:clamp(1rem,2.2vw,1.24rem)}.actions{display:flex;flex-wrap:wrap;gap:10px}.btn{display:inline-flex;align-items:center;justify-content:center;min-height:44px;border-radius:8px;padding:0 18px;background:#fff;color:var(--ink);font-weight:900}.btn.alt{background:var(--amber);color:#fff}.section{width:min(1120px,calc(100% - 36px));margin:0 auto;padding:56px 0}.section h2{margin:0 0 18px;font-size:clamp(1.6rem,3vw,2.5rem);letter-spacing:0}.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}.card{border:1px solid var(--line);border-radius:8px;padding:20px;background:#fff;box-shadow:0 16px 36px rgba(23,32,51,.07)}.card h3{margin:0 0 8px;font-size:1.2rem}.price{color:var(--green);font-size:1.55rem;font-weight:900}.info{display:grid;grid-template-columns:1fr 1fr;gap:18px}.band{background:#fff;border-block:1px solid var(--line)}.menu{display:grid;gap:10px}.menu-row{display:flex;justify-content:space-between;gap:14px;border-bottom:1px solid var(--line);padding:12px 0}.menu-row strong{font-size:1.05rem}.muted{color:var(--muted)}.footer{padding:32px 18px;text-align:center;color:#fff;background:#172033}@media(max-width:820px){.grid,.info{grid-template-columns:1fr}.hero{min-height:82vh}}
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-inner">
+      <p class="eyebrow">Restaurant Demo</p>
+      <h1>旬の料理と予約導線を、1ページで見やすく。</h1>
+      <p class="lead">メニュー、営業時間、アクセス、予約・問い合わせをまとめた飲食店向けテンプレートです。</p>
+      <div class="actions"><a class="btn alt" href="#reserve">予約する</a><a class="btn" href="#menu">メニューを見る</a></div>
+    </div>
+  </header>
+  <main>
+    <section id="menu" class="section">
+      <h2>おすすめメニュー</h2>
+      <div class="grid">
+        <article class="card"><h3>季節の前菜盛り</h3><p class="muted">仕入れに合わせて変わる小皿セット。</p><p class="price">1,280円</p></article>
+        <article class="card"><h3>炭火グリル</h3><p class="muted">肉・魚・野菜を香ばしく焼き上げます。</p><p class="price">1,680円</p></article>
+        <article class="card"><h3>本日のパスタ</h3><p class="muted">ランチにもディナーにも出しやすい主力商品。</p><p class="price">1,180円</p></article>
+      </div>
+    </section>
+    <div class="band"><section class="section info"><div><h2>店舗情報</h2><p>営業時間: 11:30-22:00<br>定休日: 火曜日<br>席数: 28席</p></div><div><h2>使える導線</h2><div class="menu"><div class="menu-row"><strong>予約</strong><span>電話 / フォーム</span></div><div class="menu-row"><strong>アクセス</strong><span>地図リンク</span></div><div class="menu-row"><strong>お知らせ</strong><span>季節メニュー掲載</span></div></div></div></section></div>
+    <section id="reserve" class="section"><h2>問い合わせ</h2><div class="card"><p>予約ボタン、電話、LINE、Googleフォームなど、店舗に合わせて導線を差し替えできます。</p><a class="btn alt" href="mailto:info@example.com">問い合わせする</a></div></section>
+  </main>
+  <footer class="footer">NosTechnology demo template</footer>
+</body>
+</html>
