@@ -6,19 +6,20 @@ GitHub Pagesで公開できる静的フォームです。
 
 ## ファイル
 
-- `index.html`: 入力フォーム本体
-- `styles.css`: 画面デザイン
-- `script.js`: 入力チェック、送信処理、下書き保存
-- `apps-script/Code.gs`: Google Apps Scriptに貼り付ける追記処理
+- `index.html`: 店内業務向け入力フォーム本体
+- `styles.css`: 店内業務向け画面デザイン
+- `script.js`: 店内業務向け入力チェック、送信処理、下書き保存
+- `apps-script/Code.gs`: 店内業務向けGoogle Apps Script追記処理
 - `github-publish.md`: GitHub Pages公開手順
+- `website/`: Webサイト制作向けヒアリングフォーム
 
 ## 使い方
 
 1. Googleスプレッドシートを開く。
 2. `拡張機能` → `Apps Script` を開く。
-3. `apps-script/Code.gs` の中身を貼り付けて保存する。
+3. 使うフォームに合わせて `apps-script/Code.gs` または `website/apps-script/Code.gs` の中身を貼り付けて保存する。
 4. Apps ScriptをWebアプリとしてデプロイする。
-5. 発行されたWebアプリURLを `script.js` の `CONFIG.appsScriptUrl` に入れる。
+5. 発行されたWebアプリURLを対象フォームの `script.js` の `CONFIG.appsScriptUrl` に入れる。
 6. GitHub Pagesへ公開する。
 7. テスト送信し、`ヒアリング入力` タブに1行追加されるか確認する。
 
@@ -31,6 +32,11 @@ GitHub Pagesで公開できる静的フォームです。
 追記タブ:
 
 `ヒアリング入力`
+
+## フォームURL
+
+- 店内業務用: `https://nextonestepinfo-ops.github.io/hearing-form/`
+- Webサイト用: `https://nextonestepinfo-ops.github.io/hearing-form/website/`
 
 ## 注意
 
