@@ -1,0 +1,5 @@
+.showreel-pin{justify-items:center}
+.showreel-inner{justify-self:center;margin:0}
+.showreel-top>div:first-child{min-width:0}
+.showreel-top h2{max-width:760px;overflow-wrap:anywhere}
+@media(max-width:620px){.showreel-inner{width:calc(100% - 24px)}.showreel-top h2{max-width:100%}}
