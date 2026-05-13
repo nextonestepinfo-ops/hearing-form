@@ -1,14 +1,26 @@
 const CONFIG = {
   SHEET_ID: "1JnJ0YsQ1FhIbr-lmO0HW7Zlg1VdBtxF2pCLRapMir1M",
   TARGET_SHEET_NAME: "ヒアリング入力",
+  PORTAL_SHEET_NAME: "取引先ポータル",
+  PORTAL_MESSAGE_SHEET_NAME: "取引先やり取り",
+  TIMEZONE: "Asia/Tokyo",
 };
 
-function doGet() {
+function doGet(e) {
+  const params = e && e.parameter ? e.parameter : {};
+  const action = text(params.action);
+  const token = text(params.token || params.key);
+
+  if (action === "clientPortal" || token) {
+    return jsonOutput(getClientPortalData(token), params.callback);
+  }
+
   return jsonOutput({
     ok: true,
     message: "NosTechnology hearing form endpoint is active.",
     targetSheet: CONFIG.TARGET_SHEET_NAME,
-    supportedForms: ["store-operations", "website"],
+    supportedForms: ["store-operations", "website", "client-portal"],
+    portalAction: "clientPortal",
   });
 }
 
@@ -18,15 +30,17 @@ function doPost(e) {
 
   try {
     const payload = parsePayload(e);
+
+    if (isClientPortalMessagePayload(payload)) {
+      return jsonOutput(appendClientPortalMessage(payload));
+    }
+
     validatePayload(payload);
 
     const spreadsheet = SpreadsheetApp.openById(CONFIG.SHEET_ID);
-    const sheet = spreadsheet.getSheetByName(CONFIG.TARGET_SHEET_NAME);
-    if (!sheet) {
-      throw new Error(`Target sheet not found: ${CONFIG.TARGET_SHEET_NAME}`);
-    }
-
+    const sheet = getSheetOrThrow(spreadsheet, CONFIG.TARGET_SHEET_NAME);
     const row = isWebsitePayload(payload) ? buildWebsiteRow(payload) : buildHearingRow(payload);
+
     sheet.appendRow(row);
 
     const appendedRow = sheet.getLastRow();
@@ -69,6 +83,149 @@ function isWebsitePayload(payload) {
   return text(payload.source) === "github-pages-website-hearing-form" || Boolean(text(payload.purpose));
 }
 
+function isClientPortalMessagePayload(payload) {
+  return text(payload.source) === "client-portal-message";
+}
+
+function getClientPortalData(token) {
+  const safeToken = text(token);
+  if (!safeToken) {
+    return {
+      ok: false,
+      error: "アクセスキーを入力してください。",
+      projects: [],
+      messages: [],
+    };
+  }
+
+  const spreadsheet = SpreadsheetApp.openById(CONFIG.SHEET_ID);
+  const projects = getSheetRows(spreadsheet, CONFIG.PORTAL_SHEET_NAME)
+    .filter((row) => isPublicPortalRow(row, safeToken))
+    .map(toPublicProject);
+  const messages = getSheetRows(spreadsheet, CONFIG.PORTAL_MESSAGE_SHEET_NAME)
+    .filter((row) => text(row["アクセスキー"]) === safeToken)
+    .map(toPublicMessage);
+
+  if (projects.length === 0) {
+    return {
+      ok: false,
+      error: "該当する公開プロジェクトが見つかりません。",
+      projects: [],
+      messages: [],
+    };
+  }
+
+  return {
+    ok: true,
+    projects: projects,
+    messages: messages,
+    updatedAt: Utilities.formatDate(new Date(), CONFIG.TIMEZONE, "yyyy-MM-dd HH:mm:ss"),
+  };
+}
+
+function appendClientPortalMessage(payload) {
+  const token = text(payload.token || payload.key);
+  const portal = getClientPortalData(token);
+
+  if (!portal.ok || portal.projects.length === 0) {
+    throw new Error("有効なアクセスキーではありません。");
+  }
+
+  const spreadsheet = SpreadsheetApp.openById(CONFIG.SHEET_ID);
+  const sheet = getSheetOrThrow(spreadsheet, CONFIG.PORTAL_MESSAGE_SHEET_NAME);
+  const now = new Date();
+  const nowText = Utilities.formatDate(now, CONFIG.TIMEZONE, "yyyy-MM-dd HH:mm:ss");
+  const messageId = "MSG-" + Utilities.formatDate(now, CONFIG.TIMEZONE, "yyyyMMdd-HHmmss");
+  const caseId = text(payload.caseId) || portal.projects[0].caseId;
+
+  sheet.appendRow([
+    messageId,
+    nowText,
+    token,
+    caseId,
+    text(payload.name) || "取引先",
+    text(payload.messageType) || "連絡",
+    text(payload.message),
+    text(payload.attachmentUrl),
+    "未対応",
+    "浦田",
+    "",
+    nowText,
+  ]);
+
+  return {
+    ok: true,
+    messageId: messageId,
+    row: sheet.getLastRow(),
+  };
+}
+
+function getSheetRows(spreadsheet, sheetName) {
+  const sheet = getSheetOrThrow(spreadsheet, sheetName);
+  const values = sheet.getDataRange().getDisplayValues();
+  if (values.length < 2) return [];
+
+  const headers = values[0].map((header) => text(header));
+  return values.slice(1)
+    .filter((row) => row.some((cell) => text(cell)))
+    .map((row) => {
+      const object = {};
+      headers.forEach((header, index) => {
+        if (header) object[header] = text(row[index]);
+      });
+      return object;
+    });
+}
+
+function getSheetOrThrow(spreadsheet, sheetName) {
+  const sheet = spreadsheet.getSheetByName(sheetName);
+  if (!sheet) throw new Error("Sheet not found: " + sheetName);
+  return sheet;
+}
+
+function isPublicPortalRow(row, token) {
+  return text(row["アクセスキー"]) === token && isTruthy(row["公開可"]);
+}
+
+function isTruthy(value) {
+  const normalized = text(value).toLowerCase();
+  return value === true || ["true", "1", "yes", "y", "公開", "公開可"].includes(normalized);
+}
+
+function toPublicProject(row) {
+  return {
+    caseId: text(row["案件ID"]),
+    clientName: text(row["取引先名"]),
+    projectName: text(row["プロジェクト名"]),
+    status: text(row["ステータス"]),
+    priority: text(row["優先度"]),
+    phase: text(row["現在フェーズ"]),
+    progress: Number(text(row["進捗%"]).replace("%", "")) || 0,
+    nextAction: text(row["次アクション"]),
+    dueDate: text(row["次回期限"]),
+    owner: text(row["担当"]),
+    lastUpdated: text(row["最終更新"]),
+    sharedMemo: text(row["共有メモ"]),
+    deliverableUrl: text(row["納品物URL"]),
+    referenceUrl: text(row["参考URL"]),
+    updatedAt: text(row["更新日時"]),
+  };
+}
+
+function toPublicMessage(row) {
+  return {
+    messageId: text(row["受付ID"]),
+    postedAt: text(row["投稿日"]),
+    caseId: text(row["案件ID"]),
+    author: text(row["投稿者"]),
+    type: text(row["種別"]),
+    body: text(row["内容"]),
+    attachmentUrl: text(row["添付URL"]),
+    status: text(row["ステータス"]),
+    updatedAt: text(row["最終更新"]),
+  };
+}
+
 function buildHearingRow(payload) {
   const now = new Date();
   const methods = listText(payload.managementMethods);
@@ -79,7 +236,7 @@ function buildHearingRow(payload) {
   const memo = [
     fieldLine("スタッフ人数", payload.staffCount),
     fieldLine("現在の管理方法", methods),
-    fieldLine("備品/食材", payload.inventoryManagement),
+    fieldLine("備品/在庫", payload.inventoryManagement),
     fieldLine("シフト", payload.shiftManagement),
     fieldLine("追加メモ", payload.memo),
   ]
@@ -111,7 +268,7 @@ function buildHearingRow(payload) {
     text(payload.owner) || "浦田",
     proposal,
     "",
-    "未判定",
+    "未判断",
     "",
     `送信元: ${text(payload.source) || "github-pages-hearing-form"} / 興味: ${interests || "未選択"}`,
     now,
@@ -119,13 +276,11 @@ function buildHearingRow(payload) {
 }
 
 function makeCaseId(date) {
-  const timezone = Session.getScriptTimeZone() || "Asia/Tokyo";
-  return `HF-${Utilities.formatDate(date, timezone, "yyyyMMdd-HHmmss")}`;
+  return "HF-" + Utilities.formatDate(date, CONFIG.TIMEZONE, "yyyyMMdd-HHmmss");
 }
 
 function makeWebsiteCaseId(date) {
-  const timezone = Session.getScriptTimeZone() || "Asia/Tokyo";
-  return `WS-${Utilities.formatDate(date, timezone, "yyyyMMdd-HHmmss")}`;
+  return "WS-" + Utilities.formatDate(date, CONFIG.TIMEZONE, "yyyyMMdd-HHmmss");
 }
 
 function buildWebsiteRow(payload) {
@@ -178,11 +333,9 @@ function buildWebsiteRow(payload) {
     text(payload.owner) || "浦田",
     proposal,
     "",
-    "未判定",
+    "未判断",
     "",
-    `送信元: ${text(payload.source) || "github-pages-website-hearing-form"} / 必要項目: ${
-      needs || "未選択"
-    }`,
+    `送信元: ${text(payload.source) || "github-pages-website-hearing-form"} / 必要項目: ${needs || "未選択"}`,
     now,
   ];
 }
@@ -190,7 +343,7 @@ function buildWebsiteRow(payload) {
 function derivePriority(payload) {
   const timeline = text(payload.timeline);
   const budget = text(payload.budget);
-  const hasNearTimeline = ["急ぎ", "1週間以内", "1か月以内"].includes(timeline);
+  const hasNearTimeline = ["急ぎ", "1週間以内", "1カ月以内"].includes(timeline);
   const hasBudget = Boolean(budget && !["未定", "1万円未満"].includes(budget));
 
   if (hasNearTimeline && hasBudget) return "A";
@@ -201,7 +354,7 @@ function derivePriority(payload) {
 function deriveProposal(payload) {
   const firstInterest = firstListItem(payload.interests);
   if (firstInterest && firstInterest !== "まだ未定") return firstInterest;
-  return "店内業務ミニ診断メモ";
+  return "店舗業務ミニ診断メモ";
 }
 
 function deriveNextAction(payload) {
@@ -214,7 +367,7 @@ function deriveNextAction(payload) {
 function deriveWebsitePriority(payload) {
   const timeline = text(payload.timeline);
   const budget = text(payload.budget);
-  const hasNearTimeline = ["急ぎ", "1週間以内", "1か月以内"].includes(timeline);
+  const hasNearTimeline = ["急ぎ", "1週間以内", "1カ月以内"].includes(timeline);
   const hasBudget = Boolean(budget && !["未定", "3万円未満"].includes(budget));
 
   if (hasNearTimeline && hasBudget) return "A";
@@ -257,8 +410,19 @@ function text(value) {
   return value == null ? "" : String(value).trim();
 }
 
-function jsonOutput(data) {
-  return ContentService.createTextOutput(JSON.stringify(data)).setMimeType(
-    ContentService.MimeType.JSON,
-  );
+function jsonOutput(data, callback) {
+  const callbackName = text(callback);
+  const body = JSON.stringify(data);
+
+  if (callbackName && isSafeCallbackName(callbackName)) {
+    return ContentService.createTextOutput(callbackName + "(" + body + ");").setMimeType(
+      ContentService.MimeType.JAVASCRIPT,
+    );
+  }
+
+  return ContentService.createTextOutput(body).setMimeType(ContentService.MimeType.JSON);
+}
+
+function isSafeCallbackName(value) {
+  return /^[A-Za-z_$][0-9A-Za-z_$]*(\.[A-Za-z_$][0-9A-Za-z_$]*)*$/.test(value);
 }
