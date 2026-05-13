@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>NosTechnology | Webサイト制作ヒアリング</title>
+    <meta
+      name="description"
+      content="NosTechnologyのWebサイト制作ヒアリング入力フォーム。制作前に必要な情報をGoogleスプレッドシートへ追記します。"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="../" aria-label="店内業務ヒアリングへ戻る">
+        <span class="brand-mark">N</span>
+        <span>NosTechnology</span>
+      </a>
+      <div class="top-actions">
+        <a class="switch-link" href="../">店内業務用</a>
+        <span class="sync-state" data-config-status>連携確認中</span>
+      </div>
+    </header>
+
+    <main class="page-shell">
+      <section class="summary" aria-labelledby="page-title">
+        <div>
+          <p class="eyebrow">Website Hearing</p>
+          <h1 id="page-title">Webサイト制作ヒアリング</h1>
+          <p class="lead">
+            目的、必要ページ、問い合わせ導線、素材状況、公開時期を整理して、初回提案に必要な情報だけを集めます。
+          </p>
+        </div>
+        <dl class="sheet-meta" aria-label="連携先">
+          <div>
+            <dt>保存先</dt>
+            <dd>05_ヒアリングシート_実店舗テスト_2026-05</dd>
+          </div>
+          <div>
+            <dt>追記タブ</dt>
+            <dd>ヒアリング入力</dd>
+          </div>
+          <div>
+            <dt>入力注意</dt>
+            <dd>ログイン情報、顧客個人情報、決済情報は入れない</dd>
+          </div>
+        </dl>
+      </section>
+
+      <form class="form-layout" data-website-form>
+        <aside class="form-side" aria-label="進行状況">
+          <div class="progress-box">
+            <span>必須入力</span>
+            <strong data-required-count>0/3</strong>
+          </div>
+          <ol class="step-list">
+            <li>基本情報</li>
+            <li>サイト目的</li>
+            <li>必要なページ・機能</li>
+          </ol>
+          <a class="sheet-link" data-sheet-link target="_blank" rel="noreferrer">
+            スプレッドシートを開く
+          </a>
+        </aside>
+
+        <div class="form-main">
+          <fieldset class="form-section">
+            <legend>基本情報</legend>
+            <div class="field-grid two">
+              <label>
+                店舗名・会社名 <span aria-hidden="true">*</span>
+                <input name="storeName" type="text" autocomplete="organization" required />
+              </label>
+              <label>
+                業種
+                <select name="industry">
+                  <option value="">選択してください</option>
+                  <option>飲食</option>
+                  <option>カフェ</option>
+                  <option>美容院/サロン</option>
+                  <option>ナイトワーク</option>
+                  <option>小売</option>
+                  <option>個人サービス</option>
+                  <option>その他</option>
+                </select>
+              </label>
+              <label>
+                回答元
+                <select name="route">
+                  <option>フォーム</option>
+                  <option>来店</option>
+                  <option>紹介</option>
+                  <option>DM</option>
+                  <option>電話</option>
+                  <option>その他</option>
+                </select>
+              </label>
+              <label>
+                現在のWeb/SNS
+                <input name="currentSite" type="text" placeholder="URL、Instagram、LINEなど" />
+              </label>
+              <label>
+                担当者名
+                <input name="contactName" type="text" autocomplete="name" />
+              </label>
+              <label>
+                連絡先
+                <input name="contact" type="text" autocomplete="email" placeholder="任意" />
+              </label>
+            </div>
+          </fieldset>
+
+          <fieldset class="form-section">
+            <legend>サイトの目的</legend>
+            <label>
+              今回サイトで達成したいこと <span aria-hidden="true">*</span>
+              <textarea
+                name="purpose"
+                rows="3"
+                placeholder="例: 新規問い合わせを増やしたい、メニューを見せたい、予約導線を作りたい"
+                required
+              ></textarea>
+            </label>
+            <div class="field-grid two">
+              <label>
+                見てほしい相手
+                <input name="targetAudience" type="text" placeholder="例: 近隣の新規客、採用候補者" />
+              </label>
+              <label>
+                見せたい印象
+                <input name="desiredImpression" type="text" placeholder="例: 落ち着いた、安い、上質、親しみやすい" />
+              </label>
+            </div>
+            <label>
+              今の困りごと
+              <textarea
+                name="currentIssue"
+                rows="3"
+                placeholder="例: SNSだけで情報が散らばる、営業時間変更が伝わらない"
+              ></textarea>
+            </label>
+          </fieldset>
+
+          <fieldset class="form-section" data-required-group="siteNeeds">
+            <legend>必要なページ・機能 <span aria-hidden="true">*</span></legend>
+            <div class="option-grid">
+              <label><input type="checkbox" name="siteNeeds" value="トップページ" /> トップページ</label>
+              <label><input type="checkbox" name="siteNeeds" value="メニュー/サービス" /> メニュー/サービス</label>
+              <label><input type="checkbox" name="siteNeeds" value="料金" /> 料金</label>
+              <label><input type="checkbox" name="siteNeeds" value="スタッフ紹介" /> スタッフ紹介</label>
+              <label><input type="checkbox" name="siteNeeds" value="店舗情報/アクセス" /> 店舗情報/アクセス</label>
+              <label><input type="checkbox" name="siteNeeds" value="ギャラリー" /> ギャラリー</label>
+              <label><input type="checkbox" name="siteNeeds" value="問い合わせフォーム" /> 問い合わせフォーム</label>
+              <label><input type="checkbox" name="siteNeeds" value="予約導線" /> 予約導線</label>
+              <label><input type="checkbox" name="siteNeeds" value="LINE/Instagram導線" /> LINE/Instagram導線</label>
+              <label><input type="checkbox" name="siteNeeds" value="お知らせ更新" /> お知らせ更新</label>
+              <label><input type="checkbox" name="siteNeeds" value="採用ページ" /> 採用ページ</label>
+              <label><input type="checkbox" name="siteNeeds" value="まだ未定" /> まだ未定</label>
+            </div>
+            <p class="field-hint" data-group-error></p>
+          </fieldset>
+
+          <fieldset class="form-section">
+            <legend>素材・公開準備</legend>
+            <div class="field-grid two">
+              <label>
+                写真素材
+                <select name="photoStatus">
+                  <option>未確認</option>
+                  <option>あり</option>
+                  <option>一部あり</option>
+                  <option>撮影が必要</option>
+                  <option>不要</option>
+                </select>
+              </label>
+              <label>
+                原稿・掲載文
+                <select name="textStatus">
+                  <option>未確認</option>
+                  <option>あり</option>
+                  <option>一部あり</option>
+                  <option>作成が必要</option>
+                </select>
+              </label>
+              <label>
+                ロゴ
+                <select name="logoStatus">
+                  <option>未確認</option>
+                  <option>あり</option>
+                  <option>なし</option>
+                  <option>作成が必要</option>
+                </select>
+              </label>
+              <label>
+                ドメイン
+                <select name="domainStatus">
+                  <option>未確認</option>
+                  <option>持っている</option>
+                  <option>新規取得したい</option>
+                  <option>不要/未定</option>
+                </select>
+              </label>
+              <label>
+                サーバー
+                <select name="serverStatus">
+                  <option>未確認</option>
+                  <option>持っている</option>
+                  <option>こちらで提案してほしい</option>
+                  <option>不要/未定</option>
+                </select>
+              </label>
+              <label>
+                営業担当
+                <select name="owner">
+                  <option>浦田</option>
+                  <option>渡邉</option>
+                  <option>未定</option>
+                </select>
+              </label>
+            </div>
+            <label>
+              参考サイト
+              <textarea name="references" rows="3" placeholder="好きなサイトURL、近い雰囲気のサイトなど"></textarea>
+            </label>
+            <div class="field-grid two">
+              <label>
+                予算感
+                <select name="budget">
+                  <option>未定</option>
+                  <option>3万円未満</option>
+                  <option>3-10万円</option>
+                  <option>10-30万円</option>
+                  <option>30-50万円</option>
+                  <option>50万円以上</option>
+                </select>
+              </label>
+              <label>
+                希望公開時期
+                <select name="timeline">
+                  <option>未定</option>
+                  <option>急ぎ</option>
+                  <option>1週間以内</option>
+                  <option>1か月以内</option>
+                  <option>2-3か月以内</option>
+                </select>
+              </label>
+              <label>
+                月額保守の興味
+                <select name="maintenanceInterest">
+                  <option>未確認</option>
+                  <option>あり</option>
+                  <option>条件次第</option>
+                  <option>なし</option>
+                </select>
+              </label>
+            </div>
+            <label>
+              追加メモ
+              <textarea name="memo" rows="4"></textarea>
+            </label>
+          </fieldset>
+
+          <div class="submit-row">
+            <button class="primary-button" type="submit" data-submit-button>
+              スプレッドシートへ送信
+            </button>
+            <p class="form-result" data-form-result aria-live="polite"></p>
+          </div>
+        </div>
+      </form>
+    </main>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
