@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 950" role="img" aria-labelledby="title desc">
+  <title id="title">桃音ゆめ コンセプトアート</title>
+  <desc id="desc">ピンクと白を基調にしたVTuber公式サイト用のヒーローアート</desc>
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fff8fc"/>
+      <stop offset="0.42" stop-color="#ffe2f1"/>
+      <stop offset="1" stop-color="#fff"/>
+    </linearGradient>
+    <linearGradient id="pink" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffd0e8"/>
+      <stop offset="0.52" stop-color="#ff77b8"/>
+      <stop offset="1" stop-color="#bfa4ff"/>
+    </linearGradient>
+    <linearGradient id="mint" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#66dec9"/>
+      <stop offset="1" stop-color="#8bd8ff"/>
+    </linearGradient>
+    <filter id="soft" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="34" stdDeviation="32" flood-color="#c94b91" flood-opacity="0.22"/>
+      <feDropShadow dx="0" dy="0" stdDeviation="16" flood-color="#ffffff" flood-opacity="0.78"/>
+    </filter>
+  </defs>
+  <rect width="1600" height="950" fill="url(#sky)"/>
+  <g opacity="0.9">
+    <circle cx="930" cy="170" r="92" fill="#ffe47a"/>
+    <circle cx="968" cy="144" r="94" fill="#ffe2f1"/>
+    <path d="M132 704c214-128 407-111 579 42 183 162 382 155 667-36" fill="none" stroke="#fff" stroke-width="70" stroke-linecap="round" opacity="0.72"/>
+    <path d="M124 604c230-88 405-70 548 50 172 144 405 154 742 8" fill="none" stroke="url(#mint)" stroke-width="20" stroke-linecap="round" opacity="0.64"/>
+    <path d="M-20 368c240-84 420-66 565 42 158 118 340 127 578 12" fill="none" stroke="#ff8ec7" stroke-width="26" stroke-linecap="round" opacity="0.36"/>
+  </g>
+  <g opacity="0.52" stroke="#fff" stroke-width="2">
+    <path d="M0 826h1600M0 756h1600M0 686h1600M0 616h1600M0 546h1600"/>
+    <path d="M230 950l460-950M520 950l350-950M840 950l190-950M1170 950l-40-950M1450 950l-260-950"/>
+  </g>
+  <g fill="none" stroke="#ff73b7" stroke-width="8" opacity="0.8">
+    <path d="M151 205l19 39 43 6-31 30 7 43-38-20-38 20 7-43-31-30 43-6z"/>
+    <path d="M1368 220c26-32 78-12 78 29 0 54-78 91-78 91s-78-37-78-91c0-41 52-61 78-29z"/>
+  </g>
+  <g font-family="'Yu Gothic','Hiragino Kaku Gothic ProN',Meiryo,sans-serif" font-weight="900" opacity="0.78">
+    <text x="116" y="838" fill="#ff7fbc" font-size="38" letter-spacing="10">MOMONE YUME</text>
+    <text x="119" y="889" fill="#6e4b79" font-size="22" letter-spacing="5">LIVE / GOODS / FAN SITE</text>
+  </g>
+  <g filter="url(#soft)" transform="translate(850 104)">
+    <path d="M286 8c-166 2-294 121-308 286-12 140 43 230 13 344-24 92-105 143-105 143 157 45 265 5 335-76 65 72 170 112 304 96 111-13 190-64 190-64-96-55-128-139-114-250 16-137 10-281-78-374C465 52 392 7 286 8z" fill="url(#pink)"/>
+    <ellipse cx="286" cy="346" rx="204" ry="224" fill="#ffe3ef"/>
+    <path d="M86 318c78-26 142-82 184-165 55 91 155 147 251 168-13-143-96-236-235-236-130 0-209 89-200 233z" fill="url(#pink)"/>
+    <circle cx="216" cy="364" r="34" fill="#34243f"/>
+    <circle cx="364" cy="364" r="34" fill="#34243f"/>
+    <circle cx="228" cy="350" r="11" fill="#fff"/>
+    <circle cx="376" cy="350" r="11" fill="#fff"/>
+    <path d="M263 432c34 26 70 26 107 0" stroke="#a33e72" stroke-width="15" stroke-linecap="round" fill="none"/>
+    <circle cx="162" cy="414" r="22" fill="#ffb4d4" opacity="0.48"/>
+    <circle cx="415" cy="414" r="22" fill="#ffb4d4" opacity="0.48"/>
+    <path d="M112 646c33-114 94-169 178-169 85 0 146 55 179 169l70 230H42z" fill="#fff"/>
+    <path d="M152 648h276M197 737h187" stroke="#ffd0e8" stroke-width="28" stroke-linecap="round"/>
+    <path d="M207 547l83 81 83-81" stroke="#ff7fbc" stroke-width="29" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    <circle cx="290" cy="676" r="34" fill="#ffe47a"/>
+    <path d="M92 816c118 60 248 60 394 0" stroke="url(#mint)" stroke-width="22" stroke-linecap="round" fill="none"/>
+    <path d="M98 251c-46-32-64-78-43-118 28-54 98-46 132 7" fill="#ffb4d4"/>
+    <path d="M478 251c46-32 64-78 43-118-28-54-98-46-132 7" fill="#ffb4d4"/>
+  </g>
+  <g fill="#ff7fbc" opacity="0.7" font-size="54" font-family="Arial, sans-serif" font-weight="900">
+    <text x="1230" y="454">♪</text>
+    <text x="1400" y="575">♪</text>
+    <text x="1000" y="94">✦</text>
+    <text x="760" y="236">♡</text>
+  </g>
+</svg>
