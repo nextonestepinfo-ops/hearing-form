@@ -41,14 +41,13 @@
 
     <header class="site-header">
       <a class="brand" href="./index.html#top" aria-label="白狼このは ホーム">
-        <span class="brand-mark">狼</span>
-        <span>白狼このは</span>
+        <img class="brand-logo" src="./assets/konoha-logo.png" alt="白狼このは" />
       </a>
       <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
       <nav class="site-nav" id="site-nav" aria-label="主要メニュー">
         <a href="./index.html#profile">プロフィール</a>
         <a href="./index.html#schedule">ムービー</a>
-        <a href="./guideline.html">ガイドライン</a>
+        <a href="./guideline.html">ガイド</a>
         <a href="./contact.html">お仕事</a>
       </nav>
     </header>
@@ -95,21 +94,32 @@
 
         <div class="hero-inner">
           <div class="hero-copy" data-reveal>
-            <p class="hero-official">Official Website</p>
+            <p class="hero-official">オフィシャルサイト</p>
             <img class="hero-logo" src="./assets/konoha-logo.png" alt="白狼このは" />
             <h1 id="hero-title">白狼このは</h1>
-            <div class="hero-actions">
-              <a class="button primary" href="https://www.twitch.tv/shirokamikonoha" target="_blank" rel="noreferrer">TWITCH</a>
-              <a class="button secondary" href="https://www.youtube.com/@%E7%99%BD%E7%8B%BC%E3%81%93%E3%81%AE%E3%81%AF" target="_blank" rel="noreferrer">YOUTUBE</a>
-              <a class="button secondary" href="https://x.com/ShirokamiKonoha" target="_blank" rel="noreferrer">X</a>
+            <p class="hero-tagline">ゲームが大好きな<br class="mobile-break" />おおかみVTuber</p>
+            <div class="hero-actions" aria-label="活動リンク">
+              <a class="button primary platform-button twitch-button" href="https://www.twitch.tv/shirokamikonoha" target="_blank" rel="noreferrer" aria-label="Twitch">
+                <span class="platform-logo twitch-logo" aria-hidden="true">
+                  <svg viewBox="0 0 48 48" role="img"><path d="M12 8h28v20L29 39h-7l-6 5v-5H8V14z" fill="currentColor"/><path d="M16 13v20h7v-4h6l6-6V13z" fill="currentColor"/><path d="M23 17h3v9h-3zm8 0h3v9h-3z" fill="#4f6761"/></svg>
+                </span>
+              </a>
+              <a class="button secondary platform-button youtube-button" href="https://www.youtube.com/@%E7%99%BD%E7%8B%BC%E3%81%93%E3%81%AE%E3%81%AF" target="_blank" rel="noreferrer" aria-label="YouTube">
+                <span class="platform-logo youtube-logo" aria-hidden="true">
+                  <svg viewBox="0 0 52 36" role="img"><rect width="52" height="36" rx="10" fill="currentColor"/><path d="M22 11v14l13-7z" fill="#fff"/></svg>
+                </span>
+              </a>
+              <a class="button secondary platform-button x-button" href="https://x.com/ShirokamiKonoha" target="_blank" rel="noreferrer" aria-label="X">
+                <span class="platform-logo x-logo" aria-hidden="true">X</span>
+              </a>
             </div>
           </div>
         </div>
 
         <div class="hero-billboard" data-parallax="-0.022" aria-label="主要導線">
-          <a href="#profile"><strong>PROFILE</strong><span>プロフィール</span></a>
-          <a href="#schedule"><strong>MOVIE</strong><span>ムービー</span></a>
-          <a href="./guideline.html"><strong>TAG</strong><span>ガイドライン</span></a>
+          <a href="#profile"><strong>プロフィール</strong><span>シロカミノコト</span></a>
+          <a href="#schedule"><strong>ムービー</strong><span>ハイシン</span></a>
+          <a href="./guideline.html"><strong>ガイド</strong><span>タグ</span></a>
         </div>
         <a class="scroll-cue" href="#profile" aria-label="プロフィールへスクロール"><span>SCROLL</span></a>
       </section>
@@ -125,48 +135,48 @@
 
       <section id="profile" class="section-block profile" aria-labelledby="profile-title" data-section-word="PROFILE">
         <div class="profile-copy" data-reveal>
-          <p class="eyebrow">Profile</p>
+          <p class="eyebrow">プロフィール</p>
           <h2 id="profile-title">白狼このは</h2>
           <ul class="profile-points">
-            <li><strong>Name</strong><span>白狼このは / Shirokami Konoha</span></li>
-            <li><strong>About</strong><span>ゲームが大好きなおおかみVTuber</span></li>
-            <li><strong>Fan Mark</strong><span>🐺🤍</span></li>
-            <li><strong>Tag</strong><span>#このはみてみて</span></li>
-            <li><strong>Fan Art</strong><span>#しろかきたい</span></li>
-            <li><strong>Food</strong><span>#えさまでこのは</span></li>
+            <li><strong>ナマエ</strong><span>白狼このは / Shirokami Konoha</span></li>
+            <li><strong>スキ</strong><span>ゲームが大好きなおおかみVTuber</span></li>
+            <li><strong>ファンマーク</strong><span>🐺🤍</span></li>
+            <li><strong>タグ</strong><span>#このはみてみて</span></li>
+            <li><strong>ファンアート</strong><span>#しろかきたい</span></li>
+            <li><strong>ゴハン</strong><span>#えさまでこのは</span></li>
           </ul>
         </div>
         <figure class="profile-visual" data-reveal data-tilt>
           <img src="./assets/konoha-icon.webp" alt="白狼このはのアイコン用ビジュアル" loading="lazy" decoding="async" />
           <figcaption>
-            <span>Shirokami Konoha</span>
+            <span>オフィシャルビジュアル</span>
             <strong>白狼このは</strong>
             <p>ゲームと白狼らしさを大切にした、白銀とミントの公式ビジュアル。</p>
           </figcaption>
         </figure>
       </section>
 
-      <section id="schedule" class="section-block" aria-labelledby="schedule-title" data-section-word="MOVIE">
+      <section id="schedule" class="section-block" aria-labelledby="schedule-title" data-section-word="ムービー">
         <div class="section-head" data-reveal>
-          <p>Movie / Live</p>
-          <h2 id="schedule-title">Movie</h2>
+          <p>ムービー / ライブ</p>
+          <h2 id="schedule-title">ムービー</h2>
         </div>
         <div class="schedule-grid">
           <article class="schedule-card highlight" data-reveal data-tilt>
             <span data-card-1-date>Twitch</span>
-            <h3 data-card-1-title>Live Stream</h3>
+            <h3 data-card-1-title>ライブ</h3>
             <p data-card-1-copy>ゲーム配信はこちら。</p>
             <a href="https://www.twitch.tv/shirokamikonoha" target="_blank" rel="noreferrer">Twitchを開く</a>
           </article>
           <article class="schedule-card" data-reveal data-tilt>
             <span data-card-2-date>YouTube</span>
-            <h3 data-card-2-title>Archive / Video</h3>
+            <h3 data-card-2-title>アーカイブ</h3>
             <p data-card-2-copy>動画とアーカイブはこちら。</p>
             <a href="https://www.youtube.com/@%E7%99%BD%E7%8B%BC%E3%81%93%E3%81%AE%E3%81%AF" target="_blank" rel="noreferrer">YouTubeを開く</a>
           </article>
           <article class="schedule-card" data-reveal data-tilt>
             <span data-card-3-date>X</span>
-            <h3 data-card-3-title>News</h3>
+            <h3 data-card-3-title>ニュース</h3>
             <p data-card-3-copy>最新告知はこちら。</p>
             <a href="https://x.com/ShirokamiKonoha" target="_blank" rel="noreferrer">Xを開く</a>
           </article>
@@ -175,8 +185,8 @@
     </main>
 
     <footer class="site-footer">
-      <span>白狼このは Official Website</span>
-      <span>Last updated 2026.05.14</span>
+      <span>白狼このは オフィシャルサイト</span>
+      <span>Last updated 2026.05.15</span>
     </footer>
 
     <script src="./script.js"></script>

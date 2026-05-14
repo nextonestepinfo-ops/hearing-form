@@ -12,7 +12,7 @@
   --wolf: #929aa5;
   --snow: #ffffff;
   --shadow: rgba(33, 54, 50, 0.16);
-  --cute-font: "Hiragino Maru Gothic ProN", "Yu Gothic UI", "Yu Gothic", Meiryo, system-ui, sans-serif;
+  --cute-font: "UD Digi Kyokasho N-R", "UD Digi Kyokasho NP-R", "Hiragino Maru Gothic ProN", "Yu Gothic UI", "Yu Gothic", Meiryo, system-ui, sans-serif;
 }
 
 * {
@@ -345,16 +345,18 @@ p {
   text-decoration: none;
 }
 
-.brand-mark {
-  display: grid;
-  width: 38px;
-  height: 38px;
-  flex: 0 0 auto;
-  place-items: center;
-  border-radius: 8px;
-  color: #fff;
-  background: linear-gradient(135deg, #5b6869, var(--mint-strong));
-  box-shadow: 0 10px 24px rgba(75, 121, 110, 0.26);
+.brand-logo {
+  display: block;
+  width: min(190px, 42vw);
+  max-height: 50px;
+  object-fit: contain;
+  object-position: left center;
+  filter:
+    brightness(0.95)
+    contrast(1.2)
+    saturate(1.12)
+    drop-shadow(0 5px 0 rgba(255, 255, 255, 0.78))
+    drop-shadow(0 10px 18px rgba(67, 103, 96, 0.12));
 }
 
 .site-nav {
@@ -535,12 +537,12 @@ p {
 
 .art-frame {
   position: absolute;
-  right: max(-90px, calc((100vw - 1280px) / 2 - 108px));
+  right: max(-130px, calc((100vw - 1280px) / 2 - 132px));
   top: clamp(68px, 8vh, 116px);
   bottom: auto;
-  width: min(62vw, 920px);
+  width: min(68vw, 1000px);
   height: min(86svh, 1120px);
-  min-height: 760px;
+  min-height: 790px;
 }
 
 .art-frame::before {
@@ -567,12 +569,12 @@ p {
 .art-frame img {
   position: absolute;
   z-index: 3;
-  right: 6%;
+  right: 0;
   bottom: 0;
-  width: min(112%, 900px);
+  width: min(118%, 980px);
   max-height: 100%;
   object-fit: contain;
-  filter: drop-shadow(0 28px 32px rgba(36, 49, 49, 0.24)) drop-shadow(0 0 20px rgba(255, 255, 255, 0.8));
+  filter: drop-shadow(0 30px 34px rgba(36, 49, 49, 0.24)) drop-shadow(0 0 20px rgba(255, 255, 255, 0.82));
   transform-origin: 50% 92%;
   animation: character-float 6.2s ease-in-out infinite alternate;
 }
@@ -605,6 +607,12 @@ p {
   width: 58%;
   background: rgba(223, 229, 234, 0.46);
   animation: line-drift 6s ease-in-out infinite reverse;
+}
+
+.art-frame::before,
+.art-frame::after,
+.art-line {
+  display: none;
 }
 
 .hero-social-rail {
@@ -736,10 +744,44 @@ p {
   z-index: 2;
   display: block;
   width: min(760px, 56vw);
-  margin: 0 0 26px;
+  margin: 0 0 12px;
   filter: drop-shadow(0 20px 30px rgba(67, 103, 96, 0.18));
   transform-origin: center;
   animation: logo-float 4.8s ease-in-out infinite alternate;
+}
+
+.hero-tagline {
+  position: relative;
+  z-index: 2;
+  width: min(540px, 100%);
+  margin: 0 0 26px;
+  color: #415a57;
+  font-family: var(--cute-font);
+  font-size: clamp(1.85rem, 3.6vw, 3.35rem);
+  font-weight: 900;
+  line-height: 1.06;
+  letter-spacing: 0;
+  text-shadow:
+    0 3px 0 rgba(255, 255, 255, 0.96),
+    0 8px 0 rgba(145, 212, 196, 0.18),
+    0 18px 34px rgba(67, 103, 96, 0.16);
+}
+
+.hero-tagline::after {
+  content: "🐺🤍";
+  display: inline-grid;
+  margin-left: 12px;
+  border: 1px solid rgba(95, 174, 155, 0.22);
+  border-radius: 999px;
+  padding: 3px 10px 5px;
+  background: rgba(255, 255, 255, 0.72);
+  font-size: 0.42em;
+  vertical-align: middle;
+  box-shadow: 0 12px 24px rgba(67, 103, 96, 0.1);
+}
+
+.mobile-break {
+  display: none;
 }
 
 .hero-official {
@@ -883,6 +925,47 @@ h1 {
 
 .button.secondary {
   background: rgba(255, 255, 255, 0.72);
+}
+
+.hero-actions .platform-button {
+  width: 98px;
+  min-height: 76px;
+  padding: 0;
+  border-radius: 8px;
+}
+
+.hero-actions .platform-button::after {
+  opacity: 0.78;
+}
+
+.platform-logo {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  place-items: center;
+  color: currentColor;
+}
+
+.platform-logo svg {
+  display: block;
+  width: 42px;
+  height: 42px;
+}
+
+.twitch-logo {
+  color: #fff;
+}
+
+.youtube-logo {
+  color: #ff3f56;
+}
+
+.x-logo {
+  color: #2d3638;
+  font-family: var(--cute-font);
+  font-size: 2.15rem;
+  font-weight: 900;
+  line-height: 1;
 }
 
 .hero-meta {
@@ -1171,12 +1254,14 @@ h1 {
 .section-head p {
   margin: 0;
   color: #608173;
+  font-family: var(--cute-font);
   font-weight: 900;
   letter-spacing: 0.08em;
 }
 
 h2 {
   margin: 0;
+  font-family: var(--cute-font);
   font-size: clamp(2.08rem, 4.9vw, 4.25rem);
   line-height: 1.04;
   text-wrap: balance;
@@ -1219,6 +1304,7 @@ h2 {
 .profile-visual strong {
   display: block;
   margin: 14px 0 10px;
+  font-family: var(--cute-font);
   font-size: 1.32rem;
   line-height: 1.32;
 }
@@ -1287,6 +1373,7 @@ h2 {
 }
 
 .profile-points strong {
+  font-family: var(--cute-font);
   color: #55756d;
 }
 
@@ -2130,12 +2217,28 @@ h2 {
 
   .hero-logo {
     width: min(315px, 82vw);
-    margin: 0 auto 0;
+    margin: 0 auto 4px;
     filter:
       contrast(1.13)
       saturate(1.05)
       drop-shadow(0 6px 0 rgba(255, 255, 255, 0.86))
       drop-shadow(0 12px 18px rgba(67, 103, 96, 0.1));
+  }
+
+  .hero-tagline {
+    width: min(286px, 76vw);
+    margin: 0 auto 0 18px;
+    text-align: left;
+    font-size: clamp(1.72rem, 7.8vw, 2.34rem);
+    line-height: 1.04;
+  }
+
+  .hero-tagline::after {
+    display: none;
+  }
+
+  .mobile-break {
+    display: block;
   }
 
   .hero-official {
@@ -2190,7 +2293,7 @@ h2 {
   .hero-actions {
     justify-content: center;
     gap: 8px;
-    margin-top: clamp(188px, 24svh, 236px);
+    margin-top: clamp(134px, 17svh, 186px);
   }
 
   .button {
@@ -2200,12 +2303,26 @@ h2 {
     backdrop-filter: none;
   }
 
+  .hero-actions .platform-button {
+    width: 78px;
+    min-height: 58px;
+  }
+
+  .platform-logo svg {
+    width: 34px;
+    height: 34px;
+  }
+
+  .x-logo {
+    font-size: 1.78rem;
+  }
+
   .art-frame {
-    top: 232px;
-    right: -30%;
+    top: 238px;
+    right: -38%;
     bottom: auto;
-    width: min(106vw, 430px);
-    min-height: 620px;
+    width: min(118vw, 470px);
+    min-height: 650px;
   }
 
   .art-frame img {
@@ -2269,7 +2386,9 @@ h2 {
   }
 
   .hero-billboard strong {
-    font-size: 1.02rem;
+    font-size: clamp(0.88rem, 3.7vw, 1.02rem);
+    letter-spacing: 0;
+    white-space: nowrap;
   }
 
   .hero-billboard span {
