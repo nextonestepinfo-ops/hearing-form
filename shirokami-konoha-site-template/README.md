@@ -6,6 +6,7 @@
 
 - `立ち絵　PSD.png` をWeb表示用に縮小し、`assets/konoha-standee.webp` / `assets/konoha-standee-small.webp` / `assets/konoha-hero-bust-mobile.webp` として使用
 - `icon用に撮ったもの.png` をWeb表示用に縮小し、`assets/konoha-icon.webp` として使用
+- `2.png` を正式ロゴとして `assets/konoha-logo.png` に配置
 - 年賀画像は直接使用していません。色の印象だけを参考にして、ミント/グリーンをアクセントカラーにしています。
 
 ## ページ構成
@@ -18,7 +19,6 @@
 
 ## 追加でもらえると完成度が上がる素材
 
-- 公式ロゴの透過PNGまたはSVG
 - 三面図、表情差分、SDキャラ
 - 配信画面、待機画面、サムネテンプレート
 - ファンマーク、ハッシュタグ、ガイドライン
