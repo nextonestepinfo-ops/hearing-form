@@ -703,7 +703,7 @@ html.is-scrolling .hero-vertical-type span {
 .hero-art {
   z-index: 4;
   left: auto;
-  width: min(66vw, 1040px);
+  width: min(72vw, 1140px);
   margin-left: auto;
   transform: translateY(calc(var(--parallax-y, 0px) + var(--scroll-bump, 0px))) rotate(var(--scroll-tilt, 0deg));
   transition: transform 0.16s ease-out;
@@ -712,12 +712,12 @@ html.is-scrolling .hero-vertical-type span {
 
 .art-frame {
   position: absolute;
-  right: max(-130px, calc((100vw - 1280px) / 2 - 132px));
-  top: clamp(68px, 8vh, 116px);
+  right: max(-170px, calc((100vw - 1280px) / 2 - 172px));
+  top: clamp(54px, 7vh, 96px);
   bottom: auto;
-  width: min(68vw, 1000px);
-  height: min(86svh, 1120px);
-  min-height: 790px;
+  width: min(73vw, 1120px);
+  height: min(90svh, 1180px);
+  min-height: 830px;
 }
 
 .art-frame::before {
@@ -746,7 +746,7 @@ html.is-scrolling .hero-vertical-type span {
   z-index: 3;
   right: 0;
   bottom: 0;
-  width: min(118%, 980px);
+  width: min(126%, 1080px);
   max-height: 100%;
   object-fit: contain;
   filter: drop-shadow(0 30px 34px rgba(36, 49, 49, 0.24)) drop-shadow(0 0 20px rgba(255, 255, 255, 0.82));
@@ -2424,10 +2424,10 @@ h2 {
   }
 
   .art-frame {
-    top: 198px;
-    right: -18%;
-    width: min(94vw, 640px);
-    min-height: 560px;
+    top: 156px;
+    right: -24%;
+    width: min(108vw, 740px);
+    min-height: 640px;
   }
 
   .hero-float-tags span:nth-child(n + 3) {
@@ -2813,19 +2813,19 @@ h2 {
   }
 
   .art-frame {
-    top: 88px;
-    right: -16vw;
+    top: 72px;
+    right: -26vw;
     bottom: auto;
-    width: min(120vw, 540px);
-    height: calc(100svh - 108px);
-    min-height: 560px;
+    width: min(144vw, 640px);
+    height: calc(100svh - 84px);
+    min-height: 650px;
   }
 
   .art-frame img {
     top: auto;
     right: 0;
     bottom: 0;
-    width: min(112%, 520px);
+    width: min(124%, 620px);
     max-height: 100%;
     filter: drop-shadow(0 24px 28px rgba(36, 49, 49, 0.21)) drop-shadow(0 0 18px rgba(255, 255, 255, 0.72));
   }
