@@ -5,34 +5,54 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>桃音ゆめ | VTuber公式サイトデモ</title>
   <meta name="description" content="活動中VTuber向けの公式サイトデモ。配信予定、推し活リンク、グッズ、企業案件相談まで整理します。" />
+  <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml" />
   <link rel="stylesheet" href="./styles.css" />
 </head>
 <body>
   <div class="loader" data-loader><strong>夢</strong><span>Momone Yume</span></div>
   <div class="progress"><span data-progress></span></div>
   <div class="cursor" data-cursor></div>
+
   <header class="header">
     <a class="brand" href="#top"><span>夢</span>桃音ゆめ</a>
     <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav">Menu</button>
     <nav id="nav" class="nav">
-      <a href="#news">お知らせ</a><a href="#profile">プロフィール</a><a href="#assets">素材</a><a href="#schedule">配信予定</a><a href="#fan">推し活</a><a href="#contact">相談</a>
+      <a href="#news">お知らせ</a>
+      <a href="#profile">プロフィール</a>
+      <a href="#assets">素材</a>
+      <a href="#schedule">配信予定</a>
+      <a href="#fan">推し活</a>
+      <a href="#contact">相談</a>
     </nav>
   </header>
 
   <main id="top">
-    <section class="hero">
-      <div class="hero-bg"></div>
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-bg" aria-hidden="true"></div>
+      <div class="hero-shade" aria-hidden="true"></div>
       <div class="hero-copy" data-reveal>
         <p class="status">ON AIR SOON / 活動中VTuber向け公式サイトデモ</p>
-        <h1>桃音ゆめ<small>Momone Yume Official</small></h1>
+        <img class="hero-logo" src="./assets/momone-yume-logo.svg" alt="桃音ゆめ" />
+        <h1 id="hero-title">桃音ゆめ<small>Momone Yume Official</small></h1>
         <p class="lead" data-lead>配信、アーカイブ、グッズ、SNS、案件相談がばらばらになりがちな活動中VTuber向けに、今の活動をもっと見やすく、もっと推しやすく、もっと仕事につながる形へ整えます。</p>
-        <div class="actions"><a class="button primary" href="#schedule">最新配信を見る</a><a class="button" href="#assets">制作素材を見る</a></div>
-        <div class="mode-tabs"><button data-mode="live" aria-pressed="true">通常配信</button><button data-mode="game">ゲーム</button><button data-mode="song">歌枠</button></div>
+        <div class="actions">
+          <a class="button primary" href="#schedule">最新配信を見る</a>
+          <a class="button" href="#assets">制作素材を見る</a>
+        </div>
+        <div class="mode-tabs">
+          <button data-mode="live" aria-pressed="true">通常配信</button>
+          <button data-mode="game">ゲーム</button>
+          <button data-mode="song">歌枠</button>
+        </div>
       </div>
       <div class="stage" data-reveal data-tilt>
         <div class="stage-top"><span>LIVE ROOM</span><strong data-stage>Live</strong></div>
         <img src="./assets/momone-live-loop.svg" alt="桃音ゆめの配信告知ビジュアル" />
-        <div class="chat"><p>今日の配信は21時！</p><p>グッズ再販のお知らせあり</p><p>案件相談フォーム受付中</p></div>
+        <div class="chat">
+          <p>今日の配信は21時！</p>
+          <p>グッズ再販のお知らせあり</p>
+          <p>案件相談フォーム受付中</p>
+        </div>
       </div>
     </section>
 
@@ -48,7 +68,12 @@
     </section>
 
     <section id="profile" class="section profile">
-      <div data-reveal><p class="eyebrow">Profile</p><h2>かわいさだけで終わらせず、活動内容までちゃんと伝える。</h2><p>桃音ゆめは、雑談、ゲーム、歌枠、グッズ展開を中心に活動するピンク髪の女の子VTuber。初見さんが入りやすく、常連さんが追いやすく、企業担当者が相談しやすい場所を作ります。</p><ul><li>ファンネーム: ゆめとも</li><li>配信タグ: #ゆめの放課後</li><li>ファンアート: #ゆめいろ絵日記</li></ul></div>
+      <div data-reveal>
+        <p class="eyebrow">Profile</p>
+        <h2>かわいさだけで終わらせず、活動内容までちゃんと伝える。</h2>
+        <p>桃音ゆめは、雑談、ゲーム、歌枠、グッズ展開を中心に活動するピンク髪の女の子VTuber。初見さんが入りやすく、常連さんが追いやすく、企業担当者が相談しやすい場所を作ります。</p>
+        <ul><li>ファンネーム: ゆめとも</li><li>配信タグ: #ゆめの放課後</li><li>ファンアート: #ゆめいろ絵日記</li></ul>
+      </div>
       <img data-reveal src="./assets/momone-hero.svg" alt="桃音ゆめのキャラクタービジュアル" />
     </section>
 
