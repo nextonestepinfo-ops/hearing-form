@@ -1,0 +1,102 @@
+﻿<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ギャラリー | 白狼このは</title>
+    <meta name="description" content="白狼このはの立ち絵、アイコン、配信用素材、三面図や表情差分をまとめるギャラリーページです。" />
+    <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="loader" data-loader aria-hidden="true"><div class="loader-mark">狼</div><p>Gallery</p><span></span></div>
+    <div class="scroll-progress" aria-hidden="true"><span data-scroll-progress></span></div>
+    <div class="deco-layer" aria-hidden="true">
+      <span style="--x: 10%; --y: 20%; --d: 0s; --s: 1.1">✦</span>
+      <span style="--x: 84%; --y: 74%; --d: 1.4s; --s: 1">◇</span>
+      <span style="--x: 58%; --y: 16%; --d: 2s; --s: .8">❋</span>
+    </div>
+
+    <header class="site-header">
+      <a class="brand" href="./index.html#top" aria-label="白狼このは ホーム"><span class="brand-mark">狼</span><span>白狼このは</span></a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+      <nav class="site-nav" id="site-nav" aria-label="主要メニュー">
+        <a href="./index.html#profile">プロフィール</a>
+        <a href="./index.html#schedule">ムービー</a>
+        <a href="./guideline.html">ガイドライン</a>
+        <a href="./fan.html">推し活</a>
+        <a href="./contact.html">お仕事</a>
+      </nav>
+    </header>
+
+    <main class="page-main">
+      <section class="page-hero" aria-labelledby="page-title">
+        <div data-reveal>
+          <p class="eyebrow">Gallery / Media Kit</p>
+          <h1 id="page-title">ビジュアルギャラリー。</h1>
+          <p>立ち絵、アイコン、配信用ビジュアル、告知に使える素材をまとめています。</p>
+        </div>
+        <figure class="page-hero-card" data-reveal data-tilt>
+          <img src="./assets/konoha-icon.webp" alt="白狼このはのアイコン素材" decoding="async" />
+        </figure>
+      </section>
+
+      <section class="section-block asset-lab" aria-labelledby="asset-title" data-section-word="GALLERY">
+        <div class="section-head" data-reveal>
+          <p>Visual Stage</p>
+          <h2 id="asset-title">配信前の空気まで、かわいく。</h2>
+        </div>
+        <div class="asset-grid">
+          <figure class="asset-card motion" data-reveal data-tilt>
+            <div class="css-motion-stage" role="img" aria-label="白狼このはのCSSアニメーション演出">
+              <span class="motion-band band-a" aria-hidden="true"></span>
+              <span class="motion-band band-b" aria-hidden="true"></span>
+              <span class="motion-note note-a" aria-hidden="true">LIVE</span>
+              <span class="motion-note note-b" aria-hidden="true">KONOHA</span>
+              <span class="motion-note note-c" aria-hidden="true">MINT</span>
+              <img src="./assets/konoha-standee-small.webp" alt="白狼このはの立ち絵" loading="lazy" decoding="async" />
+              <span class="motion-ribbon" aria-hidden="true">LIVE READY</span>
+              <span class="motion-eq" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span>
+              <span class="motion-live-badge" aria-hidden="true">#このはみてみて</span>
+            </div>
+            <figcaption>
+              <span>Live Visual</span>
+              <strong>待機画面風ビジュアル</strong>
+              <p>配信前の高まりを感じられるよう、文字、光の帯、音量バー、浮遊感を重ねています。</p>
+            </figcaption>
+          </figure>
+          <figure class="asset-card" data-reveal data-tilt>
+            <img src="./assets/konoha-standee-small.webp" alt="白狼このはの全身立ち絵" loading="lazy" decoding="async" />
+            <figcaption>
+              <span>Standing Visual</span>
+              <strong>全身立ち絵</strong>
+              <p>トップ、プロフィール、告知バナーに使いやすいメイン素材。</p>
+            </figcaption>
+          </figure>
+          <figure class="asset-card" data-reveal data-tilt>
+            <img src="./assets/konoha-icon.webp" alt="白狼このはのアイコン用立ち絵" loading="lazy" decoding="async" />
+            <figcaption>
+              <span>Icon Visual</span>
+              <strong>アイコン/上半身素材</strong>
+              <p>SNS、プロフィール、告知枠に使いやすい近めのビジュアル。</p>
+            </figcaption>
+          </figure>
+          <article class="asset-card request-card wide" data-reveal data-tilt>
+            <div>
+              <span>Coming Soon</span>
+              <strong>準備中の素材</strong>
+              <p>三面図、表情差分、配信画面、サムネテンプレ、ガイドラインなどは順次追加予定です。</p>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>白狼このは Official Website</span>
+      <span>Gallery / Media Kit</span>
+    </footer>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,94 @@
+﻿<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>推し活 | 白狼このは</title>
+    <meta name="description" content="白狼このはのTwitch、YouTube、Xへの導線と、ファン向けの情報をまとめたページです。" />
+    <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="loader" data-loader aria-hidden="true"><div class="loader-mark">狼</div><p>Fan Hub</p><span></span></div>
+    <div class="scroll-progress" aria-hidden="true"><span data-scroll-progress></span></div>
+    <header class="site-header">
+      <a class="brand" href="./index.html#top" aria-label="白狼このは ホーム"><span class="brand-mark">狼</span><span>白狼このは</span></a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+      <nav class="site-nav" id="site-nav" aria-label="主要メニュー">
+        <a href="./index.html#profile">プロフィール</a>
+        <a href="./index.html#schedule">ムービー</a>
+        <a href="./guideline.html">ガイドライン</a>
+        <a href="./fan.html" aria-current="page">推し活</a>
+        <a href="./contact.html">お仕事</a>
+      </nav>
+    </header>
+
+    <main class="page-main">
+      <section class="page-hero" aria-labelledby="page-title">
+        <div data-reveal>
+          <p class="eyebrow">Fan Hub</p>
+          <h1 id="page-title">推し先を、迷わない。</h1>
+          <p>配信を見る、アーカイブを見る、告知を追う。タグやファンマークもここから確認できます。</p>
+        </div>
+        <figure class="page-hero-card" data-reveal data-tilt>
+          <img src="./assets/konoha-standee-small.webp" alt="白狼このはの立ち絵" decoding="async" />
+        </figure>
+      </section>
+
+      <section class="section-block" aria-labelledby="fan-title" data-section-word="LINKS">
+        <div class="section-head" data-reveal>
+          <p>Official Links</p>
+          <h2 id="fan-title">公式リンクを、ひと目で。</h2>
+        </div>
+        <div class="fan-grid">
+          <a href="https://www.twitch.tv/shirokamikonoha" target="_blank" rel="noreferrer" data-reveal data-tilt>
+            <span>Twitch</span>
+            <strong>リアルタイム配信を見る</strong>
+            <p>配信中かどうか、最新のライブ情報をすぐ確認できます。</p>
+          </a>
+          <a href="https://www.youtube.com/@%E7%99%BD%E7%8B%BC%E3%81%93%E3%81%AE%E3%81%AF" target="_blank" rel="noreferrer" data-reveal data-tilt>
+            <span>YouTube</span>
+            <strong>待機所/アーカイブを見る</strong>
+            <p>YouTubeの配信ページやアーカイブへの入口として使えます。</p>
+          </a>
+          <a href="https://x.com/ShirokamiKonoha" target="_blank" rel="noreferrer" data-reveal data-tilt>
+            <span>X</span>
+            <strong>最新告知を追う</strong>
+            <p>配信予定、変更、日常投稿、告知を追うための導線です。</p>
+          </a>
+        </div>
+      </section>
+
+      <section class="section-block room" aria-labelledby="room-title" data-section-word="TAGS">
+        <div class="section-head" data-reveal>
+          <p>Fan Flow</p>
+          <h2 id="room-title">タグとファンマーク。</h2>
+        </div>
+        <div class="room-grid">
+          <article data-reveal data-tilt>
+            <span>General</span>
+            <h3>#このはみてみて</h3>
+            <p>配信の感想、告知への反応、白狼このはに届けたい投稿に。</p>
+          </article>
+          <article data-reveal data-tilt>
+            <span>Fan Art</span>
+            <h3>#しろかきたい</h3>
+            <p>ファンアートや創作投稿に使えるタグです。</p>
+          </article>
+          <article data-reveal data-tilt>
+            <span>Food / Mark</span>
+            <h3>#えさまでこのは / 🐺🤍</h3>
+            <p>飯テロ投稿は #えさまでこのは。ファンマークは 🐺🤍 です。</p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>白狼このは Official Website</span>
+      <span>Fan Hub</span>
+    </footer>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
