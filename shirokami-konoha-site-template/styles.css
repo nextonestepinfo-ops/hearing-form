@@ -1513,6 +1513,7 @@ h2 {
 
 .news-list article,
 .schedule-card,
+.featured-video,
 .fan-grid a,
 .room-grid article,
 .guideline-grid article {
@@ -1522,6 +1523,7 @@ h2 {
 
 .news-list h3,
 .schedule-card h3,
+.featured-video h3,
 .fan-grid strong,
 .room-grid h3,
 .guideline-grid h3,
@@ -1537,6 +1539,7 @@ h2 {
 
 .news-list p,
 .schedule-card p,
+.featured-video p,
 .fan-grid p,
 .room-grid p,
 .guideline-grid p,
@@ -1546,6 +1549,122 @@ h2 {
 .contact-copy p {
   margin: 0;
   color: var(--soft-ink);
+}
+
+.featured-video {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1.18fr) minmax(300px, 0.82fr);
+  gap: 0;
+  min-height: 330px;
+  margin-bottom: 16px;
+  overflow: hidden;
+  padding: 0;
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.76), rgba(232, 248, 244, 0.78)),
+    repeating-linear-gradient(135deg, rgba(145, 212, 196, 0.08) 0 16px, transparent 16px 32px);
+}
+
+.featured-video::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+  background: linear-gradient(110deg, transparent 0 42%, rgba(255, 255, 255, 0.34) 48%, transparent 56% 100%);
+  transform: translateX(-120%);
+  animation: video-shine 7s ease-in-out infinite;
+}
+
+.featured-video-media {
+  position: relative;
+  min-height: 330px;
+  overflow: hidden;
+  color: #fff;
+}
+
+.featured-video-media img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1.02);
+  transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+.featured-video-media::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, transparent 45%, rgba(22, 36, 34, 0.5)),
+    radial-gradient(circle at 72% 32%, rgba(145, 212, 196, 0.24), transparent 36%);
+}
+
+.featured-video:hover .featured-video-media img {
+  filter: saturate(1.06) brightness(1.04);
+  transform: scale(1.06);
+}
+
+.play-badge {
+  position: absolute;
+  z-index: 2;
+  right: 18px;
+  bottom: 18px;
+  display: inline-grid;
+  min-width: 86px;
+  min-height: 44px;
+  place-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.58);
+  border-radius: 999px;
+  color: #fff;
+  background: linear-gradient(135deg, rgba(64, 85, 82, 0.92), rgba(95, 174, 155, 0.92));
+  box-shadow: 0 14px 32px rgba(33, 54, 50, 0.22);
+  font-weight: 900;
+  letter-spacing: 0.08em;
+}
+
+.play-badge::before {
+  content: "";
+  display: inline-block;
+  width: 0;
+  height: 0;
+  margin-right: 8px;
+  border-top: 7px solid transparent;
+  border-bottom: 7px solid transparent;
+  border-left: 12px solid currentColor;
+}
+
+.featured-video-copy {
+  display: grid;
+  min-width: 0;
+  align-content: center;
+  padding: clamp(24px, 4vw, 42px);
+}
+
+.featured-video-copy span {
+  color: #5d8177;
+  font-size: 0.82rem;
+  font-weight: 900;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.featured-video-copy h3 {
+  margin-top: 12px;
+  font-size: clamp(1.9rem, 3.2vw, 2.9rem);
+  line-height: 1.08;
+  word-break: keep-all;
+}
+
+.featured-video-copy a {
+  display: inline-flex;
+  width: fit-content;
+  margin-top: 24px;
+  border-bottom: 2px solid var(--mint-strong);
+  color: #426c62;
+  font-weight: 900;
+  text-decoration: none;
 }
 
 .schedule-card {
@@ -2243,6 +2362,17 @@ h2 {
   }
 }
 
+@keyframes video-shine {
+  0%,
+  48% {
+    transform: translateX(-120%);
+  }
+  78%,
+  100% {
+    transform: translateX(120%);
+  }
+}
+
 @keyframes scroll-line {
   0% {
     transform: scaleY(0.4);
@@ -2447,12 +2577,17 @@ h2 {
 
   .quick-links,
   .news-list,
+  .featured-video,
   .schedule-grid,
   .fan-grid,
   .room-grid,
   .guideline-grid,
   .asset-grid {
     grid-template-columns: 1fr;
+  }
+
+  .featured-video-media {
+    min-height: 280px;
   }
 
   .asset-card.motion,
@@ -2903,6 +3038,35 @@ h2 {
 
   .section-block {
     padding: 66px 0;
+  }
+
+  .featured-video {
+    min-height: 0;
+    border-radius: 18px;
+  }
+
+  .featured-video-media {
+    min-height: 190px;
+  }
+
+  .featured-video-copy {
+    padding: 20px;
+  }
+
+  .featured-video-copy h3 {
+    font-size: 1.7rem;
+  }
+
+  .featured-video-copy a {
+    margin-top: 14px;
+  }
+
+  .play-badge {
+    right: 12px;
+    bottom: 12px;
+    min-width: 72px;
+    min-height: 38px;
+    font-size: 0.78rem;
   }
 
   .section-block[data-section-word]::before {
