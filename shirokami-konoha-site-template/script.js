@@ -43,8 +43,23 @@ function unlockAccess() {
   rememberAccess();
   document.documentElement.classList.remove("access-locked");
   document.querySelector("[data-access-gate]")?.remove();
-  loader?.classList.add("is-hidden");
+  playIntroSequence();
   initPage();
+}
+
+function playIntroSequence() {
+  if (!loader) return;
+  const logoDelay = reduceMotion ? 220 : 900;
+  const hideDelay = reduceMotion ? 720 : 1900;
+
+  document.documentElement.classList.add("intro-playing");
+  loader.classList.remove("is-hidden", "is-logo");
+
+  window.setTimeout(() => loader.classList.add("is-logo"), logoDelay);
+  window.setTimeout(() => {
+    loader.classList.add("is-hidden");
+    document.documentElement.classList.remove("intro-playing");
+  }, hideDelay);
 }
 
 function setupAccessGate() {
@@ -224,9 +239,6 @@ siteNav?.querySelectorAll("a").forEach((link) => {
 function initPage() {
   if (pageStarted) return;
   pageStarted = true;
-
-  window.setTimeout(() => loader?.classList.add("is-hidden"), 380);
-  window.addEventListener("load", () => window.setTimeout(() => loader?.classList.add("is-hidden"), 120));
 
   setupSplitText();
   revealOnScroll();
