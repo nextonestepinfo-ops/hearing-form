@@ -672,7 +672,7 @@ html.is-scrolling .hero-grid::after {
 .hero-vertical-type span {
   position: absolute;
   display: block;
-  color: rgba(61, 88, 84, 0.07);
+  color: rgba(61, 88, 84, 0.115);
   font-size: clamp(4.2rem, 10vw, 9.5rem);
   font-weight: 900;
   line-height: 0.8;
@@ -692,7 +692,7 @@ html.is-scrolling .hero-grid::after {
 .hero-vertical-type span:last-child {
   right: max(20px, calc((100vw - 1280px) / 2 - 92px));
   bottom: 2%;
-  color: rgba(95, 174, 155, 0.08);
+  color: rgba(95, 174, 155, 0.12);
   animation-delay: -4s;
 }
 
@@ -2651,7 +2651,7 @@ h2 {
   }
 
   .hero-vertical-type span {
-    color: rgba(63, 88, 84, 0.092);
+    color: rgba(63, 88, 84, 0.155);
     font-size: clamp(4.7rem, 19vw, 7rem);
     letter-spacing: 0.11em;
     text-shadow: 0 0 22px rgba(255, 255, 255, 0.8);
@@ -2661,7 +2661,7 @@ h2 {
   .hero-vertical-type::after {
     position: absolute;
     display: block;
-    color: rgba(95, 174, 155, 0.08);
+    color: rgba(95, 174, 155, 0.13);
     font-size: clamp(3.5rem, 15vw, 5.8rem);
     font-weight: 900;
     line-height: 0.84;
@@ -2683,7 +2683,7 @@ h2 {
     content: "LIVE";
     right: 28px;
     top: 22%;
-    color: rgba(123, 150, 86, 0.07);
+    color: rgba(123, 150, 86, 0.12);
     animation-delay: -3s;
   }
 
@@ -2695,7 +2695,7 @@ h2 {
   .hero-vertical-type span:last-child {
     right: -20px;
     bottom: 54px;
-    color: rgba(95, 174, 155, 0.082);
+    color: rgba(95, 174, 155, 0.135);
   }
 
   .hero-logo {
