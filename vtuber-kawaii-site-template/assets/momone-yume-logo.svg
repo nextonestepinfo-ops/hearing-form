@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 330" role="img" aria-labelledby="title desc">
+  <title id="title">桃音ゆめ ロゴ</title>
+  <desc id="desc">ピンクと白を基調にしたVTuber風の名前ロゴ</desc>
+  <defs>
+    <linearGradient id="pinkFill" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ff73b7"/>
+      <stop offset="0.48" stop-color="#ff9dcc"/>
+      <stop offset="1" stop-color="#ffd7ec"/>
+    </linearGradient>
+    <linearGradient id="mintRibbon" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#69e9d3"/>
+      <stop offset="1" stop-color="#9fe7ff"/>
+    </linearGradient>
+    <filter id="glow" x="-16%" y="-28%" width="132%" height="156%">
+      <feDropShadow dx="0" dy="13" stdDeviation="9" flood-color="#c94b91" flood-opacity="0.34"/>
+      <feDropShadow dx="0" dy="0" stdDeviation="9" flood-color="#fff" flood-opacity="0.86"/>
+    </filter>
+  </defs>
+  <path d="M63 214C157 112 239 257 337 158C421 72 509 148 564 112C608 83 651 94 701 131" fill="none" stroke="url(#mintRibbon)" stroke-width="18" stroke-linecap="round" opacity="0.86"/>
+  <path d="M75 223C166 127 242 262 341 169C425 91 506 161 570 128C622 101 655 111 692 143" fill="none" stroke="#fff" stroke-width="7" stroke-linecap="round" opacity="0.95"/>
+  <g filter="url(#glow)">
+    <text x="374" y="180" text-anchor="middle" font-family="'Yu Gothic','Hiragino Kaku Gothic ProN',Meiryo,sans-serif" font-size="112" font-weight="900" letter-spacing="7" paint-order="stroke" stroke="#fff" stroke-width="18" stroke-linejoin="round" fill="url(#pinkFill)">桃音ゆめ</text>
+    <text x="384" y="248" text-anchor="middle" font-family="Arial,'Yu Gothic',sans-serif" font-size="33" font-weight="900" letter-spacing="8" paint-order="stroke" stroke="#fff" stroke-width="8" fill="#6e4b79">MOMONE YUME</text>
+  </g>
+  <g fill="#fff" stroke="#ff7fbc" stroke-width="5" stroke-linejoin="round">
+    <path d="M116 59l14 29 32 5-23 22 6 32-29-15-28 15 5-32-23-22 32-5z"/>
+    <path d="M654 207c22-25 58-11 58 20 0 36-58 64-58 64s-58-28-58-64c0-31 36-45 58-20z"/>
+  </g>
+</svg>
