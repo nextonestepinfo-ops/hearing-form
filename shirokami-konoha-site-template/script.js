@@ -5,7 +5,87 @@ const loader = document.querySelector("[data-loader]");
 const progress = document.querySelector("[data-scroll-progress]");
 const parallaxNodes = document.querySelectorAll("[data-parallax]");
 const compactView = window.matchMedia("(max-width: 620px)");
+const ACCESS_HASH = "9497683cb70785d3626818bc7a71924c14482e16636edd6668cc2664b75ed8fe";
+const ACCESS_STORAGE_KEY = "shirokami-konoha-access";
 let scrollTicking = false;
+let pageStarted = false;
+
+function hasAccess() {
+  try {
+    return window.sessionStorage.getItem(ACCESS_STORAGE_KEY) === "ok";
+  } catch {
+    return false;
+  }
+}
+
+function rememberAccess() {
+  try {
+    window.sessionStorage.setItem(ACCESS_STORAGE_KEY, "ok");
+  } catch {
+    // Session storage can fail in strict privacy modes. The current page can still open.
+  }
+}
+
+function bytesToHex(buffer) {
+  return Array.from(new Uint8Array(buffer))
+    .map((byte) => byte.toString(16).padStart(2, "0"))
+    .join("");
+}
+
+async function hashText(value) {
+  if (!window.crypto?.subtle) return "";
+  const data = new TextEncoder().encode(value);
+  const digest = await window.crypto.subtle.digest("SHA-256", data);
+  return bytesToHex(digest);
+}
+
+function unlockAccess() {
+  rememberAccess();
+  document.documentElement.classList.remove("access-locked");
+  document.querySelector("[data-access-gate]")?.remove();
+  loader?.classList.add("is-hidden");
+  initPage();
+}
+
+function setupAccessGate() {
+  const gate = document.querySelector("[data-access-gate]");
+  const form = document.querySelector("[data-access-form]");
+  const error = document.querySelector("[data-access-error]");
+  const input = form?.querySelector('input[name="password"]');
+  const button = form?.querySelector("button");
+
+  if (!gate || hasAccess()) {
+    unlockAccess();
+    return;
+  }
+
+  loader?.classList.add("is-hidden");
+  input?.focus();
+
+  form?.addEventListener("submit", async (event) => {
+    event.preventDefault();
+    if (!input) return;
+
+    button?.setAttribute("disabled", "true");
+    if (error) error.textContent = "";
+
+    try {
+      const digest = await hashText(input.value);
+      if (digest === ACCESS_HASH) {
+        unlockAccess();
+        return;
+      }
+
+      input.value = "";
+      input.focus();
+      if (error) error.textContent = "パスワードが違います。";
+    } catch {
+      if (error) error.textContent = "このブラウザでは確認できませんでした。";
+    } finally {
+      button?.removeAttribute("disabled");
+    }
+  });
+}
 
 function revealOnScroll() {
   const targets = document.querySelectorAll("[data-reveal]");
@@ -129,11 +209,18 @@ siteNav?.querySelectorAll("a").forEach((link) => {
   });
 });
 
-window.setTimeout(() => loader?.classList.add("is-hidden"), 380);
-window.addEventListener("load", () => window.setTimeout(() => loader?.classList.add("is-hidden"), 120));
+function initPage() {
+  if (pageStarted) return;
+  pageStarted = true;
 
-setupSplitText();
-revealOnScroll();
-setupTiltCards();
-setupSparkles();
-setupHeroParallax();
+  window.setTimeout(() => loader?.classList.add("is-hidden"), 380);
+  window.addEventListener("load", () => window.setTimeout(() => loader?.classList.add("is-hidden"), 120));
+
+  setupSplitText();
+  revealOnScroll();
+  setupTiltCards();
+  setupSparkles();
+  setupHeroParallax();
+}
+
+setupAccessGate();

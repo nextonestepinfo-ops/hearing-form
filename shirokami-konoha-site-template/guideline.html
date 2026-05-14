@@ -1,5 +1,5 @@
 ﻿<!doctype html>
-<html lang="ja">
+<html lang="ja" class="access-locked">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -9,6 +9,19 @@
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
+    <div class="access-gate" data-access-gate>
+      <form class="access-card" data-access-form>
+        <span class="access-kicker">Private Work</span>
+        <strong>白狼このは 公式制作物</strong>
+        <p>確認用パスワードを入力してください。</p>
+        <label>
+          <span>Access Password</span>
+          <input type="password" name="password" autocomplete="current-password" required />
+        </label>
+        <button type="submit">開く</button>
+        <p class="access-error" data-access-error aria-live="polite"></p>
+      </form>
+    </div>
     <div class="loader" data-loader aria-hidden="true"><div class="loader-mark">狼</div><p>Guideline</p><span></span></div>
     <div class="scroll-progress" aria-hidden="true"><span data-scroll-progress></span></div>
     <header class="site-header">
@@ -87,7 +100,7 @@
     </main>
 
     <footer class="site-footer">
-      <span>白狼このは Official Website</span>
+      <span>白狼このは Official Work</span>
       <span>Fan Guideline</span>
     </footer>
 
