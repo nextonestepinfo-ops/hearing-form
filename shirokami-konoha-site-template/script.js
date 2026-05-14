@@ -90,6 +90,16 @@ function setupAccessGate() {
 function revealOnScroll() {
   const targets = document.querySelectorAll("[data-reveal]");
   if (!targets.length) return;
+
+  const revealVisibleTargets = () => {
+    targets.forEach((node) => {
+      const rect = node.getBoundingClientRect();
+      if (rect.top < window.innerHeight * 0.92 && rect.bottom > 0) {
+        node.classList.add("is-visible");
+      }
+    });
+  };
+
   if (!("IntersectionObserver" in window)) {
     targets.forEach((node) => node.classList.add("is-visible"));
     return;
@@ -104,7 +114,9 @@ function revealOnScroll() {
     { threshold: 0.13 },
   );
 
+  revealVisibleTargets();
   targets.forEach((node) => observer.observe(node));
+  window.requestAnimationFrame(revealVisibleTargets);
 }
 
 function setupSplitText() {
