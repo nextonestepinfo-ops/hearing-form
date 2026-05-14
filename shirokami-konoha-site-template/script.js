@@ -9,6 +9,8 @@ const ACCESS_HASH = "9497683cb70785d3626818bc7a71924c14482e16636edd6668cc2664b75
 const ACCESS_STORAGE_KEY = "shirokami-konoha-access";
 let scrollTicking = false;
 let pageStarted = false;
+let lastScrollY = window.scrollY;
+let scrollMotionTimer = 0;
 
 function hasAccess() {
   try {
@@ -49,8 +51,8 @@ function unlockAccess() {
 
 function playIntroSequence() {
   if (!loader) return;
-  const logoDelay = reduceMotion ? 220 : 900;
-  const hideDelay = reduceMotion ? 720 : 1900;
+  const logoDelay = reduceMotion ? 260 : 1650;
+  const hideDelay = reduceMotion ? 920 : 3600;
 
   document.documentElement.classList.add("intro-playing");
   loader.classList.remove("is-hidden", "is-logo");
@@ -171,10 +173,33 @@ function updateProgress() {
 }
 
 function updateScrollEffects() {
-  if (!reduceMotion && !compactView.matches) {
+  const max = document.documentElement.scrollHeight - window.innerHeight;
+  const scrollRatio = max <= 0 ? 0 : Math.min(1, Math.max(0, window.scrollY / max));
+  const delta = window.scrollY - lastScrollY;
+  const pulse = Math.min(1, Math.abs(delta) / 90);
+  const direction = delta < 0 ? -1 : 1;
+
+  lastScrollY = window.scrollY;
+  document.documentElement.style.setProperty("--scroll-ratio", scrollRatio.toFixed(4));
+  document.documentElement.style.setProperty("--scroll-drift", `${(window.scrollY * -0.026).toFixed(2)}px`);
+  document.documentElement.style.setProperty("--scroll-bump", `${(-10 * pulse).toFixed(2)}px`);
+  document.documentElement.style.setProperty("--scroll-tilt", `${(direction * pulse * 1.15).toFixed(2)}deg`);
+
+  if (pulse > 0.025) {
+    document.documentElement.classList.add("is-scrolling");
+    window.clearTimeout(scrollMotionTimer);
+    scrollMotionTimer = window.setTimeout(() => {
+      document.documentElement.classList.remove("is-scrolling");
+      document.documentElement.style.setProperty("--scroll-bump", "0px");
+      document.documentElement.style.setProperty("--scroll-tilt", "0deg");
+    }, 220);
+  }
+
+  if (!reduceMotion) {
+    const compactFactor = compactView.matches ? 0.44 : 1;
     parallaxNodes.forEach((node) => {
       const depth = Number(node.dataset.parallax || 0);
-      node.style.setProperty("--parallax-y", `${window.scrollY * depth}px`);
+      node.style.setProperty("--parallax-y", `${(window.scrollY * depth * compactFactor).toFixed(2)}px`);
     });
   } else {
     parallaxNodes.forEach((node) => node.style.setProperty("--parallax-y", "0px"));
