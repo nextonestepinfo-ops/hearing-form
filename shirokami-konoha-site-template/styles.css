@@ -269,7 +269,7 @@ p {
   z-index: 1;
   display: grid;
   width: min(390px, 84vw);
-  min-height: 286px;
+  min-height: 236px;
   justify-items: center;
   align-content: center;
   border: 2px solid rgba(95, 174, 155, 0.24);
@@ -284,26 +284,27 @@ p {
   transition: opacity 0.62s ease, transform 0.62s ease, filter 0.62s ease;
 }
 
+.loader-loading::before {
+  content: "";
+  display: block;
+  width: 132px;
+  height: 38px;
+  margin-bottom: 18px;
+  background:
+    radial-gradient(circle at 14% 62%, rgba(95, 174, 155, 0.76) 0 8px, transparent 9px),
+    radial-gradient(circle at 31% 34%, rgba(145, 212, 196, 0.92) 0 6px, transparent 7px),
+    radial-gradient(circle at 47% 24%, rgba(145, 212, 196, 0.82) 0 6px, transparent 7px),
+    radial-gradient(circle at 63% 34%, rgba(145, 212, 196, 0.92) 0 6px, transparent 7px),
+    radial-gradient(circle at 82% 62%, rgba(123, 150, 86, 0.45) 0 8px, transparent 9px);
+  filter: drop-shadow(0 8px 0 rgba(255, 255, 255, 0.82)) drop-shadow(0 14px 18px rgba(95, 174, 155, 0.16));
+  opacity: 0.9;
+  animation: loader-paws 1.6s ease-in-out infinite alternate;
+}
+
 .loader.is-logo .loader-loading {
   opacity: 0;
   filter: blur(6px);
   transform: translateY(-24px) scale(0.92);
-}
-
-.loader-mark {
-  display: grid;
-  width: 92px;
-  height: 92px;
-  place-items: center;
-  border-radius: 8px;
-  color: #fff;
-  background:
-    linear-gradient(135deg, rgba(82, 99, 98, 0.92), var(--mint-strong)),
-    repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.16) 0 4px, transparent 4px 8px);
-  box-shadow: 0 26px 62px rgba(68, 108, 98, 0.24), inset 0 -8px 0 rgba(31, 46, 44, 0.16);
-  font-size: 2.2rem;
-  font-weight: 900;
-  animation: loader-pop 1.35s steps(2, jump-none) infinite alternate;
 }
 
 .loader-title,
@@ -315,7 +316,7 @@ p {
   display: inline-flex;
   align-items: baseline;
   justify-content: center;
-  margin-top: 22px;
+  margin-top: 0;
   color: #4f6761;
   font-family: "Consolas", "Cascadia Mono", "Yu Gothic UI", monospace;
   font-size: clamp(1.15rem, 4vw, 1.6rem);
@@ -2029,21 +2030,21 @@ h2 {
   font-weight: 900;
 }
 
-@keyframes loader-pop {
-  from {
-    transform: translateY(0) scale(1);
-  }
-  to {
-    transform: translateY(-6px) scale(1.04);
-  }
-}
-
 @keyframes loader-line {
   from {
     transform: translateX(-70%);
   }
   to {
     transform: translateX(240%);
+  }
+}
+
+@keyframes loader-paws {
+  from {
+    transform: translateY(0) scale(1);
+  }
+  to {
+    transform: translateY(-6px) scale(1.035);
   }
 }
 
@@ -2336,6 +2337,37 @@ h2 {
   }
 }
 
+@keyframes mobile-sweet-grid {
+  from {
+    transform: translate3d(-14px, -8px, 0) rotate(-2deg);
+  }
+  to {
+    transform: translate3d(18px, 16px, 0) rotate(2deg);
+  }
+}
+
+@keyframes mobile-ribbon-breathe {
+  0%,
+  100% {
+    transform: translate3d(-18px, 0, 0) rotate(-10deg);
+  }
+  50% {
+    transform: translate3d(18px, -12px, 0) rotate(-7deg);
+  }
+}
+
+@keyframes mobile-heart-pop {
+  0%,
+  100% {
+    opacity: 0.36;
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    opacity: 0.58;
+    transform: translateY(-10px) scale(1.06);
+  }
+}
+
 @media (max-width: 980px) {
   .nav-toggle {
     display: inline-flex;
@@ -2513,14 +2545,96 @@ h2 {
     min-height: 100svh;
     padding: 74px 0 0;
     background:
-      radial-gradient(circle at 74% 20%, rgba(178, 235, 222, 0.45), transparent 34%),
-      linear-gradient(180deg, rgba(255, 255, 255, 0.28), rgba(247, 251, 248, 0.88));
+      radial-gradient(circle at 12% 17%, rgba(255, 255, 255, 0.96) 0 52px, transparent 54px),
+      radial-gradient(circle at 82% 18%, rgba(203, 249, 238, 0.62), transparent 30%),
+      radial-gradient(circle at 18% 78%, rgba(223, 229, 234, 0.46), transparent 36%),
+      linear-gradient(180deg, rgba(255, 255, 255, 0.46), rgba(239, 250, 247, 0.92));
+  }
+
+  .hero::before {
+    content: "";
+    position: absolute;
+    z-index: 3;
+    inset: 94px -72px 74px;
+    pointer-events: none;
+    background:
+      linear-gradient(105deg, transparent 0 18%, rgba(255, 255, 255, 0.78) 22% 28%, transparent 32% 100%),
+      linear-gradient(165deg, transparent 0 46%, rgba(145, 212, 196, 0.22) 47% 50%, rgba(255, 255, 255, 0.62) 51% 54%, transparent 55% 100%),
+      radial-gradient(circle at 17% 35%, rgba(255, 255, 255, 0.82) 0 17px, transparent 18px),
+      radial-gradient(circle at 86% 68%, rgba(145, 212, 196, 0.24) 0 16px, transparent 17px);
+    border-radius: 46% 54% 50% 50% / 42% 44% 56% 58%;
+    opacity: 0.64;
+    filter: blur(0.1px);
+    transform: rotate(-8deg);
+    animation: mobile-ribbon-breathe 8.4s ease-in-out infinite;
   }
 
   .hero-shade {
     background:
-      linear-gradient(180deg, rgba(255, 255, 255, 0.5) 0 24%, rgba(255, 255, 255, 0.16) 42%, rgba(247, 251, 248, 0.58) 100%),
-      linear-gradient(90deg, rgba(255, 255, 255, 0.96) 0%, rgba(247, 251, 248, 0.56) 58%, rgba(247, 251, 248, 0.08) 100%);
+      radial-gradient(circle at 52% 43%, rgba(255, 255, 255, 0.02) 0 32%, rgba(255, 255, 255, 0.42) 56%, transparent 74%),
+      linear-gradient(180deg, rgba(255, 255, 255, 0.36) 0 22%, rgba(255, 255, 255, 0.08) 42%, rgba(247, 251, 248, 0.52) 100%),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.84) 0%, rgba(247, 251, 248, 0.34) 58%, rgba(247, 251, 248, 0.06) 100%);
+  }
+
+  .hero-shade::before,
+  .hero-shade::after {
+    content: "♡";
+    position: absolute;
+    color: rgba(95, 174, 155, 0.18);
+    font-family: var(--cute-font);
+    font-size: clamp(3.1rem, 14vw, 5rem);
+    font-weight: 900;
+    line-height: 1;
+    text-shadow: 0 8px 0 rgba(255, 255, 255, 0.52);
+    animation: mobile-heart-pop 6.4s ease-in-out infinite;
+  }
+
+  .hero-shade::before {
+    top: 19%;
+    right: 11%;
+    transform: rotate(10deg);
+  }
+
+  .hero-shade::after {
+    content: "✦";
+    left: 13%;
+    bottom: 19%;
+    color: rgba(123, 150, 86, 0.14);
+    font-size: clamp(2.1rem, 11vw, 3.7rem);
+    animation-delay: -2.2s;
+  }
+
+  .hero-grid {
+    background:
+      radial-gradient(circle at 24% 18%, rgba(255, 255, 255, 0.78) 0 38px, transparent 40px),
+      radial-gradient(circle at 82% 46%, rgba(255, 255, 255, 0.6) 0 46px, transparent 48px),
+      repeating-linear-gradient(135deg, rgba(145, 212, 196, 0.13) 0 12px, rgba(255, 255, 255, 0.14) 12px 24px),
+      repeating-linear-gradient(90deg, rgba(95, 174, 155, 0.035) 0 1px, transparent 1px 28px),
+      linear-gradient(145deg, #fbfffd 0%, #edf9f6 45%, #f8fbfa 100%);
+  }
+
+  .hero-grid::before {
+    inset: -12% -28%;
+    background:
+      radial-gradient(circle at 16% 26%, rgba(95, 174, 155, 0.18) 0 7px, transparent 8px),
+      radial-gradient(circle at 32% 66%, rgba(255, 255, 255, 0.9) 0 13px, transparent 14px),
+      radial-gradient(circle at 74% 22%, rgba(123, 150, 86, 0.16) 0 8px, transparent 9px),
+      radial-gradient(circle at 84% 78%, rgba(145, 212, 196, 0.2) 0 12px, transparent 13px),
+      repeating-linear-gradient(90deg, transparent 0 34px, rgba(95, 174, 155, 0.08) 35px 37px, transparent 38px 72px);
+    opacity: 0.82;
+    animation: mobile-sweet-grid 12s ease-in-out infinite alternate;
+  }
+
+  .hero-grid::after {
+    inset: 8% -36% auto;
+    height: 54%;
+    background:
+      radial-gradient(circle at 28% 48%, rgba(255, 255, 255, 0.84) 0 34px, transparent 36px),
+      radial-gradient(circle at 68% 36%, rgba(145, 212, 196, 0.24) 0 28px, transparent 30px),
+      linear-gradient(110deg, transparent 0 36%, rgba(255, 255, 255, 0.72) 42% 49%, transparent 55% 100%);
+    opacity: 0.78;
+    transform: rotate(-7deg);
+    animation: mobile-heart-pop 6.8s ease-in-out infinite;
   }
 
   .hero-float-tags {
@@ -2537,10 +2651,40 @@ h2 {
   }
 
   .hero-vertical-type span {
-    color: rgba(63, 88, 84, 0.105);
+    color: rgba(63, 88, 84, 0.092);
     font-size: clamp(4.7rem, 19vw, 7rem);
     letter-spacing: 0.11em;
     text-shadow: 0 0 22px rgba(255, 255, 255, 0.8);
+  }
+
+  .hero-vertical-type::before,
+  .hero-vertical-type::after {
+    position: absolute;
+    display: block;
+    color: rgba(95, 174, 155, 0.08);
+    font-size: clamp(3.5rem, 15vw, 5.8rem);
+    font-weight: 900;
+    line-height: 0.84;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    pointer-events: none;
+    animation: vertical-silhouette 10s ease-in-out infinite alternate;
+  }
+
+  .hero-vertical-type::before {
+    content: "OFFICIAL";
+    top: 34%;
+    left: 22px;
+  }
+
+  .hero-vertical-type::after {
+    content: "LIVE";
+    right: 28px;
+    top: 22%;
+    color: rgba(123, 150, 86, 0.07);
+    animation-delay: -3s;
   }
 
   .hero-vertical-type span:first-child {
@@ -2551,7 +2695,7 @@ h2 {
   .hero-vertical-type span:last-child {
     right: -20px;
     bottom: 54px;
-    color: rgba(95, 174, 155, 0.095);
+    color: rgba(95, 174, 155, 0.082);
   }
 
   .hero-logo {
