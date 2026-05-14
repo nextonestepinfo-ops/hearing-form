@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>桃音ゆめ | VTuber公式サイトデモ</title>
+  <meta name="description" content="活動中VTuber向けの公式サイトデモ。配信予定、推し活リンク、グッズ、企業案件相談まで整理します。" />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <div class="loader" data-loader><strong>夢</strong><span>Momone Yume</span></div>
+  <div class="progress"><span data-progress></span></div>
+  <div class="cursor" data-cursor></div>
+  <header class="header">
+    <a class="brand" href="#top"><span>夢</span>桃音ゆめ</a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav">Menu</button>
+    <nav id="nav" class="nav">
+      <a href="#news">お知らせ</a><a href="#profile">プロフィール</a><a href="#assets">素材</a><a href="#schedule">配信予定</a><a href="#fan">推し活</a><a href="#contact">相談</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-bg"></div>
+      <div class="hero-copy" data-reveal>
+        <p class="status">ON AIR SOON / 活動中VTuber向け公式サイトデモ</p>
+        <h1>桃音ゆめ<small>Momone Yume Official</small></h1>
+        <p class="lead" data-lead>配信、アーカイブ、グッズ、SNS、案件相談がばらばらになりがちな活動中VTuber向けに、今の活動をもっと見やすく、もっと推しやすく、もっと仕事につながる形へ整えます。</p>
+        <div class="actions"><a class="button primary" href="#schedule">最新配信を見る</a><a class="button" href="#assets">制作素材を見る</a></div>
+        <div class="mode-tabs"><button data-mode="live" aria-pressed="true">通常配信</button><button data-mode="game">ゲーム</button><button data-mode="song">歌枠</button></div>
+      </div>
+      <div class="stage" data-reveal data-tilt>
+        <div class="stage-top"><span>LIVE ROOM</span><strong data-stage>Live</strong></div>
+        <img src="./assets/momone-live-loop.svg" alt="桃音ゆめの配信告知ビジュアル" />
+        <div class="chat"><p>今日の配信は21時！</p><p>グッズ再販のお知らせあり</p><p>案件相談フォーム受付中</p></div>
+      </div>
+    </section>
+
+    <div class="marquee"><span>MOMONE YUME</span><span>LIVE SCHEDULE</span><span>GOODS</span><span>FAN ART</span><span>COLLAB</span></div>
+
+    <section id="news" class="section">
+      <div class="head" data-reveal><p>お知らせ</p><h2>ファンにも企業にも、今見てほしい情報を迷わせない。</h2></div>
+      <div class="news-grid">
+        <article data-reveal data-tilt><time>5月14日</time><h3>今週の配信予定を更新</h3><p>定期配信、コラボ、歌枠、アーカイブ導線をまとめて確認できます。</p></article>
+        <article data-reveal data-tilt><time>5月18日</time><h3>グッズ再販ページを準備中</h3><p>アクスタ、缶バッジ、ボイス販売など、販売前から期待を作れます。</p></article>
+        <article data-reveal data-tilt><time>5月22日</time><h3>PR・コラボ相談を受付中</h3><p>企業案件や制作相談の入口を、活動ページ内に自然に置けます。</p></article>
+      </div>
+    </section>
+
+    <section id="profile" class="section profile">
+      <div data-reveal><p class="eyebrow">Profile</p><h2>かわいさだけで終わらせず、活動内容までちゃんと伝える。</h2><p>桃音ゆめは、雑談、ゲーム、歌枠、グッズ展開を中心に活動するピンク髪の女の子VTuber。初見さんが入りやすく、常連さんが追いやすく、企業担当者が相談しやすい場所を作ります。</p><ul><li>ファンネーム: ゆめとも</li><li>配信タグ: #ゆめの放課後</li><li>ファンアート: #ゆめいろ絵日記</li></ul></div>
+      <img data-reveal src="./assets/momone-hero.svg" alt="桃音ゆめのキャラクタービジュアル" />
+    </section>
+
+    <section id="assets" class="section">
+      <div class="head" data-reveal><p>Character Assets</p><h2>サイトだけでなく、活動に使う素材までまとめて見せる。</h2></div>
+      <div class="asset-grid">
+        <figure data-reveal data-tilt><img src="./assets/momone-standee-loop.svg" alt="立ち絵" /><figcaption><span>Standee</span><strong>立ち絵ビジュアル</strong><p>プロフィール、告知、待機画面に使える素材。</p></figcaption></figure>
+        <figure data-reveal data-tilt><img src="./assets/momone-model-sheet.svg" alt="三面図" /><figcaption><span>Model Sheet</span><strong>三面図・衣装詳細</strong><p>衣装差分やグッズ制作相談の説明用。</p></figcaption></figure>
+        <figure data-reveal data-tilt><img src="./assets/momone-expressions.svg" alt="表情差分" /><figcaption><span>Expression</span><strong>表情差分</strong><p>SNS投稿、サムネ、配信告知に使用。</p></figcaption></figure>
+        <figure class="wide" data-reveal data-tilt><img src="./assets/momone-stream-banner.svg" alt="配信サムネイル" /><figcaption><span>Thumbnail</span><strong>配信用サムネイル</strong><p>左側に配信タイトルを載せる想定の告知素材。</p></figcaption></figure>
+      </div>
+    </section>
+
+    <section id="schedule" class="section">
+      <div class="head" data-reveal><p>配信予定</p><h2>ファンが次に何を見ればいいか、すぐ分かる。</h2></div>
+      <div class="schedule-grid">
+        <article class="highlight" data-reveal data-tilt><span data-card-date>今日 21:00</span><h3 data-card-title>今週の定期配信</h3><p data-card-copy>近況、今週のお知らせ、アーカイブ導線をまとめます。</p><a href="#fan">推し活リンクへ</a></article>
+        <article data-reveal data-tilt><span>金曜 22:00</span><h3>まったりゲーム配信</h3><p>参加ルールやコメントルールも事前に整理。</p></article>
+        <article data-reveal data-tilt><span>日曜 20:00</span><h3>おやすみ前の歌枠</h3><p>セットリスト、リクエスト、アーカイブ導線を掲載。</p></article>
+      </div>
+    </section>
+
+    <section id="fan" class="section fan">
+      <div class="head" data-reveal><p>推し活リンク</p><h2>YouTube、X、グッズ、ファンクラブを迷わせない。</h2></div>
+      <div class="fan-grid">
+        <a href="#" data-reveal data-tilt><span>YouTube</span><strong>配信・アーカイブ</strong><p>最新配信とショート動画へ。</p></a>
+        <a href="#" data-reveal data-tilt><span>X / SNS</span><strong>最新告知</strong><p>投稿、タグ、日常のつぶやきへ。</p></a>
+        <a href="#" data-reveal data-tilt><span>Goods</span><strong>グッズ販売</strong><p>発売日、在庫、特典を掲載。</p></a>
+        <a href="#" data-reveal data-tilt><span>Fan Club</span><strong>限定コンテンツ</strong><p>壁紙、限定配信、応援プランへ。</p></a>
+      </div>
+    </section>
+
+    <section class="section goods">
+      <div class="head" data-reveal><p>Goods & Voice</p><h2>販売導線も、世界観を崩さずかわいく。</h2></div>
+      <figure data-reveal data-tilt><img src="./assets/momone-goods-mockup.svg" alt="グッズモックアップ" /><figcaption><strong>活動中の人向けに、販売導線まで見せる。</strong><p>アクスタ、缶バッジ、カード、ボイス販売などを、サイト上で一目で伝えられます。</p></figcaption></figure>
+    </section>
+
+    <section id="contact" class="section contact">
+      <div data-reveal><p class="eyebrow">Contact</p><h2>企業案件・コラボ・制作相談の入口も一本化。</h2><p>PR配信、イベント出演、歌ってみた制作、グッズ制作、公式サイト制作など、相手が何を相談すればいいか迷わないフォーム導線を用意します。</p></div>
+      <form data-reveal><label>お名前・会社名<input type="text" placeholder="例: 株式会社サンプル / 山田" /></label><label>相談内容<textarea placeholder="例: PR配信、コラボ、グッズ制作、公式サイト制作など"></textarea></label><button class="button primary" type="button" data-submit>相談内容を送る</button></form>
+    </section>
+  </main>
+
+  <footer>桃音ゆめ Official Site Demo / かわいいVTuber向けサンプル</footer>
+  <script src="./script.js"></script>
+</body>
+</html>
