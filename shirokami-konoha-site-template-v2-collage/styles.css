@@ -2132,16 +2132,16 @@ html:not(.access-locked) .access-gate {
   }
 
   .hero-art img {
-    inset: 96px auto 18px -75vw;
-    width: calc(100% + 150vw);
+    inset: 96px auto 18px -56vw;
+    width: calc(100% + 112vw);
     height: calc(100% - 114px);
     min-height: 0;
     border-width: 6px;
     border-radius: 36% 36% 0 0 / 13% 13% 0 0;
     object-position: center 10%;
     filter:
-      saturate(1.1)
-      contrast(1.08)
+      saturate(1.06)
+      contrast(1.03)
       brightness(1.02)
       drop-shadow(0 22px 34px rgba(49, 70, 75, 0.18));
   }
@@ -2302,9 +2302,9 @@ html:not(.access-locked) .access-gate {
   }
 
   .hero-art img {
-    left: -80vw;
+    left: -60vw;
     right: auto;
-    width: calc(100% + 160vw);
+    width: calc(100% + 120vw);
     object-position: center 9%;
   }
 
