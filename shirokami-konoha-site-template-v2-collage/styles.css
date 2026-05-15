@@ -1,17 +1,20 @@
 :root {
-  --ink: #2f3b3f;
-  --ink-soft: #607177;
-  --line: rgba(83, 111, 116, 0.22);
-  --mint: #baf5e7;
-  --mint-deep: #73cbb8;
-  --aqua: #dffbf5;
-  --silver: #d8e0e7;
-  --silver-deep: #8f9aa6;
-  --rose: #f8d7df;
-  --butter: #fff7cf;
+  --ink: #33484e;
+  --ink-soft: #617982;
+  --line: rgba(92, 132, 141, 0.22);
+  --mint: #c8f7ed;
+  --mint-deep: #83d5c6;
+  --aqua: #e7fbf7;
+  --sky: #b8e2f4;
+  --sky-soft: #e4f5fc;
+  --silver: #dfe6eb;
+  --silver-deep: #98a8b2;
+  --lavender: #c8d5f2;
+  --rose: #f2dfe8;
+  --butter: #fff8db;
   --white: #ffffff;
-  --paper: #f8fffd;
-  --shadow: rgba(58, 88, 91, 0.18);
+  --paper: #f9fffd;
+  --shadow: rgba(56, 91, 98, 0.16);
   --pixel: "Cascadia Mono", "Consolas", "SFMono-Regular", monospace;
   --round: 8px;
   --cute: "UD Digi Kyokasho N-R", "UD Digi Kyokasho NP-R", "Hiragino Maru Gothic ProN", "Yu Gothic UI", "Yu Gothic", Meiryo, system-ui, sans-serif;
@@ -33,9 +36,10 @@ body {
   min-width: 320px;
   color: var(--ink);
   background:
-    radial-gradient(circle at 16% 12%, rgba(186, 245, 231, 0.55), transparent 28%),
-    radial-gradient(circle at 86% 18%, rgba(248, 215, 223, 0.42), transparent 24%),
-    linear-gradient(180deg, #fbfffe, #eefbf8 52%, #ffffff);
+    radial-gradient(circle at 16% 12%, rgba(200, 247, 237, 0.56), transparent 28%),
+    radial-gradient(circle at 86% 18%, rgba(184, 226, 244, 0.38), transparent 26%),
+    radial-gradient(circle at 82% 62%, rgba(200, 213, 242, 0.2), transparent 30%),
+    linear-gradient(180deg, #fbfffe, #f0fbf8 56%, #f8fbff);
   font-family: "Yu Gothic", "Hiragino Kaku Gothic ProN", Meiryo, system-ui, sans-serif;
   line-height: 1.75;
   overflow-x: hidden;
@@ -47,9 +51,9 @@ body::before {
   z-index: -2;
   inset: 0;
   background:
-    repeating-linear-gradient(0deg, rgba(70, 122, 119, 0.06) 0 1px, transparent 1px 28px),
-    repeating-linear-gradient(90deg, rgba(70, 122, 119, 0.055) 0 1px, transparent 1px 28px),
-    linear-gradient(135deg, rgba(255, 255, 255, 0.72), rgba(223, 251, 245, 0.28));
+    repeating-linear-gradient(0deg, rgba(78, 129, 137, 0.052) 0 1px, transparent 1px 28px),
+    repeating-linear-gradient(90deg, rgba(78, 129, 137, 0.048) 0 1px, transparent 1px 28px),
+    linear-gradient(135deg, rgba(255, 255, 255, 0.74), rgba(231, 251, 247, 0.3));
   pointer-events: none;
 }
 
@@ -59,8 +63,8 @@ body::after {
   z-index: -1;
   inset: 0;
   background:
-    linear-gradient(rgba(255, 255, 255, 0.34) 50%, rgba(116, 171, 164, 0.04) 50%),
-    radial-gradient(circle, rgba(74, 108, 111, 0.09) 0 1px, transparent 1.5px);
+    linear-gradient(rgba(255, 255, 255, 0.34) 50%, rgba(116, 172, 178, 0.035) 50%),
+    radial-gradient(circle, rgba(79, 113, 121, 0.08) 0 1px, transparent 1.5px);
   background-size: 100% 6px, 18px 18px;
   opacity: 0.28;
   pointer-events: none;
@@ -237,9 +241,9 @@ html:not(.access-locked) .access-gate {
   background:
     radial-gradient(circle at 18% 18%, rgba(255, 255, 255, 0.94) 0 92px, transparent 96px),
     radial-gradient(circle at 70% 16%, rgba(255, 255, 255, 0.82) 0 120px, transparent 124px),
-    radial-gradient(circle at 92% 78%, rgba(248, 215, 223, 0.72), transparent 28%),
-    radial-gradient(circle at 18% 82%, rgba(173, 211, 255, 0.58), transparent 30%),
-    linear-gradient(180deg, #e7fff9, #cfe7ff 68%, #eee6ff);
+    radial-gradient(circle at 92% 78%, rgba(242, 223, 232, 0.58), transparent 28%),
+    radial-gradient(circle at 18% 82%, rgba(184, 226, 244, 0.54), transparent 30%),
+    linear-gradient(180deg, #ecfff9, #d9f0fb 68%, #eef4ff);
   transition: opacity 0.5s ease, visibility 0.5s ease;
 }
 
@@ -357,7 +361,7 @@ html:not(.access-locked) .access-gate {
   border-bottom: 2px solid rgba(103, 132, 137, 0.28);
   padding: 7px 10px;
   background:
-    linear-gradient(90deg, rgba(186, 245, 231, 0.92), rgba(236, 242, 247, 0.95), rgba(248, 215, 223, 0.82));
+    linear-gradient(90deg, rgba(200, 247, 237, 0.92), rgba(236, 244, 248, 0.95), rgba(200, 213, 242, 0.72));
   color: #587174;
   font-family: var(--pixel);
   font-size: 0.73rem;
@@ -557,10 +561,10 @@ html:not(.access-locked) .access-gate {
   border-bottom: 2px solid rgba(255, 255, 255, 0.78);
   padding: 0 18px 0 0;
   background:
-    radial-gradient(circle at 32% 24%, rgba(255, 255, 255, 0.34) 0 34px, transparent 36px),
-    radial-gradient(circle at 72% 42%, rgba(255, 255, 255, 0.2) 0 58px, transparent 61px),
-    linear-gradient(100deg, #c5f5f2 0%, #87c5ff 45%, #9db8ff 100%);
-  box-shadow: 0 12px 36px rgba(60, 105, 154, 0.18);
+    radial-gradient(circle at 31% 24%, rgba(255, 255, 255, 0.36) 0 34px, transparent 36px),
+    radial-gradient(circle at 72% 42%, rgba(255, 255, 255, 0.22) 0 58px, transparent 61px),
+    linear-gradient(100deg, #d8faf5 0%, #b6e1f2 48%, #c4d2ee 100%);
+  box-shadow: 0 12px 36px rgba(67, 111, 125, 0.16);
   backdrop-filter: blur(18px);
   overflow: visible;
 }
@@ -578,7 +582,7 @@ html:not(.access-locked) .access-gate {
   border-radius: 0 999px 999px 0 / 0 86px 86px 0;
   padding: 11px 58px 12px 22px;
   background: rgba(255, 255, 255, 0.96);
-  box-shadow: 12px 0 34px rgba(57, 101, 148, 0.12);
+  box-shadow: 12px 0 34px rgba(65, 111, 124, 0.12);
 }
 
 .brand::after {
@@ -606,7 +610,7 @@ html:not(.access-locked) .access-gate {
     contrast(2.5)
     saturate(1.42)
     drop-shadow(0 3px 0 rgba(255, 255, 255, 1))
-    drop-shadow(0 9px 13px rgba(72, 107, 111, 0.22));
+    drop-shadow(0 9px 13px rgba(70, 104, 111, 0.22));
 }
 
 .site-nav {
@@ -628,7 +632,7 @@ html:not(.access-locked) .access-gate {
   font-weight: 900;
   letter-spacing: 0.02em;
   text-decoration: none;
-  text-shadow: 0 2px 10px rgba(53, 91, 145, 0.34);
+  text-shadow: 0 2px 10px rgba(62, 96, 121, 0.3);
 }
 
 .site-nav a:hover {
@@ -641,16 +645,16 @@ html:not(.access-locked) .access-gate {
   place-items: center;
   margin-left: 8px;
   padding: 0 26px;
-  color: #5e9eec;
+  color: #5d9fcd;
   background: rgba(255, 255, 255, 0.9);
-  box-shadow: 0 10px 24px rgba(63, 112, 177, 0.22);
+  box-shadow: 0 10px 24px rgba(67, 111, 125, 0.18);
   font-size: clamp(0.86rem, 1.2vw, 1.08rem);
   letter-spacing: 0.08em;
   text-shadow: none;
 }
 
 .site-nav .nav-contact:hover {
-  color: #4e8fe2;
+  color: #4d91be;
   background: rgba(255, 255, 255, 0.98);
 }
 
@@ -702,8 +706,8 @@ html:not(.access-locked) .access-gate {
   background:
     linear-gradient(90deg, rgba(255, 255, 255, 0.96) 0 28%, rgba(255, 255, 255, 0.72) 42%, rgba(255, 255, 255, 0.06) 72%),
     radial-gradient(circle at 14% 18%, rgba(255, 255, 255, 0.88) 0 84px, transparent 88px),
-    radial-gradient(circle at 82% 15%, rgba(186, 245, 231, 0.54), transparent 24%),
-    linear-gradient(180deg, #fafffe, #dffbf5 64%, #eef2ff);
+    radial-gradient(circle at 82% 15%, rgba(200, 247, 237, 0.54), transparent 24%),
+    linear-gradient(180deg, #fafffe, #e7fbf7 64%, #eef7fc);
 }
 
 .hero-backdrop::before,
@@ -726,7 +730,7 @@ html:not(.access-locked) .access-gate {
   inset: 0;
   background:
     linear-gradient(105deg, transparent 0 34%, rgba(255, 255, 255, 0.48) 44%, transparent 54% 100%),
-    radial-gradient(circle at 82% 82%, rgba(248, 215, 223, 0.34), transparent 26%);
+    radial-gradient(circle at 82% 82%, rgba(200, 213, 242, 0.28), transparent 26%);
   animation: shine-sweep 9s ease-in-out infinite;
 }
 
@@ -1301,19 +1305,45 @@ html:not(.access-locked) .access-gate {
 .profile-layout {
   position: relative;
   display: grid;
-  grid-template-columns: minmax(320px, 0.86fr) minmax(300px, 1fr);
+  grid-template-columns: minmax(360px, 1.06fr) minmax(320px, 0.94fr);
   align-items: center;
-  gap: clamp(22px, 5vw, 60px);
+  gap: clamp(18px, 4vw, 52px);
 }
 
 .profile-visual {
   position: relative;
-  margin: 0;
-  overflow: hidden;
+  justify-self: center;
+  width: min(710px, 55vw);
+  margin: -34px 0 -18px;
+  overflow: visible;
+  isolation: isolate;
 }
 
-.window-bar {
-  min-height: 40px;
+.profile-visual::before,
+.profile-visual::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.profile-visual::before {
+  inset: 8% -8% 2%;
+  border-radius: 48% 52% 46% 54% / 46% 42% 58% 54%;
+  background:
+    radial-gradient(circle at 50% 18%, rgba(255, 255, 255, 0.88), transparent 34%),
+    radial-gradient(circle at 62% 56%, rgba(200, 247, 237, 0.62), transparent 46%),
+    radial-gradient(circle at 26% 74%, rgba(184, 226, 244, 0.4), transparent 42%);
+  filter: blur(1px);
+}
+
+.profile-visual::after {
+  inset: 18% 2% 3% 6%;
+  background:
+    repeating-linear-gradient(0deg, rgba(96, 137, 145, 0.08) 0 2px, transparent 2px 34px),
+    repeating-linear-gradient(90deg, rgba(96, 137, 145, 0.07) 0 2px, transparent 2px 34px);
+  mask-image: radial-gradient(ellipse at center, #000 0 58%, transparent 74%);
+  opacity: 0.62;
 }
 
 .profile-visual picture,
@@ -1323,8 +1353,13 @@ html:not(.access-locked) .access-gate {
 
 .profile-visual img {
   width: 100%;
-  aspect-ratio: 3 / 4;
-  object-fit: cover;
+  height: auto;
+  max-height: min(1040px, 94vh);
+  object-fit: contain;
+  filter:
+    drop-shadow(0 8px 0 rgba(255, 255, 255, 0.72))
+    drop-shadow(0 30px 44px rgba(58, 89, 98, 0.2));
+  transform: translateY(-2%);
 }
 
 .profile-visual figcaption {
@@ -1347,20 +1382,6 @@ html:not(.access-locked) .access-gate {
   z-index: 2;
   display: grid;
   gap: 18px;
-}
-
-.profile-character {
-  position: absolute;
-  z-index: 1;
-  right: -7%;
-  bottom: -10%;
-  width: min(330px, 27vw);
-  opacity: 0.18;
-  pointer-events: none;
-  filter:
-    saturate(0.92)
-    drop-shadow(0 20px 28px rgba(67, 95, 101, 0.16));
-  transform: rotate(4deg);
 }
 
 .profile-note {
@@ -1874,7 +1895,7 @@ html:not(.access-locked) .access-gate {
     border-radius: 18px;
     padding: 10px;
     background: rgba(255, 255, 255, 0.84);
-    box-shadow: 0 18px 36px rgba(60, 105, 154, 0.14);
+    box-shadow: 0 18px 36px rgba(67, 111, 125, 0.13);
     backdrop-filter: blur(14px);
   }
 
@@ -1958,11 +1979,9 @@ html:not(.access-locked) .access-gate {
     grid-template-columns: 1fr;
   }
 
-  .profile-character {
-    right: -6%;
-    bottom: 12%;
-    width: min(260px, 34vw);
-    opacity: 0.13;
+  .profile-visual {
+    width: min(590px, 86vw);
+    margin: -16px auto -28px;
   }
 
   .link-grid {
@@ -2184,8 +2203,17 @@ html:not(.access-locked) .access-gate {
     padding: 20px;
   }
 
-  .profile-character {
-    display: none;
+  .profile-visual {
+    width: min(455px, 102vw);
+    margin: -18px auto -20px;
+  }
+
+  .profile-visual::before {
+    inset: 9% -5% 1%;
+  }
+
+  .profile-visual::after {
+    opacity: 0.48;
   }
 
   .links-chibi {
