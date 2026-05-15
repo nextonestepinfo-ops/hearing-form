@@ -1,0 +1,277 @@
+<!doctype html>
+<html lang="ja" class="access-locked">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>白狼このは公式サイト</title>
+    <meta
+      name="description"
+      content="白狼このはの公式サイトです。プロフィール、配信リンク、タグ、ガイドライン、お仕事情報を掲載しています。"
+    />
+    <meta name="theme-color" content="#d9fbf2" />
+    <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="access-gate" data-access-gate>
+      <form class="access-card" data-access-form>
+        <span class="access-kicker">Access Check</span>
+        <strong>白狼このは公式サイト</strong>
+        <p>確認用パスワードを入力してください。</p>
+        <label>
+          <span>Password</span>
+          <input type="password" name="password" autocomplete="current-password" required />
+        </label>
+        <button type="submit">Enter</button>
+        <p class="access-error" data-access-error aria-live="polite"></p>
+      </form>
+    </div>
+
+    <div class="loader" data-loader aria-hidden="true">
+      <div class="loader-window">
+        <div class="loader-titlebar"><i></i><i></i><i></i><span>KONOHA.EXE</span></div>
+        <div class="loader-screen">
+          <span class="pixel-paw"></span>
+          <p>Now Loading<span data-loader-dots>...</span></p>
+          <strong>SHIROKAMI KONOHA</strong>
+          <span class="loader-bar"><i></i></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="scroll-progress" aria-hidden="true"><span data-scroll-progress></span></div>
+
+    <div class="page-decor" aria-hidden="true">
+      <span class="sparkle-dot dot-a"></span>
+      <span class="sparkle-dot dot-b"></span>
+      <span class="sparkle-dot dot-c"></span>
+      <span class="pixel-heart heart-a"></span>
+      <span class="pixel-heart heart-b"></span>
+      <span class="ribbon-sticker ribbon-a"></span>
+      <span class="ribbon-sticker ribbon-b"></span>
+    </div>
+
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="白狼このは トップ">
+        <img src="./assets/konoha-logo.png" alt="白狼このは" />
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="site-nav" id="site-nav" aria-label="主要メニュー">
+        <a href="#profile">Profile</a>
+        <a href="#links">Links</a>
+        <a href="#tags">Tags</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-backdrop" aria-hidden="true"></div>
+        <div class="hero-collage" aria-hidden="true">
+          <span class="window-chip chip-name">SHIROKAMI</span>
+          <span class="window-chip chip-check">Check me!!</span>
+          <span class="window-chip chip-wolf">Wolf VTuber</span>
+          <span class="window-panel panel-a"><i></i><b></b><em></em></span>
+          <span class="window-panel panel-b"><i></i><b></b><em></em></span>
+          <span class="charm charm-a"></span>
+          <span class="charm charm-b"></span>
+        </div>
+
+        <div class="hero-inner">
+          <div class="hero-copy" data-reveal>
+            <p class="hero-kicker">Official Website</p>
+            <img class="hero-logo" src="./assets/konoha-logo.png" alt="白狼このは" />
+            <h1 id="hero-title">白狼このは公式サイト</h1>
+            <p class="hero-lead">ゲームが大好きな白狼VTuber。配信、告知、応援タグの入口。</p>
+            <div class="hero-actions" aria-label="公式リンク">
+              <a class="icon-button twitch" href="https://www.twitch.tv/shirokamikonoha" target="_blank" rel="noreferrer" aria-label="Twitch">
+                <img src="./assets/platform-twitch.png" alt="" />
+              </a>
+              <a class="icon-button youtube" href="https://www.youtube.com/@%E7%99%BD%E7%8B%BC%E3%81%93%E3%81%AE%E3%81%AF" target="_blank" rel="noreferrer" aria-label="YouTube">
+                <img src="./assets/platform-youtube.png" alt="" />
+              </a>
+              <a class="icon-button x" href="https://x.com/ShirokamiKonoha" target="_blank" rel="noreferrer" aria-label="X">
+                <img src="./assets/platform-x.png" alt="" />
+              </a>
+            </div>
+          </div>
+
+          <div class="hero-art" data-reveal aria-hidden="true">
+            <div class="standee-stage">
+              <span class="stage-window title">KONOHA</span>
+              <span class="stage-window tag">Thank you for finding me!</span>
+              <picture>
+                <source media="(max-width: 620px)" srcset="./assets/konoha-standee-mobile.webp" type="image/webp" />
+                <source media="(max-width: 980px)" srcset="./assets/konoha-standee-small.webp" type="image/webp" />
+                <source srcset="./assets/konoha-standee.webp" type="image/webp" />
+                <img src="./assets/konoha-standee.webp" alt="" decoding="async" fetchpriority="high" />
+              </picture>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-dock" aria-label="ページ内リンク">
+          <a href="#profile"><span>01</span>Profile</a>
+          <a href="#links"><span>02</span>Links</a>
+          <a href="#tags"><span>03</span>Tags</a>
+        </div>
+      </section>
+
+      <div class="marquee" aria-hidden="true">
+        <div>
+          <span>SHIROKAMI KONOHA</span>
+          <span>OFFICIAL SITE</span>
+          <span>MINT</span>
+          <span>SILVER</span>
+          <span>PIXEL</span>
+          <span>WINDOW UI</span>
+        </div>
+        <div>
+          <span>SHIROKAMI KONOHA</span>
+          <span>OFFICIAL SITE</span>
+          <span>MINT</span>
+          <span>SILVER</span>
+          <span>PIXEL</span>
+          <span>WINDOW UI</span>
+        </div>
+      </div>
+
+      <section id="profile" class="profile-section section-shell" aria-labelledby="profile-title">
+        <div class="section-heading" data-reveal>
+          <p>Profile Main Visual</p>
+          <h2 id="profile-title">白狼このは</h2>
+        </div>
+
+        <div class="profile-layout">
+          <figure class="profile-visual window-card" data-reveal data-tilt>
+            <div class="window-bar">
+              <span>profile_main.png</span>
+              <i></i><i></i><i></i>
+            </div>
+            <picture>
+              <source media="(max-width: 620px)" srcset="./assets/konoha-collage-profile-mobile.jpg" />
+              <img src="./assets/konoha-collage-profile.jpg" alt="白狼このはのミントとシルバーのコラージュプロフィールビジュアル" loading="lazy" decoding="async" />
+            </picture>
+            <figcaption>
+              <span>New Profile Visual</span>
+              <strong>ミント、シルバー、ステッカー、ピクセルで飾った公式プロフィールビジュアル。</strong>
+            </figcaption>
+          </figure>
+
+          <div class="profile-copy" data-reveal>
+            <div class="profile-note">
+              <span class="note-pin"></span>
+              <p>ゲームとかわいいものが好きな白狼VTuber。透明感のあるシルバーと、やわらかなミントの世界観で活動中。</p>
+            </div>
+            <dl class="profile-list">
+              <div><dt>Name</dt><dd>白狼このは / Shirokami Konoha</dd></div>
+              <div><dt>Style</dt><dd>ゲーム配信、雑談、ファン交流</dd></div>
+              <div><dt>Fan Mark</dt><dd>🐺🤍</dd></div>
+              <div><dt>Color</dt><dd>Mint / Silver / White</dd></div>
+            </dl>
+            <div class="profile-badges" aria-label="キーワード">
+              <span>Wolf VTuber</span>
+              <span>Game</span>
+              <span>Ribbon</span>
+              <span>Pixel</span>
+              <span>Mint Silver</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="links" class="section-shell links-section" aria-labelledby="links-title">
+        <div class="section-heading" data-reveal>
+          <p>Official Links</p>
+          <h2 id="links-title">配信と告知の入口</h2>
+        </div>
+        <div class="link-grid">
+          <a class="link-card" href="https://www.twitch.tv/shirokamikonoha" target="_blank" rel="noreferrer" data-reveal data-tilt>
+            <span>Twitch</span>
+            <strong>ライブ配信を見る</strong>
+            <p>ゲーム配信やリアルタイムの活動はこちらから。</p>
+          </a>
+          <a class="link-card" href="https://www.youtube.com/@%E7%99%BD%E7%8B%BC%E3%81%93%E3%81%AE%E3%81%AF" target="_blank" rel="noreferrer" data-reveal data-tilt>
+            <span>YouTube</span>
+            <strong>動画・アーカイブを見る</strong>
+            <p>配信アーカイブや動画コンテンツの入口です。</p>
+          </a>
+          <a class="link-card" href="https://x.com/ShirokamiKonoha" target="_blank" rel="noreferrer" data-reveal data-tilt>
+            <span>X</span>
+            <strong>最新告知を追う</strong>
+            <p>配信予定、告知、日々の投稿をチェックできます。</p>
+          </a>
+        </div>
+
+        <article class="featured-window window-card" data-reveal data-tilt>
+          <div class="window-bar">
+            <span>latest_archive.mov</span>
+            <i></i><i></i><i></i>
+          </div>
+          <a class="featured-media" href="https://www.youtube.com/live/bNMz6S2ECvc" target="_blank" rel="noreferrer">
+            <img src="./assets/youtube-st6-thumb.jpg" alt="白狼このはのYouTube配信サムネイル" loading="lazy" decoding="async" />
+            <span>PLAY</span>
+          </a>
+          <div class="featured-copy">
+            <span>YouTube Archive</span>
+            <h3>ピックアップアーカイブ</h3>
+            <p>配信をあとから見たい人のための公式アーカイブ導線です。</p>
+          </div>
+        </article>
+      </section>
+
+      <section id="tags" class="section-shell tags-section" aria-labelledby="tags-title">
+        <div class="section-heading" data-reveal>
+          <p>Fan Tags / Guideline</p>
+          <h2 id="tags-title">応援のタグ</h2>
+        </div>
+        <div class="tag-grid">
+          <article data-reveal data-tilt>
+            <span>General</span>
+            <strong>#このはみてみて</strong>
+            <p>配信の感想、告知への反応、白狼このはに見てほしい投稿に。</p>
+          </article>
+          <article data-reveal data-tilt>
+            <span>Fan Art</span>
+            <strong>#しろかきたい</strong>
+            <p>ファンアートや創作投稿に使えるタグです。</p>
+          </article>
+          <article data-reveal data-tilt>
+            <span>Food</span>
+            <strong>#えさまでこのは</strong>
+            <p>ごはん、飯テロ、食べもの投稿はこちらへ。</p>
+          </article>
+          <article data-reveal data-tilt>
+            <span>Fan Mark</span>
+            <strong>🐺🤍</strong>
+            <p>プロフィールや応援投稿に添えられるファンマークです。</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="contact" class="section-shell contact-section" aria-labelledby="contact-title">
+        <div class="contact-window window-card" data-reveal>
+          <div class="window-bar">
+            <span>contact.txt</span>
+            <i></i><i></i><i></i>
+          </div>
+          <div class="contact-body">
+            <p>Work / Collaboration</p>
+            <h2 id="contact-title">お仕事のご相談</h2>
+            <p>PR配信、イベント出演、コラボ、タイアップのご相談は、公式Xより企画概要、希望時期、参考URLを添えてご連絡ください。</p>
+            <a class="text-button" href="https://x.com/ShirokamiKonoha" target="_blank" rel="noreferrer">Xで相談する</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>白狼このは公式サイト</span>
+      <span>Last updated 2026.05.15</span>
+    </footer>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
