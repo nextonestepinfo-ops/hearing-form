@@ -55,10 +55,10 @@
         <span></span><span></span><span></span>
       </button>
       <nav class="site-nav" id="site-nav" aria-label="主要メニュー">
-        <a href="#profile">Profile</a>
-        <a href="#links">Links</a>
-        <a href="#tags">Tags</a>
-        <a href="#contact">Contact</a>
+        <a href="#profile">PROFILE</a>
+        <a href="#links">STREAM</a>
+        <a href="#tags">TAGS</a>
+        <a class="nav-contact" href="#contact">CONTACT</a>
       </nav>
     </header>
 
@@ -149,9 +149,8 @@
       </div>
 
       <section id="profile" class="profile-section section-shell" aria-labelledby="profile-title">
-        <div class="section-heading" data-word="PROFILE" data-reveal>
-          <p>PROFILE</p>
-          <h2 id="profile-title">白狼このは</h2>
+        <div class="section-heading english-heading" data-reveal>
+          <h2 id="profile-title">PROFILE</h2>
         </div>
 
         <div class="profile-layout">
@@ -191,26 +190,31 @@
       </section>
 
       <section id="links" class="section-shell links-section" aria-labelledby="links-title">
-        <div class="section-heading" data-word="LINKS" data-reveal>
-          <p>公式リンク</p>
-          <h2 id="links-title">活動はこちら</h2>
+        <div class="section-heading english-heading stream-heading" data-reveal>
+          <h2 id="links-title"><span>STREAM</span><span>/ ARCHIVES</span></h2>
         </div>
-        <div class="link-grid">
-          <a class="link-card" href="https://www.twitch.tv/shirokamikonoha" target="_blank" rel="noreferrer" data-reveal data-tilt>
-            <span>Twitch</span>
-            <strong>ライブ配信を見る</strong>
-            <p>ゲーム配信やリアルタイムの活動はこちらから。</p>
-          </a>
-          <a class="link-card" href="https://www.youtube.com/@%E7%99%BD%E7%8B%BC%E3%81%93%E3%81%AE%E3%81%AF" target="_blank" rel="noreferrer" data-reveal data-tilt>
-            <span>YouTube</span>
-            <strong>動画・アーカイブを見る</strong>
-            <p>配信アーカイブや動画はこちらから。</p>
-          </a>
-          <a class="link-card" href="https://x.com/ShirokamiKonoha" target="_blank" rel="noreferrer" data-reveal data-tilt>
-            <span>X</span>
-            <strong>最新告知を追う</strong>
-            <p>配信予定、告知、日々の投稿をチェックできます。</p>
-          </a>
+        <div class="link-stage">
+          <img class="links-chibi" src="./assets/konoha-chibi.png" alt="" loading="lazy" decoding="async" />
+          <div class="link-grid">
+            <a class="link-card" href="https://www.twitch.tv/shirokamikonoha" target="_blank" rel="noreferrer" data-reveal data-tilt>
+              <span class="link-icon-wrap"><img class="link-icon twitch-icon" src="./assets/platform-twitch.png" alt="" loading="lazy" decoding="async" /></span>
+              <span class="link-label">Twitch</span>
+              <strong>LIVE STREAM</strong>
+              <p>ゲーム配信とリアルタイムのおしゃべり。</p>
+            </a>
+            <a class="link-card" href="https://www.youtube.com/@%E7%99%BD%E7%8B%BC%E3%81%93%E3%81%AE%E3%81%AF" target="_blank" rel="noreferrer" data-reveal data-tilt>
+              <span class="link-icon-wrap"><img class="link-icon youtube-icon" src="./assets/platform-youtube.png" alt="" loading="lazy" decoding="async" /></span>
+              <span class="link-label">YouTube</span>
+              <strong>MOVIE / ARCHIVE</strong>
+              <p>配信アーカイブや動画はこちら。</p>
+            </a>
+            <a class="link-card" href="https://x.com/ShirokamiKonoha" target="_blank" rel="noreferrer" data-reveal data-tilt>
+              <span class="link-icon-wrap"><img class="link-icon x-icon" src="./assets/platform-x.png" alt="" loading="lazy" decoding="async" /></span>
+              <span class="link-label">X</span>
+              <strong>NEWS / DIARY</strong>
+              <p>告知や日々の投稿はこちら。</p>
+            </a>
+          </div>
         </div>
 
         <article class="featured-window window-card" data-reveal data-tilt>
@@ -231,30 +235,29 @@
       </section>
 
       <section id="tags" class="section-shell tags-section" aria-labelledby="tags-title">
-        <div class="section-heading" data-word="TAGS" data-reveal>
-          <p>タグ</p>
-          <h2 id="tags-title">応援のタグ</h2>
+        <div class="section-heading english-heading" data-reveal>
+          <h2 id="tags-title">TAGS</h2>
         </div>
         <div class="tag-grid">
           <article data-reveal data-tilt>
             <span>General</span>
             <strong>#このはみてみて</strong>
-            <p>配信の感想、告知への反応、白狼このはに見てほしい投稿に。</p>
+            <p>配信の感想や、このはに見てほしい投稿に。</p>
           </article>
           <article data-reveal data-tilt>
             <span>Fan Art</span>
             <strong>#しろかきたい</strong>
-            <p>ファンアートや創作投稿に使えるタグです。</p>
+            <p>ファンアートや創作投稿に。</p>
           </article>
           <article data-reveal data-tilt>
             <span>Food</span>
             <strong>#えさまでこのは</strong>
-            <p>ごはん、飯テロ、食べもの投稿はこちらへ。</p>
+            <p>ごはん、飯テロ、食べもの投稿に。</p>
           </article>
           <article data-reveal data-tilt>
             <span>Fan Mark</span>
             <strong>🐺🤍</strong>
-            <p>プロフィールや応援投稿に添えられるファンマークです。</p>
+            <p>プロフィールや応援投稿に添えるファンマーク。</p>
           </article>
         </div>
       </section>
