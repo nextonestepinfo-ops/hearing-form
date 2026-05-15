@@ -3,6 +3,7 @@ const navToggle = document.querySelector(".nav-toggle");
 const siteNav = document.querySelector(".site-nav");
 const loader = document.querySelector("[data-loader]");
 const progress = document.querySelector("[data-scroll-progress]");
+const hero = document.querySelector(".hero");
 const ACCESS_HASH = "9497683cb70785d3626818bc7a71924c14482e16636edd6668cc2664b75ed8fe";
 const ACCESS_STORAGE_KEY = "shirokami-konoha-v2-collage-access";
 let pageStarted = false;
@@ -142,6 +143,22 @@ function updateProgress() {
   const max = document.documentElement.scrollHeight - window.innerHeight;
   const amount = max <= 0 ? 0 : (window.scrollY / max) * 100;
   progress.style.width = `${Math.min(100, Math.max(0, amount))}%`;
+  updateHeroMotion();
+}
+
+function updateHeroMotion() {
+  if (!hero || reduceMotion) {
+    document.documentElement.style.setProperty("--hero-shift", "0px");
+    document.documentElement.style.setProperty("--hero-lift", "0px");
+    document.documentElement.style.setProperty("--hero-scale", "0");
+    return;
+  }
+
+  const heroHeight = Math.max(hero.offsetHeight || window.innerHeight, 1);
+  const ratio = Math.min(1, Math.max(0, window.scrollY / heroHeight));
+  document.documentElement.style.setProperty("--hero-shift", `${(ratio * 92).toFixed(2)}px`);
+  document.documentElement.style.setProperty("--hero-lift", `${(ratio * -48).toFixed(2)}px`);
+  document.documentElement.style.setProperty("--hero-scale", (ratio * 0.026).toFixed(4));
 }
 
 function setupTiltCards() {

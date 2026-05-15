@@ -12,6 +12,7 @@
 - GIFは使わずCSSアニメーションで演出
 - スマホ表示を優先して調整
 - コピーは活動中の公式サイトとして短く整理
+- 追加素材をトップ演出の浮遊ステッカーやモーション装飾として使用
 
 ## 主要ファイル
 
@@ -21,6 +22,9 @@
 - `assets/konoha-collage-profile.jpg`: プロフィール用の軽量メイン画像
 - `assets/konoha-collage-profile-mobile.jpg`: スマホ用の軽量メイン画像
 - `assets/konoha-collage-original.png`: 提供画像の原本コピー
+- `assets/konoha-peek.png`: 追加素材から作成したトップ用透過素材
+- `assets/konoha-chibi.png`: 追加素材から作成したデフォルメ透過素材
+- `assets/konoha-standee-new.png`: 追加素材から作成した透過立ち絵
 - `preview-v2-desktop.png`: デスクトップ確認用プレビュー
 - `preview-v2-mobile.png`: スマホ確認用プレビュー
 
