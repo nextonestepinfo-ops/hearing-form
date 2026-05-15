@@ -1148,6 +1148,7 @@ html:not(.access-locked) .access-gate {
   inset: 70px -3vw 26px 4vw;
   width: calc(100% - 1vw);
   height: calc(100% - 96px);
+  max-width: none;
   border: 8px solid rgba(255, 255, 255, 0.86);
   border-radius: 42% 0 0 52% / 23% 0 0 32%;
   object-fit: cover;
@@ -2122,7 +2123,7 @@ html:not(.access-locked) .access-gate {
   }
 
   .hero-art::before {
-    inset: 172px -24vw 8px -14vw;
+    inset: 142px -34vw 10px -30vw;
     border-width: 7px;
     border-radius: 42% 42% 0 0 / 18% 18% 0 0;
   }
@@ -2135,13 +2136,13 @@ html:not(.access-locked) .access-gate {
   }
 
   .hero-art img {
-    inset: 170px -18vw 8px -15vw;
-    width: calc(100% + 33vw);
-    height: calc(100% - 178px);
+    inset: 124px auto 82px -50vw;
+    width: calc(100% + 102vw);
+    height: calc(100% - 206px);
     min-height: 0;
     border-width: 6px;
     border-radius: 42% 42% 0 0 / 18% 18% 0 0;
-    object-position: center top;
+    object-position: center 12%;
   }
 
   .strip-b,
@@ -2301,8 +2302,10 @@ html:not(.access-locked) .access-gate {
   }
 
   .hero-art img {
-    right: -22vw;
-    width: calc(100% + 37vw);
+    left: -56vw;
+    right: auto;
+    width: calc(100% + 114vw);
+    object-position: center 11%;
   }
 
   .site-nav a {
