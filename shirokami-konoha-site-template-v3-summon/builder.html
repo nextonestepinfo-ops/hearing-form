@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="ja" class="access-locked">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>推しサイト召喚ビルダー</title>
+    <meta name="description" content="VTuber公式ミニサイトを設定ファイルで組み立てるためのビルダープロトタイプです。" />
+    <meta name="theme-color" content="#d9fbf2" />
+    <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body data-builder-page>
+    <div class="access-gate" data-access-gate>
+      <form class="access-card" data-access-form>
+        <span class="access-kicker">Access Check</span>
+        <strong>推しサイト召喚ビルダー</strong>
+        <p>確認用パスワードを入力してください。</p>
+        <label>
+          <span>Password</span>
+          <input type="password" name="password" autocomplete="current-password" required />
+        </label>
+        <button type="submit">Enter</button>
+        <p class="access-error" data-access-error aria-live="polite"></p>
+      </form>
+    </div>
+
+    <div class="loader is-hidden" data-loader aria-hidden="true">
+      <div class="loader-cloud">
+        <img src="./assets/konoha-logo.png" alt="" />
+        <p>Now Loading<span data-loader-dots>...</span></p>
+        <div class="loader-build" aria-hidden="true">
+          <i></i><i></i><i></i><i></i>
+        </div>
+        <span class="loader-bubbles"><i></i><i></i><i></i></span>
+      </div>
+    </div>
+
+    <header class="site-header">
+      <a class="brand" href="./index.html" aria-label="白狼このは公式サイトへ戻る">
+        <img src="./assets/konoha-logo.png" alt="白狼このは" />
+      </a>
+      <nav class="site-nav" id="site-nav" aria-label="ビルダーメニュー">
+        <a href="./index.html">SITE</a>
+        <a href="#config">CONFIG</a>
+        <a href="#preview">PREVIEW</a>
+      </nav>
+    </header>
+
+    <main class="builder-page">
+      <div class="builder-shell">
+        <section class="section-heading english-heading" data-reveal>
+          <h1>SUMMON BUILDER</h1>
+        </section>
+
+        <div class="builder-grid">
+          <section class="builder-card" id="config" data-reveal>
+            <h2>site-config.json</h2>
+            <p>名前、素材、SNS、タグ、YouTube動画IDを差し替えると、同じ演出構成で別タレント版を組めます。</p>
+            <textarea data-config-editor spellcheck="false"></textarea>
+            <div class="builder-actions">
+              <button class="text-button" type="button" data-load-config>Load Current</button>
+              <button class="text-button" type="button" data-validate-config>Validate</button>
+              <button class="text-button" type="button" data-download-config>Download JSON</button>
+            </div>
+            <p class="access-error" data-builder-status aria-live="polite"></p>
+          </section>
+
+          <section class="builder-card builder-preview" id="preview" data-reveal>
+            <h2>Preview</h2>
+            <div class="builder-preview-frame">
+              <div class="builder-preview-hero">
+                <img class="builder-preview-logo" src="./assets/konoha-logo.png" alt="" data-preview-logo />
+                <div class="builder-preview-tags" data-preview-tags></div>
+                <img class="builder-preview-chibi" src="./assets/konoha-chibi.png" alt="" data-preview-chibi />
+              </div>
+            </div>
+            <p data-preview-copy>素材を入れると、ロゴ、タグ、ちびキャラ、サムネ演出を同じ設計で展開できます。</p>
+            <a class="text-button" href="./index.html">Open Site</a>
+          </section>
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <span>推しサイト召喚ビルダー</span>
+      <span>Prototype 2026.05.18</span>
+    </footer>
+
+    <script src="./script.js"></script>
+    <script>
+      const editor = document.querySelector("[data-config-editor]");
+      const statusNode = document.querySelector("[data-builder-status]");
+      const previewLogo = document.querySelector("[data-preview-logo]");
+      const previewChibi = document.querySelector("[data-preview-chibi]");
+      const previewTags = document.querySelector("[data-preview-tags]");
+      const previewCopy = document.querySelector("[data-preview-copy]");
+
+      function setStatus(message, isError = false) {
+        if (!statusNode) return;
+        statusNode.textContent = message;
+        statusNode.style.color = isError ? "#a75066" : "#4d7772";
+      }
+
+      function applyBuilderPreview(config) {
+        if (!config) return;
+        if (previewLogo && config.assets?.logo) previewLogo.src = config.assets.logo;
+        if (previewChibi && config.assets?.chibi) previewChibi.src = config.assets.chibi;
+        if (previewCopy && config.talent?.catch) previewCopy.textContent = config.talent.catch;
+        if (previewTags) {
+          previewTags.textContent = "";
+          (config.tags || []).slice(0, 6).forEach((tag) => {
+            const node = document.createElement("span");
+            node.textContent = tag.text || tag.label;
+            previewTags.append(node);
+          });
+        }
+      }
+
+      async function loadConfigIntoEditor() {
+        try {
+          const response = await fetch("./site-config.json", { cache: "no-store" });
+          const config = await response.json();
+          editor.value = JSON.stringify(config, null, 2);
+          applyBuilderPreview(config);
+          setStatus("Loaded current config.");
+        } catch {
+          setStatus("設定ファイルを読み込めませんでした。", true);
+        }
+      }
+
+      function readEditorConfig() {
+        const config = JSON.parse(editor.value);
+        const required = ["site", "talent", "assets", "links", "tags"];
+        required.forEach((key) => {
+          if (!config[key]) throw new Error(`${key} is missing`);
+        });
+        return config;
+      }
+
+      document.querySelector("[data-load-config]")?.addEventListener("click", loadConfigIntoEditor);
+      document.querySelector("[data-validate-config]")?.addEventListener("click", () => {
+        try {
+          const config = readEditorConfig();
+          applyBuilderPreview(config);
+          setStatus("OK. この設定でプレビューを更新しました。");
+        } catch (error) {
+          setStatus(error.message || "JSONを確認してください。", true);
+        }
+      });
+      document.querySelector("[data-download-config]")?.addEventListener("click", () => {
+        try {
+          const config = readEditorConfig();
+          const blob = new Blob([JSON.stringify(config, null, 2)], { type: "application/json" });
+          const link = document.createElement("a");
+          link.href = URL.createObjectURL(blob);
+          link.download = "site-config.json";
+          link.click();
+          URL.revokeObjectURL(link.href);
+          setStatus("JSONを書き出しました。");
+        } catch (error) {
+          setStatus(error.message || "JSONを確認してください。", true);
+        }
+      });
+
+      loadConfigIntoEditor();
+    </script>
+  </body>
+</html>

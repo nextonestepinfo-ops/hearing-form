@@ -1,0 +1,86 @@
+{
+  "version": "3.0.0",
+  "site": {
+    "title": "白狼このは公式サイト",
+    "slug": "shirokami-konoha-site-template-v3-summon",
+    "updated": "2026.05.18",
+    "description": "白狼このはの公式サイトです。プロフィール、配信リンク、タグ、ガイドライン、お仕事情報を掲載しています。"
+  },
+  "talent": {
+    "nameJa": "白狼このは",
+    "nameEn": "Shirokami Konoha",
+    "catch": "ゲームとおしゃべりが大好き。かまってちゃんのさみしがり屋オオカミ。",
+    "fanMark": "🐺🤍",
+    "likes": ["ゲーム", "おしゃべり", "かわいいもの"],
+    "style": ["ゲーム配信", "雑談", "ファン交流"]
+  },
+  "assets": {
+    "logo": "./assets/konoha-logo.png",
+    "heroDesktop": "./assets/konoha-collage-profile.jpg",
+    "heroMobile": "./assets/konoha-collage-profile-mobile-hq.jpg",
+    "standee": "./assets/konoha-profile-standee.png",
+    "standeeWebp": "./assets/konoha-profile-standee.webp",
+    "chibi": "./assets/konoha-chibi.png",
+    "icon": "./assets/konoha-icon.png"
+  },
+  "links": [
+    {
+      "label": "Twitch",
+      "headline": "LIVE STREAM",
+      "url": "https://www.twitch.tv/shirokamikonoha",
+      "icon": "./assets/platform-twitch.png",
+      "copy": "ゲーム配信とリアルタイムのおしゃべり。"
+    },
+    {
+      "label": "YouTube",
+      "headline": "MOVIE / ARCHIVE",
+      "url": "https://www.youtube.com/@%E7%99%BD%E7%8B%BC%E3%81%93%E3%81%AE%E3%81%AF",
+      "icon": "./assets/platform-youtube.png",
+      "copy": "配信アーカイブや動画はこちら。"
+    },
+    {
+      "label": "X",
+      "headline": "NEWS / DIARY",
+      "url": "https://x.com/ShirokamiKonoha",
+      "icon": "./assets/platform-x.png",
+      "copy": "告知や日々の投稿はこちら。"
+    }
+  ],
+  "tags": [
+    { "label": "General", "text": "#このはみてみて", "copy": "配信の感想や、このはに見てほしい投稿に。" },
+    { "label": "Fan Art", "text": "#しろかきたい", "copy": "ファンアートや創作投稿に。" },
+    { "label": "Food", "text": "#えさまでこのは", "copy": "ごはん、飯テロ、食べもの投稿に。" },
+    { "label": "Fan Mark", "text": "🐺🤍", "copy": "プロフィールや応援投稿に添えるファンマーク。" }
+  ],
+  "youtube": {
+    "channelHandle": "@白狼このは",
+    "channelId": "",
+    "latestJsonUrl": "",
+    "thumbnailQuality": "hqdefault",
+    "fallbackVideos": [
+      {
+        "id": "",
+        "title": "Konoha Movie",
+        "url": "https://www.youtube.com/@%E7%99%BD%E7%8B%BC%E3%81%93%E3%81%AE%E3%81%AF",
+        "thumb": "./assets/youtube-st6-thumb.jpg"
+      },
+      {
+        "id": "",
+        "title": "Konoha Archive",
+        "url": "https://www.youtube.com/@%E7%99%BD%E7%8B%BC%E3%81%93%E3%81%AE%E3%81%AF",
+        "thumb": "./assets/youtube-st6-thumb.jpg"
+      },
+      {
+        "id": "",
+        "title": "Game Talk",
+        "url": "https://www.youtube.com/@%E7%99%BD%E7%8B%BC%E3%81%93%E3%81%AE%E3%81%AF",
+        "thumb": "./assets/youtube-st6-thumb.jpg"
+      }
+    ]
+  },
+  "builder": {
+    "offerName": "推しサイト召喚パック",
+    "priceRange": "10,000円〜49,800円",
+    "requiredMaterials": ["立ち絵", "ロゴ", "SNSリンク", "好きなもの", "タグ", "配信/動画URL"]
+  }
+}
