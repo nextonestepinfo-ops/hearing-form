@@ -314,12 +314,15 @@ function renderFeaturedVideo(videos) {
 function renderThumbnailFlight(videos, config) {
   const flight = document.querySelector("[data-thumbnail-flight]");
   if (!flight || !videos.length) return;
-  const iconSources = config?.links?.map((link) => link.icon).filter(Boolean) || [];
+  const isMovieFlight = flight.dataset.thumbnailFlight === "movie";
+  const iconSources = isMovieFlight ? [] : config?.links?.map((link) => link.icon).filter(Boolean) || [];
   flight.textContent = "";
 
   videos.slice(0, 4).forEach((video, index) => {
     const link = document.createElement("a");
-    link.className = `flying-thumb thumb-${String.fromCharCode(97 + index)}`;
+    link.className = isMovieFlight
+      ? `movie-flying-thumb movie-thumb-${String.fromCharCode(97 + index)}`
+      : `flying-thumb thumb-${String.fromCharCode(97 + index)}`;
     link.href = video.url;
     link.target = "_blank";
     link.rel = "noreferrer";
