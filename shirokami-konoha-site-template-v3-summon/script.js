@@ -4,6 +4,7 @@ const siteNav = document.querySelector(".site-nav");
 const loader = document.querySelector("[data-loader]");
 const progress = document.querySelector("[data-scroll-progress]");
 const hero = document.querySelector(".hero");
+const root = document.documentElement;
 const CONFIG_URL = "./site-config.json";
 const ACCESS_HASH = "9497683cb70785d3626818bc7a71924c14482e16636edd6668cc2664b75ed8fe";
 const ACCESS_STORAGE_KEY = "shirokami-konoha-v3-summon-access";
@@ -148,21 +149,51 @@ function updateProgress() {
   const amount = max <= 0 ? 0 : (window.scrollY / max) * 100;
   progress.style.width = `${Math.min(100, Math.max(0, amount))}%`;
   updateHeroMotion();
+  updateInteractionMood();
 }
 
 function updateHeroMotion() {
   if (!hero || reduceMotion) {
-    document.documentElement.style.setProperty("--hero-shift", "0px");
-    document.documentElement.style.setProperty("--hero-lift", "0px");
-    document.documentElement.style.setProperty("--hero-scale", "0");
+    root.style.setProperty("--hero-shift", "0px");
+    root.style.setProperty("--hero-lift", "0px");
+    root.style.setProperty("--hero-scale", "0");
     return;
   }
 
   const heroHeight = Math.max(hero.offsetHeight || window.innerHeight, 1);
   const ratio = Math.min(1, Math.max(0, window.scrollY / heroHeight));
-  document.documentElement.style.setProperty("--hero-shift", `${(ratio * 92).toFixed(2)}px`);
-  document.documentElement.style.setProperty("--hero-lift", `${(ratio * -48).toFixed(2)}px`);
-  document.documentElement.style.setProperty("--hero-scale", (ratio * 0.026).toFixed(4));
+  root.style.setProperty("--hero-shift", `${(ratio * 92).toFixed(2)}px`);
+  root.style.setProperty("--hero-lift", `${(ratio * -48).toFixed(2)}px`);
+  root.style.setProperty("--hero-scale", (ratio * 0.026).toFixed(4));
+}
+
+function updateInteractionMood() {
+  const marker = window.innerHeight * 0.42;
+  const sections = [
+    ["hero", ".hero"],
+    ["profile", "#profile"],
+    ["links", "#links"],
+    ["movie", "#movie"],
+    ["tags", "#tags"],
+    ["contact", "#contact"],
+  ];
+  let activeMood = "hero";
+
+  sections.forEach(([mood, selector]) => {
+    const section = document.querySelector(selector);
+    if (!section) return;
+    const rect = section.getBoundingClientRect();
+    if (rect.top <= marker && rect.bottom >= marker) {
+      activeMood = mood;
+    }
+  });
+
+  document.body.dataset.mood = activeMood;
+  siteNav?.querySelectorAll("a[href^='#']").forEach((link) => {
+    const target = link.getAttribute("href")?.replace("#", "");
+    const isActive = target === activeMood || (activeMood === "links" && target === "links");
+    link.classList.toggle("is-active", isActive);
+  });
 }
 
 function setupTiltCards() {
@@ -190,6 +221,70 @@ function setupPointerSparkles() {
     document.body.appendChild(sparkle);
     window.setTimeout(() => sparkle.remove(), 760);
   });
+}
+
+function setupInteractionGimmicks() {
+  const hoverSelector = ".link-card, .tag-grid article, .archive-strip a, .movie-feature, .contact-window, .featured-media";
+  let pointerFrame = 0;
+  let pointerIdleTimer = 0;
+
+  const setHoverPoint = (event) => {
+    if (event.pointerType === "touch") return;
+    const target = event.target instanceof Element ? event.target.closest(hoverSelector) : null;
+    if (!target) return;
+    const rect = target.getBoundingClientRect();
+    if (!rect.width || !rect.height) return;
+    const x = Math.min(100, Math.max(0, ((event.clientX - rect.left) / rect.width) * 100));
+    const y = Math.min(100, Math.max(0, ((event.clientY - rect.top) / rect.height) * 100));
+    target.style.setProperty("--card-x", `${x.toFixed(2)}%`);
+    target.style.setProperty("--card-y", `${y.toFixed(2)}%`);
+    target.classList.add("is-hovering");
+  };
+
+  const clearHoverPoint = (event) => {
+    const target = event.target instanceof Element ? event.target.closest(hoverSelector) : null;
+    const next = event.relatedTarget instanceof Element ? event.relatedTarget : null;
+    if (target && !target.contains(next)) target.classList.remove("is-hovering");
+  };
+
+  document.addEventListener("pointermove", setHoverPoint, { passive: true });
+  document.addEventListener("pointerout", clearHoverPoint, { passive: true });
+  updateInteractionMood();
+
+  if (reduceMotion) return;
+
+  window.addEventListener(
+    "pointermove",
+    (event) => {
+      if (event.pointerType === "touch") return;
+      if (pointerFrame) return;
+
+      pointerFrame = window.requestAnimationFrame(() => {
+        const width = Math.max(window.innerWidth, 1);
+        const height = Math.max(window.innerHeight, 1);
+        const dx = event.clientX / width - 0.5;
+        const dy = event.clientY / height - 0.5;
+
+        root.style.setProperty("--cursor-x", `${event.clientX.toFixed(1)}px`);
+        root.style.setProperty("--cursor-y", `${event.clientY.toFixed(1)}px`);
+        root.style.setProperty("--pointer-shift-x", `${(-dx * 18).toFixed(2)}px`);
+        root.style.setProperty("--pointer-shift-y", `${(-dy * 13).toFixed(2)}px`);
+        root.style.setProperty("--decor-shift-x", `${(dx * 14).toFixed(2)}px`);
+        root.style.setProperty("--decor-shift-y", `${(dy * 10).toFixed(2)}px`);
+        document.body.classList.add("is-pointer-active");
+
+        window.clearTimeout(pointerIdleTimer);
+        pointerIdleTimer = window.setTimeout(() => {
+          document.body.classList.remove("is-pointer-active");
+        }, 1000);
+        pointerFrame = 0;
+      });
+    },
+    { passive: true },
+  );
+
+  window.addEventListener("pointerleave", () => document.body.classList.remove("is-pointer-active"));
+  window.addEventListener("blur", () => document.body.classList.remove("is-pointer-active"));
 }
 
 function youtubeThumb(video, quality = "hqdefault") {
@@ -392,6 +487,7 @@ function initPage() {
   revealOnScroll();
   setupTiltCards();
   setupPointerSparkles();
+  setupInteractionGimmicks();
   updateProgress();
   window.addEventListener("scroll", updateProgress, { passive: true });
   window.addEventListener("resize", updateProgress);
