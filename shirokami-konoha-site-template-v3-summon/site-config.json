@@ -54,27 +54,24 @@
   ],
   "youtube": {
     "channelHandle": "@白狼このは",
-    "channelId": "",
-    "latestJsonUrl": "",
+    "channelId": "UC_nYcejJ7nsVG_ppVLwNHsw",
+    "latestJsonUrl": "./youtube-archives.json",
     "thumbnailQuality": "hqdefault",
     "fallbackVideos": [
       {
-        "id": "",
-        "title": "Konoha Movie",
-        "url": "https://www.youtube.com/@%E7%99%BD%E7%8B%BC%E3%81%93%E3%81%AE%E3%81%AF",
-        "thumb": "./assets/youtube-st6-thumb.jpg"
+        "id": "_0HbwmJToJE",
+        "title": "【 #leagueoflegends 】頑張りたいと思います。",
+        "url": "https://www.youtube.com/watch?v=_0HbwmJToJE"
       },
       {
-        "id": "",
-        "title": "Konoha Archive",
-        "url": "https://www.youtube.com/@%E7%99%BD%E7%8B%BC%E3%81%93%E3%81%AE%E3%81%AF",
-        "thumb": "./assets/youtube-st6-thumb.jpg"
+        "id": "OyciNBxu5wA",
+        "title": "【 #スト6 】初心者Vtuberと学ぶスト6キャラクイズ！第6弾！ #shorts #vtuber",
+        "url": "https://www.youtube.com/shorts/OyciNBxu5wA"
       },
       {
-        "id": "",
-        "title": "Game Talk",
-        "url": "https://www.youtube.com/@%E7%99%BD%E7%8B%BC%E3%81%93%E3%81%AE%E3%81%AF",
-        "thumb": "./assets/youtube-st6-thumb.jpg"
+        "id": "cbsQ6UIIL9g",
+        "title": "【 #雑談 】おひさしぶりのおしゃべり！ #vtuber",
+        "url": "https://www.youtube.com/watch?v=cbsQ6UIIL9g"
       }
     ]
   },

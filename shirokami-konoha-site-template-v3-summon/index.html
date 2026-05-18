@@ -60,6 +60,7 @@
       <nav class="site-nav" id="site-nav" aria-label="主要メニュー">
         <a href="#profile">PROFILE</a>
         <a href="#links">STREAM</a>
+        <a href="#movie">MOVIE</a>
         <a href="#tags">TAGS</a>
         <a class="nav-contact" href="#contact">CONTACT</a>
       </nav>
@@ -106,18 +107,6 @@
           <span class="flying-icon icon-x"><img src="./assets/platform-x.png" alt="" /></span>
         </div>
 
-        <div class="summon-window" aria-hidden="true">
-          <div class="summon-window-bar">
-            <span>site_summon.exe</span>
-            <i></i><i></i><i></i>
-          </div>
-          <div class="summon-window-body">
-            <b>OFFICIAL SITE</b>
-            <span>logo + standee + live archive</span>
-            <em>BUILD COMPLETE</em>
-          </div>
-        </div>
-
         <div class="tag-sticker-cloud" aria-hidden="true">
           <span>#GAME</span>
           <span>#TALK</span>
@@ -130,7 +119,6 @@
             <p class="hero-kicker">Official Website</p>
             <img class="hero-logo" src="./assets/konoha-logo.png" alt="白狼このは" />
             <h1 id="hero-title">白狼このは公式サイト</h1>
-            <p class="hero-summon-label">推しサイト召喚中</p>
             <div class="hero-actions" aria-label="公式リンク">
               <a class="icon-button twitch" href="https://www.twitch.tv/shirokamikonoha" target="_blank" rel="noreferrer" aria-label="Twitch">
                 <img src="./assets/platform-twitch.png" alt="" />
@@ -155,47 +143,8 @@
         <div class="hero-dock" aria-label="ページ内リンク">
           <a href="#profile"><span>01</span>Profile</a>
           <a href="#links"><span>02</span>Links</a>
-          <a href="#tags"><span>03</span>Tags</a>
-        </div>
-      </section>
-
-      <section class="section-shell before-after-section" aria-labelledby="before-after-title">
-        <div class="section-heading english-heading" data-reveal>
-          <h2 id="before-after-title">BEFORE / AFTER</h2>
-        </div>
-        <div class="before-after-stage" data-reveal>
-          <div class="ba-panel ba-before">
-            <div class="window-bar">
-              <span>materials.zip</span>
-              <i></i><i></i><i></i>
-            </div>
-            <div class="material-cloud">
-              <span>Logo</span>
-              <span>Standee</span>
-              <span>SNS</span>
-              <span>Tags</span>
-              <span>Movie</span>
-            </div>
-          </div>
-          <button class="ba-switch" type="button" data-ba-switch aria-pressed="false">
-            <span>Before</span>
-            <b></b>
-            <span>After</span>
-          </button>
-          <div class="ba-panel ba-after">
-            <div class="window-bar">
-              <span>official_site.html</span>
-              <i></i><i></i><i></i>
-            </div>
-            <div class="after-preview">
-              <img src="./assets/konoha-logo.png" alt="" />
-              <div>
-                <strong>白狼このは</strong>
-                <p>Official Website</p>
-              </div>
-              <img src="./assets/konoha-chibi.png" alt="" />
-            </div>
-          </div>
+          <a href="#movie"><span>03</span>Movie</a>
+          <a href="#tags"><span>04</span>Tags</a>
         </div>
       </section>
 
@@ -237,7 +186,7 @@
 
       <section id="links" class="section-shell links-section" aria-labelledby="links-title">
         <div class="section-heading english-heading stream-heading" data-reveal>
-          <h2 id="links-title"><span>STREAM</span><span>/ ARCHIVES</span></h2>
+          <h2 id="links-title"><span>STREAM</span><span>/ LINKS</span></h2>
         </div>
         <div class="link-stage">
           <img class="links-chibi" src="./assets/konoha-chibi.png" alt="" loading="lazy" decoding="async" />
@@ -262,8 +211,22 @@
             </a>
           </div>
         </div>
+      </section>
 
-        <article class="featured-window window-card" data-reveal data-tilt>
+      <section id="movie" class="section-shell movie-section" aria-labelledby="movie-title">
+        <div class="section-heading english-heading" data-reveal>
+          <h2 id="movie-title">MOVIE</h2>
+        </div>
+        <div class="movie-stage">
+          <div class="movie-danmaku" aria-hidden="true">
+            <span>こんのはー！</span>
+            <span>ないす！</span>
+            <span>おしゃべり助かる</span>
+            <span>GG!</span>
+            <span>かわいい</span>
+            <span>初見です</span>
+          </div>
+        <article class="featured-window movie-feature window-card" data-reveal data-tilt>
           <div class="window-bar">
             <span>latest_archive.mov</span>
             <i></i><i></i><i></i>
@@ -274,11 +237,12 @@
           </a>
           <div class="featured-copy">
             <span>YouTube</span>
-            <h3>動画とアーカイブ</h3>
-            <p>気になった配信や動画を、あとからゆっくり見られます。</p>
+            <h3 data-featured-title>動画とアーカイブ</h3>
+            <p data-featured-meta>気になった配信や動画を、あとからゆっくり見られます。</p>
           </div>
           <div class="archive-strip" data-archive-strip aria-label="配信サムネイル"></div>
         </article>
+        </div>
       </section>
 
       <section id="tags" class="section-shell tags-section" aria-labelledby="tags-title">

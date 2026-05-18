@@ -206,7 +206,18 @@ function normalizeVideo(raw, quality) {
     url,
     title: raw.title || "YouTube Archive",
     thumb: raw.thumb || raw.thumbnail || youtubeThumb({ id }, quality),
+    published: raw.published || raw.date || "",
   };
+}
+
+function formatArchiveDate(value) {
+  if (!value) return "Archive";
+  const date = new Date(value);
+  if (Number.isNaN(date.getTime())) return "Archive";
+  return new Intl.DateTimeFormat("ja-JP", {
+    month: "2-digit",
+    day: "2-digit",
+  }).format(date);
 }
 
 function mapLatestPayload(payload, quality) {
@@ -226,6 +237,7 @@ function mapLatestPayload(payload, quality) {
           url: url || (id ? `https://www.youtube.com/watch?v=${id}` : "#"),
           title: item.title,
           thumb: item.thumbnail || item.thumb || item.media?.thumbnail?.url,
+          published: item.published || item.date,
         },
         quality,
       );
@@ -257,8 +269,9 @@ function renderArchiveStrip(videos) {
   const strip = document.querySelector("[data-archive-strip]");
   if (!strip || !videos.length) return;
   strip.textContent = "";
-  videos.slice(0, 4).forEach((video) => {
+  videos.slice(0, 6).forEach((video) => {
     const link = document.createElement("a");
+    link.className = "archive-card";
     link.href = video.url;
     link.target = "_blank";
     link.rel = "noreferrer";
@@ -270,7 +283,13 @@ function renderArchiveStrip(videos) {
     img.loading = "lazy";
     img.decoding = "async";
 
-    link.append(img);
+    const caption = document.createElement("span");
+    caption.textContent = video.title;
+
+    const date = document.createElement("em");
+    date.textContent = formatArchiveDate(video.published);
+
+    link.append(img, caption, date);
     strip.append(link);
   });
 }
@@ -278,12 +297,18 @@ function renderArchiveStrip(videos) {
 function renderFeaturedVideo(videos) {
   const featuredLink = document.querySelector("[data-featured-video]");
   const featuredThumb = document.querySelector("[data-featured-thumb]");
+  const featuredTitle = document.querySelector("[data-featured-title]");
+  const featuredMeta = document.querySelector("[data-featured-meta]");
   const video = videos[0];
   if (!video || !featuredLink || !featuredThumb) return;
 
   featuredLink.href = video.url;
   featuredThumb.src = video.thumb;
   featuredThumb.alt = `${video.title}のサムネイル`;
+  if (featuredTitle) featuredTitle.textContent = video.title;
+  if (featuredMeta) {
+    featuredMeta.textContent = `${formatArchiveDate(video.published)} / YouTube Archive`;
+  }
 }
 
 function renderThumbnailFlight(videos, config) {
@@ -356,25 +381,6 @@ async function loadSiteConfig() {
   }
 }
 
-function setupBeforeAfter() {
-  const button = document.querySelector("[data-ba-switch]");
-  const stage = button?.closest(".before-after-stage");
-  if (!button || !stage) return;
-
-  const setAfter = (isAfter) => {
-    stage.classList.toggle("is-after", isAfter);
-    button.setAttribute("aria-pressed", String(isAfter));
-  };
-
-  button.addEventListener("click", () => {
-    setAfter(!stage.classList.contains("is-after"));
-  });
-
-  if (!reduceMotion) {
-    window.setTimeout(() => setAfter(true), 1800);
-  }
-}
-
 function initPage() {
   if (pageStarted) return;
   pageStarted = true;
@@ -383,7 +389,6 @@ function initPage() {
   revealOnScroll();
   setupTiltCards();
   setupPointerSparkles();
-  setupBeforeAfter();
   updateProgress();
   window.addEventListener("scroll", updateProgress, { passive: true });
   window.addEventListener("resize", updateProgress);
