@@ -72,7 +72,8 @@ a {
 }
 
 .switch-link,
-.sync-state {
+.sync-state,
+.client-label {
   display: inline-flex;
   align-items: center;
   min-height: 34px;
@@ -99,6 +100,10 @@ a {
   border-color: #e2c69d;
   background: #fff5df;
   color: #805116;
+}
+
+.client-label {
+  color: var(--blue);
 }
 
 .page-shell {
@@ -254,7 +259,8 @@ h1,
 
 .progress-box,
 .step-list,
-.sheet-link {
+.sheet-link,
+.side-note {
   border: 1px solid var(--line);
   background: var(--surface);
   box-shadow: var(--shadow);
@@ -296,6 +302,15 @@ h1,
   color: var(--blue);
   font-weight: 900;
   text-decoration: none;
+}
+
+.side-note {
+  margin: 0;
+  padding: 12px 14px;
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 800;
+  line-height: 1.65;
 }
 
 .form-main {

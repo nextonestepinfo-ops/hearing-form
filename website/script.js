@@ -18,9 +18,14 @@ const endpointReady = /^https:\/\/script\.google\.com\/macros\/s\/.+\/exec$/.tes
   CONFIG.appsScriptUrl,
 );
 
-sheetLink.href = CONFIG.spreadsheetUrl;
-configStatus.textContent = endpointReady ? "スプレッドシート連携中" : "連携URL未設定";
-configStatus.classList.add(endpointReady ? "ready" : "demo");
+if (sheetLink) {
+  sheetLink.href = CONFIG.spreadsheetUrl;
+}
+
+if (configStatus) {
+  configStatus.textContent = endpointReady ? "送信連携中" : "送信URL未設定";
+  configStatus.classList.add(endpointReady ? "ready" : "demo");
+}
 
 function value(name) {
   return form.elements[name]?.value?.trim() || "";
