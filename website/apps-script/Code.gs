@@ -1,5 +1,6 @@
 const CONFIG = {
   SHEET_ID: "1JnJ0YsQ1FhIbr-lmO0HW7Zlg1VdBtxF2pCLRapMir1M",
+  DATA_START_ROW: 6,
   TARGET_SHEET_NAME: "ヒアリング入力",
 };
 
@@ -27,9 +28,7 @@ function doPost(e) {
     }
 
     const row = isWebsitePayload(payload) ? buildWebsiteRow(payload) : buildHearingRow(payload);
-    sheet.appendRow(row);
-
-    const appendedRow = sheet.getLastRow();
+    const appendedRow = writeRowToFirstEmptyDataRow(sheet, row);
     sheet.getRange(appendedRow, 2).setNumberFormat("yyyy-mm-dd hh:mm");
     sheet.getRange(appendedRow, 28).setNumberFormat("yyyy-mm-dd hh:mm");
 
@@ -67,6 +66,33 @@ function validatePayload(payload) {
 
 function isWebsitePayload(payload) {
   return text(payload.source) === "github-pages-website-hearing-form" || Boolean(text(payload.purpose));
+}
+
+function writeRowToFirstEmptyDataRow(sheet, row) {
+  const dataStartRow = CONFIG.DATA_START_ROW || 6;
+  const scanStartColumn = 2; // Ignore A because template formulas can exist there.
+  const scanWidth = Math.max(row.length - 1, 1);
+  const maxRows = sheet.getMaxRows();
+  const scanHeight = Math.max(maxRows - dataStartRow + 1, 1);
+  const displayValues = sheet
+    .getRange(dataStartRow, scanStartColumn, scanHeight, scanWidth)
+    .getDisplayValues();
+
+  let targetRow = 0;
+  for (let index = 0; index < displayValues.length; index += 1) {
+    if (displayValues[index].every((cell) => !text(cell))) {
+      targetRow = dataStartRow + index;
+      break;
+    }
+  }
+
+  if (!targetRow) {
+    sheet.insertRowsAfter(maxRows, 1);
+    targetRow = maxRows + 1;
+  }
+
+  sheet.getRange(targetRow, 1, 1, row.length).setValues([row]);
+  return targetRow;
 }
 
 function buildHearingRow(payload) {
