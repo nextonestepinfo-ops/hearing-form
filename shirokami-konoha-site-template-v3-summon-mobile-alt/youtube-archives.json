@@ -1,7 +1,14 @@
 {
-  "updated": "2026-05-18T12:00:00+09:00",
+  "updated": "2026-05-21T03:27:48+09:00",
   "source": "https://www.youtube.com/feeds/videos.xml?channel_id=UC_nYcejJ7nsVG_ppVLwNHsw",
   "items": [
+    {
+      "id": "pGUFtPG78mo",
+      "title": "【 #スト6 】初心者Vtuberと学ぶスト6キャラクイズ！第7弾！ #shorts  #vtuber",
+      "url": "https://www.youtube.com/shorts/pGUFtPG78mo",
+      "published": "2026-05-19T09:00:15+00:00",
+      "thumbnail": "https://i.ytimg.com/vi/pGUFtPG78mo/hqdefault.jpg"
+    },
     {
       "id": "_0HbwmJToJE",
       "title": "【 #leagueoflegends 】頑張りたいと思います。",
@@ -11,7 +18,7 @@
     },
     {
       "id": "OyciNBxu5wA",
-      "title": "【 #スト6 】初心者Vtuberと学ぶスト6キャラクイズ！第6弾！ #shorts #vtuber",
+      "title": "【 #スト6 】初心者Vtuberと学ぶスト6キャラクイズ！第6弾！ #shorts  #vtuber",
       "url": "https://www.youtube.com/shorts/OyciNBxu5wA",
       "published": "2026-05-17T09:00:29+00:00",
       "thumbnail": "https://i.ytimg.com/vi/OyciNBxu5wA/hqdefault.jpg"
@@ -32,17 +39,10 @@
     },
     {
       "id": "LxJgxjsaucU",
-      "title": "【 #スト6 】初心者Vtuberと学ぶスト6キャラクイズ！第5弾！ #shorts #vtuber",
+      "title": "【 #スト6 】初心者Vtuberと学ぶスト6キャラクイズ！第5弾！ #shorts  #vtuber",
       "url": "https://www.youtube.com/shorts/LxJgxjsaucU",
       "published": "2026-05-15T09:00:25+00:00",
       "thumbnail": "https://i.ytimg.com/vi/LxJgxjsaucU/hqdefault.jpg"
-    },
-    {
-      "id": "1VKFo7CMV60",
-      "title": "【 #leagueoflegends 】スモルダーってどうですか？",
-      "url": "https://www.youtube.com/watch?v=1VKFo7CMV60",
-      "published": "2026-05-14T08:43:51+00:00",
-      "thumbnail": "https://i.ytimg.com/vi/1VKFo7CMV60/hqdefault.jpg"
     }
   ]
 }

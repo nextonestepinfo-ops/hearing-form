@@ -1,0 +1,72 @@
+name: Update Konoha YouTube archives
+
+on:
+  schedule:
+    # Runs once a day at 03:15 JST.
+    - cron: "15 18 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: konoha-youtube-archives
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: Update archive JSON
+        run: python scripts/update_youtube_archives.py
+
+      - name: Commit archive changes
+        id: commit
+        shell: bash
+        run: |
+          set -euo pipefail
+          targets=(
+            "shirokami-konoha-site-template-v3-summon/youtube-archives.json"
+            "shirokami-konoha-site-template-v3-summon-mobile-alt/youtube-archives.json"
+          )
+
+          if git diff --quiet -- "${targets[@]}"; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            echo "No archive changes to commit."
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -- "${targets[@]}"
+          git commit -m "Update Konoha YouTube archives"
+          git push
+          echo "changed=true" >> "$GITHUB_OUTPUT"
+
+      - name: Configure Pages
+        if: steps.commit.outputs.changed == 'true'
+        uses: actions/configure-pages@v5
+
+      - name: Upload site artifact
+        if: steps.commit.outputs.changed == 'true'
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: .
+
+      - name: Deploy to Pages
+        if: steps.commit.outputs.changed == 'true'
+        id: deployment
+        uses: actions/deploy-pages@v4
