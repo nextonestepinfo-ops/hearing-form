@@ -1,7 +1,21 @@
 {
-  "updated": "2026-05-21T03:27:48+09:00",
+  "updated": "2026-05-22T05:12:22+09:00",
   "source": "https://www.youtube.com/feeds/videos.xml?channel_id=UC_nYcejJ7nsVG_ppVLwNHsw",
   "items": [
+    {
+      "id": "dJkoYGSrjeo",
+      "title": "【 #スト6 】ヨガ！正解なるか！ #vtuber  #shorts",
+      "url": "https://www.youtube.com/shorts/dJkoYGSrjeo",
+      "published": "2026-05-21T09:00:10+00:00",
+      "thumbnail": "https://i.ytimg.com/vi/dJkoYGSrjeo/hqdefault.jpg"
+    },
+    {
+      "id": "o1KPtdm9r7M",
+      "title": "【 #valorant 】スイフトしつつ様子見る",
+      "url": "https://www.youtube.com/watch?v=o1KPtdm9r7M",
+      "published": "2026-05-21T01:38:19+00:00",
+      "thumbnail": "https://i.ytimg.com/vi/o1KPtdm9r7M/hqdefault.jpg"
+    },
     {
       "id": "pGUFtPG78mo",
       "title": "【 #スト6 】初心者Vtuberと学ぶスト6キャラクイズ！第7弾！ #shorts  #vtuber",
@@ -29,20 +43,6 @@
       "url": "https://www.youtube.com/watch?v=cbsQ6UIIL9g",
       "published": "2026-05-16T03:32:21+00:00",
       "thumbnail": "https://i.ytimg.com/vi/cbsQ6UIIL9g/hqdefault.jpg"
-    },
-    {
-      "id": "09yqn0BHnws",
-      "title": "【 #valorant 】久しぶりでぇ～、今ってどんな感じ？",
-      "url": "https://www.youtube.com/watch?v=09yqn0BHnws",
-      "published": "2026-05-16T01:05:39+00:00",
-      "thumbnail": "https://i.ytimg.com/vi/09yqn0BHnws/hqdefault.jpg"
-    },
-    {
-      "id": "LxJgxjsaucU",
-      "title": "【 #スト6 】初心者Vtuberと学ぶスト6キャラクイズ！第5弾！ #shorts  #vtuber",
-      "url": "https://www.youtube.com/shorts/LxJgxjsaucU",
-      "published": "2026-05-15T09:00:25+00:00",
-      "thumbnail": "https://i.ytimg.com/vi/LxJgxjsaucU/hqdefault.jpg"
     }
   ]
 }
