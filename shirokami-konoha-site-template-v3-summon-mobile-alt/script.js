@@ -114,9 +114,25 @@ function setupNavigation() {
   });
 }
 
+function setupRevealDelays(targets) {
+  const groups = [hero, ...document.querySelectorAll(".section-shell")].filter(Boolean);
+  groups.forEach((group) => {
+    group.querySelectorAll("[data-reveal]").forEach((node, index) => {
+      node.style.setProperty("--reveal-delay", `${Math.min(index * 90, 360)}ms`);
+    });
+  });
+
+  targets.forEach((node, index) => {
+    if (!node.style.getPropertyValue("--reveal-delay")) {
+      node.style.setProperty("--reveal-delay", `${Math.min(index * 60, 300)}ms`);
+    }
+  });
+}
+
 function revealOnScroll() {
-  const targets = document.querySelectorAll("[data-reveal]");
+  const targets = Array.from(document.querySelectorAll("[data-reveal]"));
   if (!targets.length) return;
+  setupRevealDelays(targets);
 
   if (!("IntersectionObserver" in window)) {
     targets.forEach((node) => node.classList.add("is-visible"));
@@ -126,10 +142,13 @@ function revealOnScroll() {
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
-        if (entry.isIntersecting) entry.target.classList.add("is-visible");
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+          observer.unobserve(entry.target);
+        }
       });
     },
-    { threshold: 0.14 },
+    { rootMargin: "0px 0px -12% 0px", threshold: 0.16 },
   );
 
   targets.forEach((node) => observer.observe(node));
@@ -157,6 +176,8 @@ function updateHeroMotion() {
     root.style.setProperty("--hero-shift", "0px");
     root.style.setProperty("--hero-lift", "0px");
     root.style.setProperty("--hero-scale", "0");
+    root.style.setProperty("--premium-parallax", "0px");
+    root.style.setProperty("--premium-light-shift", "0px");
     return;
   }
 
@@ -165,6 +186,8 @@ function updateHeroMotion() {
   root.style.setProperty("--hero-shift", `${(ratio * 92).toFixed(2)}px`);
   root.style.setProperty("--hero-lift", `${(ratio * -48).toFixed(2)}px`);
   root.style.setProperty("--hero-scale", (ratio * 0.026).toFixed(4));
+  root.style.setProperty("--premium-parallax", `${(ratio * -42).toFixed(2)}px`);
+  root.style.setProperty("--premium-light-shift", `${(ratio * 68).toFixed(2)}px`);
 }
 
 function updateInteractionMood() {

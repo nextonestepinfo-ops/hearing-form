@@ -10,7 +10,8 @@
     />
     <meta name="theme-color" content="#d9fbf2" />
     <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml" />
-    <link rel="stylesheet" href="./styles.css?v=mobile-alt-profile-20260521" />
+    <link rel="preload" as="image" href="./assets/premium-air-hero.jpg" />
+    <link rel="stylesheet" href="./styles.css?v=premium-air-20260522" />
   </head>
   <body class="mobile-profile-alt">
     <div class="access-gate" data-access-gate>
@@ -75,6 +76,15 @@
     <main id="top">
       <section class="hero" aria-labelledby="hero-title">
         <div class="hero-backdrop" aria-hidden="true"></div>
+        <div class="premium-hero-atmosphere" aria-hidden="true">
+          <img class="premium-air premium-air-a" src="./assets/premium-air-hero.jpg" alt="" decoding="async" fetchpriority="high" />
+          <img class="premium-air premium-air-b" src="./assets/premium-air-mist.jpg" alt="" loading="lazy" decoding="async" />
+          <span class="premium-fog premium-fog-a"></span>
+          <span class="premium-fog premium-fog-b"></span>
+          <span class="premium-particle-field"></span>
+          <span class="premium-glass-reflection"></span>
+          <span class="premium-light-sweep"></span>
+        </div>
         <div class="hero-collage" aria-hidden="true">
           <span class="window-chip chip-name">SHIROKAMI</span>
           <span class="window-chip chip-check">Check me!!</span>
@@ -137,6 +147,11 @@
             <img src="./assets/konoha-collage-profile.jpg" alt="白狼このはのメインビジュアル" decoding="async" fetchpriority="high" />
           </picture>
         </figure>
+
+        <div class="premium-scroll-cue" aria-hidden="true">
+          <span></span>
+          <b>SCROLL</b>
+        </div>
 
         <div class="hero-dock" aria-label="ページ内リンク">
           <a href="#profile"><span>01</span>Profile</a>
