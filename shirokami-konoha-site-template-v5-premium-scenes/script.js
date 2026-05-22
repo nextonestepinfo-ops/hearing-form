@@ -10,6 +10,11 @@ const ACCESS_HASH = "9497683cb70785d3626818bc7a71924c14482e16636edd6668cc2664b75
 const ACCESS_STORAGE_KEY = "shirokami-konoha-v5-premium-scenes-access";
 let pageStarted = false;
 let siteConfig = null;
+let progressFrame = 0;
+let depthSections = [];
+let moodSections = [];
+let moodNavLinks = [];
+let activeMood = "";
 
 function hasAccess() {
   try {
@@ -113,6 +118,7 @@ function setupNavigation() {
       siteNav.classList.remove("is-open");
     });
   });
+  moodNavLinks = Array.from(siteNav?.querySelectorAll("a[href^='#']") || []);
 }
 
 function scrollToCurrentHash() {
@@ -181,7 +187,39 @@ function updateProgress() {
   progress.style.width = `${Math.min(100, Math.max(0, amount))}%`;
   updateSceneMotion(ratio);
   updateHeroMotion();
+  updateSectionDepth();
   updateInteractionMood();
+}
+
+function scheduleProgressUpdate() {
+  if (progressFrame) return;
+  progressFrame = window.requestAnimationFrame(() => {
+    progressFrame = 0;
+    updateProgress();
+  });
+}
+
+function updateSectionDepth() {
+  if (!depthSections.length) {
+    depthSections = Array.from(document.querySelectorAll(".hero, .section-shell"));
+  }
+  if (!depthSections.length) return;
+
+  depthSections.forEach((section) => {
+    const rect = section.getBoundingClientRect();
+    const total = window.innerHeight + rect.height;
+    const rawProgress = total <= 0 ? 0 : (window.innerHeight - rect.top) / total;
+    const progress = Math.min(1, Math.max(0, rawProgress));
+    const centerOffset = rect.top + rect.height / 2 - window.innerHeight / 2;
+    const normalizedOffset = Math.min(1, Math.max(-1, centerOffset / Math.max(window.innerHeight, 1)));
+    const focus = 1 - Math.min(1, Math.abs(normalizedOffset));
+
+    section.style.setProperty("--section-progress", progress.toFixed(4));
+    section.style.setProperty("--section-offset", normalizedOffset.toFixed(4));
+    section.style.setProperty("--section-focus", focus.toFixed(4));
+    section.style.setProperty("--section-y", `${(normalizedOffset * -72).toFixed(2)}px`);
+    section.style.setProperty("--section-shift", `${(normalizedOffset * 44).toFixed(2)}px`);
+  });
 }
 
 function updateSceneMotion(ratio = 0) {
@@ -237,30 +275,32 @@ function sceneForMood(mood) {
 
 function updateInteractionMood() {
   const marker = window.innerHeight * (window.innerWidth <= 620 ? 0.72 : 0.58);
-  const sections = [
-    ["hero", ".hero"],
-    ["profile", "#profile"],
-    ["links", "#links"],
-    ["movie", "#movie"],
-    ["tags", "#tags"],
-    ["contact", "#contact"],
-  ];
-  let activeMood = "hero";
+  if (!moodSections.length) {
+    moodSections = [
+      ["hero", document.querySelector(".hero")],
+      ["profile", document.querySelector("#profile")],
+      ["links", document.querySelector("#links")],
+      ["movie", document.querySelector("#movie")],
+      ["tags", document.querySelector("#tags")],
+      ["contact", document.querySelector("#contact")],
+    ].filter(([, section]) => section);
+  }
+  let nextMood = "hero";
 
-  sections.forEach(([mood, selector]) => {
-    const section = document.querySelector(selector);
-    if (!section) return;
+  moodSections.forEach(([mood, section]) => {
     const rect = section.getBoundingClientRect();
     if (rect.top <= marker && rect.bottom >= marker) {
-      activeMood = mood;
+      nextMood = mood;
     }
   });
 
-  document.body.dataset.mood = activeMood;
-  document.body.dataset.scene = sceneForMood(activeMood);
-  siteNav?.querySelectorAll("a[href^='#']").forEach((link) => {
+  if (nextMood === activeMood) return;
+  activeMood = nextMood;
+  document.body.dataset.mood = nextMood;
+  document.body.dataset.scene = sceneForMood(nextMood);
+  moodNavLinks.forEach((link) => {
     const target = link.getAttribute("href")?.replace("#", "");
-    const isActive = target === activeMood || (activeMood === "links" && target === "links");
+    const isActive = target === nextMood || (nextMood === "links" && target === "links");
     link.classList.toggle("is-active", isActive);
   });
 }
@@ -551,6 +591,15 @@ async function loadSiteConfig() {
 function initPage() {
   if (pageStarted) return;
   pageStarted = true;
+  depthSections = Array.from(document.querySelectorAll(".hero, .section-shell"));
+  moodSections = [
+    ["hero", document.querySelector(".hero")],
+    ["profile", document.querySelector("#profile")],
+    ["links", document.querySelector("#links")],
+    ["movie", document.querySelector("#movie")],
+    ["tags", document.querySelector("#tags")],
+    ["contact", document.querySelector("#contact")],
+  ].filter(([, section]) => section);
   loadSiteConfig();
   setupNavigation();
   revealOnScroll();
@@ -558,8 +607,8 @@ function initPage() {
   setupPointerSparkles();
   setupInteractionGimmicks();
   updateProgress();
-  window.addEventListener("scroll", updateProgress, { passive: true });
-  window.addEventListener("resize", updateProgress);
+  window.addEventListener("scroll", scheduleProgressUpdate, { passive: true });
+  window.addEventListener("resize", scheduleProgressUpdate);
 }
 
 setupAccessGate();
