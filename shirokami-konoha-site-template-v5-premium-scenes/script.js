@@ -11,6 +11,7 @@ const ACCESS_STORAGE_KEY = "shirokami-konoha-v5-premium-scenes-access";
 let pageStarted = false;
 let siteConfig = null;
 let progressFrame = 0;
+let sceneTransitionTimer = 0;
 let depthSections = [];
 let moodSections = [];
 let moodNavLinks = [];
@@ -179,6 +180,31 @@ function revealOnScroll() {
   });
 }
 
+function setupSectionSceneTransitions() {
+  const sections = Array.from(document.querySelectorAll(".section-shell"));
+  if (!sections.length) return;
+
+  sections.forEach((section) => section.classList.add("scene-ready"));
+
+  if (reduceMotion || !("IntersectionObserver" in window)) {
+    sections.forEach((section) => section.classList.add("is-scene-active", "is-scene-content"));
+    return;
+  }
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting || entry.target.classList.contains("is-scene-content")) return;
+        entry.target.classList.add("is-scene-active");
+        window.setTimeout(() => entry.target.classList.add("is-scene-content"), 460);
+      });
+    },
+    { rootMargin: "0px 0px -22% 0px", threshold: 0.18 },
+  );
+
+  sections.forEach((section) => observer.observe(section));
+}
+
 function updateProgress() {
   if (!progress) return;
   const max = document.documentElement.scrollHeight - window.innerHeight;
@@ -273,6 +299,23 @@ function sceneForMood(mood) {
   return "moon";
 }
 
+function playSceneTransition(nextScene) {
+  if (reduceMotion) return;
+  const currentScene = document.body.dataset.scene || "moon";
+  if (nextScene === currentScene) return;
+
+  const sceneOrder = { moon: 0, live: 1, silver: 2 };
+  const direction = (sceneOrder[nextScene] ?? 0) >= (sceneOrder[currentScene] ?? 0) ? "forward" : "back";
+  window.clearTimeout(sceneTransitionTimer);
+  document.body.dataset.sceneDirection = direction;
+  document.body.classList.remove("is-scene-switching");
+  void document.body.offsetWidth;
+  document.body.classList.add("is-scene-switching");
+  sceneTransitionTimer = window.setTimeout(() => {
+    document.body.classList.remove("is-scene-switching");
+  }, 960);
+}
+
 function updateInteractionMood() {
   const marker = window.innerHeight * (window.innerWidth <= 620 ? 0.72 : 0.58);
   if (!moodSections.length) {
@@ -296,8 +339,10 @@ function updateInteractionMood() {
 
   if (nextMood === activeMood) return;
   activeMood = nextMood;
+  const nextScene = sceneForMood(nextMood);
+  playSceneTransition(nextScene);
   document.body.dataset.mood = nextMood;
-  document.body.dataset.scene = sceneForMood(nextMood);
+  document.body.dataset.scene = nextScene;
   moodNavLinks.forEach((link) => {
     const target = link.getAttribute("href")?.replace("#", "");
     const isActive = target === nextMood || (nextMood === "links" && target === "links");
@@ -603,6 +648,7 @@ function initPage() {
   loadSiteConfig();
   setupNavigation();
   revealOnScroll();
+  setupSectionSceneTransitions();
   setupTiltCards();
   setupPointerSparkles();
   setupInteractionGimmicks();
