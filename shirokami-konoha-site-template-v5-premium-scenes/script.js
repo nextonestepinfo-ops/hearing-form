@@ -196,10 +196,10 @@ function setupSectionSceneTransitions() {
       entries.forEach((entry) => {
         if (!entry.isIntersecting || entry.target.classList.contains("is-scene-content")) return;
         entry.target.classList.add("is-scene-active");
-        window.setTimeout(() => entry.target.classList.add("is-scene-content"), 460);
+        window.setTimeout(() => entry.target.classList.add("is-scene-content"), 720);
       });
     },
-    { rootMargin: "0px 0px -22% 0px", threshold: 0.18 },
+    { rootMargin: "0px 0px -34% 0px", threshold: 0.08 },
   );
 
   sections.forEach((section) => observer.observe(section));
