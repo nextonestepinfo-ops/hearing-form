@@ -11083,6 +11083,394 @@ html.ios-webkit body.mobile-profile-alt .section-shell.scene-ready.is-scene-cont
   transform: translate3d(0, 0, 0) scale(1) !important;
 }
 
+/* Last-mile override: keep mobile hero animations centered after later scene rules. */
+@media (max-width: 620px) {
+  body.mobile-profile-alt .hero-art > .hero-frame-live {
+    left: 50% !important;
+    width: min(124vw, 484px) !important;
+    transform: translateX(-50%) !important;
+    transform-origin: center top !important;
+  }
+
+  body.mobile-profile-alt .hero-art picture img {
+    left: 50% !important;
+    width: min(136vw, 520px) !important;
+    transform: translateX(-50%) !important;
+    transform-origin: center top !important;
+  }
+
+  body.mobile-profile-alt.site-assembled .hero-art > .hero-frame-live,
+  html.ios-webkit body.mobile-profile-alt.site-assembled .hero-art > .hero-frame-live {
+    animation:
+      konoha-hero-frame-build-centered 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.74s both,
+      hero-live-frame-drift-centered 8.5s ease-in-out 2.1s infinite alternate !important;
+  }
+
+  body.mobile-profile-alt.site-assembled .hero-art picture img,
+  html.ios-webkit body.mobile-profile-alt.site-assembled .hero-art picture img {
+    animation:
+      konoha-hero-character-build-centered 1.26s cubic-bezier(0.16, 1, 0.3, 1) 0.92s both,
+      mobile-live-hero-float-centered 6.8s ease-in-out 2.2s infinite alternate !important;
+  }
+
+  body.mobile-profile-alt #tags .floating-tag-stickers {
+    position: absolute !important;
+    z-index: 2;
+    inset: 0;
+    min-height: 0;
+    opacity: 1;
+  }
+
+  body.mobile-profile-alt #tags .tag-grid {
+    margin-top: 2px;
+  }
+
+  body.mobile-profile-alt #tags .tag-grid article {
+    opacity: 1;
+  }
+
+  body.mobile-profile-alt #contact .section-heading {
+    display: grid !important;
+  }
+}
+
+/* Final mobile polish: centered hero talent plus richer TAGS / CONTACT stages. */
+@media (max-width: 620px) {
+  body.mobile-profile-alt .hero-art > .hero-frame-live {
+    left: 50%;
+    width: min(124vw, 484px);
+    transform: translateX(-50%);
+    transform-origin: center top;
+  }
+
+  body.mobile-profile-alt .hero-art picture img {
+    left: 50%;
+    width: min(136vw, 520px);
+    transform: translateX(-50%);
+    transform-origin: center top;
+  }
+
+  body.mobile-profile-alt.site-assembled .hero-art > .hero-frame-live {
+    animation:
+      konoha-hero-frame-build-centered 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.74s both,
+      hero-live-frame-drift-centered 8.5s ease-in-out 2.1s infinite alternate !important;
+  }
+
+  body.mobile-profile-alt.site-assembled .hero-art picture img {
+    animation:
+      konoha-hero-character-build-centered 1.26s cubic-bezier(0.16, 1, 0.3, 1) 0.92s both,
+      mobile-live-hero-float-centered 6.8s ease-in-out 2.2s infinite alternate !important;
+  }
+
+  body.mobile-profile-alt #tags {
+    padding-bottom: 96px;
+  }
+
+  body.mobile-profile-alt #tags::after,
+  body.mobile-profile-alt #contact::after {
+    display: block;
+    right: auto;
+    left: -0.08em;
+    bottom: 0.12em;
+    font-size: 4.7rem;
+    opacity: 0.68;
+  }
+
+  body.mobile-profile-alt #tags .section-heading,
+  body.mobile-profile-alt #contact .section-heading {
+    margin-bottom: 30px;
+  }
+
+  body.mobile-profile-alt #tags .floating-tag-stickers {
+    inset: 0;
+    opacity: 1;
+  }
+
+  body.mobile-profile-alt #tags .floating-tag-stickers span {
+    border: 1px solid rgba(255, 255, 255, 0.76);
+    border-radius: 999px;
+    padding: 8px 12px;
+    color: rgba(62, 83, 93, 0.42);
+    background:
+      linear-gradient(135deg, rgba(255, 255, 255, 0.72), rgba(227, 255, 249, 0.36));
+    box-shadow:
+      0 10px 26px rgba(79, 115, 128, 0.08),
+      inset 0 1px 0 rgba(255, 255, 255, 0.9);
+    font-family: var(--pixel);
+    font-size: 0.58rem;
+  }
+
+  body.mobile-profile-alt #tags .floating-tag-stickers span:nth-child(1) {
+    left: 7%;
+    top: 23%;
+  }
+
+  body.mobile-profile-alt #tags .floating-tag-stickers span:nth-child(2) {
+    right: 7%;
+    top: 31%;
+  }
+
+  body.mobile-profile-alt #tags .floating-tag-stickers span:nth-child(3) {
+    left: 15%;
+    top: 78%;
+  }
+
+  body.mobile-profile-alt #tags .tag-grid {
+    position: relative;
+    z-index: 3;
+    display: grid;
+    gap: 13px;
+    border: 1px solid rgba(255, 255, 255, 0.68);
+    border-radius: 10px;
+    padding: 14px;
+    background:
+      linear-gradient(135deg, rgba(255, 255, 255, 0.5), rgba(234, 244, 248, 0.38)),
+      repeating-linear-gradient(90deg, rgba(97, 132, 144, 0.06) 0 1px, transparent 1px 34px),
+      repeating-linear-gradient(0deg, rgba(97, 132, 144, 0.045) 0 1px, transparent 1px 34px);
+    box-shadow:
+      0 22px 54px rgba(62, 91, 103, 0.1),
+      inset 0 1px 0 rgba(255, 255, 255, 0.78);
+  }
+
+  body.mobile-profile-alt #tags .tag-grid::before,
+  body.mobile-profile-alt #tags .tag-grid::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    pointer-events: none;
+  }
+
+  body.mobile-profile-alt #tags .tag-grid::before {
+    inset: -12px 18px auto;
+    height: 34px;
+    border: 1px solid rgba(157, 188, 199, 0.28);
+    border-bottom: 0;
+    border-radius: 12px 12px 0 0;
+    background:
+      linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.7), transparent),
+      repeating-linear-gradient(90deg, rgba(121, 225, 213, 0.2) 0 10px, transparent 10px 18px);
+  }
+
+  body.mobile-profile-alt #tags .tag-grid::after {
+    right: -8px;
+    bottom: -9px;
+    width: 86px;
+    height: 86px;
+    border: 1px solid rgba(157, 188, 199, 0.22);
+    border-radius: 50%;
+    background:
+      radial-gradient(circle, transparent 0 28px, rgba(255, 255, 255, 0.68) 29px 31px, transparent 32px),
+      conic-gradient(from 45deg, transparent 0 30deg, rgba(113, 226, 214, 0.32) 30deg 42deg, transparent 42deg 360deg);
+    opacity: 0.74;
+  }
+
+  body.mobile-profile-alt #tags .tag-grid article {
+    position: relative;
+    min-height: 136px;
+    overflow: hidden;
+    border-color: rgba(255, 255, 255, 0.82);
+    padding: 42px 16px 16px 18px;
+  }
+
+  body.mobile-profile-alt #tags .tag-grid article:nth-child(odd) {
+    transform: translateX(-3px);
+  }
+
+  body.mobile-profile-alt #tags .tag-grid article:nth-child(even) {
+    transform: translateX(3px);
+  }
+
+  body.mobile-profile-alt #tags .tag-grid article::after {
+    content: "0" counter(tag-card);
+    counter-increment: tag-card;
+    top: 12px;
+    right: 14px;
+    width: auto;
+    height: auto;
+    background: none;
+    color: rgba(76, 101, 112, 0.22);
+    font-family: var(--pixel);
+    font-size: 1.6rem;
+    line-height: 1;
+    opacity: 1;
+    box-shadow: none;
+  }
+
+  body.mobile-profile-alt #tags .tag-grid {
+    counter-reset: tag-card;
+  }
+
+  body.mobile-profile-alt #tags .tag-grid span {
+    display: inline-grid;
+    width: fit-content;
+    min-height: 24px;
+    place-items: center;
+    border: 1px solid rgba(135, 177, 188, 0.22);
+    border-radius: 999px;
+    padding: 4px 9px;
+    background: rgba(255, 255, 255, 0.58);
+  }
+
+  body.mobile-profile-alt #tags .tag-grid strong {
+    margin-top: 8px;
+  }
+
+  body.mobile-profile-alt #contact {
+    min-height: 100svh;
+    padding-bottom: 104px;
+  }
+
+  body.mobile-profile-alt #contact .contact-heading {
+    display: grid;
+  }
+
+  body.mobile-profile-alt #contact .contact-window {
+    position: relative;
+    z-index: 3;
+    overflow: hidden;
+    border-color: rgba(255, 255, 255, 0.78);
+    border-radius: 10px;
+    background:
+      linear-gradient(145deg, rgba(255, 255, 255, 0.82), rgba(242, 250, 252, 0.58) 54%, rgba(222, 255, 249, 0.44)),
+      repeating-linear-gradient(90deg, rgba(102, 143, 154, 0.06) 0 1px, transparent 1px 38px),
+      url("./assets/premium-glass-kit.jpg") center / cover;
+    box-shadow:
+      0 28px 68px rgba(58, 91, 104, 0.14),
+      8px 8px 0 rgba(127, 226, 213, 0.12),
+      inset 0 1px 0 rgba(255, 255, 255, 0.82);
+  }
+
+  body.mobile-profile-alt #contact .contact-window::before {
+    content: "";
+    position: absolute;
+    inset: 42px 14px auto;
+    height: 1px;
+    border: 0;
+    background:
+      linear-gradient(90deg, transparent, rgba(113, 226, 214, 0.8), rgba(255, 255, 255, 0.9), transparent);
+    box-shadow: 0 0 18px rgba(113, 226, 214, 0.28);
+  }
+
+  body.mobile-profile-alt #contact .contact-window::after {
+    content: "";
+    position: absolute;
+    right: -28px;
+    bottom: -30px;
+    width: 128px;
+    height: 128px;
+    border: 1px solid rgba(126, 170, 182, 0.22);
+    border-radius: 50%;
+    background:
+      radial-gradient(circle, rgba(255, 255, 255, 0.8) 0 12px, transparent 13px),
+      conic-gradient(from 15deg, rgba(113, 226, 214, 0.28), transparent 28%, rgba(255, 226, 238, 0.3), transparent 62%, rgba(113, 226, 214, 0.24));
+    opacity: 0.82;
+  }
+
+  body.mobile-profile-alt #contact .window-bar {
+    position: relative;
+    z-index: 2;
+  }
+
+  body.mobile-profile-alt #contact .contact-body {
+    position: relative;
+    z-index: 2;
+    gap: 14px;
+    padding: 24px 18px 20px;
+  }
+
+  body.mobile-profile-alt #contact .contact-body > p:first-child {
+    display: inline-grid;
+    width: fit-content;
+    min-height: 28px;
+    place-items: center;
+    border: 1px solid rgba(113, 164, 174, 0.22);
+    border-radius: 999px;
+    padding: 5px 12px;
+    color: #4b6970;
+    background: rgba(255, 255, 255, 0.68);
+    font-family: var(--pixel);
+    font-size: 0.72rem;
+  }
+
+  body.mobile-profile-alt #contact .contact-body h2 {
+    font-size: clamp(1.58rem, 7.8vw, 2.14rem);
+    line-height: 1.16;
+    text-shadow:
+      2px 2px 0 rgba(255, 255, 255, 0.92),
+      0 14px 24px rgba(69, 105, 116, 0.12);
+  }
+
+  body.mobile-profile-alt #contact .contact-body p:not(:first-child) {
+    border-left: 3px solid rgba(113, 226, 214, 0.42);
+    padding-left: 12px;
+  }
+
+  body.mobile-profile-alt #contact .text-button {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+html.ios-webkit body.mobile-profile-alt.site-assembled .hero-art > .hero-frame-live {
+  animation:
+    konoha-hero-frame-build-centered 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.74s both,
+    hero-live-frame-drift-centered 8.5s ease-in-out 2.1s infinite alternate !important;
+}
+
+html.ios-webkit body.mobile-profile-alt.site-assembled .hero-art picture img {
+  animation:
+    konoha-hero-character-build-centered 1.26s cubic-bezier(0.16, 1, 0.3, 1) 0.92s both,
+    mobile-live-hero-float-centered 6.8s ease-in-out 2.2s infinite alternate !important;
+}
+
+@keyframes konoha-hero-frame-build-centered {
+  0% {
+    opacity: 0;
+    clip-path: inset(0 48% 0 48%);
+    transform: translateX(-50%) translate3d(0, 28px, 0) scale(0.94) rotate(-3deg);
+  }
+  100% {
+    opacity: 1;
+    clip-path: inset(0);
+    transform: translateX(-50%) translate3d(0, 0, 0) scale(1) rotate(0deg);
+  }
+}
+
+@keyframes konoha-hero-character-build-centered {
+  0% {
+    opacity: 0;
+    transform: translateX(-50%) translate3d(0, 44px, 0) scale(0.97);
+    filter: blur(5px) brightness(1.18);
+  }
+  64% {
+    opacity: 1;
+    filter: blur(0) brightness(1.04);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(-50%) translate3d(0, 0, 0) scale(1);
+    filter: none;
+  }
+}
+
+@keyframes hero-live-frame-drift-centered {
+  from {
+    transform: translateX(-50%) translate3d(calc(var(--premium-parallax) * 0.08), 0, 0);
+  }
+  to {
+    transform: translateX(-50%) translate3d(calc(var(--premium-parallax) * 0.14), -8px, 0);
+  }
+}
+
+@keyframes mobile-live-hero-float-centered {
+  from {
+    transform: translateX(-50%) translateY(0) scale(1);
+  }
+  to {
+    transform: translateX(-50%) translateY(-8px) scale(1.014);
+  }
+}
+
 /* iPhone alignment polish: center headings, tighten fixed UI, and prevent text from feeling clipped. */
 @media (max-width: 620px) {
   html {
@@ -12590,4 +12978,55 @@ html.ios-webkit body.mobile-profile-alt .section-shell.scene-ready > * {
 
 html.ios-webkit body.mobile-profile-alt .section-shell.scene-ready.is-scene-content > * {
   transform: translate3d(0, 0, 0) scale(1) !important;
+}
+
+/* Tail override: keep the hero talent centered after all scene-motion rules. */
+@media (max-width: 620px) {
+  body.mobile-profile-alt .hero-art > .hero-frame-live {
+    left: 50% !important;
+    width: min(124vw, 484px) !important;
+    transform: translateX(-50%) !important;
+    transform-origin: center top !important;
+  }
+
+  body.mobile-profile-alt .hero-art picture img {
+    left: 50% !important;
+    width: min(136vw, 520px) !important;
+    transform: translateX(-50%) !important;
+    transform-origin: center top !important;
+  }
+
+  body.mobile-profile-alt.site-assembled .hero-art > .hero-frame-live,
+  html.ios-webkit body.mobile-profile-alt.site-assembled .hero-art > .hero-frame-live {
+    animation:
+      konoha-hero-frame-build-centered 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.74s both,
+      hero-live-frame-drift-centered 8.5s ease-in-out 2.1s infinite alternate !important;
+  }
+
+  body.mobile-profile-alt.site-assembled .hero-art picture img,
+  html.ios-webkit body.mobile-profile-alt.site-assembled .hero-art picture img {
+    animation:
+      konoha-hero-character-build-centered 1.26s cubic-bezier(0.16, 1, 0.3, 1) 0.92s both,
+      mobile-live-hero-float-centered 6.8s ease-in-out 2.2s infinite alternate !important;
+  }
+
+  body.mobile-profile-alt #tags .floating-tag-stickers {
+    position: absolute !important;
+    z-index: 2;
+    inset: 0;
+    min-height: 0;
+    opacity: 1;
+  }
+
+  body.mobile-profile-alt #tags .tag-grid {
+    margin-top: 2px;
+  }
+
+  body.mobile-profile-alt #tags .tag-grid article {
+    opacity: 1;
+  }
+
+  body.mobile-profile-alt #contact .section-heading {
+    display: grid !important;
+  }
 }
