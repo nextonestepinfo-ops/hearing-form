@@ -13,7 +13,8 @@
     <link rel="preload" as="image" href="./assets/v5-scene-moon.jpg" />
     <link rel="preload" as="image" href="./assets/v5-scene-live.jpg" />
     <link rel="preload" as="image" href="./assets/v5-scene-silver.jpg" />
-    <link rel="stylesheet" href="./styles.css?v=v5-kaguya-scenes-20260522" />
+    <link rel="preload" as="image" href="./assets/hero-frame-live.svg" />
+    <link rel="stylesheet" href="./styles.css?v=v5-live-hero-20260522" />
   </head>
   <body class="mobile-profile-alt" data-scene="moon">
     <div class="access-gate" data-access-gate>
@@ -106,6 +107,9 @@
           <span class="premium-glass-reflection"></span>
           <span class="premium-light-sweep"></span>
         </div>
+        <div class="hero-soft-floaters" aria-hidden="true">
+          <span></span><span></span><span></span><span></span><span></span><span></span>
+        </div>
         <div class="hero-collage" aria-hidden="true">
           <span class="window-chip chip-name">SHIROKAMI</span>
           <span class="window-chip chip-check">Check me!!</span>
@@ -163,6 +167,8 @@
         </div>
 
         <figure class="hero-art" data-reveal>
+          <span class="hero-mobile-bg" aria-hidden="true"></span>
+          <img class="hero-frame-live" src="./assets/hero-frame-live.svg" alt="" aria-hidden="true" />
           <picture>
             <source media="(max-width: 620px)" srcset="./assets/konoha-profile-standee.png" />
             <img src="./assets/konoha-collage-profile.jpg" alt="白狼このはのメインビジュアル" decoding="async" fetchpriority="high" />
