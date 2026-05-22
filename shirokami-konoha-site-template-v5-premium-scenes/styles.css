@@ -11083,6 +11083,282 @@ html.ios-webkit body.mobile-profile-alt .section-shell.scene-ready.is-scene-cont
   transform: translate3d(0, 0, 0) scale(1) !important;
 }
 
+/* Scene panels: visible stage-set frames behind every section's content. */
+body.mobile-profile-alt .scene-panel-set {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+body.mobile-profile-alt .section-shell > .scene-panel-set {
+  z-index: 2;
+}
+
+body.mobile-profile-alt .section-shell.scene-ready > .scene-panel-set,
+html.ios-webkit body.mobile-profile-alt .section-shell.scene-ready > .scene-panel-set {
+  opacity: 1 !important;
+  transform: none !important;
+  transition: none;
+}
+
+body.mobile-profile-alt .scene-panel {
+  position: absolute;
+  display: block;
+  opacity: 0;
+  transform: translate3d(0, 34px, 0) scale(0.98);
+  transition:
+    opacity 0.62s ease,
+    transform 0.88s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+body.mobile-profile-alt .scene-panel::before,
+body.mobile-profile-alt .scene-panel::after {
+  content: "";
+  position: absolute;
+  pointer-events: none;
+}
+
+body.mobile-profile-alt .section-shell.is-scene-active .scene-panel {
+  opacity: 1;
+  transform: translate3d(0, 0, 0) scale(1);
+}
+
+body.mobile-profile-alt .panel-main {
+  left: max(18px, 6vw);
+  top: 23%;
+  width: min(980px, 74vw);
+  height: min(420px, 46svh);
+  border: 1px solid color-mix(in srgb, var(--k-stage-accent) 42%, transparent);
+  border-radius: 2px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.04)),
+    repeating-linear-gradient(0deg, transparent 0 26px, color-mix(in srgb, var(--k-stage-accent) 11%, transparent) 27px 28px),
+    var(--k-stage-art) center / cover no-repeat;
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 255, 255, 0.32),
+    inset 0 42px 80px rgba(255, 255, 255, 0.14),
+    0 24px 70px color-mix(in srgb, var(--k-stage-shadow) 78%, transparent);
+  filter: saturate(0.94) contrast(1.04);
+  mix-blend-mode: soft-light;
+}
+
+body.mobile-profile-alt .section-shell.is-scene-active .panel-main {
+  opacity: 0.44;
+}
+
+body.mobile-profile-alt .panel-main::before {
+  inset: 14px;
+  border: 1px solid color-mix(in srgb, var(--k-stage-accent) 36%, transparent);
+  clip-path: polygon(0 0, 32% 0, 32% 2px, 68% 2px, 68% 0, 100% 0, 100% 100%, 72% 100%, 72% calc(100% - 2px), 28% calc(100% - 2px), 28% 100%, 0 100%);
+}
+
+body.mobile-profile-alt .panel-main::after {
+  left: 0;
+  right: 0;
+  top: 22%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.88), var(--k-stage-accent), transparent);
+}
+
+body.mobile-profile-alt .panel-rail {
+  left: -4vw;
+  top: 33%;
+  width: 108vw;
+  height: 58px;
+  background:
+    linear-gradient(90deg, transparent 0 4%, rgba(255, 255, 255, 0.38) 9%, transparent 16% 84%, rgba(255, 255, 255, 0.28) 91%, transparent 100%),
+    repeating-linear-gradient(0deg, color-mix(in srgb, var(--k-stage-accent) 18%, transparent) 0 1px, transparent 1px 7px);
+  border-top: 1px solid color-mix(in srgb, var(--k-stage-accent) 32%, transparent);
+  border-bottom: 1px solid color-mix(in srgb, var(--k-stage-accent) 22%, transparent);
+  transform: translate3d(-44px, 18px, 0);
+}
+
+body.mobile-profile-alt .section-shell.is-scene-active .panel-rail {
+  opacity: 0.62;
+  transform: translate3d(0, 0, 0);
+  transition-delay: 0.08s;
+}
+
+body.mobile-profile-alt .panel-card {
+  right: max(16px, 9vw);
+  top: 20%;
+  width: 178px;
+  height: 108px;
+  border: 1px solid rgba(255, 255, 255, 0.54);
+  border-radius: 2px;
+  background:
+    radial-gradient(circle at 50% 54%, transparent 0 18px, color-mix(in srgb, var(--k-stage-accent) 32%, transparent) 19px 20px, transparent 21px),
+    repeating-radial-gradient(circle at 50% 54%, transparent 0 13px, rgba(255, 255, 255, 0.32) 14px 15px, transparent 16px 24px),
+    linear-gradient(135deg, color-mix(in srgb, var(--k-stage-accent-2) 42%, transparent), rgba(255, 255, 255, 0.12));
+  box-shadow: 0 18px 40px color-mix(in srgb, var(--k-stage-glow) 64%, transparent);
+  transform: translate3d(40px, 24px, 0) scale(0.94);
+}
+
+body.mobile-profile-alt .section-shell.is-scene-active .panel-card {
+  opacity: 0.52;
+  transform: translate3d(0, 0, 0) scale(1);
+  transition-delay: 0.16s;
+}
+
+body.mobile-profile-alt .panel-orbit {
+  right: min(18vw, 210px);
+  bottom: 13%;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 1px solid color-mix(in srgb, var(--k-stage-accent) 34%, transparent);
+  background:
+    radial-gradient(circle, transparent 0 44px, rgba(255, 255, 255, 0.26) 45px 46px, transparent 47px),
+    conic-gradient(from 20deg, transparent 0 40deg, color-mix(in srgb, var(--k-stage-accent) 28%, transparent) 42deg 48deg, transparent 50deg 360deg);
+  transform: translate3d(0, 38px, 0) rotate(-16deg);
+}
+
+body.mobile-profile-alt .panel-orbit::before {
+  inset: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.32);
+  border-radius: 50%;
+}
+
+body.mobile-profile-alt .section-shell.is-scene-active .panel-orbit {
+  opacity: 0.5;
+  transform: translate3d(0, 0, 0) rotate(0deg);
+  transition-delay: 0.22s;
+  animation: konoha-scene-panel-drift 10s ease-in-out 1s infinite alternate;
+}
+
+body.mobile-profile-alt .panel-corner {
+  left: max(18px, 7vw);
+  bottom: 16%;
+  width: 132px;
+  height: 92px;
+  border-left: 2px solid color-mix(in srgb, var(--k-stage-accent) 46%, transparent);
+  border-bottom: 2px solid color-mix(in srgb, var(--k-stage-accent) 36%, transparent);
+  transform: translate3d(-24px, 26px, 0);
+}
+
+body.mobile-profile-alt .panel-corner::before {
+  left: 16px;
+  bottom: 20px;
+  width: 122px;
+  height: 1px;
+  background: linear-gradient(90deg, var(--k-stage-accent), transparent);
+}
+
+body.mobile-profile-alt .panel-corner::after {
+  left: -7px;
+  bottom: -7px;
+  width: 13px;
+  height: 13px;
+  border: 2px solid var(--k-stage-accent);
+  transform: rotate(45deg);
+}
+
+body.mobile-profile-alt .section-shell.is-scene-active .panel-corner {
+  opacity: 0.62;
+  transform: translate3d(0, 0, 0);
+  transition-delay: 0.28s;
+}
+
+body.mobile-profile-alt #links .panel-main {
+  mix-blend-mode: screen;
+  filter: saturate(1.12) contrast(1.08) brightness(0.88);
+}
+
+body.mobile-profile-alt #links .section-shell,
+body.mobile-profile-alt #links .panel-main {
+  border-color: rgba(137, 246, 235, 0.28);
+}
+
+body.mobile-profile-alt #links .section-shell.is-scene-active .panel-main,
+body.mobile-profile-alt #links.is-scene-active .panel-main {
+  opacity: 0.34;
+}
+
+body.mobile-profile-alt #movie .panel-main,
+body.mobile-profile-alt #tags .panel-main {
+  mix-blend-mode: multiply;
+}
+
+body.mobile-profile-alt #contact .panel-main {
+  width: min(820px, 70vw);
+  height: min(340px, 42svh);
+}
+
+@keyframes konoha-scene-panel-drift {
+  from {
+    transform: translate3d(0, 0, 0) rotate(0deg);
+  }
+  to {
+    transform: translate3d(10px, -14px, 0) rotate(8deg);
+  }
+}
+
+@media (max-width: 620px) {
+  body.mobile-profile-alt .panel-main {
+    left: 16px;
+    top: 28%;
+    width: calc(100% - 32px);
+    height: 51svh;
+  }
+
+  body.mobile-profile-alt .panel-rail {
+    top: 35%;
+    height: 46px;
+  }
+
+  body.mobile-profile-alt .panel-card {
+    right: 18px;
+    top: 25%;
+    width: 112px;
+    height: 72px;
+  }
+
+  body.mobile-profile-alt .panel-orbit {
+    right: -38px;
+    bottom: 9%;
+    width: 128px;
+    height: 128px;
+  }
+
+  body.mobile-profile-alt .panel-corner {
+    left: 18px;
+    bottom: 11%;
+    width: 92px;
+    height: 70px;
+  }
+
+  body.mobile-profile-alt #profile .panel-main {
+    top: 25%;
+    height: 56svh;
+  }
+
+  body.mobile-profile-alt #links .panel-main {
+    top: 24%;
+    height: 63svh;
+  }
+
+  body.mobile-profile-alt #movie .panel-main {
+    top: 26%;
+    height: 58svh;
+  }
+
+  body.mobile-profile-alt #tags .panel-main,
+  body.mobile-profile-alt #contact .panel-main {
+    top: 27%;
+    width: calc(100% - 32px);
+    height: 54svh;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body.mobile-profile-alt .scene-panel {
+    transition: none;
+    animation: none !important;
+  }
+}
+
 html.ios-webkit body.mobile-profile-alt .hero-soft-floaters span {
   animation: konoha-hero-object-float var(--duration, 9s) ease-in-out var(--delay, 0s) infinite alternate !important;
   will-change: transform;
