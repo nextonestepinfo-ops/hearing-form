@@ -11083,6 +11083,377 @@ html.ios-webkit body.mobile-profile-alt .section-shell.scene-ready.is-scene-cont
   transform: translate3d(0, 0, 0) scale(1) !important;
 }
 
+/* iPhone alignment polish: center headings, tighten fixed UI, and prevent text from feeling clipped. */
+@media (max-width: 620px) {
+  html {
+    scroll-padding-top: 118px;
+  }
+
+  body.mobile-profile-alt .site-header {
+    top: max(8px, env(safe-area-inset-top));
+    grid-template-columns: minmax(0, 1fr) 58px;
+    align-items: start;
+    gap: 8px;
+    padding-right: 14px;
+  }
+
+  body.mobile-profile-alt .brand {
+    width: min(276px, 71vw);
+    min-height: 104px;
+    padding: 24px 50px 20px 21px;
+  }
+
+  body.mobile-profile-alt .brand::before {
+    inset: -4px -23px -15px -13px;
+  }
+
+  body.mobile-profile-alt .brand::after {
+    right: -5px;
+    bottom: 6px;
+    width: 54px;
+    height: 54px;
+  }
+
+  body.mobile-profile-alt .brand img {
+    width: min(178px, 100%);
+    max-height: 62px;
+    transform: translateY(2px);
+  }
+
+  body.mobile-profile-alt .nav-toggle {
+    width: 58px;
+    height: 58px;
+    margin-top: 22px;
+  }
+
+  body.mobile-profile-alt .nav-toggle span {
+    width: 23px;
+    transform-origin: center;
+  }
+
+  body.mobile-profile-alt .nav-toggle span:nth-child(1) { transform: translateY(-6px); }
+  body.mobile-profile-alt .nav-toggle span:nth-child(3) { transform: translateY(6px); }
+
+  body.mobile-profile-alt .tag-sticker-cloud {
+    opacity: 0.14;
+  }
+
+  body.mobile-profile-alt .tag-sticker-cloud span {
+    font-size: clamp(2.2rem, 12vw, 3.65rem);
+  }
+
+  body.mobile-profile-alt .tag-sticker-cloud span:nth-child(1) {
+    left: 3%;
+    top: 38%;
+  }
+
+  body.mobile-profile-alt .tag-sticker-cloud span:nth-child(2) {
+    right: 2%;
+    left: auto;
+    top: 25%;
+  }
+
+  body.mobile-profile-alt.is-past-hero .site-header {
+    grid-template-columns: minmax(0, 1fr) 50px;
+    gap: 7px;
+    padding-right: 12px;
+  }
+
+  body.mobile-profile-alt.is-past-hero .brand {
+    width: min(236px, 62vw);
+    min-height: 82px;
+    padding: 18px 40px 15px 16px;
+  }
+
+  body.mobile-profile-alt.is-past-hero .brand::before {
+    inset: -3px -18px -12px -11px;
+  }
+
+  body.mobile-profile-alt.is-past-hero .brand::after {
+    right: -4px;
+    bottom: 6px;
+    width: 42px;
+    height: 42px;
+  }
+
+  body.mobile-profile-alt.is-past-hero .brand img {
+    width: min(148px, 100%);
+    max-height: 50px;
+    transform: translateY(1px);
+  }
+
+  body.mobile-profile-alt.is-past-hero .nav-toggle {
+    width: 50px;
+    height: 50px;
+    margin-top: 17px;
+  }
+
+  body.mobile-profile-alt.is-past-hero .nav-toggle span {
+    width: 21px;
+    height: 2.5px;
+  }
+
+  body.mobile-profile-alt .section-shell {
+    scroll-margin-top: 118px;
+    padding-top: 116px;
+  }
+
+  body.mobile-profile-alt .section-heading {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr;
+    width: calc(100% - 32px);
+    max-width: 360px;
+    justify-items: center;
+    place-items: center;
+    margin: 0 auto 24px;
+    padding-top: 14px;
+    text-align: center;
+  }
+
+  body.mobile-profile-alt .section-heading::before {
+    grid-column: 1;
+    width: min(292px, 74vw);
+    height: 9px;
+    margin: 0 auto 12px;
+  }
+
+  body.mobile-profile-alt .section-heading::after {
+    position: absolute;
+    top: 18px;
+    right: 8px;
+    left: auto;
+    width: 30px;
+    height: 30px;
+    transform: none;
+    opacity: 0.64;
+  }
+
+  body.mobile-profile-alt .section-heading h2 {
+    grid-column: 1;
+    width: fit-content;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 0.06em 0.06em;
+    font-size: clamp(2.45rem, 12.8vw, 3.28rem);
+    line-height: 0.93;
+    text-align: center;
+  }
+
+  body.mobile-profile-alt .stream-heading h2 {
+    font-size: clamp(2.14rem, 11.4vw, 2.9rem);
+  }
+
+  body.mobile-profile-alt .section-heading h2::after {
+    right: -0.16em;
+    top: 0.02em;
+    width: 0.18em;
+    height: 0.18em;
+  }
+
+  body.mobile-profile-alt .profile-layout,
+  body.mobile-profile-alt .link-stage,
+  body.mobile-profile-alt .movie-stage,
+  body.mobile-profile-alt .tag-grid,
+  body.mobile-profile-alt .contact-window {
+    width: calc(100% - 32px);
+    max-width: 360px;
+  }
+
+  body.mobile-profile-alt #profile .profile-layout {
+    min-height: auto;
+    align-content: start;
+    gap: 10px;
+  }
+
+  body.mobile-profile-alt #profile .profile-visual,
+  body.mobile-profile-alt .profile-visual.profile-megane {
+    width: min(318px, 86vw);
+    margin: -8px auto -38px;
+  }
+
+  body.mobile-profile-alt .profile-copy {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  body.mobile-profile-alt .profile-note {
+    padding: 15px 16px 14px;
+  }
+
+  body.mobile-profile-alt .profile-note p {
+    font-size: 0.94rem;
+    line-height: 1.72;
+  }
+
+  body.mobile-profile-alt .profile-list {
+    gap: 10px;
+  }
+
+  body.mobile-profile-alt .profile-list div {
+    grid-template-columns: 66px minmax(0, 1fr);
+    align-items: center;
+    min-height: 56px;
+    gap: 8px;
+    padding: 10px 12px;
+  }
+
+  body.mobile-profile-alt .profile-list dt {
+    width: auto;
+    min-width: 0;
+    line-height: 1.22;
+  }
+
+  body.mobile-profile-alt .profile-list dd {
+    min-width: 0;
+    font-size: 0.85rem;
+    line-height: 1.48;
+    overflow-wrap: anywhere;
+    word-break: normal;
+    line-break: strict;
+  }
+
+  body.mobile-profile-alt .profile-badges {
+    justify-content: center;
+    gap: 8px;
+  }
+
+  body.mobile-profile-alt .profile-badges span {
+    min-height: 26px;
+    padding: 6px 9px;
+    line-height: 1;
+  }
+
+  body.mobile-profile-alt #links .link-stage,
+  body.mobile-profile-alt #movie .movie-stage {
+    min-height: auto;
+    align-content: start;
+  }
+
+  body.mobile-profile-alt .link-grid {
+    width: 100%;
+    gap: 12px;
+  }
+
+  body.mobile-profile-alt .link-card {
+    width: 100%;
+    min-height: 112px;
+    grid-template-columns: 48px minmax(0, 1fr);
+    gap: 3px 10px;
+    align-items: center;
+    padding: 14px 14px 14px 12px;
+  }
+
+  body.mobile-profile-alt .link-icon-wrap {
+    width: 38px;
+    height: 38px;
+  }
+
+  body.mobile-profile-alt .link-card strong {
+    font-size: clamp(0.98rem, 4.6vw, 1.14rem);
+    line-height: 1.12;
+  }
+
+  body.mobile-profile-alt .link-card p {
+    font-size: 0.78rem;
+    line-height: 1.42;
+    overflow-wrap: anywhere;
+  }
+
+  body.mobile-profile-alt .movie-feature {
+    width: 100%;
+  }
+
+  body.mobile-profile-alt .featured-copy h3 {
+    font-size: clamp(1.04rem, 5.2vw, 1.32rem);
+    line-height: 1.28;
+    overflow-wrap: anywhere;
+  }
+
+  body.mobile-profile-alt .archive-strip {
+    gap: 10px;
+  }
+
+  body.mobile-profile-alt .archive-strip .archive-card span {
+    font-size: 0.74rem;
+    line-height: 1.38;
+    overflow-wrap: anywhere;
+  }
+
+  body.mobile-profile-alt .tag-grid {
+    width: calc(100% - 32px);
+    max-width: 360px;
+    gap: 12px;
+  }
+
+  body.mobile-profile-alt .tag-grid article {
+    min-height: 124px;
+    padding: 38px 15px 15px;
+  }
+
+  body.mobile-profile-alt .tag-grid strong {
+    font-size: clamp(1rem, 5vw, 1.22rem);
+    line-height: 1.24;
+    overflow-wrap: anywhere;
+  }
+
+  body.mobile-profile-alt .tag-grid p,
+  body.mobile-profile-alt .contact-body p:not(:first-child) {
+    overflow-wrap: anywhere;
+  }
+}
+
+@media (max-width: 380px) {
+  body.mobile-profile-alt .brand {
+    width: min(264px, 70vw);
+    min-height: 100px;
+    padding: 23px 47px 18px 19px;
+  }
+
+  body.mobile-profile-alt .brand img {
+    width: min(166px, 100%);
+  }
+
+  body.mobile-profile-alt.is-past-hero .brand {
+    width: min(222px, 60vw);
+    min-height: 78px;
+    padding: 17px 38px 14px 15px;
+  }
+
+  body.mobile-profile-alt.is-past-hero .brand img {
+    width: min(138px, 100%);
+  }
+
+  body.mobile-profile-alt .nav-toggle {
+    width: 56px;
+    height: 56px;
+    margin-top: 22px;
+  }
+
+  body.mobile-profile-alt.is-past-hero .nav-toggle {
+    width: 48px;
+    height: 48px;
+    margin-top: 17px;
+  }
+
+  body.mobile-profile-alt .section-heading h2 {
+    font-size: clamp(2.26rem, 12.2vw, 3rem);
+  }
+
+  body.mobile-profile-alt .stream-heading h2 {
+    font-size: clamp(2.02rem, 10.8vw, 2.72rem);
+  }
+
+  body.mobile-profile-alt .profile-list div {
+    grid-template-columns: 62px minmax(0, 1fr);
+    padding-inline: 11px;
+  }
+
+  body.mobile-profile-alt .profile-list dd {
+    font-size: 0.82rem;
+  }
+}
+
 /* Motion upgrade: loader curtain, hero assembly, and animated scene panels. */
 body.mobile-profile-alt.site-assembled::before,
 body.mobile-profile-alt.site-assembled::after {
