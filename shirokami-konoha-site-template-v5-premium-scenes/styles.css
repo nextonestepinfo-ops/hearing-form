@@ -11083,6 +11083,400 @@ html.ios-webkit body.mobile-profile-alt .section-shell.scene-ready.is-scene-cont
   transform: translate3d(0, 0, 0) scale(1) !important;
 }
 
+/* Motion upgrade: loader curtain, hero assembly, and animated scene panels. */
+body.mobile-profile-alt.site-assembled::before,
+body.mobile-profile-alt.site-assembled::after {
+  content: "";
+  position: fixed;
+  z-index: 96;
+  inset: 0;
+  pointer-events: none;
+}
+
+body.mobile-profile-alt.site-assembled::before {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(223, 255, 249, 0.94) 48%, rgba(255, 255, 255, 0.98)),
+    radial-gradient(circle at 50% 42%, rgba(117, 226, 211, 0.32), transparent 32%);
+  transform-origin: top center;
+  animation: konoha-loader-curtain 1.18s cubic-bezier(0.16, 1, 0.3, 1) 0.04s both;
+}
+
+body.mobile-profile-alt.site-assembled::after {
+  background:
+    linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.88), rgba(106, 224, 209, 0.52), transparent),
+    repeating-linear-gradient(90deg, transparent 0 32px, rgba(106, 224, 209, 0.12) 33px 34px);
+  height: 24svh;
+  top: 38svh;
+  bottom: auto;
+  filter: blur(0.3px);
+  animation: konoha-loader-scan 1.06s cubic-bezier(0.16, 1, 0.3, 1) 0.12s both;
+}
+
+body.mobile-profile-alt.site-assembled .brand {
+  animation: konoha-top-logo-set 0.78s cubic-bezier(0.16, 1, 0.3, 1) 0.86s both;
+}
+
+body.mobile-profile-alt.site-assembled .nav-toggle {
+  animation: konoha-top-menu-set 0.68s cubic-bezier(0.16, 1, 0.3, 1) 1.02s both;
+}
+
+body.mobile-profile-alt.site-assembled .hero::after {
+  content: "";
+  position: absolute;
+  z-index: 7;
+  left: 50%;
+  top: 48%;
+  width: min(82vw, 520px);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  pointer-events: none;
+  background:
+    radial-gradient(circle, transparent 0 44%, rgba(255, 255, 255, 0.78) 45% 46%, transparent 47%),
+    conic-gradient(from -90deg, transparent 0 32deg, rgba(104, 224, 209, 0.45) 34deg 42deg, transparent 44deg 360deg);
+  transform: translate(-50%, -50%);
+  animation: konoha-hero-summon-ring 1.5s cubic-bezier(0.16, 1, 0.3, 1) 0.78s both;
+}
+
+body.mobile-profile-alt.site-assembled .hero-art > .hero-frame-live {
+  animation:
+    konoha-hero-frame-build 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.74s both,
+    hero-live-frame-drift 8.5s ease-in-out 2.1s infinite alternate;
+}
+
+body.mobile-profile-alt.site-assembled .hero-art picture img {
+  animation:
+    konoha-hero-character-build 1.26s cubic-bezier(0.16, 1, 0.3, 1) 0.92s both,
+    mobile-live-hero-float 6.8s ease-in-out 2.2s infinite alternate;
+}
+
+html.ios-webkit body.mobile-profile-alt.site-assembled .hero-art > .hero-frame-live {
+  animation: konoha-hero-frame-build 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.74s both !important;
+}
+
+html.ios-webkit body.mobile-profile-alt.site-assembled .hero-art picture img {
+  animation: konoha-hero-character-build 1.26s cubic-bezier(0.16, 1, 0.3, 1) 0.92s both !important;
+}
+
+body.mobile-profile-alt.site-assembled .hero-logo,
+body.mobile-profile-alt.site-assembled .hero-kicker,
+body.mobile-profile-alt.site-assembled .hero-actions,
+body.mobile-profile-alt.site-assembled .hero-dock {
+  animation: konoha-hero-copy-build 0.76s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+body.mobile-profile-alt.site-assembled .hero-kicker { animation-delay: 1.18s; }
+body.mobile-profile-alt.site-assembled .hero-logo { animation-delay: 1.28s; }
+body.mobile-profile-alt.site-assembled .hero-actions { animation-delay: 1.38s; }
+body.mobile-profile-alt.site-assembled .hero-dock { animation-delay: 1.48s; }
+
+body.mobile-profile-alt.site-assembled .hero-soft-floaters span {
+  animation:
+    konoha-top-object-in 0.78s cubic-bezier(0.16, 1, 0.3, 1) calc(1.05s + var(--index-delay, 0s)) both,
+    konoha-hero-object-float var(--duration, 9s) ease-in-out calc(1.9s + var(--delay, 0s)) infinite alternate;
+}
+
+body.mobile-profile-alt .hero-soft-floaters span:nth-child(1) { --index-delay: 0.02s; }
+body.mobile-profile-alt .hero-soft-floaters span:nth-child(2) { --index-delay: 0.08s; }
+body.mobile-profile-alt .hero-soft-floaters span:nth-child(3) { --index-delay: 0.14s; }
+body.mobile-profile-alt .hero-soft-floaters span:nth-child(4) { --index-delay: 0.2s; }
+body.mobile-profile-alt .hero-soft-floaters span:nth-child(5) { --index-delay: 0.26s; }
+body.mobile-profile-alt .hero-soft-floaters span:nth-child(6) { --index-delay: 0.32s; }
+
+body.mobile-profile-alt .section-shell.is-scene-active .panel-main {
+  animation: konoha-panel-main-build 1.05s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+body.mobile-profile-alt #links.is-scene-active .panel-main {
+  animation-name: konoha-panel-main-build-dark;
+}
+
+body.mobile-profile-alt .section-shell.is-scene-active .panel-main::after {
+  animation: konoha-panel-light-run 1.12s cubic-bezier(0.16, 1, 0.3, 1) 0.18s both;
+}
+
+body.mobile-profile-alt .section-shell.is-scene-active .panel-rail {
+  animation:
+    konoha-panel-rail-enter 0.86s cubic-bezier(0.16, 1, 0.3, 1) 0.06s both,
+    konoha-panel-rail-scan 4.8s linear 1.15s infinite;
+}
+
+body.mobile-profile-alt .section-shell.is-scene-active .panel-card {
+  animation:
+    konoha-panel-card-pop 0.74s cubic-bezier(0.16, 1, 0.3, 1) 0.18s both,
+    konoha-panel-card-float 4.2s ease-in-out 1.15s infinite alternate;
+}
+
+body.mobile-profile-alt .section-shell.is-scene-active .panel-corner {
+  animation: konoha-panel-corner-draw 0.78s cubic-bezier(0.16, 1, 0.3, 1) 0.28s both;
+}
+
+body.mobile-profile-alt .section-shell.is-scene-active .section-heading::before {
+  animation: konoha-heading-line-run 0.82s cubic-bezier(0.16, 1, 0.3, 1) 0.58s both;
+}
+
+body.mobile-profile-alt .section-shell.is-scene-content .section-heading h2::after {
+  animation: konoha-heading-pixels 1.6s ease-in-out 0.25s both;
+}
+
+@keyframes konoha-loader-curtain {
+  0% {
+    opacity: 1;
+    clip-path: inset(0);
+    transform: translate3d(0, 0, 0) scaleY(1);
+  }
+  62% {
+    opacity: 1;
+    clip-path: inset(0 0 54% 0);
+  }
+  100% {
+    opacity: 0;
+    clip-path: inset(0 0 100% 0);
+    transform: translate3d(0, -4svh, 0) scaleY(0.94);
+  }
+}
+
+@keyframes konoha-loader-scan {
+  0% {
+    opacity: 0;
+    transform: translate3d(-42%, 0, 0) skewY(-4deg);
+  }
+  34% {
+    opacity: 0.92;
+  }
+  100% {
+    opacity: 0;
+    transform: translate3d(58%, -14svh, 0) skewY(-4deg);
+  }
+}
+
+@keyframes konoha-top-logo-set {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -18px, 0) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+}
+
+@keyframes konoha-top-menu-set {
+  from {
+    opacity: 0;
+    transform: translate3d(14px, -14px, 0) rotate(12deg) scale(0.88);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) rotate(0deg) scale(1);
+  }
+}
+
+@keyframes konoha-hero-summon-ring {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.58) rotate(-18deg);
+    filter: blur(3px);
+  }
+  42% {
+    opacity: 0.82;
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(1.26) rotate(22deg);
+    filter: blur(0);
+  }
+}
+
+@keyframes konoha-hero-frame-build {
+  0% {
+    opacity: 0;
+    clip-path: inset(0 48% 0 48%);
+    transform: translate3d(0, 28px, 0) scale(0.94) rotate(-3deg);
+  }
+  100% {
+    opacity: 1;
+    clip-path: inset(0);
+    transform: translate3d(0, 0, 0) scale(1) rotate(0deg);
+  }
+}
+
+@keyframes konoha-hero-character-build {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 44px, 0) scale(0.97);
+    filter: blur(5px) brightness(1.18);
+  }
+  64% {
+    opacity: 1;
+    filter: blur(0) brightness(1.04);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) scale(1);
+    filter: none;
+  }
+}
+
+@keyframes konoha-hero-copy-build {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 18px, 0) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+}
+
+@keyframes konoha-top-object-in {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 22px, 0) scale(0.5) rotate(-14deg);
+  }
+  to {
+    opacity: var(--object-opacity, 0.42);
+    transform: translate3d(0, 0, 0) scale(1) rotate(0deg);
+  }
+}
+
+@keyframes konoha-panel-main-build {
+  0% {
+    opacity: 0;
+    clip-path: inset(0 50% 0 50%);
+    transform: translate3d(0, 38px, 0) scale(0.98);
+  }
+  100% {
+    opacity: 0.44;
+    clip-path: inset(0);
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+}
+
+@keyframes konoha-panel-main-build-dark {
+  0% {
+    opacity: 0;
+    clip-path: inset(0 50% 0 50%);
+    transform: translate3d(0, 38px, 0) scale(0.98);
+  }
+  100% {
+    opacity: 0.34;
+    clip-path: inset(0);
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+}
+
+@keyframes konoha-panel-light-run {
+  from {
+    transform: translate3d(-36%, 0, 0) scaleX(0.2);
+    opacity: 0;
+  }
+  42% {
+    opacity: 1;
+  }
+  to {
+    transform: translate3d(36%, 0, 0) scaleX(1);
+    opacity: 0.7;
+  }
+}
+
+@keyframes konoha-panel-rail-enter {
+  from {
+    opacity: 0;
+    transform: translate3d(-22%, 18px, 0);
+  }
+  to {
+    opacity: 0.62;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes konoha-panel-rail-scan {
+  from {
+    background-position: 0 0, 0 0;
+  }
+  to {
+    background-position: 84px 0, 0 40px;
+  }
+}
+
+@keyframes konoha-panel-card-pop {
+  from {
+    opacity: 0;
+    transform: translate3d(40px, 24px, 0) scale(0.82) rotate(6deg);
+  }
+  to {
+    opacity: 0.52;
+    transform: translate3d(0, 0, 0) scale(1) rotate(0deg);
+  }
+}
+
+@keyframes konoha-panel-card-float {
+  from {
+    transform: translate3d(0, 0, 0) rotate(0deg);
+  }
+  to {
+    transform: translate3d(8px, -10px, 0) rotate(1.4deg);
+  }
+}
+
+@keyframes konoha-panel-corner-draw {
+  from {
+    opacity: 0;
+    clip-path: inset(100% 0 0 0);
+    transform: translate3d(-24px, 26px, 0);
+  }
+  to {
+    opacity: 0.62;
+    clip-path: inset(0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes konoha-heading-line-run {
+  from {
+    clip-path: inset(0 50% 0 50%);
+    opacity: 0;
+  }
+  to {
+    clip-path: inset(0);
+    opacity: 1;
+  }
+}
+
+@keyframes konoha-heading-pixels {
+  0% {
+    transform: translate3d(0, 0, 0) scale(0.7);
+    opacity: 0;
+  }
+  30%, 100% {
+    transform: translate3d(0, 0, 0) scale(1);
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body.mobile-profile-alt.site-assembled::before,
+  body.mobile-profile-alt.site-assembled::after,
+  body.mobile-profile-alt.site-assembled .brand,
+  body.mobile-profile-alt.site-assembled .nav-toggle,
+  body.mobile-profile-alt.site-assembled .hero::after,
+  body.mobile-profile-alt.site-assembled .hero-art > .hero-frame-live,
+  body.mobile-profile-alt.site-assembled .hero-art picture img,
+  body.mobile-profile-alt.site-assembled .hero-logo,
+  body.mobile-profile-alt.site-assembled .hero-kicker,
+  body.mobile-profile-alt.site-assembled .hero-actions,
+  body.mobile-profile-alt.site-assembled .hero-dock,
+  body.mobile-profile-alt .section-shell.is-scene-active .panel-main,
+  body.mobile-profile-alt .section-shell.is-scene-active .panel-main::after,
+  body.mobile-profile-alt .section-shell.is-scene-active .panel-rail,
+  body.mobile-profile-alt .section-shell.is-scene-active .panel-card,
+  body.mobile-profile-alt .section-shell.is-scene-active .panel-corner,
+  body.mobile-profile-alt .section-shell.is-scene-active .section-heading::before,
+  body.mobile-profile-alt .section-shell.is-scene-content .section-heading h2::after {
+    animation: none !important;
+  }
+}
+
 /* Scene panels: visible stage-set frames behind every section's content. */
 body.mobile-profile-alt .scene-panel-set {
   position: absolute;
