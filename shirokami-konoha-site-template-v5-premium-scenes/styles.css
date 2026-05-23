@@ -11134,6 +11134,396 @@ html.ios-webkit body.mobile-profile-alt .section-shell.scene-ready.is-scene-cont
   }
 }
 
+/* Motion icon material pass: lightweight animated UI assets for each scene. */
+.motion-icon-pack {
+  --motion-icon-ink: rgba(58, 92, 101, 0.46);
+  --motion-icon-mint: rgba(115, 229, 216, 0.58);
+  --motion-icon-pink: rgba(255, 220, 235, 0.56);
+  --motion-icon-yellow: rgba(255, 240, 174, 0.56);
+  --motion-icon-glass: rgba(255, 255, 255, 0.72);
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.motion-icon {
+  position: absolute;
+  display: block;
+  width: var(--icon-size, 38px);
+  height: var(--icon-size, 38px);
+  opacity: 0;
+  transform: translate3d(0, 18px, 0) scale(0.78) rotate(var(--icon-rotate, 0deg));
+  transform-origin: center;
+  will-change: transform, opacity;
+  contain: layout paint;
+}
+
+.motion-icon::before,
+.motion-icon::after {
+  content: "";
+  position: absolute;
+  pointer-events: none;
+}
+
+body.site-assembled .hero-icon-pack .motion-icon,
+body.mobile-profile-alt .section-shell.is-scene-content .section-icon-pack .motion-icon {
+  animation:
+    motion-icon-material-in 0.72s cubic-bezier(0.16, 1, 0.3, 1) var(--icon-delay, 0s) both,
+    motion-icon-float var(--icon-duration, 8.4s) ease-in-out calc(var(--icon-delay, 0s) + 0.72s) infinite alternate;
+}
+
+.icon-spark::before {
+  inset: 5%;
+  background:
+    linear-gradient(90deg, transparent 42%, var(--motion-icon-mint) 43% 57%, transparent 58%),
+    linear-gradient(0deg, transparent 42%, var(--motion-icon-mint) 43% 57%, transparent 58%);
+  filter: drop-shadow(0 0 12px rgba(115, 229, 216, 0.38));
+  transform: rotate(45deg);
+}
+
+.icon-spark::after {
+  inset: 31%;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  transform: rotate(45deg);
+}
+
+.icon-game::before {
+  inset: 24% 4% 22%;
+  border: 1px solid rgba(255, 255, 255, 0.78);
+  border-radius: 999px 999px 16px 16px;
+  background:
+    radial-gradient(circle at 72% 48%, var(--motion-icon-pink) 0 3px, transparent 3.8px),
+    radial-gradient(circle at 82% 39%, var(--motion-icon-mint) 0 2px, transparent 2.8px),
+    linear-gradient(135deg, var(--motion-icon-glass), rgba(221, 255, 249, 0.28));
+  box-shadow:
+    0 12px 26px rgba(62, 100, 110, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.86);
+}
+
+.icon-game::after {
+  left: 20%;
+  top: 43%;
+  width: 14px;
+  height: 14px;
+  background:
+    linear-gradient(90deg, transparent 0 5px, var(--motion-icon-ink) 5px 9px, transparent 9px),
+    linear-gradient(0deg, transparent 0 5px, var(--motion-icon-ink) 5px 9px, transparent 9px);
+  opacity: 0.48;
+}
+
+.icon-moon::before {
+  inset: 10%;
+  border-radius: 50%;
+  background: var(--motion-icon-yellow);
+  box-shadow:
+    0 0 22px rgba(255, 240, 174, 0.34),
+    inset -9px 1px 0 rgba(255, 255, 255, 0.82);
+}
+
+.icon-moon::after {
+  inset: 20% 18% 18% 34%;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.76);
+}
+
+.icon-paw::before {
+  inset: 11%;
+  background:
+    radial-gradient(circle at 50% 62%, var(--motion-icon-glass) 0 8px, transparent 8.8px),
+    radial-gradient(circle at 25% 32%, var(--motion-icon-glass) 0 4px, transparent 4.8px),
+    radial-gradient(circle at 45% 22%, var(--motion-icon-glass) 0 4px, transparent 4.8px),
+    radial-gradient(circle at 64% 25%, var(--motion-icon-glass) 0 4px, transparent 4.8px),
+    radial-gradient(circle at 78% 39%, var(--motion-icon-glass) 0 4px, transparent 4.8px);
+  filter:
+    drop-shadow(0 0 10px rgba(115, 229, 216, 0.22))
+    drop-shadow(0 10px 16px rgba(61, 93, 101, 0.08));
+}
+
+.icon-play::before {
+  inset: 5%;
+  border: 1px solid rgba(255, 255, 255, 0.76);
+  border-radius: 50%;
+  background:
+    radial-gradient(circle at 35% 28%, rgba(255, 255, 255, 0.88), transparent 30%),
+    linear-gradient(135deg, rgba(255, 255, 255, 0.58), rgba(115, 229, 216, 0.24));
+  box-shadow: 0 16px 30px rgba(48, 86, 96, 0.1);
+}
+
+.icon-play::after {
+  left: 40%;
+  top: 33%;
+  width: 0;
+  height: 0;
+  border-top: 7px solid transparent;
+  border-bottom: 7px solid transparent;
+  border-left: 11px solid rgba(58, 92, 101, 0.42);
+}
+
+.icon-ribbon::before,
+.icon-ribbon::after {
+  top: 29%;
+  width: 48%;
+  height: 42%;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.7), var(--motion-icon-pink));
+  box-shadow: 0 10px 22px rgba(63, 93, 104, 0.08);
+}
+
+.icon-ribbon::before {
+  left: 5%;
+  border-radius: 16px 6px 16px 6px;
+  transform: rotate(-17deg);
+}
+
+.icon-ribbon::after {
+  right: 5%;
+  border-radius: 6px 16px 6px 16px;
+  transform: rotate(17deg);
+}
+
+.icon-chat::before {
+  inset: 12% 7% 20%;
+  border: 1px solid rgba(255, 255, 255, 0.78);
+  border-radius: 12px;
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.76), rgba(221, 255, 249, 0.32));
+  box-shadow: 0 12px 26px rgba(62, 100, 110, 0.1);
+}
+
+.icon-chat::after {
+  left: 24%;
+  bottom: 11%;
+  width: 11px;
+  height: 11px;
+  background: rgba(255, 255, 255, 0.7);
+  clip-path: polygon(0 0, 100% 0, 0 100%);
+}
+
+.icon-tag::before {
+  inset: 14% 8% 18% 8%;
+  border: 1px solid rgba(255, 255, 255, 0.78);
+  border-radius: 12px 6px 12px 6px;
+  background:
+    radial-gradient(circle at 25% 32%, rgba(92, 120, 130, 0.34) 0 3px, transparent 3.8px),
+    linear-gradient(135deg, rgba(255, 255, 255, 0.76), rgba(255, 220, 235, 0.34));
+  box-shadow: 0 12px 26px rgba(62, 100, 110, 0.1);
+  transform: rotate(-8deg);
+}
+
+.icon-heart::before,
+.icon-heart::after {
+  width: 18px;
+  height: 28px;
+  border-radius: 999px 999px 0 0;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.8), var(--motion-icon-pink));
+  box-shadow: 0 0 18px rgba(255, 220, 235, 0.28);
+}
+
+.icon-heart::before {
+  left: 14px;
+  top: 8px;
+  transform: rotate(-45deg);
+  transform-origin: 0 100%;
+}
+
+.icon-heart::after {
+  left: 2px;
+  top: 8px;
+  transform: rotate(45deg);
+  transform-origin: 100% 100%;
+}
+
+.hero-icon-pack {
+  z-index: 4;
+}
+
+.hero-icon-pack .motion-icon:nth-child(1) { --icon-size: 42px; --icon-delay: 0.2s; --icon-duration: 8.8s; --icon-x: 14px; --icon-y: -12px; left: 7%; top: 23%; }
+.hero-icon-pack .motion-icon:nth-child(2) { --icon-size: 46px; --icon-delay: 0.34s; --icon-duration: 9.6s; --icon-x: -11px; --icon-y: 16px; right: 4%; top: 58%; }
+.hero-icon-pack .motion-icon:nth-child(3) { --icon-size: 32px; --icon-delay: 0.48s; --icon-duration: 10.2s; --icon-x: 12px; --icon-y: 10px; left: 9%; bottom: 23%; }
+.hero-icon-pack .motion-icon:nth-child(4) { --icon-size: 34px; --icon-delay: 0.62s; --icon-duration: 8.2s; --icon-x: -14px; --icon-y: -10px; right: 8%; bottom: 18%; }
+.hero-icon-pack .motion-icon:nth-child(5) { --icon-size: 38px; --icon-delay: 0.76s; --icon-duration: 9.4s; --icon-x: 10px; --icon-y: 12px; left: 4%; top: 50%; }
+.hero-icon-pack .motion-icon:nth-child(6) { --icon-size: 38px; --icon-delay: 0.9s; --icon-duration: 10s; --icon-x: -8px; --icon-y: -14px; right: 15%; top: 17%; }
+
+.section-icon-pack {
+  z-index: 2;
+}
+
+.section-icon-pack .motion-icon:nth-child(1) { --icon-size: 42px; --icon-delay: 0.06s; --icon-duration: 8.6s; --icon-x: 14px; --icon-y: -12px; left: 8%; top: 18%; }
+.section-icon-pack .motion-icon:nth-child(2) { --icon-size: 36px; --icon-delay: 0.22s; --icon-duration: 9.4s; --icon-x: -12px; --icon-y: 14px; right: 9%; top: 34%; }
+.section-icon-pack .motion-icon:nth-child(3) { --icon-size: 32px; --icon-delay: 0.38s; --icon-duration: 8.9s; --icon-x: 10px; --icon-y: 12px; left: 12%; bottom: 16%; }
+
+.links-icon-pack,
+.movie-icon-pack {
+  --motion-icon-ink: rgba(235, 255, 252, 0.5);
+  --motion-icon-mint: rgba(119, 246, 233, 0.64);
+  --motion-icon-glass: rgba(255, 255, 255, 0.38);
+}
+
+.links-icon-pack .motion-icon:nth-child(1) { left: 6%; top: 27%; }
+.links-icon-pack .motion-icon:nth-child(2) { right: 7%; top: 56%; }
+.links-icon-pack .motion-icon:nth-child(3) { left: 15%; bottom: 18%; }
+.movie-icon-pack .motion-icon:nth-child(1) { right: 10%; top: 20%; }
+.movie-icon-pack .motion-icon:nth-child(2) { left: 7%; top: 45%; }
+.movie-icon-pack .motion-icon:nth-child(3) { right: 18%; bottom: 14%; }
+.tags-icon-pack .motion-icon:nth-child(1) { left: 9%; top: 31%; }
+.tags-icon-pack .motion-icon:nth-child(2) { right: 8%; top: 47%; }
+.tags-icon-pack .motion-icon:nth-child(3) { left: 15%; bottom: 12%; }
+.contact-icon-pack .motion-icon:nth-child(1) { left: 8%; top: 26%; }
+.contact-icon-pack .motion-icon:nth-child(2) { right: 12%; top: 18%; }
+.contact-icon-pack .motion-icon:nth-child(3) { right: 10%; bottom: 16%; }
+
+body.mobile-profile-alt .section-heading h2::before {
+  animation: heading-icon-line 5.8s ease-in-out infinite alternate;
+}
+
+body.mobile-profile-alt :is(.link-icon-wrap, .icon-button)::after {
+  content: "";
+  position: absolute;
+  inset: -7px;
+  border: 1px solid rgba(115, 229, 216, 0.22);
+  border-radius: inherit;
+  opacity: 0;
+  pointer-events: none;
+}
+
+body.mobile-profile-alt :is(.link-icon-wrap, .icon-button) {
+  position: relative;
+}
+
+body.mobile-profile-alt.site-assembled :is(.link-icon-wrap, .icon-button)::after {
+  animation: premium-icon-pulse 3.8s ease-in-out infinite;
+}
+
+body.mobile-profile-alt .tag-grid article strong::before,
+body.mobile-profile-alt .contact-body h2::before {
+  content: "";
+  display: inline-block;
+  width: 0.55em;
+  height: 0.55em;
+  margin-right: 0.32em;
+  border: 1px solid rgba(115, 229, 216, 0.46);
+  border-radius: 3px;
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.74), rgba(115, 229, 216, 0.2));
+  box-shadow: 0 0 14px rgba(115, 229, 216, 0.18);
+  transform: rotate(45deg) translateY(-0.06em);
+  vertical-align: middle;
+  animation: tiny-icon-blink 3.4s ease-in-out infinite;
+}
+
+@keyframes motion-icon-material-in {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 18px, 0) scale(0.78) rotate(calc(var(--icon-rotate, 0deg) - 14deg));
+  }
+  72% {
+    opacity: 0.72;
+  }
+  100% {
+    opacity: 0.62;
+    transform: translate3d(0, 0, 0) scale(1) rotate(var(--icon-rotate, 0deg));
+  }
+}
+
+@keyframes motion-icon-float {
+  from {
+    opacity: 0.44;
+    transform: translate3d(0, 0, 0) scale(1) rotate(var(--icon-rotate, 0deg));
+  }
+  to {
+    opacity: 0.72;
+    transform: translate3d(var(--icon-x, 10px), var(--icon-y, -12px), 0) scale(1.035) rotate(calc(var(--icon-rotate, 0deg) + 6deg));
+  }
+}
+
+@keyframes heading-icon-line {
+  from {
+    opacity: 0.44;
+    transform: translateX(calc(var(--section-offset) * -8px));
+  }
+  to {
+    opacity: 0.78;
+    transform: translateX(calc(var(--section-offset) * -14px + 8px));
+  }
+}
+
+@keyframes premium-icon-pulse {
+  0%,
+  72%,
+  100% {
+    opacity: 0;
+    transform: scale(0.92);
+  }
+  22% {
+    opacity: 0.86;
+    transform: scale(1);
+  }
+}
+
+@keyframes tiny-icon-blink {
+  0%,
+  100% {
+    opacity: 0.45;
+    transform: rotate(45deg) translateY(-0.06em) scale(0.94);
+  }
+  50% {
+    opacity: 0.95;
+    transform: rotate(45deg) translateY(-0.06em) scale(1.06);
+  }
+}
+
+@media (max-width: 620px) {
+  .hero-icon-pack .motion-icon:nth-child(1) { left: 5%; top: 19%; }
+  .hero-icon-pack .motion-icon:nth-child(2) { right: 1%; top: 62%; }
+  .hero-icon-pack .motion-icon:nth-child(3) { left: 6%; bottom: 21%; }
+  .hero-icon-pack .motion-icon:nth-child(4) { right: 5%; bottom: 14%; }
+  .hero-icon-pack .motion-icon:nth-child(5) { left: 2%; top: 47%; }
+  .hero-icon-pack .motion-icon:nth-child(6) { right: 14%; top: 15%; }
+
+  .section-icon-pack .motion-icon {
+    --icon-size: 32px;
+  }
+
+  .profile-icon-pack .motion-icon:nth-child(1) { left: 5%; top: 24%; }
+  .profile-icon-pack .motion-icon:nth-child(2) { right: 6%; top: 52%; }
+  .profile-icon-pack .motion-icon:nth-child(3) { left: 8%; bottom: 12%; }
+  .links-icon-pack .motion-icon:nth-child(1) { left: 5%; top: 24%; }
+  .links-icon-pack .motion-icon:nth-child(2) { right: 5%; top: 50%; }
+  .links-icon-pack .motion-icon:nth-child(3) { left: 9%; bottom: 14%; }
+  .movie-icon-pack .motion-icon:nth-child(1) { right: 6%; top: 19%; }
+  .movie-icon-pack .motion-icon:nth-child(2) { left: 5%; top: 38%; }
+  .movie-icon-pack .motion-icon:nth-child(3) { right: 12%; bottom: 10%; }
+  .tags-icon-pack .motion-icon:nth-child(1) { left: 4%; top: 24%; }
+  .tags-icon-pack .motion-icon:nth-child(2) { right: 5%; top: 39%; }
+  .tags-icon-pack .motion-icon:nth-child(3) { left: 10%; bottom: 10%; }
+  .contact-icon-pack .motion-icon:nth-child(1) { left: 5%; top: 26%; }
+  .contact-icon-pack .motion-icon:nth-child(2) { right: 7%; top: 20%; }
+  .contact-icon-pack .motion-icon:nth-child(3) { right: 8%; bottom: 12%; }
+}
+
+html.ios-webkit body.mobile-profile-alt .motion-icon {
+  filter: none !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .motion-icon,
+  body.mobile-profile-alt .section-heading h2::before,
+  body.mobile-profile-alt :is(.link-icon-wrap, .icon-button)::after,
+  body.mobile-profile-alt .tag-grid article strong::before,
+  body.mobile-profile-alt .contact-body h2::before {
+    animation: none !important;
+  }
+
+  .motion-icon {
+    opacity: 0.46;
+    transform: none;
+  }
+}
+
 /* Final mobile polish: centered hero talent plus richer TAGS / CONTACT stages. */
 @media (max-width: 620px) {
   body.mobile-profile-alt .hero-art > .hero-frame-live {
