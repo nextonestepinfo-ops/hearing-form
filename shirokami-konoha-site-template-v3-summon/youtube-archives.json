@@ -1,7 +1,21 @@
 {
-  "updated": "2026-05-24T04:38:43+09:00",
+  "updated": "2026-05-25T04:41:37+09:00",
   "source": "https://www.youtube.com/feeds/videos.xml?channel_id=UC_nYcejJ7nsVG_ppVLwNHsw",
   "items": [
+    {
+      "id": "dat09oD-fI8",
+      "title": "【 #leagueoflegends 】まったりあそぼ～",
+      "url": "https://www.youtube.com/watch?v=dat09oD-fI8",
+      "published": "2026-05-24T10:01:30+00:00",
+      "thumbnail": "https://i.ytimg.com/vi/dat09oD-fI8/hqdefault.jpg"
+    },
+    {
+      "id": "1CVFyoKLTvY",
+      "title": "【 #valorant 】フルパでやらせていただきます！",
+      "url": "https://www.youtube.com/watch?v=1CVFyoKLTvY",
+      "published": "2026-05-24T04:49:57+00:00",
+      "thumbnail": "https://i.ytimg.com/vi/1CVFyoKLTvY/hqdefault.jpg"
+    },
     {
       "id": "XZ9bMhTH1OU",
       "title": "【 #スト6 】初心者Vtuberと学ぶスト6キャラクイズ！ #shorts  #vtuber",
@@ -29,20 +43,6 @@
       "url": "https://www.youtube.com/watch?v=o1KPtdm9r7M",
       "published": "2026-05-21T01:38:19+00:00",
       "thumbnail": "https://i.ytimg.com/vi/o1KPtdm9r7M/hqdefault.jpg"
-    },
-    {
-      "id": "pGUFtPG78mo",
-      "title": "【 #スト6 】初心者Vtuberと学ぶスト6キャラクイズ！第7弾！ #shorts  #vtuber",
-      "url": "https://www.youtube.com/shorts/pGUFtPG78mo",
-      "published": "2026-05-19T09:00:15+00:00",
-      "thumbnail": "https://i.ytimg.com/vi/pGUFtPG78mo/hqdefault.jpg"
-    },
-    {
-      "id": "_0HbwmJToJE",
-      "title": "【 #leagueoflegends 】頑張りたいと思います。",
-      "url": "https://www.youtube.com/watch?v=_0HbwmJToJE",
-      "published": "2026-05-18T02:08:55+00:00",
-      "thumbnail": "https://i.ytimg.com/vi/_0HbwmJToJE/hqdefault.jpg"
     }
   ]
 }
