@@ -1,0 +1,807 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>中外テクノス様 車載カメラ画像合成システム ヒアリングシート</title>
+  <meta
+    name="description"
+    content="車載カメラ画像を多数取得し、色・明るさ・位置ズレを補正しながら1枚の確認用画像に合成するシステムのヒアリングシート。"
+  />
+  <style>
+    :root {
+      --ink: #172033;
+      --muted: #5d687d;
+      --base: #f5f7fa;
+      --paper: #ffffff;
+      --line: #d9e1eb;
+      --blue: #255f92;
+      --blue-soft: #e9f2fb;
+      --teal: #147c72;
+      --teal-soft: #e7f5f2;
+      --amber: #9a6b18;
+      --amber-soft: #fff4dc;
+      --slate: #314156;
+      --shadow: 0 18px 44px rgba(23, 32, 51, 0.08);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--base);
+      font-family: "Yu Gothic", "Hiragino Kaku Gothic ProN", Meiryo, system-ui, sans-serif;
+      line-height: 1.75;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      min-height: 64px;
+      padding: 12px max(20px, calc((100vw - 1120px) / 2));
+      border-bottom: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.94);
+      backdrop-filter: blur(14px);
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--ink);
+      text-decoration: none;
+      font-weight: 900;
+      letter-spacing: 0;
+    }
+
+    .brand-mark {
+      display: inline-grid;
+      place-items: center;
+      width: 34px;
+      height: 34px;
+      border-radius: 7px;
+      background: var(--blue);
+      color: #fff;
+      font-weight: 900;
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      justify-content: flex-end;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 38px;
+      padding: 8px 13px;
+      border: 1px solid var(--line);
+      border-radius: 7px;
+      background: #fff;
+      color: var(--slate);
+      font-size: 0.9rem;
+      font-weight: 800;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    .button.primary {
+      border-color: var(--blue);
+      background: var(--blue);
+      color: #fff;
+    }
+
+    main {
+      width: min(1120px, calc(100% - 34px));
+      margin: 0 auto;
+      padding: 42px 0 72px;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1.3fr) minmax(280px, 0.7fr);
+      gap: 24px;
+      align-items: stretch;
+      margin-bottom: 26px;
+    }
+
+    .hero-copy,
+    .meta-panel,
+    .section,
+    .question,
+    .note-block {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--paper);
+      box-shadow: var(--shadow);
+    }
+
+    .hero-copy {
+      padding: clamp(24px, 5vw, 40px);
+    }
+
+    .eyebrow {
+      margin: 0 0 9px;
+      color: var(--teal);
+      font-size: 0.78rem;
+      font-weight: 900;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    h1,
+    h2,
+    h3 {
+      margin: 0;
+      line-height: 1.25;
+      letter-spacing: 0;
+    }
+
+    h1 {
+      max-width: 820px;
+      font-size: clamp(2rem, 5vw, 3.1rem);
+    }
+
+    .lead {
+      max-width: 780px;
+      margin: 18px 0 0;
+      color: var(--muted);
+      font-size: 1.05rem;
+    }
+
+    .meta-panel {
+      padding: 22px;
+    }
+
+    .meta-panel dl {
+      display: grid;
+      gap: 12px;
+      margin: 0;
+    }
+
+    .meta-panel div {
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .meta-panel div:last-child {
+      padding-bottom: 0;
+      border-bottom: 0;
+    }
+
+    dt {
+      color: var(--muted);
+      font-size: 0.76rem;
+      font-weight: 900;
+    }
+
+    dd {
+      margin: 3px 0 0;
+      font-weight: 800;
+    }
+
+    .section {
+      margin-top: 18px;
+      padding: 24px;
+    }
+
+    .section-heading {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 18px;
+      margin-bottom: 16px;
+    }
+
+    .section-heading p {
+      max-width: 680px;
+      margin: 8px 0 0;
+      color: var(--muted);
+    }
+
+    .grid {
+      display: grid;
+      gap: 12px;
+    }
+
+    .grid.two {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .grid.three {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .item {
+      min-height: 100%;
+      padding: 15px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fff;
+    }
+
+    .item strong {
+      display: block;
+      margin-bottom: 6px;
+      color: var(--blue);
+    }
+
+    .item p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.94rem;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      overflow-wrap: anywhere;
+      background: #fff;
+    }
+
+    th,
+    td {
+      padding: 10px 12px;
+      border: 1px solid var(--line);
+      text-align: left;
+      vertical-align: top;
+      font-size: 0.94rem;
+    }
+
+    th {
+      background: var(--blue-soft);
+      color: var(--blue);
+      font-weight: 900;
+    }
+
+    .nav-list {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 8px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .nav-list a {
+      display: block;
+      min-height: 44px;
+      padding: 9px 10px;
+      border: 1px solid var(--line);
+      border-radius: 7px;
+      background: #fff;
+      color: var(--slate);
+      font-size: 0.88rem;
+      font-weight: 800;
+      text-decoration: none;
+    }
+
+    .question {
+      margin-top: 14px;
+      overflow: hidden;
+    }
+
+    .question-head {
+      display: grid;
+      grid-template-columns: 72px minmax(0, 1fr);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .q-no {
+      display: grid;
+      place-items: center;
+      background: var(--blue);
+      color: #fff;
+      font-weight: 900;
+    }
+
+    .q-title {
+      padding: 13px 16px;
+      background: var(--blue-soft);
+    }
+
+    .q-title span {
+      display: block;
+      color: var(--teal);
+      font-size: 0.74rem;
+      font-weight: 900;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .q-title h3 {
+      margin-top: 2px;
+      color: var(--blue);
+      font-size: 1.05rem;
+    }
+
+    .q-body {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(250px, 0.58fr);
+      gap: 0;
+    }
+
+    .ask,
+    .memo {
+      padding: 15px 16px;
+    }
+
+    .ask p,
+    .memo p {
+      margin: 0;
+    }
+
+    .ask strong,
+    .memo strong {
+      display: block;
+      margin-bottom: 5px;
+      color: var(--slate);
+      font-size: 0.78rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    .memo {
+      border-left: 1px solid var(--line);
+      background: #fbfcfe;
+    }
+
+    .answer {
+      padding: 0 16px 16px;
+    }
+
+    .answer-box {
+      min-height: 92px;
+      border: 1px dashed #a8b5c7;
+      border-radius: 7px;
+      background: #fff;
+    }
+
+    .note-block {
+      margin-top: 18px;
+      padding: 20px;
+      border-left: 5px solid var(--amber);
+      background: var(--amber-soft);
+      box-shadow: none;
+    }
+
+    .note-block h2 {
+      font-size: 1.1rem;
+    }
+
+    .note-block p {
+      margin: 7px 0 0;
+      color: #5f4411;
+    }
+
+    @media (max-width: 860px) {
+      .topbar,
+      .actions {
+        align-items: stretch;
+      }
+
+      .topbar {
+        position: static;
+        flex-direction: column;
+      }
+
+      .actions,
+      .button {
+        width: 100%;
+      }
+
+      .hero,
+      .grid.two,
+      .grid.three,
+      .q-body {
+        grid-template-columns: 1fr;
+      }
+
+      .nav-list {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .memo {
+        border-left: 0;
+        border-top: 1px solid var(--line);
+      }
+    }
+
+    @media print {
+      body {
+        background: #fff;
+      }
+
+      .topbar {
+        display: none;
+      }
+
+      main {
+        width: 100%;
+        padding: 0;
+      }
+
+      .hero {
+        display: block;
+      }
+
+      .hero-copy,
+      .meta-panel,
+      .section,
+      .question,
+      .note-block {
+        box-shadow: none;
+        break-inside: avoid;
+      }
+
+      .section,
+      .question {
+        margin-top: 10px;
+      }
+
+      .nav-section {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="../site-demos/" aria-label="公開URL一覧へ戻る">
+      <span class="brand-mark">N</span>
+      <span>NosTechnology</span>
+    </a>
+    <div class="actions">
+      <a class="button" href="../site-demos/">公開URL一覧</a>
+      <a class="button primary" href="./assets/chugai-vehicle-camera-hearing-sheet.docx">DOCXを開く</a>
+      <button class="button" type="button" onclick="window.print()">印刷</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" aria-labelledby="page-title">
+      <div class="hero-copy">
+        <p class="eyebrow">Requirement Hearing Sheet</p>
+        <h1 id="page-title">中外テクノス様 車載カメラ画像合成システム</h1>
+        <p class="lead">
+          カメラを搭載した車載器で多数の画像を取得し、光の加減・色味・位置ズレを補正しながら、
+          確認しやすい1枚の画像へ合成するための要件確認シートです。
+        </p>
+      </div>
+      <aside class="meta-panel" aria-label="案件情報">
+        <dl>
+          <div>
+            <dt>対象顧客</dt>
+            <dd>中外テクノス様</dd>
+          </div>
+          <div>
+            <dt>作成日</dt>
+            <dd>2026年5月25日</dd>
+          </div>
+          <div>
+            <dt>主な論点</dt>
+            <dd>画像合成 / 位置合わせ / 色・明るさ補正 / POC</dd>
+          </div>
+        </dl>
+      </aside>
+    </section>
+
+    <section class="section">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Current Understanding</p>
+          <h2>先方から頂いている前提</h2>
+          <p>現時点では「多数の車載カメラ画像を1枚化したい」という相談。打ち合わせでは、完成形と失敗条件を先に揃えます。</p>
+        </div>
+      </div>
+      <table>
+        <thead>
+          <tr>
+            <th>項目</th>
+            <th>現時点の前提</th>
+            <th>打ち合わせで確認すること</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>撮影</td>
+            <td>カメラを搭載した車載器で多数の画像を見る</td>
+            <td>静止画か動画か、撮影間隔、カメラ台数、走行条件</td>
+          </tr>
+          <tr>
+            <td>成果物</td>
+            <td>多数の画像を1枚の写真にしたい</td>
+            <td>横長パノラマ、俯瞰図、路線状の連結画像、報告書用画像のどれに近いか</td>
+          </tr>
+          <tr>
+            <td>問題点</td>
+            <td>光の加減で一部が分かりにくくなる</td>
+            <td>逆光、影、トンネル、反射、雨天、夜間など失敗条件</td>
+          </tr>
+          <tr>
+            <td>位置合わせ</td>
+            <td>パターンマッチングで正確に並べたい</td>
+            <td>許容ズレ、重なり率、特徴点、失敗時の手動修正の要否</td>
+          </tr>
+          <tr>
+            <td>自動補正</td>
+            <td>色やズレを自動調整したい</td>
+            <td>色補正の目的、補正してよい範囲、判定に影響する情報</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="section">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">What To Decide</p>
+          <h2>このヒアリングで決めたいこと</h2>
+        </div>
+      </div>
+      <div class="grid three">
+        <div class="item"><strong>1枚の写真の定義</strong><p>成果物がパノラマなのか、点検用の連結画像なのかで設計が変わります。</p></div>
+        <div class="item"><strong>入力データの条件</strong><p>静止画、動画、GPS、車速、撮影時刻など、使える情報で精度と工数が変わります。</p></div>
+        <div class="item"><strong>ズレと色補正の許容範囲</strong><p>パターンマッチングと自動補正の合格ラインを明確にします。</p></div>
+        <div class="item"><strong>処理速度と運用場所</strong><p>車載器内、社内PC、サーバー、クラウドのどこで処理するかを決めます。</p></div>
+        <div class="item"><strong>POCの成功条件</strong><p>最初に小さく検証し、見積・本開発へ進める判断材料にします。</p></div>
+        <div class="item"><strong>確認画面の必要性</strong><p>完全自動か、怪しい箇所だけ人が見る半自動かを切り分けます。</p></div>
+      </div>
+    </section>
+
+    <section class="section nav-section" aria-labelledby="nav-title">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Question Map</p>
+          <h2 id="nav-title">質問一覧</h2>
+        </div>
+      </div>
+      <ol class="nav-list">
+        <li><a href="#q1">Q1 最終判断したいこと</a></li>
+        <li><a href="#q2">Q2 1枚の完成イメージ</a></li>
+        <li><a href="#q3">Q3 利用者と利用シーン</a></li>
+        <li><a href="#q4">Q4 車載器・カメラ構成</a></li>
+        <li><a href="#q5">Q5 撮影対象と走行条件</a></li>
+        <li><a href="#q6">Q6 重なり率・撮影間隔</a></li>
+        <li><a href="#q7">Q7 光の加減</a></li>
+        <li><a href="#q8">Q8 入力データ形式</a></li>
+        <li><a href="#q9">Q9 メタデータ</a></li>
+        <li><a href="#q10">Q10 既存システム連携</a></li>
+        <li><a href="#q11">Q11 サンプル・失敗例</a></li>
+        <li><a href="#q12">Q12 位置合わせ精度</a></li>
+        <li><a href="#q13">Q13 正しく並んだ基準</a></li>
+        <li><a href="#q14">Q14 使える特徴</a></li>
+        <li><a href="#q15">Q15 失敗条件</a></li>
+        <li><a href="#q16">Q16 色・明るさ補正目的</a></li>
+        <li><a href="#q17">Q17 補正対象</a></li>
+        <li><a href="#q18">Q18 補正してはいけない情報</a></li>
+        <li><a href="#q19">Q19 出力形式</a></li>
+        <li><a href="#q20">Q20 処理速度・場所</a></li>
+        <li><a href="#q21">Q21 確認画面・手動修正</a></li>
+        <li><a href="#q22">Q22 保存・セキュリティ</a></li>
+        <li><a href="#q23">Q23 POC成功条件</a></li>
+        <li><a href="#q24">Q24 予算・納期・決裁</a></li>
+      </ol>
+    </section>
+
+    <section class="section" aria-labelledby="questions-title">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Hearing Questions</p>
+          <h2 id="questions-title">ヒアリング項目</h2>
+          <p>回答欄は印刷時に手書きできます。ブラウザで確認する場合は、項目ごとに論点を見ながら進行します。</p>
+        </div>
+      </div>
+
+      <article class="question" id="q1">
+        <div class="question-head"><div class="q-no">Q1</div><div class="q-title"><span>SEC 1 Purpose</span><h3>このシステムで最終的に確認・判断したいこと</h3></div></div>
+        <div class="q-body"><div class="ask"><strong>聞くこと</strong><p>1枚に合成した画像を使って、何を見たいか。点検、異常検知、報告書、記録保管、比較確認など、主目的を確認する。</p></div><div class="memo"><strong>確認例・制作側メモ</strong><p>走行しながら撮影した画像を後で1枚につなぎ、対象物の状態を確認しやすくしたい。目的が点検・測定・報告書用のどれかで、必要精度が変わる。</p></div></div>
+        <div class="answer"><div class="answer-box"></div></div>
+      </article>
+
+      <article class="question" id="q2">
+        <div class="question-head"><div class="q-no">Q2</div><div class="q-title"><span>SEC 1 Purpose</span><h3>「1枚の写真」の完成イメージ</h3></div></div>
+        <div class="q-body"><div class="ask"><strong>聞くこと</strong><p>横長の連結写真、パノラマ、俯瞰画像、地図上の帯画像、区間ごとの合成画像、報告書用の縮小画像のどれに近いか。</p></div><div class="memo"><strong>確認例・制作側メモ</strong><p>1走行区間ごとに横長の1枚画像にしたい。写真として自然に見える必要があるか、位置関係が分かればよいかを合わせる。</p></div></div>
+        <div class="answer"><div class="answer-box"></div></div>
+      </article>
+
+      <article class="question" id="q3">
+        <div class="question-head"><div class="q-no">Q3</div><div class="q-title"><span>SEC 1 Purpose</span><h3>利用者と利用シーン</h3></div></div>
+        <div class="q-body"><div class="ask"><strong>聞くこと</strong><p>誰が、いつ、どこで見るか。現場担当、解析担当、管理者、顧客提出、報告書作成などの利用シーンを確認する。</p></div><div class="memo"><strong>確認例・制作側メモ</strong><p>撮影後に事務所PCで担当者が確認し、必要な箇所だけ報告書へ貼り付ける。リアルタイム処理か後処理かを切り分ける。</p></div></div>
+        <div class="answer"><div class="answer-box"></div></div>
+      </article>
+
+      <article class="question" id="q4">
+        <div class="question-head"><div class="q-no">Q4</div><div class="q-title"><span>SEC 2 Capture</span><h3>車載器・カメラ構成</h3></div></div>
+        <div class="q-body"><div class="ask"><strong>聞くこと</strong><p>車載器の種類、カメラ台数、画角、解像度、レンズ歪み、シャッター方式、動画/静止画、取り付け位置、振動対策を確認する。</p></div><div class="memo"><strong>確認例・制作側メモ</strong><p>前方1台、斜め方向1台、解像度は不明。カメラ仕様と取り付け条件は、レンズ補正、ブレ対策、位置合わせ精度に直結する。</p></div></div>
+        <div class="answer"><div class="answer-box"></div></div>
+      </article>
+
+      <article class="question" id="q5">
+        <div class="question-head"><div class="q-no">Q5</div><div class="q-title"><span>SEC 2 Capture</span><h3>撮影対象と走行条件</h3></div></div>
+        <div class="q-body"><div class="ask"><strong>聞くこと</strong><p>何を撮るか。対象との距離、走行速度、撮影区間、撮影頻度、車線変更、停止、曲がり角、屋内外、昼夜、天候を確認する。</p></div><div class="memo"><strong>確認例・制作側メモ</strong><p>一定速度で走行しながら対象物を連続撮影する。撮影対象と移動条件により、画像同士の重なり率、歪み、欠損が変わる。</p></div></div>
+        <div class="answer"><div class="answer-box"></div></div>
+      </article>
+
+      <article class="question" id="q6">
+        <div class="question-head"><div class="q-no">Q6</div><div class="q-title"><span>SEC 2 Capture</span><h3>画像同士の重なり率・撮影間隔</h3></div></div>
+        <div class="q-body"><div class="ask"><strong>聞くこと</strong><p>隣り合う画像がどれくらい重なるか。撮影間隔、フレームレート、車速との関係、重なりが少ない区間の有無を確認する。</p></div><div class="memo"><strong>確認例・制作側メモ</strong><p>画像の重なりはおよそ30から50%。パターンマッチングには十分な重なりが必要で、重なり不足は合成失敗の主要因になる。</p></div></div>
+        <div class="answer"><div class="answer-box"></div></div>
+      </article>
+
+      <article class="question" id="q7">
+        <div class="question-head"><div class="q-no">Q7</div><div class="q-title"><span>SEC 2 Capture</span><h3>光の加減で見えにくくなる条件</h3></div></div>
+        <div class="q-body"><div class="ask"><strong>聞くこと</strong><p>逆光、影、白飛び、黒つぶれ、反射、トンネル出入口、雨、夜間、ヘッドライト、屋内照明など、見えにくくなる具体条件を聞く。</p></div><div class="memo"><strong>確認例・制作側メモ</strong><p>日陰から日なたに移る場所で明るさが急に変わる。色補正だけで解決できる問題と、撮影条件の改善が必要な問題を分ける。</p></div></div>
+        <div class="answer"><div class="answer-box"></div></div>
+      </article>
+
+      <article class="question" id="q8">
+        <div class="question-head"><div class="q-no">Q8</div><div class="q-title"><span>SEC 3 Data</span><h3>入力データ形式</h3></div></div>
+        <div class="q-body"><div class="ask"><strong>聞くこと</strong><p>入力は静止画か動画か。JPEG、PNG、TIFF、RAW、MP4などの形式、解像度、ファイルサイズ、1回あたりの枚数を確認する。</p></div><div class="memo"><strong>確認例・制作側メモ</strong><p>1走行で数百から数千枚のJPEGが出る。形式と枚数で処理時間、保存容量、クラウド利用可否、画像品質が変わる。</p></div></div>
+        <div class="answer"><div class="answer-box"></div></div>
+      </article>
+
+      <article class="question" id="q9">
+        <div class="question-head"><div class="q-no">Q9</div><div class="q-title"><span>SEC 3 Data</span><h3>使えるメタデータ</h3></div></div>
+        <div class="q-body"><div class="ask"><strong>聞くこと</strong><p>時刻、GPS、車速、距離、IMU、方位、カメラ姿勢、露光、焦点距離、撮影番号などが取れるか確認する。</p></div><div class="memo"><strong>確認例・制作側メモ</strong><p>画像ファイル名に時刻が入っている。GPSは別CSVで出せるかもしれない。メタデータがあると並び順やズレ補正の精度を上げられる。</p></div></div>
+        <div class="answer"><div class="answer-box"></div></div>
+      </article>
+
+      <article class="question" id="q10">
+        <div class="question-head"><div class="q-no">Q10</div><div class="q-title"><span>SEC 3 Data</span><h3>既存システム・車載器との受け渡し</h3></div></div>
+        <div class="q-body"><div class="ask"><strong>聞くこと</strong><p>車載器から画像をどう取り出すか。SDカード、USB、LAN、API、共有フォルダ、クラウド、専用ソフトの有無を確認する。</p></div><div class="memo"><strong>確認例・制作側メモ</strong><p>車載器から専用ソフトで画像を出力している。既存システムからの出力仕様が分かると、連携方式を見積もりやすい。</p></div></div>
+        <div class="answer"><div class="answer-box"></div></div>
+      </article>
+
+      <article class="question" id="q11">
+        <div class="question-head"><div class="q-no">Q11</div><div class="q-title"><span>SEC 3 Data</span><h3>サンプル画像・失敗例・正解例の有無</h3></div></div>
+        <div class="q-body"><div class="ask"><strong>聞くこと</strong><p>通常画像、光で見えにくい画像、ズレた画像、理想の合成結果、手作業で作った参考画像があるか確認する。</p></div><div class="memo"><strong>確認例・制作側メモ</strong><p>良い例10枚、悪い例10枚、手作業で並べた参考画像1枚を共有可能。POCでは成功例だけでなく失敗例が重要。</p></div></div>
+        <div class="answer"><div class="answer-box"></div></div>
+      </article>
+
+      <article class="question" id="q12">
+        <div class="question-head"><div class="q-no">Q12</div><div class="q-title"><span>SEC 4 Alignment</span><h3>位置合わせの精度条件</h3></div></div>
+        <div class="q-body"><div class="ask"><strong>聞くこと</strong><p>どの程度ズレたらNGか。ピクセル単位、cm/m単位、目視で違和感がなければよいのか、測定用途に使うのか確認する。</p></div><div class="memo"><strong>確認例・制作側メモ</strong><p>目視確認が主目的なので数ピクセルのズレは許容。ただし対象物の境目が二重に見えるのはNG。</p></div></div>
+        <div class="answer"><div class="answer-box"></div></div>
+      </article>
+
+      <article class="question" id="q13">
+        <div class="question-head"><div class="q-no">Q13</div><div class="q-title"><span>SEC 4 Alignment</span><h3>正確に並んだと判定する基準</h3></div></div>
+        <div class="q-body"><div class="ask"><strong>聞くこと</strong><p>何を見て正しく並んだと判断するか。線、模様、構造物、マーカー、距離情報、担当者の目視確認などを確認する。</p></div><div class="memo"><strong>確認例・制作側メモ</strong><p>連続する直線や特徴点が途切れず、同じ対象が二重にならなければOK。信頼度スコアや警告表示につなげる。</p></div></div>
+        <div class="answer"><div class="answer-box"></div></div>
+      </article>
+
+      <article class="question" id="q14">
+        <div class="question-head"><div class="q-no">Q14</div><div class="q-title"><span>SEC 4 Alignment</span><h3>パターンマッチングに使えそうな特徴</h3></div></div>
+        <div class="q-body"><div class="ask"><strong>聞くこと</strong><p>画像内に繰り返し使える特徴点、模様、線、番号、標識、マーカー、エッジ、構造物があるか確認する。</p></div><div class="memo"><strong>確認例・制作側メモ</strong><p>単調な面や反射の強い場所では特徴が少ない。GPS/距離情報、人工マーカー、撮影条件調整などの補助が必要になる場合がある。</p></div></div>
+        <div class="answer"><div class="answer-box"></div></div>
+      </article>
+
+      <article class="question" id="q15">
+        <div class="question-head"><div class="q-no">Q15</div><div class="q-title"><span>SEC 4 Alignment</span><h3>マッチングが失敗しやすい条件</h3></div></div>
+        <div class="q-body"><div class="ask"><strong>聞くこと</strong><p>ブレ、ピンぼけ、単調な面、反射、遮蔽物、車両の揺れ、画像の重なり不足、対象の変形、雨滴などを確認する。</p></div><div class="memo"><strong>確認例・制作側メモ</strong><p>白飛び、黒つぶれ、同じ模様が続く場所で失敗しやすい。失敗条件はPOCのテストケースとエラー検知ロジックに入れる。</p></div></div>
+        <div class="answer"><div class="answer-box"></div></div>
+      </article>
+
+      <article class="question" id="q16">
+        <div class="question-head"><div class="q-no">Q16</div><div class="q-title"><span>SEC 5 Correction</span><h3>色・明るさ補正の目的</h3></div></div>
+        <div class="q-body"><div class="ask"><strong>聞くこと</strong><p>自然に見せたいのか、対象を判別しやすくしたいのか、測定値として忠実さを保ちたいのかを確認する。</p></div><div class="memo"><strong>確認例・制作側メモ</strong><p>写真として自然な見た目より、対象の境界や異常箇所が分かることを優先したい。目的が曖昧だと補正方針がブレる。</p></div></div>
+        <div class="answer"><div class="answer-box"></div></div>
+      </article>
+
+      <article class="question" id="q17">
+        <div class="question-head"><div class="q-no">Q17</div><div class="q-title"><span>SEC 5 Correction</span><h3>補正したい画質問題</h3></div></div>
+        <div class="q-body"><div class="ask"><strong>聞くこと</strong><p>露光差、白飛び、黒つぶれ、色かぶり、ノイズ、ブレ、レンズ歪み、影、反射、雨滴など、補正対象を確認する。</p></div><div class="memo"><strong>確認例・制作側メモ</strong><p>明るさ差と色味の違いを揃えたい。すべてを自動補正しようとすると工数が増えるため、優先順位をつける。</p></div></div>
+        <div class="answer"><div class="answer-box"></div></div>
+      </article>
+
+      <article class="question" id="q18">
+        <div class="question-head"><div class="q-no">Q18</div><div class="q-title"><span>SEC 5 Correction</span><h3>補正してはいけない情報</h3></div></div>
+        <div class="q-body"><div class="ask"><strong>聞くこと</strong><p>色や明るさを変えることで、点検・判定・測定上まずい情報があるか確認する。原本保存の必要性も確認する。</p></div><div class="memo"><strong>確認例・制作側メモ</strong><p>色の違いが判断材料になる箇所は、補正前も確認できるようにしたい。原画像との比較や履歴保存が必要になる場合がある。</p></div></div>
+        <div class="answer"><div class="answer-box"></div></div>
+      </article>
+
+      <article class="question" id="q19">
+        <div class="question-head"><div class="q-no">Q19</div><div class="q-title"><span>SEC 6 Operation</span><h3>出力形式・画像サイズ・分割ルール</h3></div></div>
+        <div class="q-body"><div class="ask"><strong>聞くこと</strong><p>合成後の出力形式、解像度、ファイルサイズ上限、区間ごとの分割、PDF/報告書貼付、ビューアの要否を確認する。</p></div><div class="memo"><strong>確認例・制作側メモ</strong><p>高解像度TIFFまたはJPEGで保存し、報告書用には縮小版も出したい。巨大画像では分割・タイル表示・縮小版生成が必要。</p></div></div>
+        <div class="answer"><div class="answer-box"></div></div>
+      </article>
+
+      <article class="question" id="q20">
+        <div class="question-head"><div class="q-no">Q20</div><div class="q-title"><span>SEC 6 Operation</span><h3>処理速度と処理場所</h3></div></div>
+        <div class="q-body"><div class="ask"><strong>聞くこと</strong><p>リアルタイム処理が必要か、撮影後のバッチ処理でよいか。車載PC、事務所PC、社内サーバー、クラウド利用可否を確認する。</p></div><div class="memo"><strong>確認例・制作側メモ</strong><p>撮影後に事務所PCで数分から数十分かけて処理できればよい。処理速度と場所でGPU要否、データ転送、セキュリティ設計が変わる。</p></div></div>
+        <div class="answer"><div class="answer-box"></div></div>
+      </article>
+
+      <article class="question" id="q21">
+        <div class="question-head"><div class="q-no">Q21</div><div class="q-title"><span>SEC 6 Operation</span><h3>確認画面・手動修正・エラー通知</h3></div></div>
+        <div class="q-body"><div class="ask"><strong>聞くこと</strong><p>自動合成後に、人がズレを確認・修正する必要があるか。失敗箇所のハイライト、信頼度表示、再処理ボタンの要否を確認する。</p></div><div class="memo"><strong>確認例・制作側メモ</strong><p>怪しい箇所だけ赤枠で表示し、手動で微調整できるとよい。完全自動か半自動かで開発規模が変わる。</p></div></div>
+        <div class="answer"><div class="answer-box"></div></div>
+      </article>
+
+      <article class="question" id="q22">
+        <div class="question-head"><div class="q-no">Q22</div><div class="q-title"><span>SEC 6 Operation</span><h3>保存期間・セキュリティ・個人情報</h3></div></div>
+        <div class="q-body"><div class="ask"><strong>聞くこと</strong><p>画像に人物、車両ナンバー、施設情報、顧客情報が映るか。保存期間、アクセス権限、社外持ち出し、匿名化の必要性を確認する。</p></div><div class="memo"><strong>確認例・制作側メモ</strong><p>初回検証では匿名化済みサンプルを使いたい。パスワードや機密情報を預からず、サンプルデータの扱いを明確にする。</p></div></div>
+        <div class="answer"><div class="answer-box"></div></div>
+      </article>
+
+      <article class="question" id="q23">
+        <div class="question-head"><div class="q-no">Q23</div><div class="q-title"><span>SEC 7 POC</span><h3>POCで試す範囲と成功条件</h3></div></div>
+        <div class="q-body"><div class="ask"><strong>聞くこと</strong><p>まず何枚・何区間・どの失敗条件で試すか。成功率、処理時間、ズレ許容、補正品質、手動修正時間の合格ラインを決める。</p></div><div class="memo"><strong>確認例・制作側メモ</strong><p>まず100枚程度で、通常条件と光が厳しい条件を混ぜて検証する。8割以上が自動で並べば次へ進む。</p></div></div>
+        <div class="answer"><div class="answer-box"></div></div>
+      </article>
+
+      <article class="question" id="q24">
+        <div class="question-head"><div class="q-no">Q24</div><div class="q-title"><span>SEC 7 POC</span><h3>予算感・納期・決裁プロセス</h3></div></div>
+        <div class="q-body"><div class="ask"><strong>聞くこと</strong><p>希望時期、予算感、決裁者、見積前に必要な資料、社内稟議の流れ、データ提供可能時期を確認する。</p></div><div class="memo"><strong>確認例・制作側メモ</strong><p>まずは検証費用で小さく始め、本開発の費用はPOC結果を見て判断する。いきなり本開発見積ではなくPOC見積に分ける。</p></div></div>
+        <div class="answer"><div class="answer-box"></div></div>
+      </article>
+    </section>
+
+    <section class="section">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Data Request</p>
+          <h2>当日できれば確認したい資料・データ</h2>
+        </div>
+      </div>
+      <table>
+        <thead><tr><th>確認物</th><th>内容</th><th>目的</th></tr></thead>
+        <tbody>
+          <tr><td>連続画像サンプル</td><td>通常条件、光が厳しい条件、ズレが出る条件を含む10から100枚程度</td><td>画像合成・色補正の難易度を見る</td></tr>
+          <tr><td>手作業の理想例</td><td>人が手で並べた画像、または完成イメージに近い参考画像</td><td>完成形の認識を合わせる</td></tr>
+          <tr><td>車載器仕様</td><td>カメラ台数、解像度、画角、撮影間隔、出力形式</td><td>必要な補正と処理量を見積もる</td></tr>
+          <tr><td>メタデータ</td><td>GPS、時刻、距離、車速、撮影番号、CSVなど</td><td>画像マッチングの補助に使えるか判断する</td></tr>
+          <tr><td>失敗例</td><td>白飛び、黒つぶれ、反射、ブレ、重なり不足など</td><td>POCのテストケースに入れる</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="section">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Proposal Branch</p>
+          <h2>初回提案の分岐メモ</h2>
+        </div>
+      </div>
+      <table>
+        <thead><tr><th>確認結果</th><th>提案方向</th></tr></thead>
+        <tbody>
+          <tr><td>画像の重なりと特徴点が十分にある</td><td>パターンマッチング中心の自動合成POCから開始</td></tr>
+          <tr><td>特徴点が少ない、または重なりが不足する</td><td>GPS/距離/撮影時刻などのメタデータ併用、撮影条件見直しを提案</td></tr>
+          <tr><td>光の変化が主な課題</td><td>明るさ・色味の正規化、白飛び/黒つぶれ検知、原画像比較機能を提案</td></tr>
+          <tr><td>完全自動の品質保証が難しい</td><td>信頼度表示と手動微調整を備えた半自動ワークフローを提案</td></tr>
+          <tr><td>画像が巨大になる</td><td>タイル表示、区間分割、報告書用縮小画像の自動生成を提案</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <aside class="note-block">
+      <h2>営業時の使い方</h2>
+      <p>
+        まず「1枚の写真」の完成形を合わせ、その後に撮影条件、重なり率、光の失敗条件、POC成功条件を確認します。
+        技術検証型の案件なので、初回提案は本開発よりも小さなPOCに分けるのが安全です。
+      </p>
+    </aside>
+  </main>
+</body>
+</html>
