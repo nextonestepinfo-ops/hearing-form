@@ -104,6 +104,12 @@
       cursor: pointer;
     }
 
+    .button.is-active {
+      border-color: var(--teal);
+      background: var(--teal-soft);
+      color: var(--teal);
+    }
+
     .button.primary {
       border-color: var(--blue);
       background: var(--blue);
@@ -376,6 +382,121 @@
       background: #fff;
     }
 
+    .answer-tools {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      margin: 0 0 8px;
+    }
+
+    .answer-tools strong {
+      color: var(--slate);
+      font-size: 0.8rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    .mini-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .mini-button {
+      min-height: 30px;
+      padding: 5px 9px;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      background: #fff;
+      color: var(--slate);
+      font: inherit;
+      font-size: 0.78rem;
+      font-weight: 800;
+      cursor: pointer;
+    }
+
+    .answer-field {
+      width: 100%;
+      min-height: 120px;
+      padding: 12px;
+      border: 1px solid #a8b5c7;
+      border-radius: 7px;
+      color: var(--ink);
+      background: #fff;
+      font: inherit;
+      font-size: 0.95rem;
+      line-height: 1.65;
+      resize: vertical;
+    }
+
+    .answer-field:focus {
+      outline: 3px solid rgba(20, 124, 114, 0.16);
+      border-color: var(--teal);
+    }
+
+    .answer-status,
+    .copy-status {
+      color: var(--muted);
+      font-size: 0.82rem;
+      font-weight: 800;
+    }
+
+    .priority-badge {
+      display: inline-flex;
+      align-items: center;
+      min-height: 24px;
+      margin-left: 8px;
+      padding: 2px 8px;
+      border-radius: 999px;
+      background: var(--teal);
+      color: #fff;
+      font-size: 0.72rem;
+      font-weight: 900;
+      vertical-align: middle;
+    }
+
+    .question.is-hidden {
+      display: none;
+    }
+
+    .work-panel {
+      position: sticky;
+      top: 82px;
+      z-index: 5;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-top: 18px;
+      padding: 14px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.96);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(14px);
+    }
+
+    .work-panel strong {
+      display: block;
+      color: var(--slate);
+    }
+
+    .work-panel span {
+      color: var(--muted);
+      font-size: 0.9rem;
+      font-weight: 700;
+    }
+
+    .work-panel-controls {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      justify-content: flex-end;
+    }
+
     .note-block {
       margin-top: 18px;
       padding: 20px;
@@ -420,6 +541,16 @@
         grid-template-columns: repeat(2, minmax(0, 1fr));
       }
 
+      .work-panel {
+        position: static;
+      }
+
+      .work-panel,
+      .work-panel-controls,
+      .work-panel .button {
+        width: 100%;
+      }
+
       .memo {
         border-left: 0;
         border-top: 1px solid var(--line);
@@ -460,6 +591,17 @@
 
       .nav-section {
         display: none;
+      }
+
+      .work-panel,
+      .answer-tools .mini-actions,
+      .copy-status {
+        display: none;
+      }
+
+      .answer-field {
+        min-height: 100px;
+        border: 1px solid #a8b5c7;
       }
     }
   </style>
@@ -503,6 +645,19 @@
           </div>
         </dl>
       </aside>
+    </section>
+
+    <section class="work-panel" aria-label="回答操作">
+      <div>
+        <strong>回答状況 <span data-progress>0/24</span></strong>
+        <span data-save-state>入力するとこのブラウザに保存されます</span>
+      </div>
+      <div class="work-panel-controls">
+        <button class="button" type="button" data-priority-toggle>重要6問だけ</button>
+        <button class="button" type="button" data-copy-answers>回答まとめをコピー</button>
+        <button class="button" type="button" data-download-answers>TXT保存</button>
+        <button class="button" type="button" data-clear-answers>入力をクリア</button>
+      </div>
     </section>
 
     <section class="section">
@@ -803,5 +958,228 @@
       </p>
     </aside>
   </main>
+  <script>
+    (() => {
+      const storageKey = "chugaiVehicleCameraHearingAnswers:v2";
+      const priorityQuestions = new Set(["q1", "q2", "q7", "q11", "q12", "q23"]);
+      const sampleAnswers = {
+        q1: "車載器で撮影した複数画像を1枚につなぎ、対象物の全体状態を確認したい。点検・報告書作成時に、見たい箇所を探しやすくすることが目的。",
+        q2: "横長の連結画像に近い完成形を想定。写真として完全に自然であることより、位置関係と見やすさを優先したい。",
+        q7: "日陰から日なたへ移る場所、逆光、反射、トンネル出入口などで見えにくくなる。白飛び・黒つぶれが起きる画像を確認したい。",
+        q11: "通常画像、光の条件が悪い画像、ズレが出る画像をそれぞれ数十枚程度共有できるか確認する。手作業で並べた理想例があれば一緒にもらう。",
+        q12: "目視確認が主目的なら数ピクセル程度のズレは許容。ただし対象物の境目が二重に見える、位置関係が誤解されるズレはNG。",
+        q23: "まず100枚前後でPOCを行う。通常条件と光が厳しい条件を混ぜ、8割程度が自動で並び、失敗箇所が分かる状態なら次段階へ進む。"
+      };
+
+      const questions = [...document.querySelectorAll(".question")];
+      const progress = document.querySelector("[data-progress]");
+      const saveState = document.querySelector("[data-save-state]");
+      const priorityToggle = document.querySelector("[data-priority-toggle]");
+      const copyButton = document.querySelector("[data-copy-answers]");
+      const downloadButton = document.querySelector("[data-download-answers]");
+      const clearButton = document.querySelector("[data-clear-answers]");
+      let priorityOnly = false;
+      let saveTimer = null;
+
+      const readSaved = () => {
+        try {
+          return JSON.parse(localStorage.getItem(storageKey) || "{}");
+        } catch {
+          return {};
+        }
+      };
+
+      const currentAnswers = () => {
+        const data = {};
+        questions.forEach((question) => {
+          const field = question.querySelector(".answer-field");
+          if (field && field.value.trim()) {
+            data[question.id] = field.value.trim();
+          }
+        });
+        return data;
+      };
+
+      const questionTitle = (question) => {
+        const no = question.querySelector(".q-no")?.textContent?.trim() || question.id.toUpperCase();
+        const title = question.querySelector("h3")?.textContent?.trim() || "";
+        return `${no} ${title}`;
+      };
+
+      const buildSummary = () => {
+        const lines = [
+          "中外テクノス様 車載カメラ画像合成システム ヒアリング回答",
+          `作成日時: ${new Date().toLocaleString("ja-JP")}`,
+          ""
+        ];
+
+        questions.forEach((question) => {
+          const field = question.querySelector(".answer-field");
+          const answer = field?.value.trim();
+          if (!answer) return;
+          lines.push(`## ${questionTitle(question)}`);
+          lines.push(answer);
+          lines.push("");
+        });
+
+        if (lines.length === 3) {
+          lines.push("まだ回答が入力されていません。");
+        }
+
+        return lines.join("\n");
+      };
+
+      const updateProgress = () => {
+        const answered = questions.filter((question) => {
+          const field = question.querySelector(".answer-field");
+          return field && field.value.trim();
+        }).length;
+        if (progress) progress.textContent = `${answered}/${questions.length}`;
+      };
+
+      const saveAnswers = () => {
+        localStorage.setItem(storageKey, JSON.stringify(currentAnswers()));
+        if (saveState) {
+          saveState.textContent = "保存済み";
+          clearTimeout(saveTimer);
+          saveTimer = setTimeout(() => {
+            saveState.textContent = "入力するとこのブラウザに保存されます";
+          }, 1600);
+        }
+      };
+
+      const applyPriorityFilter = () => {
+        questions.forEach((question) => {
+          question.classList.toggle("is-hidden", priorityOnly && !priorityQuestions.has(question.id));
+        });
+        priorityToggle?.classList.toggle("is-active", priorityOnly);
+        if (priorityToggle) priorityToggle.textContent = priorityOnly ? "全24問を表示" : "重要6問だけ";
+      };
+
+      const copyText = async (text) => {
+        if (navigator.clipboard?.writeText) {
+          await navigator.clipboard.writeText(text);
+          return;
+        }
+        const helper = document.createElement("textarea");
+        helper.value = text;
+        helper.style.position = "fixed";
+        helper.style.opacity = "0";
+        document.body.appendChild(helper);
+        helper.select();
+        document.execCommand("copy");
+        helper.remove();
+      };
+
+      const downloadText = (text) => {
+        const blob = new Blob([text], { type: "text/plain;charset=utf-8" });
+        const url = URL.createObjectURL(blob);
+        const link = document.createElement("a");
+        link.href = url;
+        link.download = "chugai-vehicle-camera-hearing-answers.txt";
+        document.body.appendChild(link);
+        link.click();
+        link.remove();
+        URL.revokeObjectURL(url);
+      };
+
+      const saved = readSaved();
+
+      questions.forEach((question) => {
+        const answer = question.querySelector(".answer");
+        const box = question.querySelector(".answer-box");
+        if (!answer || !box) return;
+
+        if (priorityQuestions.has(question.id)) {
+          const title = question.querySelector(".q-title h3");
+          const badge = document.createElement("span");
+          badge.className = "priority-badge";
+          badge.textContent = "まず確認";
+          title?.appendChild(badge);
+        }
+
+        const tools = document.createElement("div");
+        tools.className = "answer-tools";
+
+        const label = document.createElement("strong");
+        label.textContent = "回答";
+
+        const miniActions = document.createElement("div");
+        miniActions.className = "mini-actions";
+
+        if (sampleAnswers[question.id]) {
+          const sampleButton = document.createElement("button");
+          sampleButton.type = "button";
+          sampleButton.className = "mini-button";
+          sampleButton.textContent = "例文を入れる";
+          sampleButton.addEventListener("click", () => {
+            const field = question.querySelector(".answer-field");
+            if (!field) return;
+            field.value = sampleAnswers[question.id];
+            field.dispatchEvent(new Event("input", { bubbles: true }));
+            field.focus();
+          });
+          miniActions.appendChild(sampleButton);
+        }
+
+        const clearOneButton = document.createElement("button");
+        clearOneButton.type = "button";
+        clearOneButton.className = "mini-button";
+        clearOneButton.textContent = "この回答を消す";
+        clearOneButton.addEventListener("click", () => {
+          const field = question.querySelector(".answer-field");
+          if (!field) return;
+          field.value = "";
+          field.dispatchEvent(new Event("input", { bubbles: true }));
+          field.focus();
+        });
+        miniActions.appendChild(clearOneButton);
+
+        const field = document.createElement("textarea");
+        field.className = "answer-field";
+        field.name = `${question.id}-answer`;
+        field.placeholder = "ここに回答を書く。不明な場合は「不明」「サンプル確認後に判断」でOK。";
+        field.value = saved[question.id] || "";
+        field.addEventListener("input", () => {
+          updateProgress();
+          saveAnswers();
+        });
+
+        box.replaceWith(field);
+        tools.append(label, miniActions);
+        answer.prepend(tools);
+      });
+
+      priorityToggle?.addEventListener("click", () => {
+        priorityOnly = !priorityOnly;
+        applyPriorityFilter();
+        document.querySelector("#questions-title")?.scrollIntoView({ block: "start" });
+      });
+
+      copyButton?.addEventListener("click", async () => {
+        const text = buildSummary();
+        await copyText(text);
+        if (saveState) saveState.textContent = "回答まとめをコピーしました";
+      });
+
+      downloadButton?.addEventListener("click", () => {
+        downloadText(buildSummary());
+        if (saveState) saveState.textContent = "TXTを保存しました";
+      });
+
+      clearButton?.addEventListener("click", () => {
+        if (!window.confirm("このブラウザに保存された入力をすべて消します。よろしいですか？")) return;
+        localStorage.removeItem(storageKey);
+        document.querySelectorAll(".answer-field").forEach((field) => {
+          field.value = "";
+        });
+        updateProgress();
+        if (saveState) saveState.textContent = "入力をクリアしました";
+      });
+
+      updateProgress();
+      applyPriorityFilter();
+    })();
+  </script>
 </body>
 </html>
