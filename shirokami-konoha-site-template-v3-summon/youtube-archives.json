@@ -1,7 +1,21 @@
 {
-  "updated": "2026-05-25T04:41:37+09:00",
+  "updated": "2026-05-26T05:00:21+09:00",
   "source": "https://www.youtube.com/feeds/videos.xml?channel_id=UC_nYcejJ7nsVG_ppVLwNHsw",
   "items": [
+    {
+      "id": "vg_EaPrX_Cw",
+      "title": "【 #雑談 】たくさんはなそ～",
+      "url": "https://www.youtube.com/watch?v=vg_EaPrX_Cw",
+      "published": "2026-05-25T13:09:25+00:00",
+      "thumbnail": "https://i.ytimg.com/vi/vg_EaPrX_Cw/hqdefault.jpg"
+    },
+    {
+      "id": "B6DLJ-oDHdg",
+      "title": "【 #apex 】フルパコラボ！APEX久しぶり！",
+      "url": "https://www.youtube.com/watch?v=B6DLJ-oDHdg",
+      "published": "2026-05-25T05:02:02+00:00",
+      "thumbnail": "https://i.ytimg.com/vi/B6DLJ-oDHdg/hqdefault.jpg"
+    },
     {
       "id": "dat09oD-fI8",
       "title": "【 #leagueoflegends 】まったりあそぼ～",
@@ -29,20 +43,6 @@
       "url": "https://www.youtube.com/watch?v=55h2skSGMZQ",
       "published": "2026-05-22T01:17:52+00:00",
       "thumbnail": "https://i.ytimg.com/vi/55h2skSGMZQ/hqdefault.jpg"
-    },
-    {
-      "id": "dJkoYGSrjeo",
-      "title": "【 #スト6 】初心者Vtuberと学ぶスト6キャラクイズ！ヨガ！ #shorts  #vtuber",
-      "url": "https://www.youtube.com/shorts/dJkoYGSrjeo",
-      "published": "2026-05-21T09:00:10+00:00",
-      "thumbnail": "https://i.ytimg.com/vi/dJkoYGSrjeo/hqdefault.jpg"
-    },
-    {
-      "id": "o1KPtdm9r7M",
-      "title": "【 #valorant 】スイフトしつつ様子見る",
-      "url": "https://www.youtube.com/watch?v=o1KPtdm9r7M",
-      "published": "2026-05-21T01:38:19+00:00",
-      "thumbnail": "https://i.ytimg.com/vi/o1KPtdm9r7M/hqdefault.jpg"
     }
   ]
 }
