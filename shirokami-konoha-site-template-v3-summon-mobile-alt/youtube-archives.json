@@ -1,7 +1,21 @@
 {
-  "updated": "2026-05-26T05:00:21+09:00",
+  "updated": "2026-05-27T05:26:44+09:00",
   "source": "https://www.youtube.com/feeds/videos.xml?channel_id=UC_nYcejJ7nsVG_ppVLwNHsw",
   "items": [
+    {
+      "id": "_PRiwJhQ6zo",
+      "title": "【 #スト6 】初心者Vtuberと学ぶスト6キャラクイズ！#shorts #vtuber",
+      "url": "https://www.youtube.com/shorts/_PRiwJhQ6zo",
+      "published": "2026-05-26T09:12:00+00:00",
+      "thumbnail": "https://i.ytimg.com/vi/_PRiwJhQ6zo/hqdefault.jpg"
+    },
+    {
+      "id": "TVkp2vQdIgw",
+      "title": "【 #valorant 】ソロでもつよくいきる！",
+      "url": "https://www.youtube.com/watch?v=TVkp2vQdIgw",
+      "published": "2026-05-26T01:26:45+00:00",
+      "thumbnail": "https://i.ytimg.com/vi/TVkp2vQdIgw/hqdefault.jpg"
+    },
     {
       "id": "vg_EaPrX_Cw",
       "title": "【 #雑談 】たくさんはなそ～",
@@ -29,20 +43,6 @@
       "url": "https://www.youtube.com/watch?v=1CVFyoKLTvY",
       "published": "2026-05-24T04:49:57+00:00",
       "thumbnail": "https://i.ytimg.com/vi/1CVFyoKLTvY/hqdefault.jpg"
-    },
-    {
-      "id": "XZ9bMhTH1OU",
-      "title": "【 #スト6 】初心者Vtuberと学ぶスト6キャラクイズ！ #shorts  #vtuber",
-      "url": "https://www.youtube.com/shorts/XZ9bMhTH1OU",
-      "published": "2026-05-23T09:03:15+00:00",
-      "thumbnail": "https://i.ytimg.com/vi/XZ9bMhTH1OU/hqdefault.jpg"
-    },
-    {
-      "id": "55h2skSGMZQ",
-      "title": "【 #leagueoflegends 】ADCだけじゃダメなのだ。。",
-      "url": "https://www.youtube.com/watch?v=55h2skSGMZQ",
-      "published": "2026-05-22T01:17:52+00:00",
-      "thumbnail": "https://i.ytimg.com/vi/55h2skSGMZQ/hqdefault.jpg"
     }
   ]
 }
