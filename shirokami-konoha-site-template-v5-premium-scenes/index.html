@@ -11,7 +11,7 @@
     <meta name="theme-color" content="#d9fbf2" />
     <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml" />
     <link rel="preload" as="image" href="./assets/v5-scene-moon.jpg" />
-    <link rel="preload" as="image" href="./assets/konoha-profile-standee.webp" type="image/webp" />
+    <link rel="preload" as="image" href="./assets/konoha-standee.webp" type="image/webp" />
     <link rel="preload" as="image" href="./assets/hero-frame-live.svg" />
     <script>
       (() => {
@@ -20,9 +20,9 @@
         if (isiOS || forceLite) document.documentElement.classList.add("ios-webkit");
       })();
     </script>
-    <link rel="stylesheet" href="./styles.css?v=v5-pc-premium-20260523" />
+    <link rel="stylesheet" href="./styles-v6.css?v=konoha-v6-pc-stage-ui-20260527c" />
   </head>
-  <body class="mobile-profile-alt" data-scene="moon">
+  <body class="mobile-profile-alt v6-stage" data-scene="moon">
     <div class="access-gate" data-access-gate>
       <form class="access-card" data-access-form>
         <span class="access-kicker">Access Check</span>
@@ -104,15 +104,6 @@
     <main id="top">
       <section class="hero" aria-labelledby="hero-title">
         <div class="hero-backdrop" aria-hidden="true"></div>
-        <div class="premium-hero-atmosphere" aria-hidden="true">
-          <img class="premium-air premium-air-a" src="./assets/v5-scene-moon.jpg" alt="" loading="lazy" decoding="async" fetchpriority="low" />
-          <img class="premium-air premium-air-b" src="./assets/v5-scene-live.jpg" alt="" loading="lazy" decoding="async" fetchpriority="low" />
-          <span class="premium-fog premium-fog-a"></span>
-          <span class="premium-fog premium-fog-b"></span>
-          <span class="premium-particle-field"></span>
-          <span class="premium-glass-reflection"></span>
-          <span class="premium-light-sweep"></span>
-        </div>
         <div class="hero-soft-floaters" aria-hidden="true">
           <span></span><span></span><span></span><span></span><span></span><span></span>
         </div>
@@ -186,7 +177,8 @@
           <picture>
             <source media="(max-width: 620px)" srcset="./assets/konoha-profile-standee.webp" type="image/webp" />
             <source media="(max-width: 620px)" srcset="./assets/konoha-profile-standee.png" />
-            <img src="./assets/konoha-collage-profile.jpg" alt="白狼このはのメインビジュアル" decoding="async" fetchpriority="high" />
+            <source media="(min-width: 621px)" srcset="./assets/konoha-standee.webp" type="image/webp" />
+            <img src="./assets/konoha-standee-new.png" alt="白狼このはのメインビジュアル" decoding="async" fetchpriority="high" />
           </picture>
         </figure>
 
@@ -429,6 +421,6 @@
       <span>Last updated 2026.05.15</span>
     </footer>
 
-    <script src="./script.js"></script>
+    <script src="./script-v6.js?v=konoha-v6-pc-stage-ui-20260527c"></script>
   </body>
 </html>
