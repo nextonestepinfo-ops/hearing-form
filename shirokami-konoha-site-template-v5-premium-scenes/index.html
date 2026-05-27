@@ -11,7 +11,7 @@
     <meta name="theme-color" content="#d9fbf2" />
     <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml" />
     <link rel="preload" as="image" href="./assets/v5-scene-moon.jpg" />
-    <link rel="preload" as="image" href="./assets/konoha-standee.webp" type="image/webp" />
+    <link rel="preload" as="image" href="./assets/konoha-profile-standee.webp" type="image/webp" />
     <link rel="preload" as="image" href="./assets/hero-frame-live.svg" />
     <script>
       (() => {
@@ -20,9 +20,9 @@
         if (isiOS || forceLite) document.documentElement.classList.add("ios-webkit");
       })();
     </script>
-    <link rel="stylesheet" href="./styles-v7.css?v=konoha-v7-scene-bg-20260527d" />
+    <link rel="stylesheet" href="./styles.css?v=v5-pc-premium-20260523" />
   </head>
-  <body class="mobile-profile-alt v7-stage" data-scene="moon">
+  <body class="mobile-profile-alt" data-scene="moon">
     <div class="access-gate" data-access-gate>
       <form class="access-card" data-access-form>
         <span class="access-kicker">Access Check</span>
@@ -66,12 +66,6 @@
       <div class="premium-scene-layer scene-silver">
         <img src="./assets/v5-scene-silver.jpg" alt="" loading="lazy" decoding="async" fetchpriority="low" />
       </div>
-      <span class="premium-scene-tone"></span>
-      <span class="premium-scene-panel plane-a"></span>
-      <span class="premium-scene-panel plane-b"></span>
-      <span class="premium-scene-panel plane-c"></span>
-      <span class="premium-scene-glow glow-a"></span>
-      <span class="premium-scene-glow glow-b"></span>
       <span class="premium-scene-vignette"></span>
       <span class="premium-scene-grid"></span>
       <span class="premium-scene-particles"></span>
@@ -108,8 +102,17 @@
     </header>
 
     <main id="top">
-      <section class="hero" data-scene="moon" aria-labelledby="hero-title">
+      <section class="hero" aria-labelledby="hero-title">
         <div class="hero-backdrop" aria-hidden="true"></div>
+        <div class="premium-hero-atmosphere" aria-hidden="true">
+          <img class="premium-air premium-air-a" src="./assets/v5-scene-moon.jpg" alt="" loading="lazy" decoding="async" fetchpriority="low" />
+          <img class="premium-air premium-air-b" src="./assets/v5-scene-live.jpg" alt="" loading="lazy" decoding="async" fetchpriority="low" />
+          <span class="premium-fog premium-fog-a"></span>
+          <span class="premium-fog premium-fog-b"></span>
+          <span class="premium-particle-field"></span>
+          <span class="premium-glass-reflection"></span>
+          <span class="premium-light-sweep"></span>
+        </div>
         <div class="hero-soft-floaters" aria-hidden="true">
           <span></span><span></span><span></span><span></span><span></span><span></span>
         </div>
@@ -183,8 +186,7 @@
           <picture>
             <source media="(max-width: 620px)" srcset="./assets/konoha-profile-standee.webp" type="image/webp" />
             <source media="(max-width: 620px)" srcset="./assets/konoha-profile-standee.png" />
-            <source media="(min-width: 621px)" srcset="./assets/konoha-standee.webp" type="image/webp" />
-            <img src="./assets/konoha-standee-new.png" alt="白狼このはのメインビジュアル" decoding="async" fetchpriority="high" />
+            <img src="./assets/konoha-collage-profile.jpg" alt="白狼このはのメインビジュアル" decoding="async" fetchpriority="high" />
           </picture>
         </figure>
 
@@ -201,7 +203,7 @@
         </div>
       </section>
 
-      <section id="profile" class="profile-section section-shell" data-scene="mist" aria-labelledby="profile-title">
+      <section id="profile" class="profile-section section-shell" aria-labelledby="profile-title">
         <div class="scene-panel-set" aria-hidden="true">
           <span class="scene-panel panel-main"></span>
           <span class="scene-panel panel-rail"></span>
@@ -253,7 +255,7 @@
         </div>
       </section>
 
-      <section id="links" class="section-shell links-section" data-scene="live" aria-labelledby="links-title">
+      <section id="links" class="section-shell links-section" aria-labelledby="links-title">
         <div class="scene-panel-set" aria-hidden="true">
           <span class="scene-panel panel-main"></span>
           <span class="scene-panel panel-rail"></span>
@@ -295,7 +297,7 @@
         </div>
       </section>
 
-      <section id="movie" class="section-shell movie-section" data-scene="night" aria-labelledby="movie-title">
+      <section id="movie" class="section-shell movie-section" aria-labelledby="movie-title">
         <div class="scene-panel-set" aria-hidden="true">
           <span class="scene-panel panel-main"></span>
           <span class="scene-panel panel-rail"></span>
@@ -346,7 +348,7 @@
         </div>
       </section>
 
-      <section id="tags" class="section-shell tags-section" data-scene="bloom" aria-labelledby="tags-title">
+      <section id="tags" class="section-shell tags-section" aria-labelledby="tags-title">
         <div class="scene-panel-set" aria-hidden="true">
           <span class="scene-panel panel-main"></span>
           <span class="scene-panel panel-rail"></span>
@@ -391,7 +393,7 @@
         </div>
       </section>
 
-      <section id="contact" class="section-shell contact-section" data-scene="silver" aria-labelledby="contact-heading contact-title">
+      <section id="contact" class="section-shell contact-section" aria-labelledby="contact-heading contact-title">
         <div class="scene-panel-set" aria-hidden="true">
           <span class="scene-panel panel-main"></span>
           <span class="scene-panel panel-rail"></span>
@@ -424,9 +426,9 @@
 
     <footer class="site-footer">
       <span>白狼このは公式サイト</span>
-      <span>Last updated 2026.05.27</span>
+      <span>Last updated 2026.05.15</span>
     </footer>
 
-    <script src="./script-v7.js?v=konoha-v7-scene-bg-20260527d"></script>
+    <script src="./script.js"></script>
   </body>
 </html>
