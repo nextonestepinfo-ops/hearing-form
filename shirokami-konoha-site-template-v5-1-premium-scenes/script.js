@@ -752,7 +752,6 @@ function initPage() {
   setupNavigation();
   revealOnScroll();
   setupSectionSceneTransitions();
-  setupGeneratedLineBackground();
   setupTiltCards();
   setupPointerSparkles();
   setupInteractionGimmicks();
