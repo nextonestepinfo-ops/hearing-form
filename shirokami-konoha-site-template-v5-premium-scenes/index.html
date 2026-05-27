@@ -20,9 +20,9 @@
         if (isiOS || forceLite) document.documentElement.classList.add("ios-webkit");
       })();
     </script>
-    <link rel="stylesheet" href="./styles-v6.css?v=konoha-v6-pc-stage-ui-20260527c" />
+    <link rel="stylesheet" href="./styles-v7.css?v=konoha-v7-scene-bg-20260527d" />
   </head>
-  <body class="mobile-profile-alt v6-stage" data-scene="moon">
+  <body class="mobile-profile-alt v7-stage" data-scene="moon">
     <div class="access-gate" data-access-gate>
       <form class="access-card" data-access-form>
         <span class="access-kicker">Access Check</span>
@@ -66,6 +66,12 @@
       <div class="premium-scene-layer scene-silver">
         <img src="./assets/v5-scene-silver.jpg" alt="" loading="lazy" decoding="async" fetchpriority="low" />
       </div>
+      <span class="premium-scene-tone"></span>
+      <span class="premium-scene-panel plane-a"></span>
+      <span class="premium-scene-panel plane-b"></span>
+      <span class="premium-scene-panel plane-c"></span>
+      <span class="premium-scene-glow glow-a"></span>
+      <span class="premium-scene-glow glow-b"></span>
       <span class="premium-scene-vignette"></span>
       <span class="premium-scene-grid"></span>
       <span class="premium-scene-particles"></span>
@@ -102,7 +108,7 @@
     </header>
 
     <main id="top">
-      <section class="hero" aria-labelledby="hero-title">
+      <section class="hero" data-scene="moon" aria-labelledby="hero-title">
         <div class="hero-backdrop" aria-hidden="true"></div>
         <div class="hero-soft-floaters" aria-hidden="true">
           <span></span><span></span><span></span><span></span><span></span><span></span>
@@ -195,7 +201,7 @@
         </div>
       </section>
 
-      <section id="profile" class="profile-section section-shell" aria-labelledby="profile-title">
+      <section id="profile" class="profile-section section-shell" data-scene="mist" aria-labelledby="profile-title">
         <div class="scene-panel-set" aria-hidden="true">
           <span class="scene-panel panel-main"></span>
           <span class="scene-panel panel-rail"></span>
@@ -247,7 +253,7 @@
         </div>
       </section>
 
-      <section id="links" class="section-shell links-section" aria-labelledby="links-title">
+      <section id="links" class="section-shell links-section" data-scene="live" aria-labelledby="links-title">
         <div class="scene-panel-set" aria-hidden="true">
           <span class="scene-panel panel-main"></span>
           <span class="scene-panel panel-rail"></span>
@@ -289,7 +295,7 @@
         </div>
       </section>
 
-      <section id="movie" class="section-shell movie-section" aria-labelledby="movie-title">
+      <section id="movie" class="section-shell movie-section" data-scene="night" aria-labelledby="movie-title">
         <div class="scene-panel-set" aria-hidden="true">
           <span class="scene-panel panel-main"></span>
           <span class="scene-panel panel-rail"></span>
@@ -340,7 +346,7 @@
         </div>
       </section>
 
-      <section id="tags" class="section-shell tags-section" aria-labelledby="tags-title">
+      <section id="tags" class="section-shell tags-section" data-scene="bloom" aria-labelledby="tags-title">
         <div class="scene-panel-set" aria-hidden="true">
           <span class="scene-panel panel-main"></span>
           <span class="scene-panel panel-rail"></span>
@@ -385,7 +391,7 @@
         </div>
       </section>
 
-      <section id="contact" class="section-shell contact-section" aria-labelledby="contact-heading contact-title">
+      <section id="contact" class="section-shell contact-section" data-scene="silver" aria-labelledby="contact-heading contact-title">
         <div class="scene-panel-set" aria-hidden="true">
           <span class="scene-panel panel-main"></span>
           <span class="scene-panel panel-rail"></span>
@@ -418,9 +424,9 @@
 
     <footer class="site-footer">
       <span>白狼このは公式サイト</span>
-      <span>Last updated 2026.05.15</span>
+      <span>Last updated 2026.05.27</span>
     </footer>
 
-    <script src="./script-v6.js?v=konoha-v6-pc-stage-ui-20260527c"></script>
+    <script src="./script-v7.js?v=konoha-v7-scene-bg-20260527d"></script>
   </body>
 </html>
