@@ -1,7 +1,14 @@
 {
-  "updated": "2026-05-27T05:26:44+09:00",
+  "updated": "2026-05-28T05:30:00+09:00",
   "source": "https://www.youtube.com/feeds/videos.xml?channel_id=UC_nYcejJ7nsVG_ppVLwNHsw",
   "items": [
+    {
+      "id": "vg_EaPrX_Cw",
+      "title": "【 #雑談 】たくさんはなそ～",
+      "url": "https://www.youtube.com/watch?v=vg_EaPrX_Cw",
+      "published": "2026-05-25T13:09:25+00:00",
+      "thumbnail": "https://i.ytimg.com/vi/vg_EaPrX_Cw/hqdefault.jpg"
+    },
     {
       "id": "_PRiwJhQ6zo",
       "title": "【 #スト6 】初心者Vtuberと学ぶスト6キャラクイズ！#shorts #vtuber",
@@ -15,13 +22,6 @@
       "url": "https://www.youtube.com/watch?v=TVkp2vQdIgw",
       "published": "2026-05-26T01:26:45+00:00",
       "thumbnail": "https://i.ytimg.com/vi/TVkp2vQdIgw/hqdefault.jpg"
-    },
-    {
-      "id": "vg_EaPrX_Cw",
-      "title": "【 #雑談 】たくさんはなそ～",
-      "url": "https://www.youtube.com/watch?v=vg_EaPrX_Cw",
-      "published": "2026-05-25T13:09:25+00:00",
-      "thumbnail": "https://i.ytimg.com/vi/vg_EaPrX_Cw/hqdefault.jpg"
     },
     {
       "id": "B6DLJ-oDHdg",
