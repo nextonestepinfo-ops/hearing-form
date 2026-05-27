@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="白狼このは">
+  <rect width="64" height="64" rx="14" fill="#f7fbf8"/>
+  <path d="M18 42 14 23l12 7 6-12 6 12 12-7-4 19c-5 7-23 7-28 0Z" fill="#dfe5ea" stroke="#4f6f64" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M24 39c3 4 13 4 16 0" fill="none" stroke="#8dc8b9" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="25" cy="33" r="3" fill="#2f3738"/>
+  <circle cx="39" cy="33" r="3" fill="#2f3738"/>
+  <path d="M30 37h4l-2 3Z" fill="#6f958a"/>
+</svg>

@@ -1,0 +1,429 @@
+<!doctype html>
+<html lang="ja" class="access-locked">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>白狼このは公式サイト</title>
+    <meta
+      name="description"
+      content="白狼このはの公式サイトです。プロフィール、配信リンク、タグ、ガイドライン、お仕事情報を掲載しています。"
+    />
+    <meta name="theme-color" content="#d9fbf2" />
+    <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml" />
+    <link rel="preload" as="image" href="./assets/v5-scene-moon.jpg" />
+    <link rel="preload" as="image" href="./assets/konoha-profile-standee.webp" type="image/webp" />
+    <link rel="preload" as="image" href="./assets/hero-frame-live.svg" />
+    <script>
+      (() => {
+        const isiOS = /iP(hone|ad|od)/.test(navigator.userAgent) || (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
+        const forceLite = new URLSearchParams(location.search).has("ios-lite");
+        if (isiOS || forceLite) document.documentElement.classList.add("ios-webkit");
+      })();
+    </script>
+    <link rel="stylesheet" href="./styles.css?v=v5-1-clean-pc-20260527" />
+  </head>
+  <body class="mobile-profile-alt v51-clean" data-scene="moon">
+    <div class="access-gate" data-access-gate>
+      <form class="access-card" data-access-form>
+        <span class="access-kicker">Access Check</span>
+        <strong>白狼このは公式サイト</strong>
+        <p>確認用パスワードを入力してください。</p>
+        <label>
+          <span>Password</span>
+          <input type="password" name="password" autocomplete="current-password" required />
+        </label>
+        <button type="submit">Enter</button>
+        <p class="access-error" data-access-error aria-live="polite"></p>
+      </form>
+    </div>
+
+    <div class="loader" data-loader aria-hidden="true">
+      <div class="loader-cloud">
+        <img src="./assets/konoha-logo.png" alt="" />
+        <p>Now Loading<span data-loader-dots>...</span></p>
+        <img class="loader-window-art" src="./assets/konoha-sozai-extra/now_loading_window.png" alt="" />
+        <div class="loader-build" aria-hidden="true">
+          <i></i><i></i><i></i><i></i>
+        </div>
+        <span class="loader-bubbles"><i></i><i></i><i></i></span>
+      </div>
+    </div>
+
+    <div class="scroll-progress" aria-hidden="true"><span data-scroll-progress></span></div>
+
+    <div class="premium-scene-stage" aria-hidden="true">
+      <div class="premium-scene-layer scene-moon">
+        <img src="./assets/v5-scene-moon.jpg" alt="" decoding="async" fetchpriority="high" />
+      </div>
+      <div class="premium-scene-layer scene-live">
+        <img src="./assets/v5-scene-live.jpg" alt="" loading="lazy" decoding="async" fetchpriority="low" />
+      </div>
+      <div class="premium-scene-layer scene-silver">
+        <img src="./assets/v5-scene-silver.jpg" alt="" loading="lazy" decoding="async" fetchpriority="low" />
+      </div>
+      <span class="premium-scene-vignette"></span>
+      <span class="premium-scene-grid"></span>
+      <span class="premium-scene-particles"></span>
+      <span class="premium-scene-fog fog-a"></span>
+      <span class="premium-scene-fog fog-b"></span>
+      <span class="premium-scene-line line-a"></span>
+      <span class="premium-scene-line line-b"></span>
+    </div>
+
+    <div class="page-decor" aria-hidden="true">
+      <span class="sparkle-dot dot-a"></span>
+      <span class="sparkle-dot dot-b"></span>
+      <span class="sparkle-dot dot-c"></span>
+      <span class="pixel-heart heart-a"></span>
+      <span class="pixel-heart heart-b"></span>
+      <span class="ribbon-sticker ribbon-a"></span>
+      <span class="ribbon-sticker ribbon-b"></span>
+    </div>
+
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="白狼このは トップ">
+        <img src="./assets/konoha-logo.png" alt="白狼このは" />
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="site-nav" id="site-nav" aria-label="主要メニュー">
+        <a href="#profile">PROFILE</a>
+        <a href="#links">STREAM</a>
+        <a href="#movie">MOVIE</a>
+        <a href="#tags">TAGS</a>
+        <a class="nav-contact" href="#contact">CONTACT</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-backdrop" aria-hidden="true"></div>
+        <div class="premium-hero-atmosphere" aria-hidden="true">
+          <img class="premium-air premium-air-a" src="./assets/v5-scene-moon.jpg" alt="" loading="lazy" decoding="async" fetchpriority="low" />
+          <img class="premium-air premium-air-b" src="./assets/v5-scene-live.jpg" alt="" loading="lazy" decoding="async" fetchpriority="low" />
+          <span class="premium-fog premium-fog-a"></span>
+          <span class="premium-fog premium-fog-b"></span>
+          <span class="premium-particle-field"></span>
+          <span class="premium-glass-reflection"></span>
+          <span class="premium-light-sweep"></span>
+        </div>
+        <div class="hero-soft-floaters" aria-hidden="true">
+          <span></span><span></span><span></span><span></span><span></span><span></span>
+        </div>
+        <div class="motion-icon-pack hero-icon-pack" aria-hidden="true">
+          <span class="motion-icon icon-spark"></span>
+          <span class="motion-icon icon-game"></span>
+          <span class="motion-icon icon-moon"></span>
+          <span class="motion-icon icon-paw"></span>
+          <span class="motion-icon icon-play"></span>
+          <span class="motion-icon icon-ribbon"></span>
+        </div>
+        <div class="hero-collage" aria-hidden="true">
+          <span class="window-chip chip-name">SHIROKAMI</span>
+          <span class="window-chip chip-check">Check me!!</span>
+          <span class="window-chip chip-wolf">Wolf VTuber</span>
+          <span class="window-panel panel-a"><i></i><b></b><em></em></span>
+          <span class="window-panel panel-b"><i></i><b></b><em></em></span>
+          <span class="charm charm-a"></span>
+          <span class="charm charm-b"></span>
+          <img class="sozai-decor hero-portal" src="./assets/konoha-sozai-extra/magic_portal_sparkles.png" alt="" loading="lazy" decoding="async" />
+          <img class="sozai-decor hero-live-tag" src="./assets/konoha-sozai-extra/live_keychain_tag.png" alt="" loading="lazy" decoding="async" />
+          <img class="sozai-decor hero-paw-pendant" src="./assets/konoha-sozai-extra/heart_paw_pendant.png" alt="" loading="lazy" decoding="async" />
+          <img class="sozai-decor hero-heart-bubble" src="./assets/konoha-sozai-extra/pixel_heart_speech_bubble.png" alt="" loading="lazy" decoding="async" />
+        </div>
+
+        <div class="hero-motion" aria-hidden="true">
+          <div class="motion-strip strip-a">
+            <span>GAME TALK LIVE SHIROKAMI KONOHA</span>
+            <span>GAME TALK LIVE SHIROKAMI KONOHA</span>
+          </div>
+          <div class="motion-strip strip-b">
+            <span>#このはみてみて #しろかきたい #えさまでこのは</span>
+            <span>#このはみてみて #しろかきたい #えさまでこのは</span>
+          </div>
+          <img class="motion-peek" src="./assets/konoha-chibi.webp" alt="" loading="lazy" decoding="async" />
+          <span class="motion-badge badge-live">LIVE</span>
+          <span class="motion-badge badge-talk">TALK</span>
+          <span class="motion-badge badge-game">GAME</span>
+          <span class="motion-arrow"></span>
+        </div>
+
+        <div class="tag-sticker-cloud" aria-hidden="true">
+          <span>#GAME</span>
+          <span>#TALK</span>
+          <span>#LIVE</span>
+          <span>#FANART</span>
+        </div>
+
+        <div class="hero-inner">
+          <div class="hero-copy" data-reveal>
+            <p class="hero-kicker">Official Website</p>
+            <img class="hero-logo" src="./assets/konoha-logo.png" alt="白狼このは" />
+            <h1 id="hero-title">白狼このは公式サイト</h1>
+            <div class="hero-actions" aria-label="公式リンク">
+              <a class="icon-button twitch" href="https://www.twitch.tv/shirokamikonoha" target="_blank" rel="noreferrer" aria-label="Twitch">
+                <img src="./assets/konoha-sozai-extra/twitch_social_icon.png" alt="" />
+              </a>
+              <a class="icon-button youtube" href="https://www.youtube.com/@%E7%99%BD%E7%8B%BC%E3%81%93%E3%81%AE%E3%81%AF" target="_blank" rel="noreferrer" aria-label="YouTube">
+                <img src="./assets/konoha-sozai-extra/youtube_social_icon.png" alt="" />
+              </a>
+              <a class="icon-button x" href="https://x.com/ShirokamiKonoha" target="_blank" rel="noreferrer" aria-label="X">
+                <img src="./assets/konoha-sozai-extra/x_social_icon.png" alt="" />
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <figure class="hero-art" data-reveal>
+          <span class="hero-mobile-bg" aria-hidden="true"></span>
+          <img class="hero-frame-live" src="./assets/hero-frame-live.svg" alt="" aria-hidden="true" />
+          <picture>
+            <source media="(max-width: 620px)" srcset="./assets/konoha-profile-standee.webp" type="image/webp" />
+            <source media="(max-width: 620px)" srcset="./assets/konoha-profile-standee.png" />
+            <img src="./assets/konoha-collage-profile.jpg" alt="白狼このはのメインビジュアル" decoding="async" fetchpriority="high" />
+          </picture>
+        </figure>
+
+        <div class="premium-scroll-cue" aria-hidden="true">
+          <span></span>
+          <b>SCROLL</b>
+        </div>
+
+        <div class="hero-dock" aria-label="ページ内リンク">
+          <a href="#profile"><span>01</span>Profile</a>
+          <a href="#links"><span>02</span>Links</a>
+          <a href="#movie"><span>03</span>Movie</a>
+          <a href="#tags"><span>04</span>Tags</a>
+        </div>
+      </section>
+
+      <section id="profile" class="profile-section section-shell" aria-labelledby="profile-title">
+        <div class="scene-panel-set" aria-hidden="true">
+          <span class="scene-panel panel-main"></span>
+          <span class="scene-panel panel-rail"></span>
+          <span class="scene-panel panel-card"></span>
+          <span class="scene-panel panel-orbit"></span>
+          <span class="scene-panel panel-corner"></span>
+        </div>
+        <div class="motion-icon-pack section-icon-pack profile-icon-pack" aria-hidden="true">
+          <span class="motion-icon icon-paw"></span>
+          <span class="motion-icon icon-ribbon"></span>
+          <span class="motion-icon icon-spark"></span>
+        </div>
+        <div class="section-heading english-heading" data-reveal>
+          <h2 id="profile-title">PROFILE</h2>
+        </div>
+
+        <div class="profile-layout">
+          <img class="sozai-decor profile-portal" src="./assets/konoha-sozai-extra/magic_portal_sparkles.png" alt="" aria-hidden="true" />
+          <img class="sozai-decor profile-cloud" src="./assets/konoha-sozai-extra/cloud_frame_with_bow.png" alt="" aria-hidden="true" />
+          <figure class="profile-visual profile-standee profile-megane" data-reveal>
+            <picture>
+              <source media="(max-width: 620px)" srcset="./assets/konoha-profile-megane.webp" type="image/webp" />
+              <source media="(max-width: 620px)" srcset="./assets/konoha-profile-megane.png" />
+              <source srcset="./assets/konoha-profile-standee.webp" type="image/webp" />
+              <img src="./assets/konoha-profile-standee.png" alt="白狼このはの立ち絵" loading="lazy" decoding="async" />
+            </picture>
+          </figure>
+
+          <div class="profile-copy" data-reveal>
+            <div class="profile-note">
+              <span class="note-pin"></span>
+              <p>ゲームとおしゃべりが大好き。<br />かまってちゃんのさみしがり屋オオカミ</p>
+            </div>
+            <dl class="profile-list">
+              <div><dt>Name</dt><dd>白狼このは / Shirokami Konoha</dd></div>
+              <div><dt>Like</dt><dd>ゲーム / おしゃべり / かわいいもの</dd></div>
+              <div><dt>Style</dt><dd>ゲーム配信、雑談、ファン交流</dd></div>
+              <div><dt>Fan Mark</dt><dd>🐺🤍</dd></div>
+              <div><dt>Tag</dt><dd>#このはみてみて / #しろかきたい / #えさまでこのは</dd></div>
+            </dl>
+            <div class="profile-badges" aria-label="キーワード">
+              <span>Wolf VTuber</span>
+              <span>Game</span>
+              <span>Ribbon</span>
+              <span>Pixel</span>
+              <span>Mint Silver</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="links" class="section-shell links-section" aria-labelledby="links-title">
+        <div class="scene-panel-set" aria-hidden="true">
+          <span class="scene-panel panel-main"></span>
+          <span class="scene-panel panel-rail"></span>
+          <span class="scene-panel panel-card"></span>
+          <span class="scene-panel panel-orbit"></span>
+          <span class="scene-panel panel-corner"></span>
+        </div>
+        <div class="motion-icon-pack section-icon-pack links-icon-pack" aria-hidden="true">
+          <span class="motion-icon icon-game"></span>
+          <span class="motion-icon icon-play"></span>
+          <span class="motion-icon icon-chat"></span>
+        </div>
+        <div class="section-heading english-heading stream-heading" data-reveal>
+          <h2 id="links-title"><span>STREAM</span><span>/ LINKS</span></h2>
+        </div>
+        <div class="link-stage">
+          <img class="sozai-decor stream-live-tag" src="./assets/konoha-sozai-extra/live_keychain_tag.png" alt="" aria-hidden="true" />
+          <img class="links-chibi" src="./assets/konoha-chibi.webp" alt="" loading="lazy" decoding="async" />
+          <div class="link-grid">
+            <a class="link-card" href="https://www.twitch.tv/shirokamikonoha" target="_blank" rel="noreferrer" data-reveal data-tilt>
+              <span class="link-icon-wrap"><img class="link-icon twitch-icon" src="./assets/konoha-sozai-extra/twitch_social_icon.png" alt="" loading="lazy" decoding="async" /></span>
+              <span class="link-label">Twitch</span>
+              <strong>LIVE STREAM</strong>
+              <p>ゲーム配信とおしゃべり。</p>
+            </a>
+            <a class="link-card" href="https://www.youtube.com/@%E7%99%BD%E7%8B%BC%E3%81%93%E3%81%AE%E3%81%AF" target="_blank" rel="noreferrer" data-reveal data-tilt>
+              <span class="link-icon-wrap"><img class="link-icon youtube-icon" src="./assets/konoha-sozai-extra/youtube_social_icon.png" alt="" loading="lazy" decoding="async" /></span>
+              <span class="link-label">YouTube</span>
+              <strong>MOVIE / ARCHIVE</strong>
+              <p>配信アーカイブや動画はこちら。</p>
+            </a>
+            <a class="link-card" href="https://x.com/ShirokamiKonoha" target="_blank" rel="noreferrer" data-reveal data-tilt>
+              <span class="link-icon-wrap"><img class="link-icon x-icon" src="./assets/konoha-sozai-extra/x_social_icon.png" alt="" loading="lazy" decoding="async" /></span>
+              <span class="link-label">X</span>
+              <strong>NEWS / DIARY</strong>
+              <p>告知や日々の投稿はこちら。</p>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section id="movie" class="section-shell movie-section" aria-labelledby="movie-title">
+        <div class="scene-panel-set" aria-hidden="true">
+          <span class="scene-panel panel-main"></span>
+          <span class="scene-panel panel-rail"></span>
+          <span class="scene-panel panel-card"></span>
+          <span class="scene-panel panel-orbit"></span>
+          <span class="scene-panel panel-corner"></span>
+        </div>
+        <div class="motion-icon-pack section-icon-pack movie-icon-pack" aria-hidden="true">
+          <span class="motion-icon icon-play"></span>
+          <span class="motion-icon icon-spark"></span>
+          <span class="motion-icon icon-game"></span>
+        </div>
+        <div class="section-heading english-heading" data-reveal>
+          <h2 id="movie-title">MOVIE</h2>
+        </div>
+        <div class="movie-stage">
+          <div class="movie-danmaku" aria-hidden="true">
+            <span>こんのはー！</span>
+            <span>ないすー！</span>
+            <span>おしゃべり助かる</span>
+            <span>えらい！</span>
+            <span>かわいい！</span>
+            <span>初見です</span>
+            <span>GG!</span>
+            <span>かまって！</span>
+            <span>天才かも</span>
+            <span>応援してる</span>
+          </div>
+          <div class="movie-thumb-flight" data-thumbnail-flight="movie" aria-hidden="true"></div>
+          <img class="sozai-decor movie-portal" src="./assets/konoha-sozai-extra/magic_portal_sparkles.png" alt="" aria-hidden="true" />
+          <img class="sozai-decor movie-pendant" src="./assets/konoha-sozai-extra/heart_paw_pendant.png" alt="" aria-hidden="true" />
+        <article class="featured-window movie-feature window-card" data-reveal data-tilt>
+          <div class="window-bar">
+            <span>latest_archive.mov</span>
+            <i></i><i></i><i></i>
+          </div>
+          <a class="featured-media" href="https://www.youtube.com/@%E7%99%BD%E7%8B%BC%E3%81%93%E3%81%AE%E3%81%AF" target="_blank" rel="noreferrer" data-featured-video>
+            <img src="./assets/youtube-st6-thumb.jpg" alt="白狼このはのYouTube配信サムネイル" loading="lazy" decoding="async" data-featured-thumb />
+            <span>PLAY</span>
+          </a>
+          <div class="featured-copy">
+            <span>YouTube</span>
+            <h3 data-featured-title>動画とアーカイブ</h3>
+            <p data-featured-meta>気になった配信や動画を、あとからゆっくり見られます。</p>
+          </div>
+          <div class="archive-strip" data-archive-strip aria-label="配信サムネイル"></div>
+        </article>
+        </div>
+      </section>
+
+      <section id="tags" class="section-shell tags-section" aria-labelledby="tags-title">
+        <div class="scene-panel-set" aria-hidden="true">
+          <span class="scene-panel panel-main"></span>
+          <span class="scene-panel panel-rail"></span>
+          <span class="scene-panel panel-card"></span>
+          <span class="scene-panel panel-orbit"></span>
+          <span class="scene-panel panel-corner"></span>
+        </div>
+        <div class="motion-icon-pack section-icon-pack tags-icon-pack" aria-hidden="true">
+          <span class="motion-icon icon-tag"></span>
+          <span class="motion-icon icon-heart"></span>
+          <span class="motion-icon icon-spark"></span>
+        </div>
+        <div class="section-heading english-heading" data-reveal>
+          <h2 id="tags-title">TAGS</h2>
+        </div>
+        <div class="floating-tag-stickers" aria-hidden="true">
+          <span>#このはみてみて</span>
+          <span>#しろかきたい</span>
+          <span>#えさまでこのは</span>
+        </div>
+        <div class="tag-grid">
+          <article data-reveal data-tilt>
+            <span>General</span>
+            <strong>#このはみてみて</strong>
+            <p>配信の感想や、このはに見てほしい投稿に。</p>
+          </article>
+          <article data-reveal data-tilt>
+            <span>Fan Art</span>
+            <strong>#しろかきたい</strong>
+            <p>ファンアートや創作投稿に。</p>
+          </article>
+          <article data-reveal data-tilt>
+            <span>Food</span>
+            <strong>#えさまでこのは</strong>
+            <p>ごはん、飯テロ、食べもの投稿に。</p>
+          </article>
+          <article data-reveal data-tilt>
+            <span>Fan Mark</span>
+            <strong>🐺🤍</strong>
+            <p>プロフィールや応援投稿に添えるファンマーク。</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="contact" class="section-shell contact-section" aria-labelledby="contact-heading contact-title">
+        <div class="scene-panel-set" aria-hidden="true">
+          <span class="scene-panel panel-main"></span>
+          <span class="scene-panel panel-rail"></span>
+          <span class="scene-panel panel-card"></span>
+          <span class="scene-panel panel-orbit"></span>
+          <span class="scene-panel panel-corner"></span>
+        </div>
+        <div class="motion-icon-pack section-icon-pack contact-icon-pack" aria-hidden="true">
+          <span class="motion-icon icon-chat"></span>
+          <span class="motion-icon icon-moon"></span>
+          <span class="motion-icon icon-paw"></span>
+        </div>
+        <div class="section-heading english-heading contact-heading" data-reveal>
+          <h2 id="contact-heading">CONTACT</h2>
+        </div>
+        <div class="contact-window window-card" data-reveal>
+          <div class="window-bar">
+            <span>contact.txt</span>
+            <i></i><i></i><i></i>
+          </div>
+          <div class="contact-body">
+            <p>Work / Collaboration</p>
+            <h2 id="contact-title">お仕事のご相談</h2>
+            <p>PR配信、イベント出演、コラボ、タイアップなどのご相談は、公式Xより企画概要、希望時期、参考URLを添えてご連絡ください。</p>
+            <a class="text-button" href="https://x.com/ShirokamiKonoha" target="_blank" rel="noreferrer">Xで相談する</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>白狼このは公式サイト</span>
+      <span>Last updated 2026.05.15</span>
+    </footer>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 760" fill="none">
+  <defs>
+    <linearGradient id="silverRim" x1="38" y1="58" x2="382" y2="728" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#ffffff" stop-opacity=".96"/>
+      <stop offset=".38" stop-color="#e9f4fb" stop-opacity=".92"/>
+      <stop offset=".74" stop-color="#ddd6ff" stop-opacity=".86"/>
+      <stop offset="1" stop-color="#c5d2dc" stop-opacity=".9"/>
+    </linearGradient>
+    <linearGradient id="silverLine" x1="42" y1="54" x2="386" y2="728" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#afc3d0"/>
+      <stop offset=".52" stop-color="#d7d0ff"/>
+      <stop offset="1" stop-color="#9eb4c1"/>
+    </linearGradient>
+    <filter id="softShadow" x="-20%" y="-16%" width="140%" height="132%" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#6b8494" flood-opacity=".2"/>
+    </filter>
+  </defs>
+  <path d="M34 746V202C34 104 111 42 210 42s176 62 176 160v544" stroke="url(#silverRim)" stroke-width="32" stroke-linecap="round" filter="url(#softShadow)"/>
+  <path d="M34 746V202C34 104 111 42 210 42s176 62 176 160v544" stroke="url(#silverLine)" stroke-width="6" stroke-linecap="round"/>
+  <path d="M61 734V210C61 124 126 72 210 72s149 52 149 138v524" stroke="#fff" stroke-width="2" stroke-opacity=".78" stroke-linecap="round"/>
+  <path d="M141 73h138c-11 12-28 20-49 24l-20 4-20-4c-21-4-38-12-49-24Z" fill="#fff" fill-opacity=".64" stroke="#b8c9da" stroke-width="2" stroke-opacity=".58"/>
+  <path d="M210 52l10 21 23 9-23 10-10 21-10-21-23-10 23-9 10-21Z" fill="#fff" stroke="#cfc7ff" stroke-width="2.5" stroke-opacity=".82"/>
+  <path d="M78 203c-14 0-25 11-25 25s11 25 25 25h34c10 0 18-8 18-18s-8-18-18-18h-3c-4-9-12-14-23-14h-8Z" fill="#fff" fill-opacity=".72"/>
+  <path d="M311 616c0-11 9-20 20-20s20 9 20 20-9 20-20 20-20-9-20-20Zm-36 26c0-11 9-20 20-20s20 9 20 20-9 20-20 20-20-9-20-20Zm48 29c0-11 9-20 20-20s20 9 20 20-9 20-20 20-20-9-20-20Zm-45 33c0-12 10-21 22-21h36c12 0 22 9 22 21s-10 21-22 21h-36c-12 0-22-9-22-21Z" fill="#fff" fill-opacity=".68" stroke="#aebdcc" stroke-width="2" stroke-opacity=".54"/>
+  <path d="M101 632l7 15 16 6-16 7-7 15-7-15-16-7 16-6 7-15Z" fill="#fff" stroke="#d7d0ff" stroke-width="2" stroke-opacity=".78"/>
+  <path d="M108 714h204" stroke="#fff" stroke-width="5" stroke-linecap="round" stroke-opacity=".82"/>
+  <path d="M130 714h160" stroke="#aebdcc" stroke-width="2" stroke-linecap="round" stroke-opacity=".62"/>
+</svg>

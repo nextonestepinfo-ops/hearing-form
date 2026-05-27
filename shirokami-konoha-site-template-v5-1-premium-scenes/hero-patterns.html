@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Konoha Hero Patterns</title>
+    <style>
+      :root {
+        color-scheme: light;
+        --white: #ffffff;
+        --ink: #5a6f72;
+        --glass: rgba(255, 255, 255, 0.68);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        min-height: 100%;
+        scroll-snap-type: y mandatory;
+      }
+
+      body {
+        min-height: 100%;
+        margin: 0;
+        overflow-x: hidden;
+        background: #f9fffd;
+        font-family: "Yu Gothic", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+      }
+
+      img {
+        display: block;
+        max-width: 100%;
+      }
+
+      .pattern {
+        --accent: #8edbd1;
+        --accent-2: #fff2ab;
+        --accent-3: #d9d5ff;
+        --deep: #6da7a9;
+        --frame: rgba(185, 226, 224, 0.88);
+        --shadow: rgba(92, 150, 155, 0.18);
+        position: relative;
+        min-height: 100svh;
+        overflow: hidden;
+        isolation: isolate;
+        scroll-snap-align: start;
+        background:
+          radial-gradient(circle at 18% 22%, rgba(255, 255, 255, 0.98), transparent 22%),
+          radial-gradient(circle at 82% 10%, color-mix(in srgb, var(--accent) 26%, transparent), transparent 31%),
+          linear-gradient(180deg, #ffffff 0%, color-mix(in srgb, var(--accent) 20%, #ffffff) 46%, color-mix(in srgb, var(--accent-3) 16%, #ffffff) 100%);
+      }
+
+      .pattern::before,
+      .pattern::after {
+        content: "";
+        position: absolute;
+        pointer-events: none;
+        z-index: 1;
+      }
+
+      .pattern::before {
+        inset: -14% -18% 34%;
+        opacity: 0.58;
+        background:
+          radial-gradient(circle at 14% 42%, rgba(255, 255, 255, 0.9) 0 10px, transparent 11px),
+          radial-gradient(circle at 78% 35%, color-mix(in srgb, var(--accent-2) 70%, transparent) 0 26px, transparent 27px),
+          radial-gradient(circle at 86% 76%, color-mix(in srgb, var(--accent-3) 52%, transparent) 0 42px, transparent 43px),
+          linear-gradient(115deg, transparent 0 38%, rgba(255, 255, 255, 0.48) 39% 42%, transparent 43% 100%);
+        filter: blur(0.2px);
+      }
+
+      .pattern::after {
+        inset: 0;
+        opacity: 0.24;
+        background-image:
+          linear-gradient(90deg, color-mix(in srgb, var(--deep) 18%, transparent) 1px, transparent 1px),
+          linear-gradient(0deg, color-mix(in srgb, var(--deep) 12%, transparent) 1px, transparent 1px);
+        background-size: 46px 46px;
+        mask-image: linear-gradient(180deg, transparent 0%, #000 20%, #000 78%, transparent 100%);
+      }
+
+      .pattern-a {
+        --accent: #8ee5d7;
+        --accent-2: #fff1a4;
+        --accent-3: #cdc9ff;
+        --deep: #579da1;
+        --frame: rgba(207, 207, 255, 0.92);
+        --shadow: rgba(76, 147, 148, 0.22);
+      }
+
+      .pattern-b {
+        --accent: #7bdcff;
+        --accent-2: #ffd0df;
+        --accent-3: #ffeca8;
+        --deep: #5897ca;
+        --frame: rgba(130, 212, 250, 0.92);
+        --shadow: rgba(85, 149, 205, 0.23);
+        background:
+          radial-gradient(circle at 18% 20%, #ffffff 0 15%, transparent 16%),
+          radial-gradient(circle at 88% 14%, rgba(255, 211, 105, 0.52), transparent 27%),
+          radial-gradient(circle at 12% 78%, rgba(255, 190, 214, 0.58), transparent 36%),
+          linear-gradient(180deg, #ffffff 0%, #d2f5ff 39%, #ffe5ef 100%);
+      }
+
+      .pattern-c {
+        --accent: #b8c9da;
+        --accent-2: #d9eeff;
+        --accent-3: #ded5ff;
+        --deep: #728da0;
+        --frame: rgba(196, 211, 224, 0.95);
+        --shadow: rgba(99, 124, 146, 0.2);
+        background:
+          radial-gradient(circle at 24% 18%, rgba(255, 255, 255, 0.98), transparent 23%),
+          radial-gradient(circle at 82% 18%, rgba(198, 226, 248, 0.74), transparent 31%),
+          radial-gradient(circle at 20% 78%, rgba(212, 204, 255, 0.66), transparent 35%),
+          linear-gradient(180deg, #ffffff 0%, #e8f2f8 48%, #f0edff 100%);
+      }
+
+      .pattern-b::before {
+        opacity: 0.76;
+        background:
+          radial-gradient(circle at 12% 34%, rgba(255, 255, 255, 0.92) 0 12px, transparent 13px),
+          radial-gradient(circle at 84% 29%, rgba(255, 210, 226, 0.72) 0 38px, transparent 39px),
+          radial-gradient(circle at 14% 82%, rgba(255, 239, 168, 0.74) 0 54px, transparent 55px),
+          linear-gradient(108deg, transparent 0 31%, rgba(113, 211, 255, 0.25) 32% 38%, transparent 39% 100%);
+      }
+
+      .pattern-c::before {
+        opacity: 0.72;
+        background:
+          radial-gradient(circle at 18% 42%, rgba(255, 255, 255, 0.9) 0 10px, transparent 11px),
+          radial-gradient(circle at 83% 30%, rgba(208, 230, 250, 0.76) 0 42px, transparent 43px),
+          radial-gradient(circle at 12% 80%, rgba(222, 213, 255, 0.66) 0 48px, transparent 49px),
+          linear-gradient(115deg, transparent 0 36%, rgba(184, 201, 218, 0.28) 37% 43%, transparent 44% 100%);
+      }
+
+      .scene {
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+        opacity: 0.54;
+        background-image: var(--scene-img);
+        background-size: cover;
+        background-position: center top;
+        filter: saturate(1.15) brightness(1.08);
+        transform: scale(1.05);
+      }
+
+      .pattern-b .scene {
+        opacity: 0.46;
+        filter: saturate(1.28) hue-rotate(8deg) brightness(1.08);
+      }
+
+      .pattern-c .scene {
+        opacity: 0.5;
+        filter: saturate(0.9) brightness(1.12);
+      }
+
+      .head {
+        position: absolute;
+        top: max(16px, env(safe-area-inset-top));
+        left: 0;
+        right: 0;
+        z-index: 20;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 12px;
+        padding: 0 17px 0 0;
+      }
+
+      .logo-plate {
+        position: relative;
+        width: min(74vw, 290px);
+        height: 112px;
+        padding: 24px 42px 24px 28px;
+        border: 1px solid rgba(255, 255, 255, 0.86);
+        border-left: 0;
+        border-top: 0;
+        border-radius: 0 0 58px 0;
+        background:
+          linear-gradient(128deg, rgba(255, 255, 255, 0.96), rgba(255, 255, 255, 0.68)),
+          radial-gradient(circle at 68% 102%, color-mix(in srgb, var(--accent) 23%, transparent), transparent 40%);
+        box-shadow:
+          0 22px 44px rgba(255, 255, 255, 0.78),
+          0 20px 48px var(--shadow),
+          inset 0 -1px 0 rgba(255, 255, 255, 0.7);
+        backdrop-filter: blur(18px);
+      }
+
+      .logo-plate::before,
+      .logo-plate::after {
+        content: "";
+        position: absolute;
+        pointer-events: none;
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.94);
+        box-shadow: 0 18px 30px var(--shadow);
+      }
+
+      .logo-plate::before {
+        right: -34px;
+        bottom: -18px;
+        width: 92px;
+        height: 92px;
+      }
+
+      .logo-plate::after {
+        left: 34px;
+        bottom: -24px;
+        width: 84px;
+        height: 48px;
+      }
+
+      .logo-plate img {
+        position: relative;
+        z-index: 2;
+        width: 190px;
+        max-width: 100%;
+        filter: brightness(0.78) saturate(1.2) contrast(1.55) drop-shadow(0 8px 16px rgba(105, 137, 142, 0.2));
+      }
+
+      .logo-plate .bow {
+        position: absolute;
+        left: 122px;
+        bottom: -35px;
+        z-index: 3;
+        width: 86px;
+        opacity: 0.82;
+        filter: drop-shadow(0 8px 10px var(--shadow));
+      }
+
+      .menu-orb {
+        position: relative;
+        display: grid;
+        width: 66px;
+        height: 66px;
+        margin-top: 12px;
+        place-items: center;
+        border: 1px solid rgba(255, 255, 255, 0.9);
+        border-radius: 50%;
+        background:
+          linear-gradient(145deg, rgba(255, 255, 255, 0.97), rgba(255, 255, 255, 0.64)),
+          radial-gradient(circle at 50% 100%, color-mix(in srgb, var(--accent) 34%, transparent), transparent 58%);
+        box-shadow: 0 18px 38px var(--shadow), inset 0 1px 0 rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(18px);
+      }
+
+      .menu-orb::before {
+        content: "";
+        position: absolute;
+        inset: -7px;
+        border: 1px solid color-mix(in srgb, var(--accent) 35%, transparent);
+        border-radius: inherit;
+        opacity: 0.46;
+      }
+
+      .menu-orb span,
+      .menu-orb span::before,
+      .menu-orb span::after {
+        display: block;
+        width: 28px;
+        height: 3px;
+        border-radius: 999px;
+        background: var(--deep);
+        box-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
+      }
+
+      .menu-orb span {
+        position: relative;
+      }
+
+      .menu-orb span::before,
+      .menu-orb span::after {
+        content: "";
+        position: absolute;
+        left: 0;
+      }
+
+      .menu-orb span::before {
+        top: -10px;
+        width: 22px;
+      }
+
+      .menu-orb span::after {
+        top: 10px;
+        width: 18px;
+      }
+
+      .hero-shell {
+        position: absolute;
+        z-index: 8;
+        overflow: visible;
+        margin: 0;
+        border: 0;
+        background: transparent;
+      }
+
+      .hero-shell::before,
+      .hero-shell::after {
+        content: "";
+        position: absolute;
+        pointer-events: none;
+      }
+
+      .hero-shell::before {
+        inset: -10px;
+        z-index: 1;
+        border: 2px solid color-mix(in srgb, var(--frame) 82%, transparent);
+        border-radius: inherit;
+        background:
+          linear-gradient(135deg, rgba(255, 255, 255, 0.86), rgba(255, 255, 255, 0.28)),
+          radial-gradient(circle at 12% 10%, rgba(255, 255, 255, 0.86), transparent 30%),
+          radial-gradient(circle at 84% 92%, color-mix(in srgb, var(--accent) 24%, transparent), transparent 34%);
+        box-shadow:
+          0 24px 64px var(--shadow),
+          0 0 0 7px rgba(255, 255, 255, 0.5),
+          inset 0 0 0 1px rgba(255, 255, 255, 0.7),
+          inset 0 18px 42px rgba(255, 255, 255, 0.38);
+        backdrop-filter: blur(18px);
+      }
+
+      .hero-shell::after {
+        inset: -4px;
+        z-index: 9;
+        border: 1px solid rgba(255, 255, 255, 0.82);
+        border-radius: inherit;
+        background:
+          linear-gradient(112deg, transparent 0 34%, rgba(255, 255, 255, 0.52) 41%, transparent 48% 100%),
+          linear-gradient(180deg, rgba(255, 255, 255, 0.26), transparent 26% 74%, rgba(255, 255, 255, 0.44));
+        opacity: 0.82;
+        mix-blend-mode: screen;
+      }
+
+      .visual-window {
+        position: absolute;
+        inset: 0;
+        z-index: 3;
+        overflow: hidden;
+        border-radius: inherit;
+        background:
+          linear-gradient(180deg, rgba(255, 255, 255, 0.74), rgba(255, 255, 255, 0.28)),
+          color-mix(in srgb, var(--accent) 13%, #ffffff);
+        box-shadow:
+          inset 0 0 0 10px rgba(255, 255, 255, 0.72),
+          inset 0 0 0 14px color-mix(in srgb, var(--frame) 76%, transparent),
+          inset 0 0 0 16px rgba(255, 255, 255, 0.5);
+      }
+
+      .visual-window::before,
+      .visual-window::after {
+        content: "";
+        position: absolute;
+        pointer-events: none;
+      }
+
+      .visual-window::before {
+        z-index: 2;
+        inset: 16px;
+        border: 1px solid rgba(255, 255, 255, 0.68);
+        border-radius: inherit;
+        box-shadow:
+          0 0 0 1px color-mix(in srgb, var(--accent) 20%, transparent),
+          inset 0 0 22px rgba(255, 255, 255, 0.42);
+      }
+
+      .visual-window::after {
+        z-index: 1;
+        inset: 0;
+        background:
+          radial-gradient(circle at 20% 18%, rgba(255, 255, 255, 0.36), transparent 18%),
+          linear-gradient(108deg, transparent 0 34%, rgba(255, 255, 255, 0.42) 42%, transparent 49%);
+        mix-blend-mode: screen;
+        opacity: 0.58;
+      }
+
+      .frame-asset {
+        position: absolute;
+        z-index: 12;
+        pointer-events: none;
+        user-select: none;
+        filter: drop-shadow(0 12px 18px var(--shadow));
+      }
+
+      .frame-svg {
+        position: absolute;
+        inset: -92px -26px -26px -26px;
+        z-index: 14;
+        width: calc(100% + 52px);
+        height: calc(100% + 118px);
+        object-fit: fill;
+        pointer-events: none;
+        user-select: none;
+        filter: drop-shadow(0 18px 26px var(--shadow));
+      }
+
+      .visual-window .frame-svg {
+        z-index: 2;
+        filter: none;
+      }
+
+      .frame-cloud > .frame-svg {
+        opacity: 0.38;
+        mix-blend-mode: screen;
+      }
+
+      .pattern-a .hero-shell {
+        top: 126px;
+        right: -26px;
+        bottom: -18px;
+        left: -18px;
+        border-radius: 46% 0 18px 18px / 16% 0 18px 18px;
+        transform: rotate(-1.4deg);
+      }
+
+      .pattern-a .hero-shell::after {
+        border-radius: 46% 0 18px 18px / 16% 0 18px 18px;
+      }
+
+      .desktop-visual {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: 52% 23%;
+        filter: saturate(1.1) contrast(1.04) brightness(1.02);
+        transform: scale(1.34) rotate(1.4deg);
+      }
+
+      .frame-cloud {
+        --frame: rgba(207, 207, 255, 0.86);
+      }
+
+      .frame-cloud::before {
+        background:
+          radial-gradient(circle at 11% 4%, rgba(255, 255, 255, 0.96) 0 42px, transparent 43px),
+          radial-gradient(circle at 38% -2%, rgba(255, 255, 255, 0.88) 0 28px, transparent 29px),
+          radial-gradient(circle at 78% 100%, rgba(255, 255, 255, 0.78) 0 42px, transparent 43px),
+          linear-gradient(135deg, rgba(255, 255, 255, 0.86), rgba(255, 255, 255, 0.28)),
+          radial-gradient(circle at 84% 92%, color-mix(in srgb, var(--accent) 28%, transparent), transparent 34%);
+      }
+
+      .frame-cloud .frame-moon {
+        top: 86px;
+        left: 2px;
+        width: 76px;
+        opacity: 0.96;
+      }
+
+      .frame-cloud .frame-divider {
+        right: 40px;
+        bottom: 18px;
+        width: 188px;
+        opacity: 0.64;
+      }
+
+      .frame-cloud .frame-bow {
+        top: -22px;
+        right: 58px;
+        width: 82px;
+        opacity: 0.92;
+      }
+
+      .pattern-b .hero-shell {
+        top: 126px;
+        right: 15px;
+        bottom: -52px;
+        left: 15px;
+        border-width: 6px;
+        border-radius: 48% 48% 22px 22px / 18% 18% 22px 22px;
+      }
+
+      .pattern-b .hero-shell::after {
+        border-radius: 48% 48% 22px 22px / 18% 18% 22px 22px;
+      }
+
+      .frame-ribbon {
+        --frame: rgba(120, 210, 250, 0.88);
+      }
+
+      .frame-ribbon::before {
+        background:
+          linear-gradient(90deg, color-mix(in srgb, var(--accent) 44%, transparent) 0 6px, transparent 6px calc(100% - 6px), color-mix(in srgb, var(--accent-2) 54%, transparent) calc(100% - 6px)),
+          radial-gradient(circle at 6% 10%, rgba(255, 255, 255, 0.92) 0 44px, transparent 45px),
+          radial-gradient(circle at 94% 20%, rgba(255, 222, 232, 0.9) 0 46px, transparent 47px),
+          radial-gradient(circle at 50% -8%, rgba(255, 239, 174, 0.72) 0 56px, transparent 57px),
+          linear-gradient(135deg, rgba(255, 255, 255, 0.82), rgba(255, 255, 255, 0.22));
+      }
+
+      .frame-ribbon .frame-tape {
+        top: 92px;
+        left: 0;
+        width: 100px;
+        opacity: 0.94;
+        transform: rotate(-13deg);
+      }
+
+      .frame-ribbon .frame-tag {
+        right: 4px;
+        top: 124px;
+        width: 100px;
+        opacity: 0.84;
+        transform: rotate(10deg);
+      }
+
+      .frame-ribbon .frame-bow {
+        top: -30px;
+        left: 50%;
+        width: 84px;
+        opacity: 0.86;
+        transform: translateX(-50%);
+      }
+
+      .pattern-b .hero-shell .frame-bg,
+      .pattern-c .hero-shell .frame-bg {
+        position: absolute;
+        inset: 0;
+        z-index: 0;
+        background-image: var(--frame-bg);
+        background-size: cover;
+        background-position: center;
+        opacity: 0.62;
+        filter: saturate(1.18) brightness(1.08);
+      }
+
+      .standee {
+        position: absolute;
+        z-index: 4;
+        left: 50%;
+        top: -8px;
+        width: min(112vw, 520px);
+        max-width: none;
+        transform: translateX(-49%);
+        filter: drop-shadow(0 26px 28px rgba(98, 130, 146, 0.22));
+      }
+
+      .pattern-b .standee {
+        top: -16px;
+        width: min(132vw, 540px);
+        transform: translateX(-50%);
+      }
+
+      .pattern-c .hero-shell {
+        top: 136px;
+        right: -3px;
+        bottom: -44px;
+        left: -3px;
+        border-width: 6px;
+        border-radius: 48% 48% 34px 34px / 22% 22% 30px 30px;
+      }
+
+      .pattern-c .hero-shell::after {
+        border-radius: 48% 48% 34px 34px / 22% 22% 30px 30px;
+      }
+
+      .pattern-c .standee {
+        top: -24px;
+        width: min(134vw, 540px);
+        transform: translateX(-50%);
+      }
+
+      .frame-silver {
+        --frame: rgba(187, 204, 218, 0.9);
+      }
+
+      .frame-silver::before {
+        background:
+          radial-gradient(circle at 10% 10%, rgba(255, 255, 255, 0.86) 0 44px, transparent 45px),
+          radial-gradient(circle at 94% 10%, rgba(217, 238, 255, 0.78) 0 48px, transparent 49px),
+          radial-gradient(circle at 12% 94%, rgba(222, 213, 255, 0.58) 0 48px, transparent 49px),
+          linear-gradient(135deg, rgba(255, 255, 255, 0.84), rgba(240, 247, 250, 0.24));
+      }
+
+      .frame-silver .frame-ornate {
+        top: -22px;
+        left: 50%;
+        width: 136px;
+        opacity: 0.58;
+        transform: translateX(-50%);
+      }
+
+      .frame-silver .frame-paw {
+        right: 6px;
+        bottom: 110px;
+        width: 76px;
+        opacity: 0.82;
+      }
+
+      .frame-silver .frame-divider {
+        left: 48px;
+        bottom: 22px;
+        width: 182px;
+        opacity: 0.56;
+      }
+
+      .glass-title {
+        position: absolute;
+        z-index: 12;
+        left: 22px;
+        bottom: 30px;
+        width: min(62vw, 250px);
+        height: 74px;
+        border: 1px solid rgba(255, 255, 255, 0.78);
+        border-radius: 28px;
+        background:
+          linear-gradient(125deg, rgba(255, 255, 255, 0.82), rgba(255, 255, 255, 0.36)),
+          radial-gradient(circle at 12% 50%, color-mix(in srgb, var(--accent) 28%, transparent), transparent 32%);
+        box-shadow: 0 18px 42px var(--shadow), inset 0 1px 0 rgba(255, 255, 255, 0.86);
+        backdrop-filter: blur(18px);
+        display: none;
+      }
+
+      .glass-title::before,
+      .glass-title::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        height: 1px;
+        transform: translateY(-50%);
+        background: linear-gradient(90deg, transparent, var(--deep), transparent);
+        opacity: 0.44;
+      }
+
+      .glass-title::before {
+        left: 22px;
+        width: 42px;
+      }
+
+      .glass-title::after {
+        right: 22px;
+        width: 84px;
+      }
+
+      .dock {
+        position: absolute;
+        right: 18px;
+        bottom: 30px;
+        z-index: 13;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .dock i {
+        width: 48px;
+        height: 48px;
+        border: 1px solid rgba(255, 255, 255, 0.82);
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.62);
+        box-shadow: 0 15px 24px var(--shadow), inset 0 1px 0 rgba(255, 255, 255, 0.82);
+        backdrop-filter: blur(16px);
+      }
+
+      .motif {
+        position: absolute;
+        z-index: 14;
+        pointer-events: none;
+        filter: drop-shadow(0 10px 16px var(--shadow));
+      }
+
+      .motif-moon {
+        top: 235px;
+        left: 28px;
+        width: 54px;
+        opacity: 0.92;
+      }
+
+      .motif-sparkle {
+        top: 91px;
+        right: 78px;
+        width: 134px;
+        opacity: 0.5;
+      }
+
+      .motif-paw {
+        right: 24px;
+        bottom: 132px;
+        width: 74px;
+        opacity: 0.72;
+      }
+
+      .motif-portal {
+        top: 176px;
+        left: -42px;
+        width: 188px;
+        opacity: 0.36;
+      }
+
+      .motif-heart {
+        right: 32px;
+        top: 210px;
+        width: 74px;
+        opacity: 0.72;
+      }
+
+      .motif-frame {
+        right: -34px;
+        top: 154px;
+        width: 150px;
+        opacity: 0.38;
+      }
+
+      .screen-glow {
+        position: absolute;
+        inset: auto -15% -10% -15%;
+        z-index: 7;
+        height: 28%;
+        pointer-events: none;
+        background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.9), transparent 64%);
+      }
+
+      @media (min-width: 720px) {
+        .pattern {
+          display: grid;
+          min-height: 100vh;
+          place-items: center;
+        }
+
+        .pattern > * {
+          max-width: 430px;
+          margin-inline: auto;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <section id="desktop-visual" class="pattern pattern-a" style="--scene-img: url('./assets/v5-scene-moon.jpg')">
+        <div class="scene"></div>
+        <div class="head">
+          <div class="logo-plate">
+            <img src="./assets/konoha-logo.png" alt="" />
+            <img class="bow" src="./assets/konoha-sozai-extra/mint_bow_large.png" alt="" />
+          </div>
+          <div class="menu-orb" aria-hidden="true"><span></span></div>
+        </div>
+        <img class="motif motif-moon" src="./assets/konoha-sozai-extra/crescent_moon.png" alt="" />
+        <img class="motif motif-sparkle" src="./assets/konoha-sozai-extra/sparkle_scatter_scene.png" alt="" />
+        <figure class="hero-shell frame-cloud">
+          <span class="visual-window">
+            <img class="desktop-visual" src="./assets/konoha-collage-profile.jpg" alt="" />
+          </span>
+          <img class="frame-svg" src="./assets/hero-frame-moon.svg" alt="" />
+          <img class="frame-asset frame-moon" src="./assets/konoha-sozai/moon_and_sparkles.png" alt="" />
+          <img class="frame-asset frame-divider" src="./assets/konoha-sozai/sparkle_divider.png" alt="" />
+          <img class="frame-asset frame-bow" src="./assets/konoha-sozai-extra/mint_bow_large.png" alt="" />
+        </figure>
+        <div class="glass-title" aria-hidden="true"></div>
+        <div class="dock" aria-hidden="true"><i></i><i></i></div>
+        <div class="screen-glow"></div>
+      </section>
+
+      <section id="standee-live" class="pattern pattern-b" style="--scene-img: url('./assets/v5-scene-live.jpg'); --frame-bg: url('./assets/v5-scene-live.jpg')">
+        <div class="scene"></div>
+        <div class="head">
+          <div class="logo-plate">
+            <img src="./assets/konoha-logo.png" alt="" />
+            <img class="bow" src="./assets/konoha-sozai-extra/mint_bow_large.png" alt="" />
+          </div>
+          <div class="menu-orb" aria-hidden="true"><span></span></div>
+        </div>
+        <img class="motif motif-portal" src="./assets/konoha-sozai-extra/magic_portal_sparkles.png" alt="" />
+        <img class="motif motif-heart" src="./assets/konoha-sozai-extra/heart_paw_pendant.png" alt="" />
+        <figure class="hero-shell frame-ribbon">
+          <span class="visual-window">
+            <span class="frame-bg"></span>
+            <img class="frame-svg" src="./assets/hero-frame-live.svg" alt="" />
+            <img class="standee" src="./assets/konoha-profile-standee.png" alt="" />
+          </span>
+          <img class="frame-asset frame-tape" src="./assets/konoha-sozai-extra/striped_washi_tape.png" alt="" />
+          <img class="frame-asset frame-tag" src="./assets/konoha-sozai-extra/live_keychain_tag.png" alt="" />
+          <img class="frame-asset frame-bow" src="./assets/konoha-sozai-extra/mint_bow_large.png" alt="" />
+        </figure>
+        <div class="glass-title" aria-hidden="true"></div>
+        <div class="dock" aria-hidden="true"><i></i><i></i></div>
+        <div class="screen-glow"></div>
+      </section>
+
+      <section id="megane-silver" class="pattern pattern-c" style="--scene-img: url('./assets/v5-scene-silver.jpg'); --frame-bg: url('./assets/v5-scene-silver.jpg')">
+        <div class="scene"></div>
+        <div class="head">
+          <div class="logo-plate">
+            <img src="./assets/konoha-logo.png" alt="" />
+            <img class="bow" src="./assets/konoha-sozai-extra/mint_bow_large.png" alt="" />
+          </div>
+          <div class="menu-orb" aria-hidden="true"><span></span></div>
+        </div>
+        <img class="motif motif-frame" src="./assets/konoha-sozai-extra/ornate_decorative_frame.png" alt="" />
+        <img class="motif motif-paw" src="./assets/konoha-sozai-extra/silver_paw_print.png" alt="" />
+        <figure class="hero-shell frame-silver">
+          <span class="visual-window">
+            <span class="frame-bg"></span>
+            <img class="frame-svg" src="./assets/hero-frame-silver.svg" alt="" />
+            <img class="standee" src="./assets/konoha-profile-megane.png" alt="" />
+          </span>
+          <img class="frame-asset frame-ornate" src="./assets/konoha-sozai-extra/ornate_decorative_frame.png" alt="" />
+          <img class="frame-asset frame-paw" src="./assets/konoha-sozai-extra/silver_paw_print.png" alt="" />
+          <img class="frame-asset frame-divider" src="./assets/konoha-sozai/sparkle_divider.png" alt="" />
+        </figure>
+        <div class="glass-title" aria-hidden="true"></div>
+        <div class="dock" aria-hidden="true"><i></i><i></i></div>
+        <div class="screen-glow"></div>
+      </section>
+    </main>
+  </body>
+</html>
