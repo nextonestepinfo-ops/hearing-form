@@ -15076,20 +15076,23 @@ body.v51-clean.mobile-profile-alt .hero-art picture img {
   }
 
   body.v51-clean.mobile-profile-alt .brand {
-    width: min(228px, 70vw);
-    min-height: 82px;
-    padding: 10px 42px 10px 14px;
+    width: min(208px, 64vw);
+    min-height: 72px;
+    padding: 9px 36px 9px 13px;
+    border-color: rgba(255, 255, 255, 0.58);
+    background-color: rgba(255, 255, 255, 0.62);
   }
 
   body.v51-clean.mobile-profile-alt .brand img {
-    width: min(170px, 100%);
-    max-height: 52px;
+    width: min(150px, 100%);
+    max-height: 46px;
   }
 
   body.v51-clean.mobile-profile-alt .nav-toggle {
-    width: 50px;
-    height: 50px;
-    margin-top: 10px;
+    width: 48px;
+    height: 48px;
+    margin-top: 9px;
+    background-color: rgba(255, 255, 255, 0.66);
   }
 
   body.v51-clean.mobile-profile-alt .hero {
@@ -15118,14 +15121,14 @@ body.v51-clean.mobile-profile-alt .hero-art picture img {
     justify-items: start;
     gap: 8px;
     padding: 13px 14px 14px;
-    border: 1px solid rgba(255, 255, 255, 0.72);
+    border: 1px solid rgba(255, 255, 255, 0.58);
     border-radius: 8px;
     background:
       linear-gradient(135deg, rgba(255, 255, 255, 0.86), rgba(230, 255, 250, 0.62) 52%, rgba(255, 255, 255, 0.78)),
       repeating-linear-gradient(90deg, rgba(44, 166, 166, 0.055) 0 1px, transparent 1px 44px);
     box-shadow:
-      0 22px 54px rgba(42, 82, 90, 0.14),
-      inset 0 1px 0 rgba(255, 255, 255, 0.86);
+      0 18px 46px rgba(42, 82, 90, 0.12),
+      inset 0 1px 0 rgba(255, 255, 255, 0.72);
     text-align: left;
     pointer-events: auto;
   }
@@ -15312,5 +15315,561 @@ body.v51-clean.mobile-profile-alt .hero-art picture img {
   body.v51-clean.mobile-profile-alt.site-assembled .hero-art picture img,
   html.ios-webkit body.v51-clean.mobile-profile-alt.site-assembled .hero-art picture img {
     max-width: 82vw !important;
+  }
+}
+
+/* V5.1 VSPO-style background emphasis: large moving world, calm readable UI. */
+body.v51-clean.mobile-profile-alt {
+  --scene-layer-opacity: 0.34;
+  --scene-vignette-side: rgba(255, 255, 255, 0.5);
+  --scene-vignette-top: rgba(255, 255, 255, 0.62);
+  --line-grid: rgba(15, 174, 171, 0.36);
+  --line-grid-soft: rgba(15, 174, 171, 0.18);
+  --line-panel: rgba(255, 255, 255, 0.32);
+  --line-panel-edge: rgba(255, 255, 255, 0.7);
+  --line-panel-stripe: rgba(35, 218, 201, 0.26);
+  --line-rail-a: rgba(35, 232, 210, 0.95);
+  --line-rail-b: rgba(255, 175, 215, 0.82);
+}
+
+body.v51-clean.mobile-profile-alt[data-scene="mint"] {
+  --scene-layer-opacity: 0.36;
+  --line-grid: rgba(7, 185, 167, 0.38);
+  --line-grid-soft: rgba(7, 185, 167, 0.19);
+  --line-rail-a: rgba(29, 220, 195, 0.96);
+  --line-rail-b: rgba(215, 255, 247, 0.86);
+}
+
+body.v51-clean.mobile-profile-alt[data-scene="pink"] {
+  --scene-layer-opacity: 0.3;
+  --line-grid: rgba(231, 76, 158, 0.34);
+  --line-grid-soft: rgba(231, 76, 158, 0.16);
+  --line-rail-a: rgba(255, 107, 184, 0.92);
+  --line-rail-b: rgba(63, 224, 210, 0.82);
+}
+
+body.v51-clean.mobile-profile-alt[data-scene="night"] {
+  --scene-layer-opacity: 0.34;
+  --scene-vignette-side: rgba(2, 18, 28, 0.28);
+  --scene-vignette-top: rgba(3, 27, 37, 0.38);
+  --line-grid: rgba(115, 255, 239, 0.42);
+  --line-grid-soft: rgba(115, 255, 239, 0.2);
+  --line-rail-a: rgba(100, 255, 236, 0.95);
+  --line-rail-b: rgba(255, 224, 141, 0.78);
+}
+
+body.v51-clean.mobile-profile-alt .premium-scene-stage {
+  background:
+    radial-gradient(ellipse at 18% 14%, var(--line-bg-glow-a), transparent 32%),
+    radial-gradient(ellipse at 86% 64%, var(--line-bg-glow-b), transparent 38%),
+    linear-gradient(180deg, color-mix(in srgb, var(--line-bg-base) 82%, transparent), var(--line-bg-soft) 52%, var(--line-bg-deep)),
+    var(--line-bg-solid);
+}
+
+body.v51-clean.mobile-profile-alt .premium-scene-layer {
+  inset: -8%;
+  transform: translate3d(0, calc(var(--scene-scroll) * 0.34), 0) scale(1.04);
+}
+
+body.v51-clean.mobile-profile-alt .premium-scene-layer img {
+  opacity: var(--scene-layer-opacity);
+  filter: saturate(1.16) contrast(1.05) brightness(1.04);
+}
+
+body.v51-clean.mobile-profile-alt .premium-scene-vignette {
+  background:
+    linear-gradient(90deg, var(--scene-vignette-side), transparent 14% 86%, var(--scene-vignette-side)),
+    linear-gradient(180deg, var(--scene-vignette-top), transparent 14% 82%, var(--scene-vignette-top));
+}
+
+body.v51-clean.mobile-profile-alt .premium-scene-stage::after {
+  opacity: 0.62;
+  background:
+    linear-gradient(116deg, transparent 0 40%, rgba(255, 100, 180, 0.56) 41% 50%, transparent 51% 100%) 9% 22% / 58px 172px no-repeat,
+    linear-gradient(116deg, transparent 0 42%, rgba(87, 76, 213, 0.38) 43% 51%, transparent 52% 100%) 88% 16% / 52px 158px no-repeat,
+    linear-gradient(116deg, transparent 0 43%, rgba(38, 220, 199, 0.42) 44% 52%, transparent 53% 100%) 72% 78% / 72px 190px no-repeat,
+    linear-gradient(116deg, transparent 0 40%, rgba(31, 48, 58, 0.18) 41% 51%, transparent 52% 100%) 16% 74% / 44px 142px no-repeat,
+    radial-gradient(circle, rgba(37, 75, 84, 0.11) 0 1px, transparent 1.7px) 0 0 / 18px 18px repeat,
+    linear-gradient(118deg, transparent 0 38%, rgba(255, 255, 255, 0.32) 46%, transparent 56%),
+    radial-gradient(ellipse at 50% 112%, var(--line-bg-glow-a), transparent 42%);
+  animation: konoha-vspo-texture-drift 42s ease-in-out infinite alternate;
+}
+
+body.v51-clean.mobile-profile-alt .premium-scene-grid {
+  opacity: 0.46;
+  background:
+    repeating-linear-gradient(90deg, transparent 0 216px, var(--line-grid) 217px 220px),
+    repeating-linear-gradient(0deg, transparent 0 216px, var(--line-grid-soft) 217px 220px);
+  animation-duration: 58s;
+  transform: translate3d(calc(var(--scene-light) * -0.06), calc(var(--scene-scroll) * 0.28), 0) rotate(-5deg);
+}
+
+body.v51-clean.mobile-profile-alt .konoha-generated-bg::before {
+  inset: -22%;
+  opacity: 0.52;
+  background:
+    repeating-linear-gradient(90deg, transparent 0 204px, var(--line-grid) 205px 208px),
+    repeating-linear-gradient(0deg, transparent 0 204px, var(--line-grid-soft) 205px 208px);
+  animation-duration: 64s;
+}
+
+body.v51-clean.mobile-profile-alt .konoha-generated-bg::after {
+  opacity: 0.56;
+  background:
+    linear-gradient(112deg, transparent 0 22%, var(--line-panel) 30%, transparent 45% 100%),
+    linear-gradient(70deg, transparent 0 52%, rgba(255, 255, 255, 0.24) 59%, transparent 70% 100%),
+    radial-gradient(ellipse at 52% 14%, rgba(255, 255, 255, 0.28), transparent 34%);
+}
+
+body.v51-clean.mobile-profile-alt .konoha-bg-panel {
+  width: min(880px, 78vw);
+  opacity: 0.64;
+  border-color: var(--line-panel-edge);
+  background:
+    linear-gradient(135deg, var(--line-panel), transparent 68%),
+    repeating-linear-gradient(90deg, var(--line-panel-stripe) 0 1px, transparent 1px 46px);
+  animation-duration: 30s;
+}
+
+body.v51-clean.mobile-profile-alt .konoha-bg-panel.panel-b {
+  opacity: 0.52;
+}
+
+body.v51-clean.mobile-profile-alt .konoha-bg-rail {
+  height: 3px;
+  width: min(860px, 82vw);
+  opacity: 0.72;
+  animation-duration: 18s;
+}
+
+body.v51-clean.mobile-profile-alt .premium-scene-line {
+  height: 2px;
+  opacity: 0.72;
+  background: linear-gradient(90deg, transparent, var(--line-rail-a), rgba(255, 255, 255, 0.86), var(--line-rail-b), transparent);
+  box-shadow: 0 0 24px color-mix(in srgb, var(--line-rail-a) 55%, transparent);
+}
+
+body.v51-clean.mobile-profile-alt .premium-scene-line.line-a {
+  top: 22svh;
+  left: -18vw;
+  width: 76vw;
+  animation: konoha-vspo-line-a 24s ease-in-out infinite alternate;
+}
+
+body.v51-clean.mobile-profile-alt .premium-scene-line.line-b {
+  right: -20vw;
+  bottom: 18svh;
+  width: 82vw;
+  animation: konoha-vspo-line-b 28s ease-in-out -7s infinite alternate;
+}
+
+body.v51-clean.mobile-profile-alt .hero-backdrop {
+  opacity: 0.32 !important;
+}
+
+body.v51-clean.mobile-profile-alt .hero::before {
+  content: "SHIROKAMI\A KONOHA";
+  position: absolute;
+  z-index: 1;
+  inset: clamp(76px, 12svh, 118px) clamp(16px, 7vw, 72px) clamp(88px, 12svh, 120px);
+  display: grid;
+  place-items: start center;
+  padding-top: clamp(22px, 6svh, 70px);
+  border: 1px solid color-mix(in srgb, var(--line-grid) 72%, rgba(255, 255, 255, 0.68));
+  border-radius: 8px;
+  color: color-mix(in srgb, var(--ink) 38%, transparent);
+  background:
+    linear-gradient(90deg, rgba(255, 255, 255, 0.16), transparent 20% 80%, rgba(255, 255, 255, 0.12)),
+    radial-gradient(ellipse at 50% 18%, rgba(255, 255, 255, 0.3), transparent 38%),
+    repeating-linear-gradient(90deg, rgba(55, 164, 164, 0.07) 0 1px, transparent 1px 84px),
+    repeating-linear-gradient(0deg, rgba(55, 164, 164, 0.045) 0 1px, transparent 1px 84px);
+  font-family: var(--pixel);
+  font-size: clamp(4.2rem, 11vw, 9.8rem);
+  font-weight: 900;
+  letter-spacing: 0;
+  line-height: 0.82;
+  text-align: center;
+  white-space: pre-line;
+  text-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.64),
+    0 0 30px rgba(255, 255, 255, 0.42);
+  mix-blend-mode: multiply;
+  mask-image: linear-gradient(180deg, #000 0 78%, transparent 100%);
+  pointer-events: none;
+}
+
+body.v51-clean.mobile-profile-alt[data-scene="night"] .hero::before {
+  color: rgba(207, 255, 249, 0.16);
+  mix-blend-mode: screen;
+  border-color: rgba(120, 255, 240, 0.26);
+}
+
+body.v51-clean.mobile-profile-alt .hero-art::before {
+  opacity: 0.48;
+  border-color: rgba(255, 255, 255, 0.42);
+  background:
+    radial-gradient(ellipse at 50% 26%, rgba(255, 255, 255, 0.42), transparent 42%),
+    radial-gradient(ellipse at 50% 78%, rgba(222, 255, 249, 0.22), transparent 46%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.2), rgba(232, 255, 250, 0.08));
+  box-shadow:
+    0 28px 72px rgba(64, 128, 130, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.5);
+}
+
+body.v51-clean.mobile-profile-alt .hero-copy,
+body.v51-clean.mobile-profile-alt :is(.profile-note, .profile-list div, .link-card, .movie-feature, .tag-grid article, .contact-window) {
+  background-color: rgba(255, 255, 255, 0.68);
+  -webkit-backdrop-filter: blur(12px) saturate(1.12);
+  backdrop-filter: blur(12px) saturate(1.12);
+}
+
+body.v51-clean.mobile-profile-alt .brand,
+body.v51-clean.mobile-profile-alt .nav-toggle {
+  background-color: rgba(255, 255, 255, 0.68);
+  -webkit-backdrop-filter: blur(10px) saturate(1.08);
+  backdrop-filter: blur(10px) saturate(1.08);
+}
+
+body.v51-clean.mobile-profile-alt .site-header {
+  pointer-events: none;
+}
+
+body.v51-clean.mobile-profile-alt .brand,
+body.v51-clean.mobile-profile-alt .nav-toggle,
+body.v51-clean.mobile-profile-alt .site-nav {
+  pointer-events: auto;
+}
+
+body.v51-clean.mobile-profile-alt #links :is(.link-card, .movie-feature, .tag-grid article, .contact-window) {
+  background-color: rgba(242, 255, 252, 0.74);
+}
+
+body.v51-clean.mobile-profile-alt .section-shell::after {
+  opacity: 0.36;
+}
+
+body.v51-clean.mobile-profile-alt .section-shell.scene-ready.is-scene-active::after {
+  opacity: 0.36;
+}
+
+@keyframes konoha-vspo-line-a {
+  from {
+    transform: translate3d(-10vw, 2vh, 0) rotate(-8deg);
+  }
+
+  to {
+    transform: translate3d(14vw, -3vh, 0) rotate(-8deg);
+  }
+}
+
+@keyframes konoha-vspo-line-b {
+  from {
+    transform: translate3d(12vw, -1vh, 0) rotate(-8deg);
+  }
+
+  to {
+    transform: translate3d(-16vw, 4vh, 0) rotate(-8deg);
+  }
+}
+
+@keyframes konoha-vspo-texture-drift {
+  from {
+    transform: translate3d(-10px, -6px, 0);
+  }
+
+  to {
+    transform: translate3d(18px, 12px, 0);
+  }
+}
+
+@media (min-width: 900px) {
+  body.v51-clean.mobile-profile-alt .hero::before {
+    inset: 118px max(42px, calc((100vw - 1320px) / 2)) 92px;
+    place-items: center;
+    padding-top: 0;
+    font-size: clamp(7.2rem, 10vw, 12rem);
+    line-height: 0.78;
+  }
+
+  body.v51-clean.mobile-profile-alt .premium-scene-grid {
+    opacity: 0.5;
+    background:
+      repeating-linear-gradient(90deg, transparent 0 276px, var(--line-grid) 277px 280px),
+      repeating-linear-gradient(0deg, transparent 0 276px, var(--line-grid-soft) 277px 280px);
+  }
+
+  body.v51-clean.mobile-profile-alt .konoha-generated-bg::before {
+    opacity: 0.46;
+    background:
+      repeating-linear-gradient(90deg, transparent 0 248px, var(--line-grid) 249px 252px),
+      repeating-linear-gradient(0deg, transparent 0 248px, var(--line-grid-soft) 249px 252px);
+  }
+
+  body.v51-clean.mobile-profile-alt .konoha-bg-panel {
+    width: min(1040px, 74vw);
+    height: 48svh;
+  }
+
+  body.v51-clean.mobile-profile-alt .konoha-bg-panel.panel-b {
+    width: min(1120px, 78vw);
+    height: 36svh;
+  }
+
+  body.v51-clean.mobile-profile-alt .konoha-bg-rail {
+    width: min(1120px, 76vw);
+  }
+}
+
+@media (max-width: 620px) {
+  body.v51-clean.mobile-profile-alt {
+    --scene-layer-opacity: 0.4;
+    --scene-vignette-side: rgba(255, 255, 255, 0.36);
+    --scene-vignette-top: rgba(255, 255, 255, 0.5);
+  }
+
+  body.v51-clean.mobile-profile-alt[data-scene="night"] {
+    --scene-vignette-side: rgba(2, 18, 28, 0.24);
+    --scene-vignette-top: rgba(3, 27, 37, 0.34);
+  }
+
+  body.v51-clean.mobile-profile-alt .premium-scene-grid {
+    opacity: 0.4;
+    background:
+      repeating-linear-gradient(90deg, transparent 0 184px, var(--line-grid) 185px 188px),
+      repeating-linear-gradient(0deg, transparent 0 184px, var(--line-grid-soft) 185px 188px);
+  }
+
+  body.v51-clean.mobile-profile-alt .premium-scene-stage::after {
+    opacity: 0.5;
+    background-size:
+      46px 138px,
+      42px 124px,
+      56px 150px,
+      34px 118px,
+      18px 18px,
+      auto,
+      auto;
+  }
+
+  body.v51-clean.mobile-profile-alt .konoha-generated-bg::before {
+    opacity: 0.38;
+    background:
+      repeating-linear-gradient(90deg, transparent 0 176px, var(--line-grid) 177px 180px),
+      repeating-linear-gradient(0deg, transparent 0 176px, var(--line-grid-soft) 177px 180px);
+  }
+
+  body.v51-clean.mobile-profile-alt .konoha-bg-panel {
+    opacity: 0.4;
+  }
+
+  body.v51-clean.mobile-profile-alt .konoha-bg-panel.panel-b {
+    opacity: 0.34;
+  }
+
+  body.v51-clean.mobile-profile-alt .konoha-bg-rail {
+    opacity: 0.52;
+    animation-duration: 22s;
+  }
+
+  body.v51-clean.mobile-profile-alt .premium-scene-line {
+    opacity: 0.58;
+  }
+
+  body.v51-clean.mobile-profile-alt .hero-copy {
+    background:
+      linear-gradient(135deg, rgba(255, 255, 255, 0.76), rgba(229, 255, 250, 0.5) 52%, rgba(255, 255, 255, 0.66)),
+      repeating-linear-gradient(90deg, rgba(44, 166, 166, 0.075) 0 1px, transparent 1px 44px);
+  }
+
+  body.v51-clean.mobile-profile-alt .hero::before {
+    inset: 72px 14px 76px;
+    padding-top: 36px;
+    font-size: clamp(3.45rem, 22vw, 5.9rem);
+    line-height: 0.78;
+    color: rgba(42, 76, 84, 0.2);
+    border-color: rgba(38, 186, 178, 0.34);
+    background:
+      linear-gradient(90deg, rgba(255, 255, 255, 0.12), transparent 16% 84%, rgba(255, 255, 255, 0.1)),
+      radial-gradient(ellipse at 50% 18%, rgba(255, 255, 255, 0.24), transparent 34%),
+      repeating-linear-gradient(90deg, rgba(34, 174, 170, 0.08) 0 1px, transparent 1px 64px),
+      repeating-linear-gradient(0deg, rgba(34, 174, 170, 0.05) 0 1px, transparent 1px 64px);
+  }
+
+  body.v51-clean.mobile-profile-alt .hero-art::before {
+    opacity: 0.36;
+    background:
+      radial-gradient(ellipse at 50% 28%, rgba(255, 255, 255, 0.34), transparent 42%),
+      radial-gradient(ellipse at 50% 78%, rgba(222, 255, 249, 0.18), transparent 46%),
+      linear-gradient(180deg, rgba(255, 255, 255, 0.16), rgba(232, 255, 250, 0.06));
+  }
+}
+
+/* V5.1 premium pass 2: bolder full-page backgrounds with quieter foreground rhythm. */
+body.v51-clean.mobile-profile-alt {
+  --k-line-speed: 18s;
+  --line-field-opacity: 0.72;
+}
+
+body.v51-clean.mobile-profile-alt #profile {
+  --k-stage-wash-a: rgba(239, 255, 251, 0.72);
+  --k-stage-wash-b: rgba(204, 255, 247, 0.56);
+  --k-stage-line-hot: rgba(15, 209, 184, 0.54);
+  --k-stage-grid: rgba(28, 184, 166, 0.28);
+  --k-stage-grid-soft: rgba(28, 184, 166, 0.15);
+}
+
+body.v51-clean.mobile-profile-alt #links {
+  --k-stage-wash-a: rgba(2, 20, 31, 0.66);
+  --k-stage-wash-b: rgba(2, 56, 67, 0.58);
+  --k-stage-line-hot: rgba(120, 255, 240, 0.58);
+  --k-stage-grid: rgba(129, 248, 236, 0.34);
+  --k-stage-grid-soft: rgba(129, 248, 236, 0.18);
+  --k-stage-panel: rgba(93, 242, 225, 0.16);
+}
+
+body.v51-clean.mobile-profile-alt #movie {
+  --k-stage-wash-a: rgba(255, 246, 252, 0.74);
+  --k-stage-wash-b: rgba(255, 212, 236, 0.58);
+  --k-stage-line-hot: rgba(255, 84, 175, 0.54);
+  --k-stage-grid: rgba(229, 87, 161, 0.3);
+  --k-stage-grid-soft: rgba(229, 87, 161, 0.16);
+  --k-stage-panel: rgba(255, 185, 222, 0.28);
+}
+
+body.v51-clean.mobile-profile-alt #tags {
+  --k-stage-wash-a: rgba(249, 252, 255, 0.76);
+  --k-stage-wash-b: rgba(225, 236, 242, 0.58);
+  --k-stage-line-hot: rgba(83, 138, 154, 0.44);
+  --k-stage-grid: rgba(98, 129, 142, 0.27);
+  --k-stage-grid-soft: rgba(98, 129, 142, 0.15);
+}
+
+body.v51-clean.mobile-profile-alt #contact {
+  --k-stage-wash-a: rgba(239, 255, 250, 0.74);
+  --k-stage-wash-b: rgba(206, 255, 246, 0.56);
+  --k-stage-line-hot: rgba(22, 207, 184, 0.52);
+  --k-stage-grid: rgba(42, 174, 162, 0.28);
+  --k-stage-grid-soft: rgba(42, 174, 162, 0.15);
+}
+
+body.v51-clean.mobile-profile-alt .section-shell::before {
+  opacity: 0.58;
+  background-size:
+    auto,
+    260px 260px,
+    132px 132px,
+    132px 132px,
+    auto,
+    auto,
+    auto,
+    cover,
+    auto;
+}
+
+body.v51-clean.mobile-profile-alt .section-heading h2 {
+  text-shadow:
+    2px 2px 0 rgba(255, 255, 255, 0.92),
+    0 18px 30px rgba(45, 84, 96, 0.16);
+}
+
+body.v51-clean.mobile-profile-alt .section-heading::before {
+  opacity: 0.86;
+}
+
+body.v51-clean.mobile-profile-alt :is(.profile-note, .profile-list div, .link-card, .movie-feature, .tag-grid article, .contact-window) {
+  border-color: rgba(255, 255, 255, 0.82);
+  box-shadow:
+    0 24px 54px rgba(52, 83, 96, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.76);
+}
+
+body.v51-clean.mobile-profile-alt[data-scene="night"] :is(.link-card, .movie-feature, .tag-grid article, .contact-window) {
+  border-color: rgba(171, 255, 246, 0.42);
+  box-shadow:
+    0 24px 58px rgba(0, 10, 18, 0.28),
+    inset 0 1px 0 rgba(255, 255, 255, 0.24);
+}
+
+body.v51-clean.mobile-profile-alt[data-scene="night"] .section-heading h2 {
+  text-shadow:
+    2px 2px 0 rgba(240, 255, 253, 0.24),
+    0 0 26px rgba(112, 255, 241, 0.2);
+}
+
+@media (min-width: 900px) {
+  body.v51-clean.mobile-profile-alt .section-shell {
+    padding-top: clamp(118px, 8vw, 154px);
+    padding-bottom: clamp(118px, 8vw, 154px);
+  }
+
+  body.v51-clean.mobile-profile-alt .hero-copy {
+    max-width: 560px;
+  }
+
+  body.v51-clean.mobile-profile-alt .section-shell::before {
+    opacity: 0.5;
+    background-size:
+      auto,
+      320px 320px,
+      160px 160px,
+      160px 160px,
+      auto,
+      auto,
+      auto,
+      cover,
+      auto;
+  }
+}
+
+@media (max-width: 620px) {
+  body.v51-clean.mobile-profile-alt .section-shell::before {
+    opacity: 0.5;
+  }
+
+  body.v51-clean.mobile-profile-alt .hero-copy {
+    border-color: rgba(255, 255, 255, 0.76);
+    background:
+      linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(229, 255, 250, 0.78) 52%, rgba(255, 255, 255, 0.84)),
+      repeating-linear-gradient(90deg, rgba(44, 166, 166, 0.07) 0 1px, transparent 1px 44px);
+    -webkit-backdrop-filter: blur(18px) saturate(1.08);
+    backdrop-filter: blur(18px) saturate(1.08);
+  }
+
+  body.v51-clean.mobile-profile-alt .hero-kicker {
+    color: #2d726b;
+    background: rgba(255, 255, 255, 0.92);
+    box-shadow:
+      inset 0 0 0 1px rgba(87, 202, 188, 0.32),
+      0 8px 18px rgba(53, 104, 112, 0.08);
+  }
+
+  body.v51-clean.mobile-profile-alt .hero-logo {
+    opacity: 0.94;
+    filter: saturate(1.06) contrast(1.08);
+  }
+
+  body.v51-clean.mobile-profile-alt .hero-art picture img,
+  body.v51-clean.mobile-profile-alt.site-assembled .hero-art picture img,
+  html.ios-webkit body.v51-clean.mobile-profile-alt.site-assembled .hero-art picture img {
+    bottom: -10px !important;
+    height: min(62svh, 560px) !important;
+    max-width: min(82vw, 324px) !important;
+  }
+
+  body.v51-clean.mobile-profile-alt #contact {
+    min-height: 100svh;
+    justify-content: flex-start;
+  }
+
+  body.v51-clean.mobile-profile-alt #contact .section-heading {
+    margin-top: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body.v51-clean.mobile-profile-alt .premium-scene-line.line-a,
+  body.v51-clean.mobile-profile-alt .premium-scene-line.line-b,
+  body.v51-clean.mobile-profile-alt .premium-scene-stage::after {
+    animation: none !important;
   }
 }
