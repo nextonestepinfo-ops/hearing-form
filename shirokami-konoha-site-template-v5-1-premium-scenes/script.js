@@ -5,6 +5,7 @@ const loader = document.querySelector("[data-loader]");
 const progress = document.querySelector("[data-scroll-progress]");
 const hero = document.querySelector(".hero");
 const root = document.documentElement;
+const liteSceneMode = document.body?.classList.contains("v51-scene-lite");
 const CONFIG_URL = "./site-config.json";
 const ACCESS_HASH = "9497683cb70785d3626818bc7a71924c14482e16636edd6668cc2664b75ed8fe";
 const ACCESS_STORAGE_KEY = "shirokami-konoha-v5-premium-scenes-access";
@@ -12,6 +13,8 @@ let pageStarted = false;
 let siteConfig = null;
 let progressFrame = 0;
 let sceneTransitionTimer = 0;
+let sceneApplyTimer = 0;
+let scenePresentTimer = 0;
 let depthSections = [];
 let moodSections = [];
 let moodNavLinks = [];
@@ -48,7 +51,7 @@ async function hashText(value) {
 
 function playIntroSequence() {
   if (!loader) return;
-  const hideDelay = reduceMotion ? 700 : 2200;
+  const hideDelay = reduceMotion || liteSceneMode ? 700 : 2200;
   document.documentElement.classList.add("intro-playing");
   document.body.classList.remove("site-assembled");
   loader.classList.remove("is-hidden");
@@ -129,7 +132,7 @@ function scrollToCurrentHash() {
   if (!target) return;
   const offset = window.innerWidth <= 620 ? 84 : 104;
   const top = target.getBoundingClientRect().top + window.scrollY - offset;
-  window.scrollTo({ top: Math.max(0, top), behavior: reduceMotion ? "auto" : "smooth" });
+  window.scrollTo({ top: Math.max(0, top), behavior: reduceMotion || liteSceneMode ? "auto" : "smooth" });
 }
 
 function setupRevealDelays(targets) {
@@ -211,6 +214,10 @@ function updateProgress() {
   const ratio = max <= 0 ? 0 : window.scrollY / max;
   const amount = ratio * 100;
   progress.style.width = `${Math.min(100, Math.max(0, amount))}%`;
+  if (liteSceneMode) {
+    updateInteractionMood();
+    return;
+  }
   updateSceneMotion(ratio);
   updateHeroMotion();
   updateSectionDepth();
@@ -301,20 +308,46 @@ function sceneForMood(mood) {
 }
 
 function playSceneTransition(nextScene) {
-  if (reduceMotion) return;
-  const currentScene = document.body.dataset.scene || "moon";
-  if (nextScene === currentScene) return;
+  const currentScene = document.body.dataset.scene || "white";
+  if (reduceMotion) {
+    document.body.dataset.scene = nextScene;
+    delete document.body.dataset.sceneNext;
+    document.body.classList.remove("is-scene-switching", "is-scene-presenting");
+    return;
+  }
 
   const sceneOrder = { white: 0, mint: 1, night: 2, pink: 3 };
   const direction = (sceneOrder[nextScene] ?? 0) >= (sceneOrder[currentScene] ?? 0) ? "forward" : "back";
+  const sameScene = nextScene === currentScene;
   window.clearTimeout(sceneTransitionTimer);
+  window.clearTimeout(sceneApplyTimer);
+  window.clearTimeout(scenePresentTimer);
   document.body.dataset.sceneDirection = direction;
-  document.body.classList.remove("is-scene-switching");
+  if (sameScene) {
+    delete document.body.dataset.sceneNext;
+  } else {
+    document.body.dataset.sceneNext = nextScene;
+  }
+  document.body.classList.remove("is-scene-switching", "is-scene-presenting");
   void document.body.offsetWidth;
-  document.body.classList.add("is-scene-switching");
+  document.body.classList.add("is-scene-presenting");
+
+  if (!sameScene) {
+    document.body.classList.add("is-scene-switching");
+    sceneApplyTimer = window.setTimeout(() => {
+      document.body.dataset.scene = nextScene;
+    }, liteSceneMode ? 320 : 160);
+  }
+
+  scenePresentTimer = window.setTimeout(() => {
+    document.body.classList.remove("is-scene-presenting");
+  }, liteSceneMode ? 980 : 720);
+
   sceneTransitionTimer = window.setTimeout(() => {
     document.body.classList.remove("is-scene-switching");
-  }, 960);
+    if (!sameScene) document.body.dataset.scene = nextScene;
+    delete document.body.dataset.sceneNext;
+  }, liteSceneMode ? 1180 : 960);
 }
 
 function updateInteractionMood() {
@@ -341,9 +374,8 @@ function updateInteractionMood() {
   if (nextMood === activeMood) return;
   activeMood = nextMood;
   const nextScene = sceneForMood(nextMood);
-  playSceneTransition(nextScene);
   document.body.dataset.mood = nextMood;
-  document.body.dataset.scene = nextScene;
+  playSceneTransition(nextScene);
   moodNavLinks.forEach((link) => {
     const target = link.getAttribute("href")?.replace("#", "");
     const isActive = target === nextMood || (nextMood === "links" && target === "links");
@@ -523,7 +555,7 @@ function renderThumbnailFlight(videos, config) {
 
 function applyConfigBasics(config) {
   if (!config) return;
-  if (!document.body?.hasAttribute("data-builder-page")) {
+  if (!document.body?.hasAttribute("data-builder-page") && !document.body?.classList.contains("contact-page")) {
     document.title = config.site?.title || document.title;
   }
   const description = document.querySelector('meta[name="description"]');

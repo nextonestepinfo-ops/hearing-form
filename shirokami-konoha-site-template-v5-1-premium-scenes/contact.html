@@ -1,11 +1,123 @@
 <!doctype html>
-<html lang="ja">
+<html lang="ja" class="access-locked">
   <head>
     <meta charset="utf-8" />
-    <meta http-equiv="refresh" content="0; url=./index.html#contact" />
-    <title>お仕事相談 | 白狼このは公式サイト</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="白狼このはへのお仕事、コラボ、イベント出演、PR相談のためのコンタクトページです。"
+    />
+    <meta name="theme-color" content="#d9fbf2" />
+    <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml" />
+    <script>
+      (() => {
+        const isiOS = /iPad|iPhone|iPod/.test(navigator.userAgent) || (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
+        const forceLite = new URLSearchParams(location.search).has("ios-lite");
+        if (isiOS || forceLite) document.documentElement.classList.add("ios-webkit");
+      })();
+    </script>
+    <link rel="stylesheet" href="./styles.css?v=v5-1-lite-scene-contact-20260528q" />
+    <title>CONTACT | 白狼このは公式サイト</title>
   </head>
-  <body>
-    <a href="./index.html#contact">お仕事相談へ移動</a>
+  <body class="mobile-profile-alt v51-clean v51-scene-lite contact-page" data-mood="contact" data-scene="mint">
+    <div class="access-gate" data-access-gate>
+      <form class="access-card" data-access-form>
+        <span class="access-kicker">Access Check</span>
+        <h1>白狼このは公式サイト</h1>
+        <p>確認用パスワードを入力してください。</p>
+        <label>
+          <span>Password</span>
+          <input type="password" name="password" autocomplete="current-password" required />
+        </label>
+        <button type="submit">Enter</button>
+        <p class="access-error" data-access-error aria-live="polite"></p>
+      </form>
+    </div>
+
+    <div class="loader" data-loader aria-hidden="true">
+      <span>Now Loading</span>
+      <i></i>
+    </div>
+
+    <div class="scroll-progress" aria-hidden="true"><span data-scroll-progress></span></div>
+
+    <div class="premium-scene-stage" aria-hidden="true">
+      <span class="premium-scene-vignette"></span>
+      <span class="premium-scene-grid"></span>
+      <span class="premium-scene-particles"></span>
+      <span class="premium-scene-fog fog-a"></span>
+      <span class="premium-scene-fog fog-b"></span>
+      <span class="premium-scene-line line-a"></span>
+      <span class="premium-scene-line line-b"></span>
+    </div>
+
+    <header class="site-header">
+      <a class="brand" href="./index.html#top" aria-label="白狼このは トップ">
+        <img src="./assets/konoha-logo.png" alt="白狼このは" />
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="site-nav" id="site-nav" aria-label="主要メニュー">
+        <a href="./index.html#profile">PROFILE</a>
+        <a href="./index.html#links">STREAM</a>
+        <a href="./index.html#movie">MOVIE</a>
+        <a href="./index.html#tags">TAGS</a>
+        <a class="nav-contact is-current" href="./contact.html" aria-current="page">CONTACT</a>
+      </nav>
+    </header>
+
+    <main id="top" class="contact-page-main">
+      <section id="contact" class="section-shell contact-section contact-page-section" aria-labelledby="contact-heading contact-title">
+        <div class="section-heading english-heading contact-heading" data-reveal>
+          <span>Work / Collaboration</span>
+          <h2 id="contact-heading">CONTACT</h2>
+        </div>
+
+        <div class="contact-window window-card contact-page-window" data-reveal>
+          <div class="window-bar">
+            <span>contact.txt</span>
+            <i></i><i></i><i></i>
+          </div>
+          <div class="contact-body">
+            <p>For Work / PR / Collaboration</p>
+            <h1 id="contact-title">お仕事・コラボのご相談</h1>
+            <p>
+              PR配信、イベント出演、ゲーム案件、コラボ、タイアップなどのご相談はこちらからお願いします。
+              内容、希望時期、掲載条件、参考URLを添えてご連絡ください。
+            </p>
+            <div class="contact-action-row" aria-label="連絡先">
+              <a class="text-button contact-primary" href="https://x.com/ShirokamiKonoha" target="_blank" rel="noreferrer">Xで相談する</a>
+              <a class="text-button contact-secondary" href="./index.html#top">トップへ戻る</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-note-grid" aria-label="相談時の目安">
+          <article>
+            <span>01</span>
+            <strong>内容</strong>
+            <p>配信、出演、PR、コラボなど、相談したい企画の概要。</p>
+          </article>
+          <article>
+            <span>02</span>
+            <strong>時期</strong>
+            <p>希望日、公開予定、返答期限などのスケジュール。</p>
+          </article>
+          <article>
+            <span>03</span>
+            <strong>条件</strong>
+            <p>掲載媒体、拘束時間、素材の有無、参考URL。</p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>白狼このは公式サイト</span>
+      <span>Last updated 2026.05.15</span>
+    </footer>
+
+    <script src="./script.js?v=v5-1-lite-scene-contact-20260528q"></script>
   </body>
 </html>
