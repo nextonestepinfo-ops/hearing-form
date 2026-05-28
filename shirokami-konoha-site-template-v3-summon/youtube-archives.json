@@ -1,13 +1,27 @@
 {
-  "updated": "2026-05-28T05:30:00+09:00",
+  "updated": "2026-05-29T05:38:00+09:00",
   "source": "https://www.youtube.com/feeds/videos.xml?channel_id=UC_nYcejJ7nsVG_ppVLwNHsw",
   "items": [
+    {
+      "id": "bnYBx_HXPwE",
+      "title": "【 #スト6 】初心者Vtuberと学ぶスト6キャラクイズ！ #shorts #vtuber",
+      "url": "https://www.youtube.com/shorts/bnYBx_HXPwE",
+      "published": "2026-05-28T10:33:01+00:00",
+      "thumbnail": "https://i.ytimg.com/vi/bnYBx_HXPwE/hqdefault.jpg"
+    },
     {
       "id": "vg_EaPrX_Cw",
       "title": "【 #雑談 】たくさんはなそ～",
       "url": "https://www.youtube.com/watch?v=vg_EaPrX_Cw",
-      "published": "2026-05-25T13:09:25+00:00",
+      "published": "2026-05-28T02:11:06+00:00",
       "thumbnail": "https://i.ytimg.com/vi/vg_EaPrX_Cw/hqdefault.jpg"
+    },
+    {
+      "id": "q4wJASaHxEg",
+      "title": "【 #leagueoflegends 】いろんなキャラさわりたい",
+      "url": "https://www.youtube.com/watch?v=q4wJASaHxEg",
+      "published": "2026-05-28T02:10:25+00:00",
+      "thumbnail": "https://i.ytimg.com/vi/q4wJASaHxEg/hqdefault.jpg"
     },
     {
       "id": "_PRiwJhQ6zo",
@@ -29,20 +43,6 @@
       "url": "https://www.youtube.com/watch?v=B6DLJ-oDHdg",
       "published": "2026-05-25T05:02:02+00:00",
       "thumbnail": "https://i.ytimg.com/vi/B6DLJ-oDHdg/hqdefault.jpg"
-    },
-    {
-      "id": "dat09oD-fI8",
-      "title": "【 #leagueoflegends 】まったりあそぼ～",
-      "url": "https://www.youtube.com/watch?v=dat09oD-fI8",
-      "published": "2026-05-24T10:01:30+00:00",
-      "thumbnail": "https://i.ytimg.com/vi/dat09oD-fI8/hqdefault.jpg"
-    },
-    {
-      "id": "1CVFyoKLTvY",
-      "title": "【 #valorant 】フルパでやらせていただきます！",
-      "url": "https://www.youtube.com/watch?v=1CVFyoKLTvY",
-      "published": "2026-05-24T04:49:57+00:00",
-      "thumbnail": "https://i.ytimg.com/vi/1CVFyoKLTvY/hqdefault.jpg"
     }
   ]
 }
