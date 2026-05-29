@@ -1,7 +1,28 @@
 {
-  "updated": "2026-05-29T05:38:00+09:00",
+  "updated": "2026-05-30T05:38:44+09:00",
   "source": "https://www.youtube.com/feeds/videos.xml?channel_id=UC_nYcejJ7nsVG_ppVLwNHsw",
   "items": [
+    {
+      "id": "B6DLJ-oDHdg",
+      "title": "【 #apex 】フルパコラボ！APEX久しぶり！",
+      "url": "https://www.youtube.com/watch?v=B6DLJ-oDHdg",
+      "published": "2026-05-29T16:10:12+00:00",
+      "thumbnail": "https://i.ytimg.com/vi/B6DLJ-oDHdg/hqdefault.jpg"
+    },
+    {
+      "id": "pnDbTdp5m1Y",
+      "title": "【 #スト6 】初心者Vtuberと学ぶスト6キャラクイズ！#shorts #vtuber",
+      "url": "https://www.youtube.com/shorts/pnDbTdp5m1Y",
+      "published": "2026-05-29T09:09:59+00:00",
+      "thumbnail": "https://i.ytimg.com/vi/pnDbTdp5m1Y/hqdefault.jpg"
+    },
+    {
+      "id": "loc6kKrUq0k",
+      "title": "【 #leagueoflegends 】まだスモルダーでも、、、。",
+      "url": "https://www.youtube.com/watch?v=loc6kKrUq0k",
+      "published": "2026-05-29T01:21:07+00:00",
+      "thumbnail": "https://i.ytimg.com/vi/loc6kKrUq0k/hqdefault.jpg"
+    },
     {
       "id": "bnYBx_HXPwE",
       "title": "【 #スト6 】初心者Vtuberと学ぶスト6キャラクイズ！ #shorts #vtuber",
@@ -22,27 +43,6 @@
       "url": "https://www.youtube.com/watch?v=q4wJASaHxEg",
       "published": "2026-05-28T02:10:25+00:00",
       "thumbnail": "https://i.ytimg.com/vi/q4wJASaHxEg/hqdefault.jpg"
-    },
-    {
-      "id": "_PRiwJhQ6zo",
-      "title": "【 #スト6 】初心者Vtuberと学ぶスト6キャラクイズ！#shorts #vtuber",
-      "url": "https://www.youtube.com/shorts/_PRiwJhQ6zo",
-      "published": "2026-05-26T09:12:00+00:00",
-      "thumbnail": "https://i.ytimg.com/vi/_PRiwJhQ6zo/hqdefault.jpg"
-    },
-    {
-      "id": "TVkp2vQdIgw",
-      "title": "【 #valorant 】ソロでもつよくいきる！",
-      "url": "https://www.youtube.com/watch?v=TVkp2vQdIgw",
-      "published": "2026-05-26T01:26:45+00:00",
-      "thumbnail": "https://i.ytimg.com/vi/TVkp2vQdIgw/hqdefault.jpg"
-    },
-    {
-      "id": "B6DLJ-oDHdg",
-      "title": "【 #apex 】フルパコラボ！APEX久しぶり！",
-      "url": "https://www.youtube.com/watch?v=B6DLJ-oDHdg",
-      "published": "2026-05-25T05:02:02+00:00",
-      "thumbnail": "https://i.ytimg.com/vi/B6DLJ-oDHdg/hqdefault.jpg"
     }
   ]
 }
