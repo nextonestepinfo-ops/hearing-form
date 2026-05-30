@@ -1,7 +1,14 @@
 {
-  "updated": "2026-05-30T05:38:45+09:00",
+  "updated": "2026-05-31T04:41:37+09:00",
   "source": "https://www.youtube.com/feeds/videos.xml?channel_id=UC_nYcejJ7nsVG_ppVLwNHsw",
   "items": [
+    {
+      "id": "1CVFyoKLTvY",
+      "title": "【 #valorant 】フルパでやらせていただきます！",
+      "url": "https://www.youtube.com/watch?v=1CVFyoKLTvY",
+      "published": "2026-05-30T18:44:41+00:00",
+      "thumbnail": "https://i.ytimg.com/vi/1CVFyoKLTvY/hqdefault.jpg"
+    },
     {
       "id": "B6DLJ-oDHdg",
       "title": "【 #apex 】フルパコラボ！APEX久しぶり！",
@@ -36,13 +43,6 @@
       "url": "https://www.youtube.com/watch?v=vg_EaPrX_Cw",
       "published": "2026-05-28T02:11:06+00:00",
       "thumbnail": "https://i.ytimg.com/vi/vg_EaPrX_Cw/hqdefault.jpg"
-    },
-    {
-      "id": "q4wJASaHxEg",
-      "title": "【 #leagueoflegends 】いろんなキャラさわりたい",
-      "url": "https://www.youtube.com/watch?v=q4wJASaHxEg",
-      "published": "2026-05-28T02:10:25+00:00",
-      "thumbnail": "https://i.ytimg.com/vi/q4wJASaHxEg/hqdefault.jpg"
     }
   ]
 }
