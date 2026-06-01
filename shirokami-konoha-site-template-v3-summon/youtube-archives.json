@@ -1,7 +1,14 @@
 {
-  "updated": "2026-06-01T04:41:18+09:00",
+  "updated": "2026-06-02T06:43:47+09:00",
   "source": "https://www.youtube.com/feeds/videos.xml?channel_id=UC_nYcejJ7nsVG_ppVLwNHsw",
   "items": [
+    {
+      "id": "Fyl5Rt68D80",
+      "title": "【 #スト6 】初心者Vtuberと学ぶスト6キャラクイズ #shorts  #vtuber",
+      "url": "https://www.youtube.com/shorts/Fyl5Rt68D80",
+      "published": "2026-06-01T09:08:20+00:00",
+      "thumbnail": "https://i.ytimg.com/vi/Fyl5Rt68D80/hqdefault.jpg"
+    },
     {
       "id": "EVRuR6K0o-I",
       "title": "【 #雑談 】サムネつくったり作業しつつ",
@@ -36,13 +43,6 @@
       "url": "https://www.youtube.com/shorts/pnDbTdp5m1Y",
       "published": "2026-05-29T09:09:59+00:00",
       "thumbnail": "https://i.ytimg.com/vi/pnDbTdp5m1Y/hqdefault.jpg"
-    },
-    {
-      "id": "loc6kKrUq0k",
-      "title": "【 #leagueoflegends 】まだスモルダーでも、、、。",
-      "url": "https://www.youtube.com/watch?v=loc6kKrUq0k",
-      "published": "2026-05-29T01:21:07+00:00",
-      "thumbnail": "https://i.ytimg.com/vi/loc6kKrUq0k/hqdefault.jpg"
     }
   ]
 }
