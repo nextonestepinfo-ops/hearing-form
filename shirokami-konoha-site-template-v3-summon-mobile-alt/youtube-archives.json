@@ -1,7 +1,21 @@
 {
-  "updated": "2026-06-02T06:43:47+09:00",
+  "updated": "2026-06-03T06:24:51+09:00",
   "source": "https://www.youtube.com/feeds/videos.xml?channel_id=UC_nYcejJ7nsVG_ppVLwNHsw",
   "items": [
+    {
+      "id": "pf89A16f1sE",
+      "title": "【 #valorant 】スイフトしつつ",
+      "url": "https://www.youtube.com/watch?v=pf89A16f1sE",
+      "published": "2026-06-02T15:54:55+00:00",
+      "thumbnail": "https://i.ytimg.com/vi/pf89A16f1sE/hqdefault.jpg"
+    },
+    {
+      "id": "pPccz-W8tEE",
+      "title": "【 #スト6 】初心者Vtuberと学ぶスト6キャラクイズ！#shorts #vtuber",
+      "url": "https://www.youtube.com/shorts/pPccz-W8tEE",
+      "published": "2026-06-02T08:59:47+00:00",
+      "thumbnail": "https://i.ytimg.com/vi/pPccz-W8tEE/hqdefault.jpg"
+    },
     {
       "id": "Fyl5Rt68D80",
       "title": "【 #スト6 】初心者Vtuberと学ぶスト6キャラクイズ #shorts  #vtuber",
@@ -29,20 +43,6 @@
       "url": "https://www.youtube.com/watch?v=1CVFyoKLTvY",
       "published": "2026-05-30T18:44:41+00:00",
       "thumbnail": "https://i.ytimg.com/vi/1CVFyoKLTvY/hqdefault.jpg"
-    },
-    {
-      "id": "B6DLJ-oDHdg",
-      "title": "【 #apex 】フルパコラボ！APEX久しぶり！",
-      "url": "https://www.youtube.com/watch?v=B6DLJ-oDHdg",
-      "published": "2026-05-29T16:10:12+00:00",
-      "thumbnail": "https://i.ytimg.com/vi/B6DLJ-oDHdg/hqdefault.jpg"
-    },
-    {
-      "id": "pnDbTdp5m1Y",
-      "title": "【 #スト6 】初心者Vtuberと学ぶスト6キャラクイズ！#shorts #vtuber",
-      "url": "https://www.youtube.com/shorts/pnDbTdp5m1Y",
-      "published": "2026-05-29T09:09:59+00:00",
-      "thumbnail": "https://i.ytimg.com/vi/pnDbTdp5m1Y/hqdefault.jpg"
     }
   ]
 }
