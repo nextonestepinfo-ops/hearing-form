@@ -1,7 +1,28 @@
 {
-  "updated": "2026-06-03T06:24:51+09:00",
+  "updated": "2026-06-04T06:30:35+09:00",
   "source": "https://www.youtube.com/feeds/videos.xml?channel_id=UC_nYcejJ7nsVG_ppVLwNHsw",
   "items": [
+    {
+      "id": "bwCel5VyxEQ",
+      "title": "【 #valorant 】頑張っていくぞ！",
+      "url": "https://www.youtube.com/watch?v=bwCel5VyxEQ",
+      "published": "2026-06-03T18:12:01+00:00",
+      "thumbnail": "https://i.ytimg.com/vi/bwCel5VyxEQ/hqdefault.jpg"
+    },
+    {
+      "id": "EQiE7xtWaVM",
+      "title": "【 #rust 】DAY1┊お友達たくさんつくる！",
+      "url": "https://www.youtube.com/watch?v=EQiE7xtWaVM",
+      "published": "2026-06-03T18:07:27+00:00",
+      "thumbnail": "https://i.ytimg.com/vi/EQiE7xtWaVM/hqdefault.jpg"
+    },
+    {
+      "id": "N7wMg8fGJCI",
+      "title": "【 #minecraft 】かみつか家の女子会！",
+      "url": "https://www.youtube.com/watch?v=N7wMg8fGJCI",
+      "published": "2026-06-03T18:04:28+00:00",
+      "thumbnail": "https://i.ytimg.com/vi/N7wMg8fGJCI/hqdefault.jpg"
+    },
     {
       "id": "pf89A16f1sE",
       "title": "【 #valorant 】スイフトしつつ",
@@ -22,27 +43,6 @@
       "url": "https://www.youtube.com/shorts/Fyl5Rt68D80",
       "published": "2026-06-01T09:08:20+00:00",
       "thumbnail": "https://i.ytimg.com/vi/Fyl5Rt68D80/hqdefault.jpg"
-    },
-    {
-      "id": "EVRuR6K0o-I",
-      "title": "【 #雑談 】サムネつくったり作業しつつ",
-      "url": "https://www.youtube.com/watch?v=EVRuR6K0o-I",
-      "published": "2026-05-31T09:25:33+00:00",
-      "thumbnail": "https://i.ytimg.com/vi/EVRuR6K0o-I/hqdefault.jpg"
-    },
-    {
-      "id": "qzhBhu2siJE",
-      "title": "【 #スト6 】初心者Vtuberと学ぶスト6キャラクイズ！#shorts #vtuber",
-      "url": "https://www.youtube.com/shorts/qzhBhu2siJE",
-      "published": "2026-05-31T08:58:40+00:00",
-      "thumbnail": "https://i.ytimg.com/vi/qzhBhu2siJE/hqdefault.jpg"
-    },
-    {
-      "id": "1CVFyoKLTvY",
-      "title": "【 #valorant 】フルパでやらせていただきます！",
-      "url": "https://www.youtube.com/watch?v=1CVFyoKLTvY",
-      "published": "2026-05-30T18:44:41+00:00",
-      "thumbnail": "https://i.ytimg.com/vi/1CVFyoKLTvY/hqdefault.jpg"
     }
   ]
 }
