@@ -1,7 +1,28 @@
 {
-  "updated": "2026-06-06T05:13:59+09:00",
+  "updated": "2026-06-07T04:47:21+09:00",
   "source": "https://www.youtube.com/feeds/videos.xml?channel_id=UC_nYcejJ7nsVG_ppVLwNHsw",
   "items": [
+    {
+      "id": "EQiE7xtWaVM",
+      "title": "【 #rust 】DAY1┊お友達たくさんつくる！",
+      "url": "https://www.youtube.com/watch?v=EQiE7xtWaVM",
+      "published": "2026-06-06T17:27:35+00:00",
+      "thumbnail": "https://i.ytimg.com/vi/EQiE7xtWaVM/hqdefault.jpg"
+    },
+    {
+      "id": "vMpyn1EGBL8",
+      "title": "【 #leagueoflegends 】ノーマルでキャラ練習！",
+      "url": "https://www.youtube.com/watch?v=vMpyn1EGBL8",
+      "published": "2026-06-06T07:24:43+00:00",
+      "thumbnail": "https://i.ytimg.com/vi/vMpyn1EGBL8/hqdefault.jpg"
+    },
+    {
+      "id": "FessaGm5ybk",
+      "title": "【 #雑談 】のんびりまったり～",
+      "url": "https://www.youtube.com/watch?v=FessaGm5ybk",
+      "published": "2026-06-06T02:05:05+00:00",
+      "thumbnail": "https://i.ytimg.com/vi/FessaGm5ybk/hqdefault.jpg"
+    },
     {
       "id": "lJHSF7_P1L8",
       "title": "【 スト6 】初心者Vtuberと学ぶスト6キャラクイズ！ #shorts",
@@ -22,27 +43,6 @@
       "url": "https://www.youtube.com/watch?v=ZgcevwDGsGg",
       "published": "2026-06-04T04:20:31+00:00",
       "thumbnail": "https://i.ytimg.com/vi/ZgcevwDGsGg/hqdefault.jpg"
-    },
-    {
-      "id": "bwCel5VyxEQ",
-      "title": "【 #valorant 】頑張っていくぞ！",
-      "url": "https://www.youtube.com/watch?v=bwCel5VyxEQ",
-      "published": "2026-06-03T18:12:01+00:00",
-      "thumbnail": "https://i.ytimg.com/vi/bwCel5VyxEQ/hqdefault.jpg"
-    },
-    {
-      "id": "EQiE7xtWaVM",
-      "title": "【 #rust 】DAY1┊お友達たくさんつくる！",
-      "url": "https://www.youtube.com/watch?v=EQiE7xtWaVM",
-      "published": "2026-06-03T18:07:27+00:00",
-      "thumbnail": "https://i.ytimg.com/vi/EQiE7xtWaVM/hqdefault.jpg"
-    },
-    {
-      "id": "pf89A16f1sE",
-      "title": "【 #valorant 】スイフトしつつ",
-      "url": "https://www.youtube.com/watch?v=pf89A16f1sE",
-      "published": "2026-06-02T15:54:55+00:00",
-      "thumbnail": "https://i.ytimg.com/vi/pf89A16f1sE/hqdefault.jpg"
     }
   ]
 }
