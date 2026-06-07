@@ -1,7 +1,14 @@
 {
-  "updated": "2026-06-07T04:47:21+09:00",
+  "updated": "2026-06-08T04:47:22+09:00",
   "source": "https://www.youtube.com/feeds/videos.xml?channel_id=UC_nYcejJ7nsVG_ppVLwNHsw",
   "items": [
+    {
+      "id": "bCEYV7geUG8",
+      "title": "【 #rust 】DAY2┊ファーム！ファーム！",
+      "url": "https://www.youtube.com/watch?v=bCEYV7geUG8",
+      "published": "2026-06-07T17:26:53+00:00",
+      "thumbnail": "https://i.ytimg.com/vi/bCEYV7geUG8/hqdefault.jpg"
+    },
     {
       "id": "EQiE7xtWaVM",
       "title": "【 #rust 】DAY1┊お友達たくさんつくる！",
@@ -36,13 +43,6 @@
       "url": "https://www.youtube.com/watch?v=y6XX-1P3XkE",
       "published": "2026-06-05T09:17:09+00:00",
       "thumbnail": "https://i.ytimg.com/vi/y6XX-1P3XkE/hqdefault.jpg"
-    },
-    {
-      "id": "ZgcevwDGsGg",
-      "title": "【 #leagueoflegends 】ヴァルス触ってみようの会",
-      "url": "https://www.youtube.com/watch?v=ZgcevwDGsGg",
-      "published": "2026-06-04T04:20:31+00:00",
-      "thumbnail": "https://i.ytimg.com/vi/ZgcevwDGsGg/hqdefault.jpg"
     }
   ]
 }
