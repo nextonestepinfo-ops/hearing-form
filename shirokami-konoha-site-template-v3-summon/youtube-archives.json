@@ -1,7 +1,14 @@
 {
-  "updated": "2026-06-08T04:47:22+09:00",
+  "updated": "2026-06-09T05:34:15+09:00",
   "source": "https://www.youtube.com/feeds/videos.xml?channel_id=UC_nYcejJ7nsVG_ppVLwNHsw",
   "items": [
+    {
+      "id": "Rn1PrkZdWG8",
+      "title": "【 #雑談 】最近のはまってること！",
+      "url": "https://www.youtube.com/watch?v=Rn1PrkZdWG8",
+      "published": "2026-06-08T17:21:38+00:00",
+      "thumbnail": "https://i.ytimg.com/vi/Rn1PrkZdWG8/hqdefault.jpg"
+    },
     {
       "id": "bCEYV7geUG8",
       "title": "【 #rust 】DAY2┊ファーム！ファーム！",
@@ -36,13 +43,6 @@
       "url": "https://www.youtube.com/shorts/lJHSF7_P1L8",
       "published": "2026-06-05T09:35:31+00:00",
       "thumbnail": "https://i.ytimg.com/vi/lJHSF7_P1L8/hqdefault.jpg"
-    },
-    {
-      "id": "y6XX-1P3XkE",
-      "title": "【 #雑談 】サムネつくったり作業しつつまったりはなそ～",
-      "url": "https://www.youtube.com/watch?v=y6XX-1P3XkE",
-      "published": "2026-06-05T09:17:09+00:00",
-      "thumbnail": "https://i.ytimg.com/vi/y6XX-1P3XkE/hqdefault.jpg"
     }
   ]
 }
