@@ -1,7 +1,21 @@
 {
-  "updated": "2026-06-13T05:27:20+09:00",
+  "updated": "2026-06-17T06:20:15+09:00",
   "source": "https://www.youtube.com/feeds/videos.xml?channel_id=UC_nYcejJ7nsVG_ppVLwNHsw",
   "items": [
+    {
+      "id": "Hj_AGU6SRAs",
+      "title": "【 #leagueoflegends 】いまってADCなにがつよい？",
+      "url": "https://www.youtube.com/watch?v=Hj_AGU6SRAs",
+      "published": "2026-06-16T15:38:44+00:00",
+      "thumbnail": "https://i.ytimg.com/vi/Hj_AGU6SRAs/hqdefault.jpg"
+    },
+    {
+      "id": "Jhnk0BE07Rs",
+      "title": "【 #pathofexile2 】初見だけど気になってたからやってみる",
+      "url": "https://www.youtube.com/watch?v=Jhnk0BE07Rs",
+      "published": "2026-06-16T08:13:05+00:00",
+      "thumbnail": "https://i.ytimg.com/vi/Jhnk0BE07Rs/hqdefault.jpg"
+    },
     {
       "id": "Jof72g2sMys",
       "title": "【 #雑談 】おはようなのだよ～",
@@ -29,20 +43,6 @@
       "url": "https://www.youtube.com/watch?v=EQiE7xtWaVM",
       "published": "2026-06-06T17:27:35+00:00",
       "thumbnail": "https://i.ytimg.com/vi/EQiE7xtWaVM/hqdefault.jpg"
-    },
-    {
-      "id": "vMpyn1EGBL8",
-      "title": "【 #leagueoflegends 】ノーマルでキャラ練習！",
-      "url": "https://www.youtube.com/watch?v=vMpyn1EGBL8",
-      "published": "2026-06-06T07:24:43+00:00",
-      "thumbnail": "https://i.ytimg.com/vi/vMpyn1EGBL8/hqdefault.jpg"
-    },
-    {
-      "id": "FessaGm5ybk",
-      "title": "【 #雑談 】のんびりまったり～",
-      "url": "https://www.youtube.com/watch?v=FessaGm5ybk",
-      "published": "2026-06-06T02:05:05+00:00",
-      "thumbnail": "https://i.ytimg.com/vi/FessaGm5ybk/hqdefault.jpg"
     }
   ]
 }
