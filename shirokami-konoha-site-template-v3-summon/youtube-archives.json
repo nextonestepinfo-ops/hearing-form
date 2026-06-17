@@ -1,7 +1,14 @@
 {
-  "updated": "2026-06-17T06:20:15+09:00",
+  "updated": "2026-06-18T05:30:48+09:00",
   "source": "https://www.youtube.com/feeds/videos.xml?channel_id=UC_nYcejJ7nsVG_ppVLwNHsw",
   "items": [
+    {
+      "id": "MA7MFPG5pFY",
+      "title": "【 #雑談 】ゆる～りおはなししよ？",
+      "url": "https://www.youtube.com/watch?v=MA7MFPG5pFY",
+      "published": "2026-06-17T12:10:06+00:00",
+      "thumbnail": "https://i.ytimg.com/vi/MA7MFPG5pFY/hqdefault.jpg"
+    },
     {
       "id": "Hj_AGU6SRAs",
       "title": "【 #leagueoflegends 】いまってADCなにがつよい？",
@@ -36,13 +43,6 @@
       "url": "https://www.youtube.com/watch?v=bCEYV7geUG8",
       "published": "2026-06-07T17:26:53+00:00",
       "thumbnail": "https://i.ytimg.com/vi/bCEYV7geUG8/hqdefault.jpg"
-    },
-    {
-      "id": "EQiE7xtWaVM",
-      "title": "【 #rust 】DAY1┊お友達たくさんつくる！",
-      "url": "https://www.youtube.com/watch?v=EQiE7xtWaVM",
-      "published": "2026-06-06T17:27:35+00:00",
-      "thumbnail": "https://i.ytimg.com/vi/EQiE7xtWaVM/hqdefault.jpg"
     }
   ]
 }
