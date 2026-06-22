@@ -1,7 +1,21 @@
 {
-  "updated": "2026-06-19T05:39:04+09:00",
+  "updated": "2026-06-23T06:14:07+09:00",
   "source": "https://www.youtube.com/feeds/videos.xml?channel_id=UC_nYcejJ7nsVG_ppVLwNHsw",
   "items": [
+    {
+      "id": "wm5sCL7agjM",
+      "title": "【 #雑談 】サムネイル作るんです！",
+      "url": "https://www.youtube.com/watch?v=wm5sCL7agjM",
+      "published": "2026-06-22T20:38:54+00:00",
+      "thumbnail": "https://i.ytimg.com/vi/wm5sCL7agjM/hqdefault.jpg"
+    },
+    {
+      "id": "Fv2Vc3N8yt8",
+      "title": "【 #leagueoflegends 】がんばるんです。",
+      "url": "https://www.youtube.com/watch?v=Fv2Vc3N8yt8",
+      "published": "2026-06-22T08:35:56+00:00",
+      "thumbnail": "https://i.ytimg.com/vi/Fv2Vc3N8yt8/hqdefault.jpg"
+    },
     {
       "id": "Hj_AGU6SRAs",
       "title": "【 #leagueoflegends 】いまってADCなにがつよい？",
@@ -29,20 +43,6 @@
       "url": "https://www.youtube.com/watch?v=Rn1PrkZdWG8",
       "published": "2026-06-08T17:21:38+00:00",
       "thumbnail": "https://i.ytimg.com/vi/Rn1PrkZdWG8/hqdefault.jpg"
-    },
-    {
-      "id": "bCEYV7geUG8",
-      "title": "【 #rust 】DAY2┊ファーム！ファーム！",
-      "url": "https://www.youtube.com/watch?v=bCEYV7geUG8",
-      "published": "2026-06-07T17:26:53+00:00",
-      "thumbnail": "https://i.ytimg.com/vi/bCEYV7geUG8/hqdefault.jpg"
-    },
-    {
-      "id": "EQiE7xtWaVM",
-      "title": "【 #rust 】DAY1┊お友達たくさんつくる！",
-      "url": "https://www.youtube.com/watch?v=EQiE7xtWaVM",
-      "published": "2026-06-06T17:27:35+00:00",
-      "thumbnail": "https://i.ytimg.com/vi/EQiE7xtWaVM/hqdefault.jpg"
     }
   ]
 }
