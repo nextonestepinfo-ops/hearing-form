@@ -1,7 +1,14 @@
 {
-  "updated": "2026-06-23T06:14:07+09:00",
+  "updated": "2026-07-01T05:19:46+09:00",
   "source": "https://www.youtube.com/feeds/videos.xml?channel_id=UC_nYcejJ7nsVG_ppVLwNHsw",
   "items": [
+    {
+      "id": "aWaOF2b-Axs",
+      "title": "【 #雑談 】眠れない人話そう～",
+      "url": "https://www.youtube.com/watch?v=aWaOF2b-Axs",
+      "published": "2026-06-30T14:03:00+00:00",
+      "thumbnail": "https://i.ytimg.com/vi/aWaOF2b-Axs/hqdefault.jpg"
+    },
     {
       "id": "wm5sCL7agjM",
       "title": "【 #雑談 】サムネイル作るんです！",
@@ -36,13 +43,6 @@
       "url": "https://www.youtube.com/watch?v=Jof72g2sMys",
       "published": "2026-06-10T02:48:03+00:00",
       "thumbnail": "https://i.ytimg.com/vi/Jof72g2sMys/hqdefault.jpg"
-    },
-    {
-      "id": "Rn1PrkZdWG8",
-      "title": "【 #雑談 】最近のはまってること！",
-      "url": "https://www.youtube.com/watch?v=Rn1PrkZdWG8",
-      "published": "2026-06-08T17:21:38+00:00",
-      "thumbnail": "https://i.ytimg.com/vi/Rn1PrkZdWG8/hqdefault.jpg"
     }
   ]
 }
