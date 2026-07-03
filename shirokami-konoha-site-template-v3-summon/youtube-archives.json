@@ -1,7 +1,21 @@
 {
-  "updated": "2026-07-02T05:15:17+09:00",
+  "updated": "2026-07-04T04:50:13+09:00",
   "source": "https://www.youtube.com/feeds/videos.xml?channel_id=UC_nYcejJ7nsVG_ppVLwNHsw",
   "items": [
+    {
+      "id": "D8ThNBghJrs",
+      "title": "【 #雑談 】所属したぞ～",
+      "url": "https://www.youtube.com/watch?v=D8ThNBghJrs",
+      "published": "2026-07-03T13:03:12+00:00",
+      "thumbnail": "https://i.ytimg.com/vi/D8ThNBghJrs/hqdefault.jpg"
+    },
+    {
+      "id": "Nn242w1hGws",
+      "title": "【 #leagueoflegends 】MIDに挑戦！",
+      "url": "https://www.youtube.com/watch?v=Nn242w1hGws",
+      "published": "2026-07-03T02:32:51+00:00",
+      "thumbnail": "https://i.ytimg.com/vi/Nn242w1hGws/hqdefault.jpg"
+    },
     {
       "id": "wMZzaBpddHU",
       "title": "【 #leagueoflegends 】ADCもしつつMIDに挑戦！",
@@ -29,20 +43,6 @@
       "url": "https://www.youtube.com/watch?v=Fv2Vc3N8yt8",
       "published": "2026-06-22T08:35:56+00:00",
       "thumbnail": "https://i.ytimg.com/vi/Fv2Vc3N8yt8/hqdefault.jpg"
-    },
-    {
-      "id": "Hj_AGU6SRAs",
-      "title": "【 #leagueoflegends 】いまってADCなにがつよい？",
-      "url": "https://www.youtube.com/watch?v=Hj_AGU6SRAs",
-      "published": "2026-06-16T15:38:44+00:00",
-      "thumbnail": "https://i.ytimg.com/vi/Hj_AGU6SRAs/hqdefault.jpg"
-    },
-    {
-      "id": "Jhnk0BE07Rs",
-      "title": "【 #pathofexile2 】初見だけど気になってたからやってみる",
-      "url": "https://www.youtube.com/watch?v=Jhnk0BE07Rs",
-      "published": "2026-06-16T08:13:05+00:00",
-      "thumbnail": "https://i.ytimg.com/vi/Jhnk0BE07Rs/hqdefault.jpg"
     }
   ]
 }
