@@ -1,13 +1,20 @@
 {
-  "updated": "2026-07-04T04:50:13+09:00",
+  "updated": "2026-07-05T04:38:09+09:00",
   "source": "https://www.youtube.com/feeds/videos.xml?channel_id=UC_nYcejJ7nsVG_ppVLwNHsw",
   "items": [
     {
       "id": "D8ThNBghJrs",
       "title": "【 #雑談 】所属したぞ～",
       "url": "https://www.youtube.com/watch?v=D8ThNBghJrs",
-      "published": "2026-07-03T13:03:12+00:00",
+      "published": "2026-07-04T02:29:10+00:00",
       "thumbnail": "https://i.ytimg.com/vi/D8ThNBghJrs/hqdefault.jpg"
+    },
+    {
+      "id": "rbcTJBRzagw",
+      "title": "【 #leagueoflegends 】MID練習したい気持ち！",
+      "url": "https://www.youtube.com/watch?v=rbcTJBRzagw",
+      "published": "2026-07-04T01:28:30+00:00",
+      "thumbnail": "https://i.ytimg.com/vi/rbcTJBRzagw/hqdefault.jpg"
     },
     {
       "id": "Nn242w1hGws",
@@ -36,13 +43,6 @@
       "url": "https://www.youtube.com/watch?v=wm5sCL7agjM",
       "published": "2026-06-22T20:38:54+00:00",
       "thumbnail": "https://i.ytimg.com/vi/wm5sCL7agjM/hqdefault.jpg"
-    },
-    {
-      "id": "Fv2Vc3N8yt8",
-      "title": "【 #leagueoflegends 】がんばるんです。",
-      "url": "https://www.youtube.com/watch?v=Fv2Vc3N8yt8",
-      "published": "2026-06-22T08:35:56+00:00",
-      "thumbnail": "https://i.ytimg.com/vi/Fv2Vc3N8yt8/hqdefault.jpg"
     }
   ]
 }
