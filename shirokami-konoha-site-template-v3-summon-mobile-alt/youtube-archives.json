@@ -1,7 +1,14 @@
 {
-  "updated": "2026-07-05T04:38:09+09:00",
+  "updated": "2026-07-11T04:53:01+09:00",
   "source": "https://www.youtube.com/feeds/videos.xml?channel_id=UC_nYcejJ7nsVG_ppVLwNHsw",
   "items": [
+    {
+      "id": "kXe6DkPZTrQ",
+      "title": "【 #オーバーウォッチ2 】サポート練習！",
+      "url": "https://www.youtube.com/watch?v=kXe6DkPZTrQ",
+      "published": "2026-07-10T00:49:45+00:00",
+      "thumbnail": "https://i.ytimg.com/vi/kXe6DkPZTrQ/hqdefault.jpg"
+    },
     {
       "id": "D8ThNBghJrs",
       "title": "【 #雑談 】所属したぞ～",
@@ -36,13 +43,6 @@
       "url": "https://www.youtube.com/watch?v=aWaOF2b-Axs",
       "published": "2026-07-01T03:48:03+00:00",
       "thumbnail": "https://i.ytimg.com/vi/aWaOF2b-Axs/hqdefault.jpg"
-    },
-    {
-      "id": "wm5sCL7agjM",
-      "title": "【 #雑談 】サムネイル作るんです！",
-      "url": "https://www.youtube.com/watch?v=wm5sCL7agjM",
-      "published": "2026-06-22T20:38:54+00:00",
-      "thumbnail": "https://i.ytimg.com/vi/wm5sCL7agjM/hqdefault.jpg"
     }
   ]
 }
