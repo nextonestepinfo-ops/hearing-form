@@ -1,7 +1,21 @@
 {
-  "updated": "2026-07-11T04:53:01+09:00",
+  "updated": "2026-07-13T04:31:49+09:00",
   "source": "https://www.youtube.com/feeds/videos.xml?channel_id=UC_nYcejJ7nsVG_ppVLwNHsw",
   "items": [
+    {
+      "id": "GcsjPIJA5v0",
+      "title": "【 #パルワールド 】初心者でかわいいの捕まえたい！",
+      "url": "https://www.youtube.com/watch?v=GcsjPIJA5v0",
+      "published": "2026-07-12T03:35:33+00:00",
+      "thumbnail": "https://i.ytimg.com/vi/GcsjPIJA5v0/hqdefault.jpg"
+    },
+    {
+      "id": "ncdiPrvU19E",
+      "title": "【 #オーバーウォッチ2 】スト鯖CUP本番！がんばる！",
+      "url": "https://www.youtube.com/watch?v=ncdiPrvU19E",
+      "published": "2026-07-11T21:46:17+00:00",
+      "thumbnail": "https://i.ytimg.com/vi/ncdiPrvU19E/hqdefault.jpg"
+    },
     {
       "id": "kXe6DkPZTrQ",
       "title": "【 #オーバーウォッチ2 】サポート練習！",
@@ -29,20 +43,6 @@
       "url": "https://www.youtube.com/watch?v=Nn242w1hGws",
       "published": "2026-07-03T02:32:51+00:00",
       "thumbnail": "https://i.ytimg.com/vi/Nn242w1hGws/hqdefault.jpg"
-    },
-    {
-      "id": "wMZzaBpddHU",
-      "title": "【 #leagueoflegends 】ADCもしつつMIDに挑戦！",
-      "url": "https://www.youtube.com/watch?v=wMZzaBpddHU",
-      "published": "2026-07-01T17:50:50+00:00",
-      "thumbnail": "https://i.ytimg.com/vi/wMZzaBpddHU/hqdefault.jpg"
-    },
-    {
-      "id": "aWaOF2b-Axs",
-      "title": "【 #雑談 】眠れない人話そう～",
-      "url": "https://www.youtube.com/watch?v=aWaOF2b-Axs",
-      "published": "2026-07-01T03:48:03+00:00",
-      "thumbnail": "https://i.ytimg.com/vi/aWaOF2b-Axs/hqdefault.jpg"
     }
   ]
 }
