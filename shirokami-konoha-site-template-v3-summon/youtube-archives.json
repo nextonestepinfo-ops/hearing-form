@@ -1,7 +1,14 @@
 {
-  "updated": "2026-07-13T04:31:49+09:00",
+  "updated": "2026-07-14T04:49:50+09:00",
   "source": "https://www.youtube.com/feeds/videos.xml?channel_id=UC_nYcejJ7nsVG_ppVLwNHsw",
   "items": [
+    {
+      "id": "iMZcGyXkUvQ",
+      "title": "【 #パルワールド 】初心者でもいいパル見つける！",
+      "url": "https://www.youtube.com/watch?v=iMZcGyXkUvQ",
+      "published": "2026-07-13T04:30:42+00:00",
+      "thumbnail": "https://i.ytimg.com/vi/iMZcGyXkUvQ/hqdefault.jpg"
+    },
     {
       "id": "GcsjPIJA5v0",
       "title": "【 #パルワールド 】初心者でかわいいの捕まえたい！",
@@ -36,13 +43,6 @@
       "url": "https://www.youtube.com/watch?v=rbcTJBRzagw",
       "published": "2026-07-04T01:28:30+00:00",
       "thumbnail": "https://i.ytimg.com/vi/rbcTJBRzagw/hqdefault.jpg"
-    },
-    {
-      "id": "Nn242w1hGws",
-      "title": "【 #leagueoflegends 】MIDに挑戦！",
-      "url": "https://www.youtube.com/watch?v=Nn242w1hGws",
-      "published": "2026-07-03T02:32:51+00:00",
-      "thumbnail": "https://i.ytimg.com/vi/Nn242w1hGws/hqdefault.jpg"
     }
   ]
 }
