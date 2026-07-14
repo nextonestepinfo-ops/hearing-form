@@ -1,7 +1,14 @@
 {
-  "updated": "2026-07-14T04:49:50+09:00",
+  "updated": "2026-07-15T04:43:37+09:00",
   "source": "https://www.youtube.com/feeds/videos.xml?channel_id=UC_nYcejJ7nsVG_ppVLwNHsw",
   "items": [
+    {
+      "id": "ZQqGqdmulYo",
+      "title": "【 #マイクラ 】ミリしら4人でどこまでいけるか！",
+      "url": "https://www.youtube.com/watch?v=ZQqGqdmulYo",
+      "published": "2026-07-14T18:21:05+00:00",
+      "thumbnail": "https://i.ytimg.com/vi/ZQqGqdmulYo/hqdefault.jpg"
+    },
     {
       "id": "iMZcGyXkUvQ",
       "title": "【 #パルワールド 】初心者でもいいパル見つける！",
@@ -36,13 +43,6 @@
       "url": "https://www.youtube.com/watch?v=D8ThNBghJrs",
       "published": "2026-07-04T02:29:10+00:00",
       "thumbnail": "https://i.ytimg.com/vi/D8ThNBghJrs/hqdefault.jpg"
-    },
-    {
-      "id": "rbcTJBRzagw",
-      "title": "【 #leagueoflegends 】MID練習したい気持ち！",
-      "url": "https://www.youtube.com/watch?v=rbcTJBRzagw",
-      "published": "2026-07-04T01:28:30+00:00",
-      "thumbnail": "https://i.ytimg.com/vi/rbcTJBRzagw/hqdefault.jpg"
     }
   ]
 }
