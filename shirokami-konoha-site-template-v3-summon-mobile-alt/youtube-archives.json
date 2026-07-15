@@ -1,7 +1,21 @@
 {
-  "updated": "2026-07-15T04:43:37+09:00",
+  "updated": "2026-07-16T04:36:58+09:00",
   "source": "https://www.youtube.com/feeds/videos.xml?channel_id=UC_nYcejJ7nsVG_ppVLwNHsw",
   "items": [
+    {
+      "id": "2Fof2Q1krB8",
+      "title": "【 #マイクラ 】エンダードラゴン討伐！！！",
+      "url": "https://www.youtube.com/watch?v=2Fof2Q1krB8",
+      "published": "2026-07-15T18:56:58+00:00",
+      "thumbnail": "https://i.ytimg.com/vi/2Fof2Q1krB8/hqdefault.jpg"
+    },
+    {
+      "id": "wft3b9AWqqs",
+      "title": "【 #パルワールド 】もっと強いパルに出会いたい！",
+      "url": "https://www.youtube.com/watch?v=wft3b9AWqqs",
+      "published": "2026-07-15T11:53:33+00:00",
+      "thumbnail": "https://i.ytimg.com/vi/wft3b9AWqqs/hqdefault.jpg"
+    },
     {
       "id": "ZQqGqdmulYo",
       "title": "【 #マイクラ 】ミリしら4人でどこまでいけるか！",
@@ -29,20 +43,6 @@
       "url": "https://www.youtube.com/watch?v=ncdiPrvU19E",
       "published": "2026-07-11T21:46:17+00:00",
       "thumbnail": "https://i.ytimg.com/vi/ncdiPrvU19E/hqdefault.jpg"
-    },
-    {
-      "id": "kXe6DkPZTrQ",
-      "title": "【 #オーバーウォッチ2 】サポート練習！",
-      "url": "https://www.youtube.com/watch?v=kXe6DkPZTrQ",
-      "published": "2026-07-10T00:49:45+00:00",
-      "thumbnail": "https://i.ytimg.com/vi/kXe6DkPZTrQ/hqdefault.jpg"
-    },
-    {
-      "id": "D8ThNBghJrs",
-      "title": "【 #雑談 】所属したぞ～",
-      "url": "https://www.youtube.com/watch?v=D8ThNBghJrs",
-      "published": "2026-07-04T02:29:10+00:00",
-      "thumbnail": "https://i.ytimg.com/vi/D8ThNBghJrs/hqdefault.jpg"
     }
   ]
 }
