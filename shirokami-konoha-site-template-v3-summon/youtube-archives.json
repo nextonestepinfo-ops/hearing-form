@@ -1,7 +1,14 @@
 {
-  "updated": "2026-07-16T04:36:58+09:00",
+  "updated": "2026-07-17T04:34:33+09:00",
   "source": "https://www.youtube.com/feeds/videos.xml?channel_id=UC_nYcejJ7nsVG_ppVLwNHsw",
   "items": [
+    {
+      "id": "1_sXHXZUZF4",
+      "title": "【 #パルワールド 】初心者すぎて、これからどうしていけば…？",
+      "url": "https://www.youtube.com/watch?v=1_sXHXZUZF4",
+      "published": "2026-07-16T06:03:34+00:00",
+      "thumbnail": "https://i.ytimg.com/vi/1_sXHXZUZF4/hqdefault.jpg"
+    },
     {
       "id": "2Fof2Q1krB8",
       "title": "【 #マイクラ 】エンダードラゴン討伐！！！",
@@ -36,13 +43,6 @@
       "url": "https://www.youtube.com/watch?v=GcsjPIJA5v0",
       "published": "2026-07-12T03:35:33+00:00",
       "thumbnail": "https://i.ytimg.com/vi/GcsjPIJA5v0/hqdefault.jpg"
-    },
-    {
-      "id": "ncdiPrvU19E",
-      "title": "【 #オーバーウォッチ2 】スト鯖CUP本番！がんばる！",
-      "url": "https://www.youtube.com/watch?v=ncdiPrvU19E",
-      "published": "2026-07-11T21:46:17+00:00",
-      "thumbnail": "https://i.ytimg.com/vi/ncdiPrvU19E/hqdefault.jpg"
     }
   ]
 }
