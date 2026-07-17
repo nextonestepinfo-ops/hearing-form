@@ -1,7 +1,14 @@
 {
-  "updated": "2026-07-17T04:34:33+09:00",
+  "updated": "2026-07-18T04:33:44+09:00",
   "source": "https://www.youtube.com/feeds/videos.xml?channel_id=UC_nYcejJ7nsVG_ppVLwNHsw",
   "items": [
+    {
+      "id": "MGBlg3jIwuc",
+      "title": "【 #パルワールド 】初心者ですが、必死に発展させてく！",
+      "url": "https://www.youtube.com/watch?v=MGBlg3jIwuc",
+      "published": "2026-07-17T04:00:37+00:00",
+      "thumbnail": "https://i.ytimg.com/vi/MGBlg3jIwuc/hqdefault.jpg"
+    },
     {
       "id": "1_sXHXZUZF4",
       "title": "【 #パルワールド 】初心者すぎて、これからどうしていけば…？",
@@ -36,13 +43,6 @@
       "url": "https://www.youtube.com/watch?v=iMZcGyXkUvQ",
       "published": "2026-07-13T04:30:42+00:00",
       "thumbnail": "https://i.ytimg.com/vi/iMZcGyXkUvQ/hqdefault.jpg"
-    },
-    {
-      "id": "GcsjPIJA5v0",
-      "title": "【 #パルワールド 】初心者でかわいいの捕まえたい！",
-      "url": "https://www.youtube.com/watch?v=GcsjPIJA5v0",
-      "published": "2026-07-12T03:35:33+00:00",
-      "thumbnail": "https://i.ytimg.com/vi/GcsjPIJA5v0/hqdefault.jpg"
     }
   ]
 }
