@@ -1,7 +1,14 @@
 {
-  "updated": "2026-07-19T04:32:20+09:00",
+  "updated": "2026-07-20T04:32:51+09:00",
   "source": "https://www.youtube.com/feeds/videos.xml?channel_id=UC_nYcejJ7nsVG_ppVLwNHsw",
   "items": [
+    {
+      "id": "qxB-mW6lxfw",
+      "title": "【 #パルワールド 】初心者でもまだまだ発展させてく！",
+      "url": "https://www.youtube.com/watch?v=qxB-mW6lxfw",
+      "published": "2026-07-19T04:02:29+00:00",
+      "thumbnail": "https://i.ytimg.com/vi/qxB-mW6lxfw/hqdefault.jpg"
+    },
     {
       "id": "ykWJD2iYt38",
       "title": "【 #パルワールド 】初心者かわいいパルかっこいいパルにメロメロ！",
@@ -36,13 +43,6 @@
       "url": "https://www.youtube.com/watch?v=wft3b9AWqqs",
       "published": "2026-07-15T11:53:33+00:00",
       "thumbnail": "https://i.ytimg.com/vi/wft3b9AWqqs/hqdefault.jpg"
-    },
-    {
-      "id": "ZQqGqdmulYo",
-      "title": "【 #マイクラ 】ミリしら4人でどこまでいけるか！",
-      "url": "https://www.youtube.com/watch?v=ZQqGqdmulYo",
-      "published": "2026-07-14T18:21:05+00:00",
-      "thumbnail": "https://i.ytimg.com/vi/ZQqGqdmulYo/hqdefault.jpg"
     }
   ]
 }
