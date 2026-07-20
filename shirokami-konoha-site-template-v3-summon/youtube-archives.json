@@ -1,7 +1,14 @@
 {
-  "updated": "2026-07-20T04:32:51+09:00",
+  "updated": "2026-07-21T04:57:04+09:00",
   "source": "https://www.youtube.com/feeds/videos.xml?channel_id=UC_nYcejJ7nsVG_ppVLwNHsw",
   "items": [
+    {
+      "id": "ljFsjKchrps",
+      "title": "【 #パルワールド 】拠点移動して新しいパルに出会いたい！",
+      "url": "https://www.youtube.com/watch?v=ljFsjKchrps",
+      "published": "2026-07-20T06:34:50+00:00",
+      "thumbnail": "https://i.ytimg.com/vi/ljFsjKchrps/hqdefault.jpg"
+    },
     {
       "id": "qxB-mW6lxfw",
       "title": "【 #パルワールド 】初心者でもまだまだ発展させてく！",
@@ -36,13 +43,6 @@
       "url": "https://www.youtube.com/watch?v=2Fof2Q1krB8",
       "published": "2026-07-15T18:56:58+00:00",
       "thumbnail": "https://i.ytimg.com/vi/2Fof2Q1krB8/hqdefault.jpg"
-    },
-    {
-      "id": "wft3b9AWqqs",
-      "title": "【 #パルワールド 】もっと強いパルに出会いたい！",
-      "url": "https://www.youtube.com/watch?v=wft3b9AWqqs",
-      "published": "2026-07-15T11:53:33+00:00",
-      "thumbnail": "https://i.ytimg.com/vi/wft3b9AWqqs/hqdefault.jpg"
     }
   ]
 }
