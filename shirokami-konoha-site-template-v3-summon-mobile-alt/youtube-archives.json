@@ -1,7 +1,14 @@
 {
-  "updated": "2026-07-21T04:57:04+09:00",
+  "updated": "2026-07-22T04:52:12+09:00",
   "source": "https://www.youtube.com/feeds/videos.xml?channel_id=UC_nYcejJ7nsVG_ppVLwNHsw",
   "items": [
+    {
+      "id": "6VrssC2GRy4",
+      "title": "【 #パルワールド 】ボス達を倒して新しいパル捕まえる！",
+      "url": "https://www.youtube.com/watch?v=6VrssC2GRy4",
+      "published": "2026-07-21T03:42:08+00:00",
+      "thumbnail": "https://i.ytimg.com/vi/6VrssC2GRy4/hqdefault.jpg"
+    },
     {
       "id": "ljFsjKchrps",
       "title": "【 #パルワールド 】拠点移動して新しいパルに出会いたい！",
@@ -36,13 +43,6 @@
       "url": "https://www.youtube.com/watch?v=1_sXHXZUZF4",
       "published": "2026-07-16T06:03:34+00:00",
       "thumbnail": "https://i.ytimg.com/vi/1_sXHXZUZF4/hqdefault.jpg"
-    },
-    {
-      "id": "2Fof2Q1krB8",
-      "title": "【 #マイクラ 】エンダードラゴン討伐！！！",
-      "url": "https://www.youtube.com/watch?v=2Fof2Q1krB8",
-      "published": "2026-07-15T18:56:58+00:00",
-      "thumbnail": "https://i.ytimg.com/vi/2Fof2Q1krB8/hqdefault.jpg"
     }
   ]
 }
