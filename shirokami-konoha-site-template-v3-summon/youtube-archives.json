@@ -1,7 +1,14 @@
 {
-  "updated": "2026-07-22T04:52:12+09:00",
+  "updated": "2026-07-25T04:47:28+09:00",
   "source": "https://www.youtube.com/feeds/videos.xml?channel_id=UC_nYcejJ7nsVG_ppVLwNHsw",
   "items": [
+    {
+      "id": "0Kbf4FBkDYg",
+      "title": "【 #パルワールド 】捕まえてないパル捕まえたい！",
+      "url": "https://www.youtube.com/watch?v=0Kbf4FBkDYg",
+      "published": "2026-07-24T04:12:46+00:00",
+      "thumbnail": "https://i.ytimg.com/vi/0Kbf4FBkDYg/hqdefault.jpg"
+    },
     {
       "id": "6VrssC2GRy4",
       "title": "【 #パルワールド 】ボス達を倒して新しいパル捕まえる！",
@@ -36,13 +43,6 @@
       "url": "https://www.youtube.com/watch?v=MGBlg3jIwuc",
       "published": "2026-07-17T04:00:37+00:00",
       "thumbnail": "https://i.ytimg.com/vi/MGBlg3jIwuc/hqdefault.jpg"
-    },
-    {
-      "id": "1_sXHXZUZF4",
-      "title": "【 #パルワールド 】初心者すぎて、これからどうしていけば…？",
-      "url": "https://www.youtube.com/watch?v=1_sXHXZUZF4",
-      "published": "2026-07-16T06:03:34+00:00",
-      "thumbnail": "https://i.ytimg.com/vi/1_sXHXZUZF4/hqdefault.jpg"
     }
   ]
 }
