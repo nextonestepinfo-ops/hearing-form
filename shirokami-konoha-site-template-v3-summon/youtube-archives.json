@@ -1,7 +1,14 @@
 {
-  "updated": "2026-07-26T04:35:06+09:00",
+  "updated": "2026-07-28T04:56:16+09:00",
   "source": "https://www.youtube.com/feeds/videos.xml?channel_id=UC_nYcejJ7nsVG_ppVLwNHsw",
   "items": [
+    {
+      "id": "8gtM65twaS0",
+      "title": "【 #パルワールド 】パルも拠点もアップデートしたい！",
+      "url": "https://www.youtube.com/watch?v=8gtM65twaS0",
+      "published": "2026-07-27T06:31:42+00:00",
+      "thumbnail": "https://i.ytimg.com/vi/8gtM65twaS0/hqdefault.jpg"
+    },
     {
       "id": "GQWqwMRIo4g",
       "title": "【 #パルワールド 】新しい所を開拓していきたい！",
@@ -36,13 +43,6 @@
       "url": "https://www.youtube.com/watch?v=qxB-mW6lxfw",
       "published": "2026-07-19T04:02:29+00:00",
       "thumbnail": "https://i.ytimg.com/vi/qxB-mW6lxfw/hqdefault.jpg"
-    },
-    {
-      "id": "ykWJD2iYt38",
-      "title": "【 #パルワールド 】初心者かわいいパルかっこいいパルにメロメロ！",
-      "url": "https://www.youtube.com/watch?v=ykWJD2iYt38",
-      "published": "2026-07-18T04:01:03+00:00",
-      "thumbnail": "https://i.ytimg.com/vi/ykWJD2iYt38/hqdefault.jpg"
     }
   ]
 }
