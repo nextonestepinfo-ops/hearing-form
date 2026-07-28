@@ -21,6 +21,7 @@ GitHub Pagesで公開する営業用デモ、ヒアリングフォーム、取�
 
 - 店舗業務ヒアリング: https://nextonestepinfo-ops.github.io/hearing-form/
 - Webサイト制作ヒアリング: https://nextonestepinfo-ops.github.io/hearing-form/website/
+- 美容室・個人整体院 営業ヒアリング: https://nextonestepinfo-ops.github.io/hearing-form/salon-seitai-hearing/
 - 中外テクノス 車載カメラ画像合成ヒアリング: https://nextonestepinfo-ops.github.io/hearing-form/chugai-vehicle-camera-hearing/
 - 取引先ポータル: https://nextonestepinfo-ops.github.io/hearing-form/portal/
 
