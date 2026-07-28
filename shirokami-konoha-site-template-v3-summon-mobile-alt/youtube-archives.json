@@ -1,7 +1,21 @@
 {
-  "updated": "2026-07-28T04:56:16+09:00",
+  "updated": "2026-07-29T04:53:28+09:00",
   "source": "https://www.youtube.com/feeds/videos.xml?channel_id=UC_nYcejJ7nsVG_ppVLwNHsw",
   "items": [
+    {
+      "id": "7dtxp6G3j94",
+      "title": "【 #雑談 】まったり過ごしたい夕方ですね",
+      "url": "https://www.youtube.com/watch?v=7dtxp6G3j94",
+      "published": "2026-07-28T09:21:42+00:00",
+      "thumbnail": "https://i.ytimg.com/vi/7dtxp6G3j94/hqdefault.jpg"
+    },
+    {
+      "id": "2_0FFq4evqk",
+      "title": "【 #パルワールド 】お金はたくさん稼いだ！あとは、、、",
+      "url": "https://www.youtube.com/watch?v=2_0FFq4evqk",
+      "published": "2026-07-28T03:43:14+00:00",
+      "thumbnail": "https://i.ytimg.com/vi/2_0FFq4evqk/hqdefault.jpg"
+    },
     {
       "id": "8gtM65twaS0",
       "title": "【 #パルワールド 】パルも拠点もアップデートしたい！",
@@ -29,20 +43,6 @@
       "url": "https://www.youtube.com/watch?v=6VrssC2GRy4",
       "published": "2026-07-21T03:42:08+00:00",
       "thumbnail": "https://i.ytimg.com/vi/6VrssC2GRy4/hqdefault.jpg"
-    },
-    {
-      "id": "ljFsjKchrps",
-      "title": "【 #パルワールド 】拠点移動して新しいパルに出会いたい！",
-      "url": "https://www.youtube.com/watch?v=ljFsjKchrps",
-      "published": "2026-07-20T06:34:50+00:00",
-      "thumbnail": "https://i.ytimg.com/vi/ljFsjKchrps/hqdefault.jpg"
-    },
-    {
-      "id": "qxB-mW6lxfw",
-      "title": "【 #パルワールド 】初心者でもまだまだ発展させてく！",
-      "url": "https://www.youtube.com/watch?v=qxB-mW6lxfw",
-      "published": "2026-07-19T04:02:29+00:00",
-      "thumbnail": "https://i.ytimg.com/vi/qxB-mW6lxfw/hqdefault.jpg"
     }
   ]
 }
