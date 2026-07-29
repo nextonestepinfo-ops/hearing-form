@@ -2,68 +2,33 @@
 <html lang="ja">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-    <meta name="theme-color" content="#9d5b73" />
-    <title>美容室・個人整体院 営業ヒアリング | NosTechnology</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f8f6f5" />
+    <title>美容室・個人整体院 ヒアリングシート一覧 | NosTechnology</title>
     <meta
       name="description"
-      content="美容室と個人整体院向けの、Webサイト・業務改善・システム開発営業ヒアリングフォーム。スマホ入力、自動保存、回答コピーに対応。"
+      content="美容室と個人整体院向けの、Webサイト・業務改善システム開発ヒアリングシート一覧です。"
     />
     <style>
       :root {
         color-scheme: light;
-        --accent: #9d5b73;
-        --accent-strong: #753d52;
-        --accent-soft: #f8edf1;
-        --accent-faint: #fdf8fa;
-        --ink: #233847;
-        --muted: #667680;
-        --line: #d7e0e5;
-        --surface: #ffffff;
-        --background: #f5f7f8;
-        --success: #22785d;
-        --warning: #8b5d0f;
-        --danger: #a33d4d;
-        --shadow: 0 18px 50px rgba(34, 55, 68, 0.08);
         font-family:
-          "BIZ UDPGothic", "Noto Sans JP", "Yu Gothic", "Meiryo", system-ui, sans-serif;
-        font-synthesis: none;
+          Inter, "Hiragino Sans", "Yu Gothic UI", "Yu Gothic", Meiryo, sans-serif;
+        color: #243238;
+        background: #f8f6f5;
       }
 
       * {
         box-sizing: border-box;
       }
 
-      html {
-        scroll-behavior: smooth;
-        background: var(--background);
-      }
-
       body {
-        margin: 0;
-        color: var(--ink);
-        background:
-          radial-gradient(circle at 0 0, color-mix(in srgb, var(--accent-soft) 88%, white), transparent 36rem),
-          var(--background);
         min-width: 320px;
-      }
-
-      body[data-industry="seitai"] {
-        --accent: #3e7a73;
-        --accent-strong: #28564f;
-        --accent-soft: #eaf4f2;
-        --accent-faint: #f7fbfa;
-      }
-
-      button,
-      input,
-      textarea,
-      select {
-        font: inherit;
-      }
-
-      button {
-        cursor: pointer;
+        margin: 0;
+        background:
+          radial-gradient(circle at 8% 0%, rgba(177, 102, 130, 0.12), transparent 34%),
+          radial-gradient(circle at 95% 4%, rgba(62, 122, 115, 0.13), transparent 35%),
+          #f8f6f5;
       }
 
       a {
@@ -73,26 +38,23 @@
       .topbar {
         position: sticky;
         top: 0;
-        z-index: 30;
+        z-index: 10;
         display: flex;
         align-items: center;
-        justify-content: space-between;
-        gap: 16px;
-        min-height: 60px;
-        padding: 10px max(18px, env(safe-area-inset-left));
-        border-bottom: 1px solid rgba(215, 224, 229, 0.85);
-        background: rgba(255, 255, 255, 0.9);
+        min-height: 64px;
+        padding: 10px 18px;
+        border-bottom: 1px solid rgba(215, 224, 229, 0.88);
+        background: rgba(255, 255, 255, 0.94);
         backdrop-filter: blur(18px);
       }
 
       .brand {
         display: inline-flex;
-        align-items: center;
         gap: 10px;
-        text-decoration: none;
-        font-size: 14px;
+        align-items: center;
+        font-size: 15px;
         font-weight: 800;
-        letter-spacing: 0.02em;
+        text-decoration: none;
       }
 
       .brand-mark {
@@ -102,1409 +64,241 @@
         place-items: center;
         border-radius: 11px;
         color: #fff;
-        background: var(--accent);
-        box-shadow: 0 8px 18px color-mix(in srgb, var(--accent) 28%, transparent);
+        background: linear-gradient(145deg, #9d5b73, #3e7a73);
+        box-shadow: 0 8px 18px rgba(73, 88, 92, 0.16);
       }
 
-      .top-status {
-        display: inline-flex;
-        align-items: center;
-        gap: 7px;
-        color: var(--muted);
-        font-size: 12px;
-        font-weight: 700;
-      }
-
-      .top-status::before {
-        width: 8px;
-        height: 8px;
-        border-radius: 50%;
-        background: var(--success);
-        content: "";
-        box-shadow: 0 0 0 4px rgba(34, 120, 93, 0.1);
-      }
-
-      .shell {
-        width: min(100% - 32px, 1080px);
+      main {
+        width: min(100% - 28px, 820px);
         margin: 0 auto;
-        padding: 36px 0 132px;
-      }
-
-      .hero {
-        display: grid;
-        grid-template-columns: minmax(0, 1fr) minmax(280px, 0.42fr);
-        gap: 28px;
-        align-items: end;
-        margin-bottom: 24px;
+        padding: 42px 0 60px;
       }
 
       .eyebrow {
-        margin: 0 0 8px;
-        color: var(--accent-strong);
+        margin: 0 0 12px;
+        color: #7e5463;
         font-size: 12px;
         font-weight: 900;
-        letter-spacing: 0.14em;
+        letter-spacing: 0.17em;
         text-transform: uppercase;
       }
 
       h1 {
-        max-width: 760px;
+        max-width: 680px;
         margin: 0;
-        font-size: clamp(30px, 5vw, 54px);
+        font-size: clamp(32px, 8vw, 56px);
         line-height: 1.08;
-        letter-spacing: -0.04em;
+        letter-spacing: -0.045em;
       }
 
       .lead {
-        max-width: 690px;
-        margin: 14px 0 0;
-        color: var(--muted);
+        max-width: 620px;
+        margin: 18px 0 0;
+        color: #637077;
         font-size: 15px;
-        line-height: 1.8;
+        line-height: 1.85;
       }
 
-      .privacy-note {
-        margin: 0;
+      .notice {
+        margin: 24px 0 30px;
         padding: 16px 18px;
-        border: 1px solid color-mix(in srgb, var(--accent) 25%, var(--line));
+        border: 1px solid #e2d7da;
         border-radius: 18px;
-        background: var(--accent-faint);
-        color: var(--accent-strong);
+        background: rgba(255, 255, 255, 0.75);
+        color: #654d56;
         font-size: 12px;
         font-weight: 700;
-        line-height: 1.7;
+        line-height: 1.75;
       }
 
-      .switcher {
-        position: sticky;
-        top: 70px;
-        z-index: 20;
-        margin-bottom: 20px;
-        padding: 14px;
-        border: 1px solid rgba(215, 224, 229, 0.9);
-        border-radius: 22px;
-        background: rgba(255, 255, 255, 0.94);
-        box-shadow: var(--shadow);
-        backdrop-filter: blur(18px);
-      }
-
-      .switcher-grid {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 12px;
-      }
-
-      .switch-group {
-        display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 6px;
-        padding: 5px;
-        border-radius: 15px;
-        background: #eef2f4;
-      }
-
-      .switch-button {
-        min-height: 46px;
-        padding: 9px 12px;
-        border: 0;
-        border-radius: 11px;
-        color: var(--muted);
-        background: transparent;
-        font-size: 13px;
-        font-weight: 800;
-        transition:
-          background 160ms ease,
-          color 160ms ease,
-          transform 160ms ease;
-      }
-
-      .switch-button[aria-selected="true"] {
-        color: #fff;
-        background: var(--accent);
-        box-shadow: 0 8px 18px color-mix(in srgb, var(--accent) 24%, transparent);
-      }
-
-      .switch-button:active {
-        transform: scale(0.98);
-      }
-
-      .progress-row {
-        display: grid;
-        grid-template-columns: auto minmax(100px, 1fr) auto;
-        gap: 12px;
-        align-items: center;
-        margin-top: 12px;
-        padding: 0 4px;
-        color: var(--muted);
-        font-size: 12px;
-        font-weight: 700;
-      }
-
-      .progress-track {
-        height: 7px;
-        overflow: hidden;
-        border-radius: 999px;
-        background: #e7ecef;
-      }
-
-      .progress-bar {
-        width: 0%;
-        height: 100%;
-        border-radius: inherit;
-        background: var(--accent);
-        transition: width 180ms ease;
-      }
-
-      .form-intro {
-        display: grid;
-        grid-template-columns: 1fr auto;
-        gap: 20px;
-        align-items: end;
-        margin: 28px 0 16px;
-      }
-
-      .form-intro h2 {
-        margin: 0;
-        font-size: clamp(24px, 4vw, 36px);
-        letter-spacing: -0.035em;
-      }
-
-      .form-intro p {
-        margin: 7px 0 0;
-        color: var(--muted);
-        font-size: 14px;
-        line-height: 1.7;
-      }
-
-      .answered-chip {
-        display: inline-flex;
-        align-items: center;
-        min-height: 38px;
-        padding: 8px 13px;
-        border-radius: 999px;
-        color: var(--accent-strong);
-        background: var(--accent-soft);
-        font-size: 12px;
-        font-weight: 900;
-        white-space: nowrap;
-      }
-
-      .meta-card,
-      .form-section {
-        border: 1px solid var(--line);
-        border-radius: 24px;
-        background: var(--surface);
-        box-shadow: 0 10px 36px rgba(34, 55, 68, 0.045);
-      }
-
-      .meta-card {
-        margin-bottom: 16px;
-        padding: 20px;
-      }
-
-      .meta-card h3 {
-        margin: 0 0 14px;
-        font-size: 15px;
-      }
-
-      .field-grid {
-        display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 14px;
-      }
-
-      .form-section {
-        margin: 0 0 16px;
-        padding: 0;
-        overflow: hidden;
-      }
-
-      .section-head {
-        display: flex;
-        gap: 13px;
-        align-items: flex-start;
-        padding: 18px 20px;
-        border-bottom: 1px solid color-mix(in srgb, var(--accent) 16%, var(--line));
-        background: var(--accent-faint);
-      }
-
-      .section-no {
-        display: grid;
-        flex: 0 0 auto;
-        width: 32px;
-        height: 32px;
-        place-items: center;
-        border-radius: 10px;
-        color: #fff;
-        background: var(--accent);
-        font-size: 12px;
-        font-weight: 900;
-      }
-
-      .section-head h3 {
-        margin: 0;
-        color: var(--accent-strong);
-        font-size: 18px;
-        line-height: 1.35;
-      }
-
-      .section-head p {
-        margin: 4px 0 0;
-        color: var(--muted);
-        font-size: 12px;
-        line-height: 1.6;
-      }
-
-      .section-body {
+      .groups {
         display: grid;
         gap: 18px;
+      }
+
+      .group {
         padding: 20px;
+        border: 1px solid #dfe6e8;
+        border-radius: 24px;
+        background: rgba(255, 255, 255, 0.9);
+        box-shadow: 0 14px 36px rgba(54, 67, 73, 0.08);
       }
 
-      .field {
-        display: grid;
-        gap: 7px;
-      }
-
-      .field-label {
+      .group-head {
         display: flex;
-        gap: 8px;
+        gap: 12px;
         align-items: center;
-        justify-content: space-between;
-        font-size: 13px;
-        font-weight: 800;
-        line-height: 1.5;
+        margin-bottom: 14px;
       }
 
-      .field-label small {
-        color: var(--muted);
-        font-size: 10px;
-        font-weight: 600;
-      }
-
-      .field-help {
-        margin: -2px 0 0;
-        color: var(--muted);
-        font-size: 11px;
-        line-height: 1.6;
-      }
-
-      input[type="text"],
-      input[type="date"],
-      textarea,
-      select {
-        width: 100%;
-        min-height: 48px;
-        border: 1px solid #cbd6dc;
-        border-radius: 13px;
-        color: var(--ink);
-        background: #fff;
-        outline: none;
-        transition:
-          border-color 150ms ease,
-          box-shadow 150ms ease,
-          background 150ms ease;
-      }
-
-      input[type="text"],
-      input[type="date"],
-      select {
-        padding: 0 13px;
-      }
-
-      textarea {
-        min-height: 112px;
-        resize: vertical;
-        padding: 12px 13px;
-        line-height: 1.7;
-      }
-
-      input:focus,
-      textarea:focus,
-      select:focus {
-        border-color: var(--accent);
-        box-shadow: 0 0 0 4px color-mix(in srgb, var(--accent) 14%, transparent);
-        background: var(--accent-faint);
-      }
-
-      .option-grid {
+      .group-icon {
         display: grid;
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-        gap: 9px;
-      }
-
-      .option {
-        position: relative;
-        display: flex;
-        min-height: 46px;
-        align-items: center;
-        gap: 9px;
-        padding: 10px 11px;
-        border: 1px solid #d3dde2;
-        border-radius: 13px;
-        background: #fff;
-        font-size: 12px;
-        font-weight: 700;
-        line-height: 1.4;
-        transition:
-          border-color 150ms ease,
-          background 150ms ease,
-          color 150ms ease;
-      }
-
-      .option:has(input:checked) {
-        border-color: var(--accent);
-        color: var(--accent-strong);
-        background: var(--accent-soft);
-      }
-
-      .option input {
-        width: 18px;
-        height: 18px;
-        flex: 0 0 auto;
-        margin: 0;
-        accent-color: var(--accent);
-      }
-
-      .actions {
-        position: fixed;
-        z-index: 40;
-        right: max(16px, env(safe-area-inset-right));
-        bottom: max(16px, env(safe-area-inset-bottom));
-        left: max(16px, env(safe-area-inset-left));
-        display: flex;
-        width: min(calc(100% - 32px), 720px);
-        margin: 0 auto;
-        gap: 8px;
-        padding: 10px;
-        border: 1px solid rgba(215, 224, 229, 0.9);
-        border-radius: 20px;
-        background: rgba(255, 255, 255, 0.94);
-        box-shadow: 0 18px 60px rgba(34, 55, 68, 0.18);
-        backdrop-filter: blur(18px);
-      }
-
-      .action-button {
-        min-height: 48px;
-        flex: 1 1 0;
-        padding: 10px 13px;
-        border: 1px solid var(--line);
-        border-radius: 13px;
-        color: var(--ink);
-        background: #fff;
-        font-size: 12px;
+        width: 44px;
+        height: 44px;
+        place-items: center;
+        border-radius: 14px;
+        color: #fff;
+        font-size: 18px;
         font-weight: 900;
       }
 
-      .action-button.primary {
-        flex: 1.7 1 0;
-        border-color: var(--accent);
-        color: #fff;
-        background: var(--accent);
+      .salon .group-icon {
+        background: #a65f79;
       }
 
-      .action-button.danger {
-        color: var(--danger);
+      .seitai .group-icon {
+        background: #3e7a73;
       }
 
-      .toast {
-        position: fixed;
-        z-index: 50;
-        right: 16px;
-        bottom: 96px;
-        left: 16px;
-        width: min(calc(100% - 32px), 480px);
-        margin: auto;
-        padding: 13px 16px;
-        border-radius: 14px;
-        color: #fff;
-        background: var(--ink);
-        box-shadow: 0 15px 40px rgba(34, 55, 68, 0.24);
-        font-size: 13px;
-        font-weight: 800;
-        text-align: center;
-        opacity: 0;
-        pointer-events: none;
-        transform: translateY(8px);
+      h2 {
+        margin: 0;
+        font-size: 21px;
+      }
+
+      .group-head p {
+        margin: 4px 0 0;
+        color: #7a858a;
+        font-size: 12px;
+      }
+
+      .sheet-links {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+      }
+
+      .sheet-link {
+        display: flex;
+        min-height: 116px;
+        padding: 17px;
+        border: 1px solid #e0e6e8;
+        border-radius: 17px;
+        flex-direction: column;
+        justify-content: space-between;
+        background: #fff;
+        text-decoration: none;
         transition:
-          opacity 160ms ease,
-          transform 160ms ease;
+          transform 160ms ease,
+          box-shadow 160ms ease,
+          border-color 160ms ease;
       }
 
-      .toast.is-visible {
-        opacity: 1;
-        transform: translateY(0);
+      .sheet-link:hover,
+      .sheet-link:focus-visible {
+        border-color: currentColor;
+        box-shadow: 0 12px 26px rgba(54, 67, 73, 0.1);
+        transform: translateY(-2px);
+        outline: none;
       }
 
-      .noscript {
-        margin: 18px auto;
-        padding: 16px;
-        border: 1px solid #e2b8bf;
-        border-radius: 14px;
-        color: #8a3040;
-        background: #fff2f4;
+      .salon .sheet-link {
+        color: #86495f;
       }
 
-      @media (max-width: 760px) {
-        .topbar {
-          min-height: 56px;
+      .seitai .sheet-link {
+        color: #2d6761;
+      }
+
+      .sheet-link strong {
+        font-size: 15px;
+        line-height: 1.45;
+      }
+
+      .sheet-link span {
+        color: #778287;
+        font-size: 12px;
+        line-height: 1.55;
+      }
+
+      .open-label {
+        color: currentColor !important;
+        font-weight: 900;
+      }
+
+      @media (max-width: 560px) {
+        main {
+          width: min(100% - 20px, 820px);
+          padding-top: 32px;
         }
 
-        .top-status {
-          font-size: 10px;
+        .group {
+          padding: 14px;
+          border-radius: 20px;
         }
 
-        .shell {
-          width: min(100% - 22px, 1080px);
-          padding-top: 26px;
-        }
-
-        .hero {
-          grid-template-columns: 1fr;
-          gap: 16px;
-        }
-
-        .lead {
-          font-size: 13px;
-        }
-
-        .switcher {
-          top: 64px;
-          margin-right: -3px;
-          margin-left: -3px;
-          padding: 9px;
-          border-radius: 17px;
-        }
-
-        .switcher-grid {
-          grid-template-columns: 1fr;
-          gap: 7px;
-        }
-
-        .switch-button {
-          min-height: 42px;
-          padding: 7px 8px;
-          font-size: 12px;
-        }
-
-        .progress-row {
-          margin-top: 9px;
-        }
-
-        .form-intro {
-          grid-template-columns: 1fr;
-          gap: 10px;
-          margin-top: 22px;
-        }
-
-        .answered-chip {
-          justify-self: start;
-        }
-
-        .field-grid,
-        .option-grid {
+        .sheet-links {
           grid-template-columns: 1fr;
         }
 
-        .meta-card,
-        .form-section {
-          border-radius: 18px;
-        }
-
-        .meta-card,
-        .section-body {
-          padding: 16px;
-        }
-
-        .section-head {
-          padding: 15px 16px;
-        }
-
-        .section-head h3 {
-          font-size: 16px;
-        }
-
-        .actions {
-          width: calc(100% - 20px);
-          right: max(10px, env(safe-area-inset-right));
-          bottom: max(9px, env(safe-area-inset-bottom));
-          left: max(10px, env(safe-area-inset-left));
-          gap: 6px;
-          padding: 7px;
-          border-radius: 17px;
-        }
-
-        .action-button {
-          min-height: 46px;
-          padding: 8px 9px;
-          font-size: 11px;
-        }
-
-        .action-button.download {
-          display: none;
-        }
-      }
-
-      @media (prefers-reduced-motion: reduce) {
-        *,
-        *::before,
-        *::after {
-          scroll-behavior: auto !important;
-          transition-duration: 0.01ms !important;
+        .sheet-link {
+          min-height: 104px;
         }
       }
     </style>
   </head>
-  <body data-industry="beauty">
+  <body>
     <header class="topbar">
       <a class="brand" href="../" aria-label="NosTechnology営業フォーム一覧へ戻る">
         <span class="brand-mark">N</span>
         <span>NosTechnology</span>
       </a>
-      <span class="top-status" data-save-status>この端末に自動保存</span>
     </header>
 
-    <main class="shell">
-      <section class="hero" aria-labelledby="page-title">
-        <div>
-          <p class="eyebrow">Sales Hearing Form</p>
-          <h1 id="page-title">美容室・個人整体院<br />営業ヒアリング</h1>
-          <p class="lead">
-            外出先でスマホから入力し、回答をそのまま提案メモへコピーできます。
-            業種と相談内容を切り替えてお使いください。
-          </p>
-        </div>
-        <p class="privacy-note">
-          入力内容はこの端末内だけに自動保存されます。「回答をコピー」するまで外部送信されません。
-          パスワード、決済情報、顧客個人情報は入力しないでください。
-        </p>
-      </section>
+    <main>
+      <p class="eyebrow">Sales Hearing Forms</p>
+      <h1>営業ヒアリングシート</h1>
+      <p class="lead">
+        営業先と相談内容に合うシートを選んでください。それぞれ別画面で開き、回答は端末内に自動保存されます。
+      </p>
+      <p class="notice">
+        「回答まとめをコピー」するまで外部送信されません。パスワード、決済情報、顧客個人情報は入力しないでください。
+      </p>
 
-      <section class="switcher" aria-label="ヒアリングシート切り替え">
-        <div class="switcher-grid">
-          <div class="switch-group" role="tablist" aria-label="業種">
-            <button
-              class="switch-button"
-              type="button"
-              role="tab"
-              aria-selected="true"
-              data-industry-button="beauty"
-            >
-              美容室・サロン
-            </button>
-            <button
-              class="switch-button"
-              type="button"
-              role="tab"
-              aria-selected="false"
-              data-industry-button="seitai"
-            >
-              個人整体院
-            </button>
+      <div class="groups">
+        <section class="group salon" aria-labelledby="salon-title">
+          <div class="group-head">
+            <span class="group-icon" aria-hidden="true">美</span>
+            <div>
+              <h2 id="salon-title">美容室・サロン</h2>
+              <p>予約導線と店内業務を別々に確認</p>
+            </div>
           </div>
-          <div class="switch-group" role="tablist" aria-label="相談内容">
-            <button
-              class="switch-button"
-              type="button"
-              role="tab"
-              aria-selected="true"
-              data-sheet-button="web"
-            >
-              Webサイト
-            </button>
-            <button
-              class="switch-button"
-              type="button"
-              role="tab"
-              aria-selected="false"
-              data-sheet-button="ops"
-            >
-              業務改善・システム
-            </button>
-          </div>
-        </div>
-        <div class="progress-row">
-          <span>回答状況</span>
-          <div
-            class="progress-track"
-            role="progressbar"
-            aria-valuemin="0"
-            aria-valuemax="100"
-            aria-valuenow="0"
-            data-progress-track
-          >
-            <div class="progress-bar" data-progress-bar></div>
-          </div>
-          <strong data-progress-label>0/0</strong>
-        </div>
-      </section>
-
-      <section class="form-intro" aria-live="polite">
-        <div>
-          <p class="eyebrow" data-form-kicker>美容室・サロン / Web</p>
-          <h2 data-form-title>Webサイト ヒアリングシート</h2>
-          <p data-form-description>
-            予約につながる導線と、伝える内容を現状から順に整理します。
-          </p>
-        </div>
-        <span class="answered-chip" data-answered-chip>未入力</span>
-      </section>
-
-      <form data-hearing-form novalidate>
-        <section class="meta-card" aria-labelledby="meta-title">
-          <h3 id="meta-title">基本情報</h3>
-          <div class="field-grid">
-            <label class="field">
-              <span class="field-label">店舗名・院名</span>
-              <input type="text" name="storeName" autocomplete="organization" placeholder="例：Salon ○○" />
-            </label>
-            <label class="field">
-              <span class="field-label">ご担当者</span>
-              <input type="text" name="contactName" autocomplete="name" placeholder="例：代表 ○○様" />
-            </label>
-            <label class="field">
-              <span class="field-label">ヒアリング日</span>
-              <input type="date" name="hearingDate" />
-            </label>
-            <label class="field">
-              <span class="field-label">担当営業</span>
-              <select name="salesOwner">
-                <option value="">選択してください</option>
-                <option>浦田</option>
-                <option>渡邉</option>
-                <option>その他</option>
-              </select>
-            </label>
+          <div class="sheet-links">
+            <a class="sheet-link" href="../salon-website-hearing/">
+              <strong>Webサイト<br />ヒアリング</strong>
+              <span>集客・予約導線・掲載内容</span>
+              <span class="open-label">このシートを開く →</span>
+            </a>
+            <a class="sheet-link" href="../salon-operations-hearing/">
+              <strong>業務改善・システム<br />ヒアリング</strong>
+              <span>予約・顧客管理・集計・手作業</span>
+              <span class="open-label">このシートを開く →</span>
+            </a>
           </div>
         </section>
 
-        <div data-form-sections></div>
-      </form>
+        <section class="group seitai" aria-labelledby="seitai-title">
+          <div class="group-head">
+            <span class="group-icon" aria-hidden="true">整</span>
+            <div>
+              <h2 id="seitai-title">個人整体院</h2>
+              <p>来院導線と院内業務を別々に確認</p>
+            </div>
+          </div>
+          <div class="sheet-links">
+            <a class="sheet-link" href="../seitai-website-hearing/">
+              <strong>Webサイト<br />ヒアリング</strong>
+              <span>安心材料・予約導線・掲載内容</span>
+              <span class="open-label">このシートを開く →</span>
+            </a>
+            <a class="sheet-link" href="../seitai-operations-hearing/">
+              <strong>業務改善・システム<br />ヒアリング</strong>
+              <span>予約・問診・施術記録・集計</span>
+              <span class="open-label">このシートを開く →</span>
+            </a>
+          </div>
+        </section>
+      </div>
     </main>
-
-    <div class="actions" aria-label="回答操作">
-      <button class="action-button primary" type="button" data-copy>回答まとめをコピー</button>
-      <button class="action-button download" type="button" data-download>TXT保存</button>
-      <button class="action-button danger" type="button" data-clear>クリア</button>
-    </div>
-
-    <p class="toast" role="status" aria-live="polite" data-toast></p>
-
-    <noscript>
-      <p class="noscript">このフォームの入力・保存・コピーにはJavaScriptが必要です。</p>
-    </noscript>
-
-    <script>
-      (() => {
-        const form = document.querySelector("[data-hearing-form]");
-        const sectionsRoot = document.querySelector("[data-form-sections]");
-        const formKicker = document.querySelector("[data-form-kicker]");
-        const formTitle = document.querySelector("[data-form-title]");
-        const formDescription = document.querySelector("[data-form-description]");
-        const saveStatus = document.querySelector("[data-save-status]");
-        const progressLabel = document.querySelector("[data-progress-label]");
-        const progressBar = document.querySelector("[data-progress-bar]");
-        const progressTrack = document.querySelector("[data-progress-track]");
-        const answeredChip = document.querySelector("[data-answered-chip]");
-        const toast = document.querySelector("[data-toast]");
-        const copyButton = document.querySelector("[data-copy]");
-        const downloadButton = document.querySelector("[data-download]");
-        const clearButton = document.querySelector("[data-clear]");
-        const industryButtons = [...document.querySelectorAll("[data-industry-button]")];
-        const sheetButtons = [...document.querySelectorAll("[data-sheet-button]")];
-        const globalKey = "nosSalonSeitaiHearing:global:v1";
-        const storagePrefix = "nosSalonSeitaiHearing:v1";
-        let saveTimer = null;
-        let toastTimer = null;
-
-        const field = (id, label, type, extra = {}) => ({ id, label, type, ...extra });
-        const section = (title, purpose, fields) => ({ title, purpose, fields });
-
-        const configs = {
-          beauty: {
-            name: "美容室・サロン",
-            web: {
-              short: "Web",
-              title: "Webサイト ヒアリングシート",
-              description: "予約につながる導線と、伝える内容を現状から順に整理します。",
-              sections: [
-                section("目的と今の集客導線", "最初に、増やしたい予約と現在の入口を確認します。", [
-                  field("increaseGoals", "一番増やしたいもの", "checks", {
-                    options: ["新規予約", "指名予約", "高単価メニュー", "リピーター", "平日予約", "採用", "その他"],
-                  }),
-                  field("currentRoutes", "今の集客・予約入口", "checks", {
-                    options: ["Googleマップ", "Instagram", "LINE", "Hot Pepper等", "Webサイト", "紹介", "電話"],
-                  }),
-                  field("currentMetrics", "現状と目標の数字", "textarea", {
-                    placeholder: "例：新規予約 月8件 → 月15件、客単価8,000円、平日稼働を増やしたい",
-                  }),
-                  field("trigger", "作り直すきっかけ・一番の課題", "textarea", {
-                    placeholder: "例：Instagramは見られるが予約ページまで進まれない。料金が分かりにくいと言われた。",
-                  }),
-                ]),
-                section("理想のお客様と選ばれる理由", "誰に何を伝えるかを決めます。", [
-                  field("target", "理想のお客様", "textarea", {
-                    placeholder: "年齢、悩み、好み、来店前の不安、情報を探す場所",
-                  }),
-                  field("strengths", "よく言われる3つの強み", "textarea", {
-                    placeholder: "例：相談しやすい / 仕上がりが長持ち / 店内が落ち着く",
-                  }),
-                  field("featuredMenu", "推したいメニュー", "textarea", {
-                    placeholder: "メニュー名、価格、所要時間、選ばれている理由",
-                  }),
-                  field("lossReasons", "選ばれにくい理由・競合との差", "textarea", {
-                    placeholder: "分かる範囲で。価格、予約しづらさ、写真、知名度など",
-                  }),
-                ]),
-                section("サイト内容と予約までの動線", "掲載内容と最終的な予約先を決めます。", [
-                  field("siteContents", "載せたい内容", "checks", {
-                    options: ["メニュー・料金", "スタッフ", "施術例", "店内写真", "お客様の声", "FAQ", "採用", "お知らせ"],
-                  }),
-                  field("bookingGoals", "予約のゴール", "checks", {
-                    options: ["Hot Pepper等", "LINE", "電話", "予約フォーム", "複数から選択", "まだ未定"],
-                  }),
-                  field("searchArea", "狙いたい地域・検索語", "textarea", {
-                    placeholder: "例：広島市中区 美容室 / 髪質改善 / メンズカット",
-                  }),
-                ]),
-                section("雰囲気・素材・更新", "デザインの方向と、公開後の運用を確認します。", [
-                  field("vibes", "希望する雰囲気", "checks", {
-                    options: ["上品", "ナチュラル", "ミニマル", "韓国風", "かわいい", "モード", "高級感", "その他"],
-                  }),
-                  field("assets", "使える素材", "checks", {
-                    options: ["ロゴ", "スタッフ写真", "施術写真", "店内写真", "動画", "料金表", "撮影希望"],
-                  }),
-                  field("operation", "更新担当・頻度・避けたいデザイン", "textarea", {
-                    placeholder: "例：お知らせは月1回。更新は代表。原色や動きすぎるデザインは避けたい。",
-                  }),
-                ]),
-                section("条件と次の一歩", "提案・見積に必要な条件を揃えます。", [
-                  field("budget", "予算感", "select", {
-                    options: ["未定", "30万円未満", "30-80万円", "80-150万円", "150万円以上", "相談して決めたい"],
-                  }),
-                  field("timeline", "希望公開時期", "text", {
-                    placeholder: "例：3か月以内 / ○月のキャンペーン前",
-                  }),
-                  field("decision", "決裁者・確認が必要な人", "text", {
-                    placeholder: "例：代表決裁 / 共同経営者と確認",
-                  }),
-                  field("nextActions", "次の一歩", "checks", {
-                    options: ["無料診断を送る", "構成案・概算見積", "サンプル提示", "次回打合せ", "保留・再連絡"],
-                  }),
-                  field("memo", "営業メモ", "textarea", {
-                    placeholder: "温度感、次回連絡日、約束したこと、注意点",
-                  }),
-                ]),
-              ],
-            },
-            ops: {
-              short: "業務改善・システム",
-              title: "業務改善・システム開発 ヒアリングシート",
-              description: "機能から入らず、時間がかかる仕事と二重入力から改善範囲を決めます。",
-              sections: [
-                section("一番減らしたい手作業", "時間・ミス・後回しが発生している作業を特定します。", [
-                  field("painAreas", "課題チェック", "checks", {
-                    options: ["予約確認", "顧客検索", "カルテ入力", "写真整理", "薬剤・配合", "在庫・発注", "シフト", "売上・経費", "連絡"],
-                  }),
-                  field("priorityTask", "最優先で減らしたい作業", "textarea", {
-                    placeholder: "誰が、いつ、何をして、どこで時間やミスが発生しているか",
-                  }),
-                  field("workflow", "現在の作業の流れ", "textarea", {
-                    placeholder: "例：予約確認 → 紙カルテ確認 → 施術 → 写真保存 → カルテ入力 → LINE連絡",
-                  }),
-                ]),
-                section("負担を数字で確認", "大まかな頻度と時間で十分です。", [
-                  field("frequency", "発生頻度", "text", {
-                    placeholder: "例：1日10回 / 月末に1回",
-                  }),
-                  field("minutes", "1回にかかる時間", "text", {
-                    placeholder: "例：1件5分 / 月末3時間",
-                  }),
-                  field("people", "関わる人数", "text", {
-                    placeholder: "例：スタッフ4名",
-                  }),
-                  field("errors", "ミス・後回し・機会損失", "textarea", {
-                    placeholder: "例：月3回入力漏れ。返信が遅れて予約を逃すことがある。",
-                  }),
-                ]),
-                section("今使っているもの・二重入力", "既存サービスを残すか、置き換えるかを判断します。", [
-                  field("currentTools", "管理方法", "checks", {
-                    options: ["紙", "Excel", "Google Sheets", "LINE", "予約サービス", "POS", "会計ソフト", "その他"],
-                  }),
-                  field("serviceNames", "利用中のサービス・端末", "textarea", {
-                    placeholder: "サービス名、スマホ・タブレット・PCのどれで使うか",
-                  }),
-                  field("duplicateEntry", "二重入力・転記している場所", "textarea", {
-                    placeholder: "例：予約サービス → 紙カルテ → Excel売上表へ同じ内容を入力",
-                  }),
-                ]),
-                section("希望する改善・必要な機能", "小さな改善で足りるか、専用システムが必要かを分けます。", [
-                  field("direction", "改善の方向", "checks", {
-                    options: ["運用整理", "Excel/Sheets改善", "小さな業務ツール", "店舗専用システム", "まだ不明"],
-                  }),
-                  field("features", "機能候補", "checks", {
-                    options: ["予約", "顧客・カルテ", "施術履歴", "写真", "薬剤・配合", "在庫", "シフト", "売上・経費", "リマインド", "音声入力"],
-                  }),
-                  field("idealState", "理想の状態・成功条件", "textarea", {
-                    placeholder: "例：カルテ入力を1件5分から1分へ。入力漏れがなくなる。",
-                  }),
-                ]),
-                section("利用者・データ・連携条件", "権限、端末、保存情報、外部連携を確認します。", [
-                  field("users", "利用人数・利用場所", "textarea", {
-                    placeholder: "例：スタッフ5名。店内タブレットと各自スマホ。店外閲覧は代表のみ。",
-                  }),
-                  field("dataAndPermissions", "保存データ・権限", "textarea", {
-                    placeholder: "個人情報、写真、会計情報。閲覧・編集・削除できる人。",
-                  }),
-                  field("integrations", "連携したいサービス", "textarea", {
-                    placeholder: "予約サービス、POS、会計、LINE等。CSV出力の有無も確認。",
-                  }),
-                ]),
-                section("試作条件と次の一歩", "まず小さく試す範囲と、次回までの資料を決めます。", [
-                  field("budget", "予算感", "select", {
-                    options: ["未定", "10万円未満", "10-30万円", "30-80万円", "80万円以上", "内容を見て決めたい"],
-                  }),
-                  field("timeline", "希望時期", "text", {
-                    placeholder: "例：繁忙期前 / 2か月以内 / 時期未定",
-                  }),
-                  field("trial", "試す人数・試作の成功条件", "textarea", {
-                    placeholder: "例：2名で2週間。カルテ入力が1分以内なら次へ進む。",
-                  }),
-                  field("materials", "次回までに確認・預かる資料", "checks", {
-                    options: ["現在の管理表", "紙メモ項目", "匿名化した入力例", "メニュー・料金", "権限ルール"],
-                  }),
-                  field("nextActions", "次の一歩", "checks", {
-                    options: ["業務ミニ診断", "現行資料確認", "簡易試作", "要件整理・概算見積", "保留・再連絡"],
-                  }),
-                  field("memo", "営業メモ", "textarea", {
-                    placeholder: "技術確認が必要な点、次回連絡日、約束したこと",
-                  }),
-                ]),
-              ],
-            },
-          },
-          seitai: {
-            name: "個人整体院",
-            web: {
-              short: "Web",
-              title: "Webサイト ヒアリングシート",
-              description: "初めての方の不安を減らし、予約まで迷わない導線を整理します。",
-              sections: [
-                section("目的と今の集客導線", "増やしたい来院と現在の入口を確認します。", [
-                  field("increaseGoals", "一番増やしたいもの", "checks", {
-                    options: ["新規予約", "リピート", "自費メニュー", "平日予約", "紹介", "信頼づくり", "その他"],
-                  }),
-                  field("currentRoutes", "今の集客・予約入口", "checks", {
-                    options: ["Googleマップ", "Instagram", "LINE", "予約ポータル", "Webサイト", "紹介", "電話"],
-                  }),
-                  field("currentMetrics", "現状と目標の数字", "textarea", {
-                    placeholder: "例：新規来院 月6人 → 月12人、平均単価6,000円、紹介以外の入口を増やしたい",
-                  }),
-                  field("trigger", "作り直すきっかけ・一番の課題", "textarea", {
-                    placeholder: "例：施術内容が伝わらず、料金や初回の流れを電話で毎回説明している。",
-                  }),
-                ]),
-                section("理想の来院者と選ばれる理由", "誰のどんな不安を減らすかを決めます。", [
-                  field("target", "理想の来院者", "textarea", {
-                    placeholder: "年齢、生活、主な悩み、来院前の不安、情報を探す場所",
-                  }),
-                  field("strengths", "よく言われる3つの強み", "textarea", {
-                    placeholder: "例：説明が分かりやすい / 話をよく聞く / 通いやすい",
-                  }),
-                  field("featuredMenu", "推したいメニュー", "textarea", {
-                    placeholder: "メニュー名、料金、所要時間、どんな方に向くか",
-                  }),
-                  field("lossReasons", "来院につながりにくい理由・競合との差", "textarea", {
-                    placeholder: "分かる範囲で。料金、場所、専門性、予約手段、写真など",
-                  }),
-                ]),
-                section("掲載内容と予約までの動線", "安心材料と最終的な予約先を決めます。", [
-                  field("siteContents", "載せたい内容", "checks", {
-                    options: ["施術方針", "悩み別案内", "初回の流れ", "料金・時間", "施術者紹介", "アクセス・駐車場", "FAQ", "口コミ"],
-                  }),
-                  field("bookingGoals", "予約のゴール", "checks", {
-                    options: ["LINE", "電話", "予約フォーム", "予約ポータル", "複数から選択", "まだ未定"],
-                  }),
-                  field("searchArea", "狙いたい地域・検索語", "textarea", {
-                    placeholder: "例：広島市中区 整体 / 肩こり / 産後ケア / 駅名",
-                  }),
-                ]),
-                section("信頼材料・表現・素材", "資格・経歴・写真と、掲載表現の確認点を整理します。", [
-                  field("trustAssets", "信頼材料", "checks", {
-                    options: ["資格・経歴", "施術実績", "院内写真", "施術写真", "お客様の声", "料金の明確さ"],
-                  }),
-                  field("expressionChecks", "表現の確認が必要な箇所", "textarea", {
-                    placeholder: "資格名、症状や効果の表現、口コミ、ビフォーアフターなど",
-                  }),
-                  field("vibes", "希望する雰囲気", "checks", {
-                    options: ["清潔", "安心", "親しみ", "落ち着き", "専門性", "高級感", "その他"],
-                  }),
-                  field("assets", "使える素材", "checks", {
-                    options: ["ロゴ", "施術者写真", "院内写真", "施術写真", "動画", "料金表", "撮影希望"],
-                  }),
-                ]),
-                section("更新・条件・次の一歩", "提案・見積に必要な条件を揃えます。", [
-                  field("operation", "更新担当・頻度", "textarea", {
-                    placeholder: "例：お知らせは季節ごと。更新は代表。料金変更時は依頼したい。",
-                  }),
-                  field("budget", "予算感", "select", {
-                    options: ["未定", "30万円未満", "30-80万円", "80-150万円", "150万円以上", "相談して決めたい"],
-                  }),
-                  field("timeline", "希望公開時期", "text", {
-                    placeholder: "例：3か月以内 / 開院○周年まで",
-                  }),
-                  field("decision", "決裁者・確認が必要な人", "text", {
-                    placeholder: "例：代表決裁 / 家族と確認",
-                  }),
-                  field("nextActions", "次の一歩", "checks", {
-                    options: ["無料診断を送る", "構成案・概算見積", "サンプル提示", "次回打合せ", "保留・再連絡"],
-                  }),
-                  field("memo", "営業メモ", "textarea", {
-                    placeholder: "温度感、次回連絡日、約束したこと、注意点",
-                  }),
-                ]),
-              ],
-            },
-            ops: {
-              short: "業務改善・システム",
-              title: "業務改善・システム開発 ヒアリングシート",
-              description: "紙・LINE・予約・施術記録の流れから、必要な改善範囲を決めます。",
-              sections: [
-                section("一番減らしたい手作業", "時間・抜け漏れが発生している作業を特定します。", [
-                  field("painAreas", "課題チェック", "checks", {
-                    options: ["予約確認", "事前問診", "来院者検索", "施術記録", "写真・書類", "会計", "売上集計", "リマインド", "在庫"],
-                  }),
-                  field("priorityTask", "最優先で減らしたい作業", "textarea", {
-                    placeholder: "誰が、いつ、何をして、どこで時間や抜け漏れが発生しているか",
-                  }),
-                  field("workflow", "現在の作業の流れ", "textarea", {
-                    placeholder: "例：LINE予約 → 紙の問診票 → 施術 → 紙カルテ → 会計 → 次回来院の連絡",
-                  }),
-                ]),
-                section("負担を数字で確認", "大まかな頻度と時間で十分です。", [
-                  field("frequency", "発生頻度", "text", {
-                    placeholder: "例：1日8回 / 月末に1回",
-                  }),
-                  field("minutes", "1回にかかる時間", "text", {
-                    placeholder: "例：1件7分 / 月末2時間",
-                  }),
-                  field("people", "関わる人数", "text", {
-                    placeholder: "例：院内2名",
-                  }),
-                  field("errors", "抜け漏れ・後回し・機会損失", "textarea", {
-                    placeholder: "例：予約変更が紙に反映されない。次回来院の連絡を忘れる。",
-                  }),
-                ]),
-                section("今使っているもの・二重入力", "既存サービスを残すか、置き換えるかを判断します。", [
-                  field("currentTools", "管理方法", "checks", {
-                    options: ["紙", "Excel", "Google Sheets", "LINE", "Googleカレンダー", "予約サービス", "POS", "会計ソフト"],
-                  }),
-                  field("serviceNames", "利用中のサービス・端末", "textarea", {
-                    placeholder: "サービス名、スマホ・タブレット・PCのどれで使うか",
-                  }),
-                  field("duplicateEntry", "二重入力・転記している場所", "textarea", {
-                    placeholder: "例：LINE予約 → 紙の予約表 → Googleカレンダーへ同じ内容を入力",
-                  }),
-                ]),
-                section("希望する改善・必要な機能", "小さな改善で足りるか、院専用システムが必要かを分けます。", [
-                  field("direction", "改善の方向", "checks", {
-                    options: ["運用整理", "Excel/Sheets改善", "小さな業務ツール", "院専用システム", "まだ不明"],
-                  }),
-                  field("features", "機能候補", "checks", {
-                    options: ["予約", "Web問診", "来院者・施術記録", "写真・同意", "会計", "売上", "在庫", "リマインド", "帳票", "バックアップ"],
-                  }),
-                  field("idealState", "理想の状態・成功条件", "textarea", {
-                    placeholder: "例：施術記録を3分以内。予約変更の転記をゼロにする。",
-                  }),
-                ]),
-                section("利用者・個人情報・連携条件", "権限、端末、保存情報、外部連携を確認します。", [
-                  field("users", "利用人数・利用場所", "textarea", {
-                    placeholder: "例：院内2名。院内PCと代表スマホ。院外閲覧は代表のみ。",
-                  }),
-                  field("dataAndPermissions", "保存データ・権限", "textarea", {
-                    placeholder: "問診、施術記録、写真。閲覧・編集・削除できる人。",
-                  }),
-                  field("integrations", "連携したいサービス", "textarea", {
-                    placeholder: "予約、LINE、Googleカレンダー、POS、会計等",
-                  }),
-                ]),
-                section("試作条件と次の一歩", "まず小さく試す範囲と、次回までの資料を決めます。", [
-                  field("budget", "予算感", "select", {
-                    options: ["未定", "10万円未満", "10-30万円", "30-80万円", "80万円以上", "内容を見て決めたい"],
-                  }),
-                  field("timeline", "希望時期", "text", {
-                    placeholder: "例：繁忙期前 / 2か月以内 / 時期未定",
-                  }),
-                  field("trial", "試す人数・試作の成功条件", "textarea", {
-                    placeholder: "例：2名で2週間。予約と施術記録を迷わず入力できれば次へ進む。",
-                  }),
-                  field("materials", "次回までに確認・預かる資料", "checks", {
-                    options: ["予約表", "問診票", "施術記録項目", "匿名化した入力例", "料金表", "権限ルール"],
-                  }),
-                  field("nextActions", "次の一歩", "checks", {
-                    options: ["業務ミニ診断", "現行資料確認", "簡易試作", "要件整理・概算見積", "保留・再連絡"],
-                  }),
-                  field("memo", "営業メモ", "textarea", {
-                    placeholder: "技術確認が必要な点、次回連絡日、約束したこと",
-                  }),
-                ]),
-              ],
-            },
-          },
-        };
-
-        const params = new URLSearchParams(location.search);
-        let currentIndustry = params.get("industry") === "seitai" ? "seitai" : "beauty";
-        let currentSheet = params.get("sheet") === "ops" ? "ops" : "web";
-
-        const storageKey = () => `${storagePrefix}:${currentIndustry}:${currentSheet}`;
-        const currentConfig = () => configs[currentIndustry][currentSheet];
-
-        const escapeHtml = (value) =>
-          String(value)
-            .replaceAll("&", "&amp;")
-            .replaceAll("<", "&lt;")
-            .replaceAll(">", "&gt;")
-            .replaceAll('"', "&quot;");
-
-        const readJson = (key, fallback = {}) => {
-          try {
-            return JSON.parse(localStorage.getItem(key) || JSON.stringify(fallback));
-          } catch {
-            return fallback;
-          }
-        };
-
-        const showToast = (message) => {
-          toast.textContent = message;
-          toast.classList.add("is-visible");
-          clearTimeout(toastTimer);
-          toastTimer = setTimeout(() => toast.classList.remove("is-visible"), 2200);
-        };
-
-        const fieldMarkup = (item) => {
-          const help = item.help ? `<p class="field-help">${escapeHtml(item.help)}</p>` : "";
-          const label = `<span class="field-label">${escapeHtml(item.label)}<small>任意</small></span>`;
-
-          if (item.type === "checks") {
-            const options = item.options
-              .map(
-                (option) => `
-                  <label class="option">
-                    <input type="checkbox" name="${escapeHtml(item.id)}" value="${escapeHtml(option)}" />
-                    <span>${escapeHtml(option)}</span>
-                  </label>`,
-              )
-              .join("");
-            return `
-              <div class="field" data-field-id="${escapeHtml(item.id)}">
-                ${label}
-                <div class="option-grid">${options}</div>
-                ${help}
-              </div>`;
-          }
-
-          if (item.type === "textarea") {
-            return `
-              <label class="field" data-field-id="${escapeHtml(item.id)}">
-                ${label}
-                <textarea name="${escapeHtml(item.id)}" placeholder="${escapeHtml(item.placeholder || "")}"></textarea>
-                ${help}
-              </label>`;
-          }
-
-          if (item.type === "select") {
-            const options = item.options
-              .map((option) => `<option value="${escapeHtml(option)}">${escapeHtml(option)}</option>`)
-              .join("");
-            return `
-              <label class="field" data-field-id="${escapeHtml(item.id)}">
-                ${label}
-                <select name="${escapeHtml(item.id)}">
-                  ${options}
-                </select>
-                ${help}
-              </label>`;
-          }
-
-          return `
-            <label class="field" data-field-id="${escapeHtml(item.id)}">
-              ${label}
-              <input type="text" name="${escapeHtml(item.id)}" placeholder="${escapeHtml(item.placeholder || "")}" />
-              ${help}
-            </label>`;
-        };
-
-        const renderSections = () => {
-          const config = currentConfig();
-          sectionsRoot.innerHTML = config.sections
-            .map(
-              (item, index) => `
-                <section class="form-section" aria-labelledby="section-${index + 1}">
-                  <div class="section-head">
-                    <span class="section-no">${index + 1}</span>
-                    <div>
-                      <h3 id="section-${index + 1}">${escapeHtml(item.title)}</h3>
-                      <p>${escapeHtml(item.purpose)}</p>
-                    </div>
-                  </div>
-                  <div class="section-body">
-                    ${item.fields.map(fieldMarkup).join("")}
-                  </div>
-                </section>`,
-            )
-            .join("");
-        };
-
-        const collectValues = () => {
-          const config = currentConfig();
-          const values = {};
-          config.sections.forEach((group) => {
-            group.fields.forEach((item) => {
-              if (item.type === "checks") {
-                values[item.id] = [
-                  ...form.querySelectorAll(`input[name="${CSS.escape(item.id)}"]:checked`),
-                ].map((input) => input.value);
-              } else {
-                values[item.id] = form.elements[item.id]?.value?.trim() || "";
-              }
-            });
-          });
-          return values;
-        };
-
-        const collectMeta = () => ({
-          storeName: form.elements.storeName?.value?.trim() || "",
-          contactName: form.elements.contactName?.value?.trim() || "",
-          hearingDate: form.elements.hearingDate?.value || "",
-          salesOwner: form.elements.salesOwner?.value || "",
-        });
-
-        const applyValues = (values) => {
-          const config = currentConfig();
-          config.sections.forEach((group) => {
-            group.fields.forEach((item) => {
-              const saved = values[item.id];
-              if (item.type === "checks") {
-                form.querySelectorAll(`input[name="${CSS.escape(item.id)}"]`).forEach((input) => {
-                  input.checked = Array.isArray(saved) && saved.includes(input.value);
-                });
-              } else if (form.elements[item.id]) {
-                form.elements[item.id].value = saved || "";
-              }
-            });
-          });
-        };
-
-        const applyMeta = (meta) => {
-          ["storeName", "contactName", "hearingDate", "salesOwner"].forEach((name) => {
-            if (form.elements[name]) form.elements[name].value = meta[name] || "";
-          });
-        };
-
-        const allFields = () => currentConfig().sections.flatMap((group) => group.fields);
-
-        const isAnswered = (item, values) => {
-          const answer = values[item.id];
-          return Array.isArray(answer) ? answer.length > 0 : Boolean(answer);
-        };
-
-        const updateProgress = () => {
-          const values = collectValues();
-          const fields = allFields();
-          const answered = fields.filter((item) => isAnswered(item, values)).length;
-          const total = fields.length;
-          const percentage = total ? Math.round((answered / total) * 100) : 0;
-          progressLabel.textContent = `${answered}/${total}`;
-          progressBar.style.width = `${percentage}%`;
-          progressTrack.setAttribute("aria-valuenow", String(percentage));
-          answeredChip.textContent = answered ? `${answered}項目 入力済み` : "未入力";
-        };
-
-        const save = ({ quiet = false } = {}) => {
-          localStorage.setItem(storageKey(), JSON.stringify(collectValues()));
-          localStorage.setItem(globalKey, JSON.stringify(collectMeta()));
-          updateProgress();
-          if (!quiet) {
-            saveStatus.textContent = "保存済み";
-            clearTimeout(saveTimer);
-            saveTimer = setTimeout(() => {
-              saveStatus.textContent = "この端末に自動保存";
-            }, 1500);
-          }
-        };
-
-        const updateControls = () => {
-          industryButtons.forEach((button) => {
-            button.setAttribute(
-              "aria-selected",
-              String(button.dataset.industryButton === currentIndustry),
-            );
-          });
-          sheetButtons.forEach((button) => {
-            button.setAttribute("aria-selected", String(button.dataset.sheetButton === currentSheet));
-          });
-        };
-
-        const updateUrl = () => {
-          const url = new URL(location.href);
-          url.searchParams.set("industry", currentIndustry);
-          url.searchParams.set("sheet", currentSheet);
-          history.replaceState(null, "", url);
-        };
-
-        const loadCurrent = ({ scroll = false } = {}) => {
-          document.body.dataset.industry = currentIndustry;
-          document.querySelector('meta[name="theme-color"]').content =
-            currentIndustry === "beauty" ? "#9d5b73" : "#3e7a73";
-          const config = currentConfig();
-          formKicker.textContent = `${configs[currentIndustry].name} / ${config.short}`;
-          formTitle.textContent = config.title;
-          formDescription.textContent = config.description;
-          updateControls();
-          renderSections();
-          applyMeta(readJson(globalKey));
-          applyValues(readJson(storageKey()));
-          updateProgress();
-          updateUrl();
-          if (scroll) {
-            document.querySelector(".form-intro")?.scrollIntoView({ block: "start" });
-          }
-        };
-
-        const answerText = (item, values) => {
-          const answer = values[item.id];
-          if (Array.isArray(answer)) return answer.join(" / ");
-          return answer || "";
-        };
-
-        const buildSummary = () => {
-          const config = currentConfig();
-          const values = collectValues();
-          const meta = collectMeta();
-          const lines = [
-            `${configs[currentIndustry].name}｜${config.title}`,
-            `作成日時: ${new Date().toLocaleString("ja-JP")}`,
-            "",
-            "【基本情報】",
-            `店舗名・院名: ${meta.storeName || "未入力"}`,
-            `ご担当者: ${meta.contactName || "未入力"}`,
-            `ヒアリング日: ${meta.hearingDate || "未入力"}`,
-            `担当営業: ${meta.salesOwner || "未入力"}`,
-            "",
-          ];
-
-          let hasAnswer = false;
-          config.sections.forEach((group) => {
-            const groupLines = [];
-            group.fields.forEach((item) => {
-              const answer = answerText(item, values);
-              if (!answer) return;
-              hasAnswer = true;
-              groupLines.push(`・${item.label}`);
-              groupLines.push(answer);
-              groupLines.push("");
-            });
-            if (groupLines.length) {
-              lines.push(`【${group.title}】`, ...groupLines);
-            }
-          });
-
-          if (!hasAnswer) {
-            lines.push("ヒアリング回答はまだ入力されていません。");
-          }
-
-          lines.push(
-            "【次回確認】",
-            currentSheet === "ops"
-              ? "外部サービス連携は、契約・正式なAPI・CSV出力等を確認後に判断。技術可否と納期は持ち帰って正式回答する。"
-              : "正式な構成・費用・納期は、診断とヒアリング内容を確認後に提案する。",
-          );
-
-          return lines.join("\n").trim();
-        };
-
-        const copyText = async (text) => {
-          if (navigator.clipboard?.writeText) {
-            await navigator.clipboard.writeText(text);
-            return;
-          }
-          const helper = document.createElement("textarea");
-          helper.value = text;
-          helper.style.position = "fixed";
-          helper.style.opacity = "0";
-          document.body.appendChild(helper);
-          helper.select();
-          document.execCommand("copy");
-          helper.remove();
-        };
-
-        const downloadText = (text) => {
-          const blob = new Blob([text], { type: "text/plain;charset=utf-8" });
-          const url = URL.createObjectURL(blob);
-          const link = document.createElement("a");
-          const industry = currentIndustry === "beauty" ? "beauty-salon" : "seitai";
-          link.href = url;
-          link.download = `${industry}-${currentSheet}-hearing-${new Date()
-            .toISOString()
-            .slice(0, 10)}.txt`;
-          document.body.appendChild(link);
-          link.click();
-          link.remove();
-          URL.revokeObjectURL(url);
-        };
-
-        industryButtons.forEach((button) => {
-          button.addEventListener("click", () => {
-            const next = button.dataset.industryButton;
-            if (!next || next === currentIndustry) return;
-            save({ quiet: true });
-            currentIndustry = next;
-            loadCurrent({ scroll: true });
-          });
-        });
-
-        sheetButtons.forEach((button) => {
-          button.addEventListener("click", () => {
-            const next = button.dataset.sheetButton;
-            if (!next || next === currentSheet) return;
-            save({ quiet: true });
-            currentSheet = next;
-            loadCurrent({ scroll: true });
-          });
-        });
-
-        form.addEventListener("input", () => save());
-        form.addEventListener("change", () => save());
-
-        copyButton.addEventListener("click", async () => {
-          save({ quiet: true });
-          try {
-            await copyText(buildSummary());
-            showToast("回答まとめをコピーしました");
-          } catch {
-            showToast("コピーできませんでした。TXT保存をお試しください。");
-          }
-        });
-
-        downloadButton.addEventListener("click", () => {
-          save({ quiet: true });
-          downloadText(buildSummary());
-          showToast("回答TXTを保存しました");
-        });
-
-        clearButton.addEventListener("click", () => {
-          const label = `${configs[currentIndustry].name} / ${currentConfig().title}`;
-          if (!window.confirm(`${label} の入力だけを消します。よろしいですか？`)) return;
-          localStorage.removeItem(storageKey());
-          renderSections();
-          applyMeta(readJson(globalKey));
-          updateProgress();
-          showToast("このシートの入力をクリアしました");
-        });
-
-        loadCurrent();
-      })();
-    </script>
   </body>
 </html>
