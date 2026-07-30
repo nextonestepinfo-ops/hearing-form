@@ -1,7 +1,14 @@
 {
-  "updated": "2026-07-30T04:44:24+09:00",
+  "updated": "2026-07-31T04:52:57+09:00",
   "source": "https://www.youtube.com/feeds/videos.xml?channel_id=UC_nYcejJ7nsVG_ppVLwNHsw",
   "items": [
+    {
+      "id": "mUbPm6gT7H8",
+      "title": "【 #パルワールド 】水上建築がんばる！",
+      "url": "https://www.youtube.com/watch?v=mUbPm6gT7H8",
+      "published": "2026-07-30T05:44:23+00:00",
+      "thumbnail": "https://i.ytimg.com/vi/mUbPm6gT7H8/hqdefault.jpg"
+    },
     {
       "id": "0Q19bwWmdRk",
       "title": "【 #雑談 】まったり作業する夕方です",
@@ -36,13 +43,6 @@
       "url": "https://www.youtube.com/watch?v=8gtM65twaS0",
       "published": "2026-07-27T06:31:42+00:00",
       "thumbnail": "https://i.ytimg.com/vi/8gtM65twaS0/hqdefault.jpg"
-    },
-    {
-      "id": "GQWqwMRIo4g",
-      "title": "【 #パルワールド 】新しい所を開拓していきたい！",
-      "url": "https://www.youtube.com/watch?v=GQWqwMRIo4g",
-      "published": "2026-07-25T03:08:22+00:00",
-      "thumbnail": "https://i.ytimg.com/vi/GQWqwMRIo4g/hqdefault.jpg"
     }
   ]
 }
