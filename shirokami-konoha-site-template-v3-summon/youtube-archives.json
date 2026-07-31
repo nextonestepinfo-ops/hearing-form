@@ -1,7 +1,14 @@
 {
-  "updated": "2026-07-31T04:52:57+09:00",
+  "updated": "2026-08-01T04:53:16+09:00",
   "source": "https://www.youtube.com/feeds/videos.xml?channel_id=UC_nYcejJ7nsVG_ppVLwNHsw",
   "items": [
+    {
+      "id": "L9eeX4r99is",
+      "title": "【 #パルワールド 】たくさんのボスパルと戦うの巻",
+      "url": "https://www.youtube.com/watch?v=L9eeX4r99is",
+      "published": "2026-07-31T04:58:45+00:00",
+      "thumbnail": "https://i.ytimg.com/vi/L9eeX4r99is/hqdefault.jpg"
+    },
     {
       "id": "mUbPm6gT7H8",
       "title": "【 #パルワールド 】水上建築がんばる！",
@@ -36,13 +43,6 @@
       "url": "https://www.youtube.com/watch?v=2_0FFq4evqk",
       "published": "2026-07-28T03:43:14+00:00",
       "thumbnail": "https://i.ytimg.com/vi/2_0FFq4evqk/hqdefault.jpg"
-    },
-    {
-      "id": "8gtM65twaS0",
-      "title": "【 #パルワールド 】パルも拠点もアップデートしたい！",
-      "url": "https://www.youtube.com/watch?v=8gtM65twaS0",
-      "published": "2026-07-27T06:31:42+00:00",
-      "thumbnail": "https://i.ytimg.com/vi/8gtM65twaS0/hqdefault.jpg"
     }
   ]
 }
