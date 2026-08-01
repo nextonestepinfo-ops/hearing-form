@@ -1,7 +1,21 @@
 {
-  "updated": "2026-08-01T04:53:16+09:00",
+  "updated": "2026-08-02T04:35:04+09:00",
   "source": "https://www.youtube.com/feeds/videos.xml?channel_id=UC_nYcejJ7nsVG_ppVLwNHsw",
   "items": [
+    {
+      "id": "MT7eDVXzICM",
+      "title": "【超自然スクワッドBB杯】はじめてするけど、怖くないよね？",
+      "url": "https://www.youtube.com/watch?v=MT7eDVXzICM",
+      "published": "2026-08-01T13:50:21+00:00",
+      "thumbnail": "https://i.ytimg.com/vi/MT7eDVXzICM/hqdefault.jpg"
+    },
+    {
+      "id": "rjcbs9JoEpc",
+      "title": "【 #パルワールド 】ボスも倒したし、新しいところを探索！",
+      "url": "https://www.youtube.com/watch?v=rjcbs9JoEpc",
+      "published": "2026-08-01T02:49:52+00:00",
+      "thumbnail": "https://i.ytimg.com/vi/rjcbs9JoEpc/hqdefault.jpg"
+    },
     {
       "id": "L9eeX4r99is",
       "title": "【 #パルワールド 】たくさんのボスパルと戦うの巻",
@@ -29,20 +43,6 @@
       "url": "https://www.youtube.com/watch?v=3Zegf5i8Lj4",
       "published": "2026-07-29T05:02:09+00:00",
       "thumbnail": "https://i.ytimg.com/vi/3Zegf5i8Lj4/hqdefault.jpg"
-    },
-    {
-      "id": "7dtxp6G3j94",
-      "title": "【 #雑談 】まったり過ごしたい夕方ですね",
-      "url": "https://www.youtube.com/watch?v=7dtxp6G3j94",
-      "published": "2026-07-28T09:21:42+00:00",
-      "thumbnail": "https://i.ytimg.com/vi/7dtxp6G3j94/hqdefault.jpg"
-    },
-    {
-      "id": "2_0FFq4evqk",
-      "title": "【 #パルワールド 】お金はたくさん稼いだ！あとは、、、",
-      "url": "https://www.youtube.com/watch?v=2_0FFq4evqk",
-      "published": "2026-07-28T03:43:14+00:00",
-      "thumbnail": "https://i.ytimg.com/vi/2_0FFq4evqk/hqdefault.jpg"
     }
   ]
 }
