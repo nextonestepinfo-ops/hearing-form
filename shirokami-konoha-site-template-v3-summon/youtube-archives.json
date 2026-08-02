@@ -1,7 +1,28 @@
 {
-  "updated": "2026-08-02T04:35:04+09:00",
+  "updated": "2026-08-03T04:35:49+09:00",
   "source": "https://www.youtube.com/feeds/videos.xml?channel_id=UC_nYcejJ7nsVG_ppVLwNHsw",
   "items": [
+    {
+      "id": "PoZUqXkpb8s",
+      "title": "【超自然スクワッドBB杯】参加〇初心者ですがたくさん宝物見つけたい！",
+      "url": "https://www.youtube.com/watch?v=PoZUqXkpb8s",
+      "published": "2026-08-02T15:53:28+00:00",
+      "thumbnail": "https://i.ytimg.com/vi/PoZUqXkpb8s/hqdefault.jpg"
+    },
+    {
+      "id": "zegVvpqUsTQ",
+      "title": "【 #valorant 】おひさしぶりのソロ！",
+      "url": "https://www.youtube.com/watch?v=zegVvpqUsTQ",
+      "published": "2026-08-02T14:44:49+00:00",
+      "thumbnail": "https://i.ytimg.com/vi/zegVvpqUsTQ/hqdefault.jpg"
+    },
+    {
+      "id": "mtEQUKYrtzU",
+      "title": "【 #パルワールド 】最強パル軍団つくる！",
+      "url": "https://www.youtube.com/watch?v=mtEQUKYrtzU",
+      "published": "2026-08-02T09:08:43+00:00",
+      "thumbnail": "https://i.ytimg.com/vi/mtEQUKYrtzU/hqdefault.jpg"
+    },
     {
       "id": "MT7eDVXzICM",
       "title": "【超自然スクワッドBB杯】はじめてするけど、怖くないよね？",
@@ -22,27 +43,6 @@
       "url": "https://www.youtube.com/watch?v=L9eeX4r99is",
       "published": "2026-07-31T04:58:45+00:00",
       "thumbnail": "https://i.ytimg.com/vi/L9eeX4r99is/hqdefault.jpg"
-    },
-    {
-      "id": "mUbPm6gT7H8",
-      "title": "【 #パルワールド 】水上建築がんばる！",
-      "url": "https://www.youtube.com/watch?v=mUbPm6gT7H8",
-      "published": "2026-07-30T05:44:23+00:00",
-      "thumbnail": "https://i.ytimg.com/vi/mUbPm6gT7H8/hqdefault.jpg"
-    },
-    {
-      "id": "0Q19bwWmdRk",
-      "title": "【 #雑談 】まったり作業する夕方です",
-      "url": "https://www.youtube.com/watch?v=0Q19bwWmdRk",
-      "published": "2026-07-29T09:34:21+00:00",
-      "thumbnail": "https://i.ytimg.com/vi/0Q19bwWmdRk/hqdefault.jpg"
-    },
-    {
-      "id": "3Zegf5i8Lj4",
-      "title": "【 #パルワールド 】伝説のパルを見つけに行きたい！",
-      "url": "https://www.youtube.com/watch?v=3Zegf5i8Lj4",
-      "published": "2026-07-29T05:02:09+00:00",
-      "thumbnail": "https://i.ytimg.com/vi/3Zegf5i8Lj4/hqdefault.jpg"
     }
   ]
 }
