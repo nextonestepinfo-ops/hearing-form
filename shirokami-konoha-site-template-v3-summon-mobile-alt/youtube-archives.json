@@ -1,7 +1,14 @@
 {
-  "updated": "2026-08-03T04:35:49+09:00",
+  "updated": "2026-08-04T04:59:03+09:00",
   "source": "https://www.youtube.com/feeds/videos.xml?channel_id=UC_nYcejJ7nsVG_ppVLwNHsw",
   "items": [
+    {
+      "id": "bFAlbrbxbJI",
+      "title": "【 #パルワールド 】これからどうしていこうかな！",
+      "url": "https://www.youtube.com/watch?v=bFAlbrbxbJI",
+      "published": "2026-08-03T06:54:23+00:00",
+      "thumbnail": "https://i.ytimg.com/vi/bFAlbrbxbJI/hqdefault.jpg"
+    },
     {
       "id": "PoZUqXkpb8s",
       "title": "【超自然スクワッドBB杯】参加〇初心者ですがたくさん宝物見つけたい！",
@@ -36,13 +43,6 @@
       "url": "https://www.youtube.com/watch?v=rjcbs9JoEpc",
       "published": "2026-08-01T02:49:52+00:00",
       "thumbnail": "https://i.ytimg.com/vi/rjcbs9JoEpc/hqdefault.jpg"
-    },
-    {
-      "id": "L9eeX4r99is",
-      "title": "【 #パルワールド 】たくさんのボスパルと戦うの巻",
-      "url": "https://www.youtube.com/watch?v=L9eeX4r99is",
-      "published": "2026-07-31T04:58:45+00:00",
-      "thumbnail": "https://i.ytimg.com/vi/L9eeX4r99is/hqdefault.jpg"
     }
   ]
 }
