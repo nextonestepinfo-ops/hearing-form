@@ -1,7 +1,21 @@
 {
-  "updated": "2026-08-06T04:55:20+09:00",
+  "updated": "2026-08-10T04:01:22+09:00",
   "source": "https://www.youtube.com/feeds/videos.xml?channel_id=UC_nYcejJ7nsVG_ppVLwNHsw",
   "items": [
+    {
+      "id": "X9KHiuwW0F8",
+      "title": "【超自然スクワッドBB杯】初見プレイでびっくり！？ #shorts",
+      "url": "https://www.youtube.com/shorts/X9KHiuwW0F8",
+      "published": "2026-08-09T09:00:24+00:00",
+      "thumbnail": "https://i.ytimg.com/vi/X9KHiuwW0F8/hqdefault.jpg"
+    },
+    {
+      "id": "4LI1s957XjU",
+      "title": "【 #パルワールド 】最強パル軍団つくる！",
+      "url": "https://www.youtube.com/watch?v=4LI1s957XjU",
+      "published": "2026-08-09T04:02:59+00:00",
+      "thumbnail": "https://i.ytimg.com/vi/4LI1s957XjU/hqdefault.jpg"
+    },
     {
       "id": "owSdjo_ucVc",
       "title": "【 #パルワールド 】最強パル軍団、、、、配合、、、、、。",
@@ -29,20 +43,6 @@
       "url": "https://www.youtube.com/watch?v=zegVvpqUsTQ",
       "published": "2026-08-02T14:44:49+00:00",
       "thumbnail": "https://i.ytimg.com/vi/zegVvpqUsTQ/hqdefault.jpg"
-    },
-    {
-      "id": "mtEQUKYrtzU",
-      "title": "【 #パルワールド 】最強パル軍団つくる！",
-      "url": "https://www.youtube.com/watch?v=mtEQUKYrtzU",
-      "published": "2026-08-02T09:08:43+00:00",
-      "thumbnail": "https://i.ytimg.com/vi/mtEQUKYrtzU/hqdefault.jpg"
-    },
-    {
-      "id": "MT7eDVXzICM",
-      "title": "【超自然スクワッドBB杯】はじめてするけど、怖くないよね？",
-      "url": "https://www.youtube.com/watch?v=MT7eDVXzICM",
-      "published": "2026-08-01T13:50:21+00:00",
-      "thumbnail": "https://i.ytimg.com/vi/MT7eDVXzICM/hqdefault.jpg"
     }
   ]
 }
