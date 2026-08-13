@@ -1,7 +1,14 @@
 {
-  "updated": "2026-08-12T04:24:59+09:00",
+  "updated": "2026-08-14T04:26:10+09:00",
   "source": "https://www.youtube.com/feeds/videos.xml?channel_id=UC_nYcejJ7nsVG_ppVLwNHsw",
   "items": [
+    {
+      "id": "tVNyrgJLdRU",
+      "title": "【 #タルコフ 】初心者です！がんばります！",
+      "url": "https://www.youtube.com/watch?v=tVNyrgJLdRU",
+      "published": "2026-08-13T09:38:53+00:00",
+      "thumbnail": "https://i.ytimg.com/vi/tVNyrgJLdRU/hqdefault.jpg"
+    },
     {
       "id": "yXjrH9DBGgk",
       "title": "【 #パルワールド 】拠点を最強パルにしたい！",
@@ -36,13 +43,6 @@
       "url": "https://www.youtube.com/watch?v=owSdjo_ucVc",
       "published": "2026-08-05T06:17:21+00:00",
       "thumbnail": "https://i.ytimg.com/vi/owSdjo_ucVc/hqdefault.jpg"
-    },
-    {
-      "id": "bFAlbrbxbJI",
-      "title": "【 #パルワールド 】これからどうしていこうかな！",
-      "url": "https://www.youtube.com/watch?v=bFAlbrbxbJI",
-      "published": "2026-08-03T06:54:23+00:00",
-      "thumbnail": "https://i.ytimg.com/vi/bFAlbrbxbJI/hqdefault.jpg"
     }
   ]
 }
