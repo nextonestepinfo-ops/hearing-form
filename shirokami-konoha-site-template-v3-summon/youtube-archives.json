@@ -1,7 +1,21 @@
 {
-  "updated": "2026-08-14T04:26:10+09:00",
+  "updated": "2026-08-15T04:14:36+09:00",
   "source": "https://www.youtube.com/feeds/videos.xml?channel_id=UC_nYcejJ7nsVG_ppVLwNHsw",
   "items": [
+    {
+      "id": "0KNJlN7lnHU",
+      "title": "【 Wave Rev City 】DAY1┊たのしむぞ～！",
+      "url": "https://www.youtube.com/watch?v=0KNJlN7lnHU",
+      "published": "2026-08-14T17:11:44+00:00",
+      "thumbnail": "https://i.ytimg.com/vi/0KNJlN7lnHU/hqdefault.jpg"
+    },
+    {
+      "id": "Qe1QIETlsSs",
+      "title": "【 #パルワールド 】拠点アップデート！",
+      "url": "https://www.youtube.com/watch?v=Qe1QIETlsSs",
+      "published": "2026-08-14T09:35:11+00:00",
+      "thumbnail": "https://i.ytimg.com/vi/Qe1QIETlsSs/hqdefault.jpg"
+    },
     {
       "id": "tVNyrgJLdRU",
       "title": "【 #タルコフ 】初心者です！がんばります！",
@@ -29,20 +43,6 @@
       "url": "https://www.youtube.com/shorts/X9KHiuwW0F8",
       "published": "2026-08-09T09:00:24+00:00",
       "thumbnail": "https://i.ytimg.com/vi/X9KHiuwW0F8/hqdefault.jpg"
-    },
-    {
-      "id": "4LI1s957XjU",
-      "title": "【 #パルワールド 】最強パル軍団つくる！",
-      "url": "https://www.youtube.com/watch?v=4LI1s957XjU",
-      "published": "2026-08-09T04:02:59+00:00",
-      "thumbnail": "https://i.ytimg.com/vi/4LI1s957XjU/hqdefault.jpg"
-    },
-    {
-      "id": "owSdjo_ucVc",
-      "title": "【 #パルワールド 】最強パル軍団、、、、配合、、、、、。",
-      "url": "https://www.youtube.com/watch?v=owSdjo_ucVc",
-      "published": "2026-08-05T06:17:21+00:00",
-      "thumbnail": "https://i.ytimg.com/vi/owSdjo_ucVc/hqdefault.jpg"
     }
   ]
 }
