@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-20T03:53:52+09:00",
+  "updated": "2026-08-21T03:59:55+09:00",
   "source": "https://www.youtube.com/feeds/videos.xml?channel_id=UC_nYcejJ7nsVG_ppVLwNHsw",
   "items": [
     {
@@ -8,13 +8,6 @@
       "url": "https://www.youtube.com/watch?v=ga3wF0H7174",
       "published": "2026-08-19T17:26:56+00:00",
       "thumbnail": "https://i.ytimg.com/vi/ga3wF0H7174/hqdefault.jpg"
-    },
-    {
-      "id": "qtfzLl05XU0",
-      "title": "【 #雑談 】まったり",
-      "url": "https://www.youtube.com/watch?v=qtfzLl05XU0",
-      "published": "2026-08-19T10:07:03+00:00",
-      "thumbnail": "https://i.ytimg.com/vi/qtfzLl05XU0/hqdefault.jpg"
     },
     {
       "id": "Xl0PYr5miLo",
@@ -43,6 +36,13 @@
       "url": "https://www.youtube.com/watch?v=Qe1QIETlsSs",
       "published": "2026-08-14T09:35:11+00:00",
       "thumbnail": "https://i.ytimg.com/vi/Qe1QIETlsSs/hqdefault.jpg"
+    },
+    {
+      "id": "tVNyrgJLdRU",
+      "title": "【 #タルコフ 】初心者です！がんばります！",
+      "url": "https://www.youtube.com/watch?v=tVNyrgJLdRU",
+      "published": "2026-08-13T09:38:53+00:00",
+      "thumbnail": "https://i.ytimg.com/vi/tVNyrgJLdRU/hqdefault.jpg"
     }
   ]
 }
