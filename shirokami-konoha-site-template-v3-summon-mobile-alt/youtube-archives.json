@@ -1,7 +1,28 @@
 {
-  "updated": "2026-08-24T03:48:39+09:00",
+  "updated": "2026-08-26T03:57:46+09:00",
   "source": "https://www.youtube.com/feeds/videos.xml?channel_id=UC_nYcejJ7nsVG_ppVLwNHsw",
   "items": [
+    {
+      "id": "mcd7vrvQGiU",
+      "title": "【 LOL 】ADC以外やる！みんなおしえて！",
+      "url": "https://www.youtube.com/watch?v=mcd7vrvQGiU",
+      "published": "2026-08-25T09:42:21+00:00",
+      "thumbnail": "https://i.ytimg.com/vi/mcd7vrvQGiU/hqdefault.jpg"
+    },
+    {
+      "id": "Po-ZO4M6-7Y",
+      "title": "【 #パルワールド 】みんなが思う最強パル教えて！",
+      "url": "https://www.youtube.com/watch?v=Po-ZO4M6-7Y",
+      "published": "2026-08-25T02:33:55+00:00",
+      "thumbnail": "https://i.ytimg.com/vi/Po-ZO4M6-7Y/hqdefault.jpg"
+    },
+    {
+      "id": "tZQAnHZGtjE",
+      "title": "【 #パルワールド 】パル図鑑全部埋めたい！",
+      "url": "https://www.youtube.com/watch?v=tZQAnHZGtjE",
+      "published": "2026-08-24T21:13:29+00:00",
+      "thumbnail": "https://i.ytimg.com/vi/tZQAnHZGtjE/hqdefault.jpg"
+    },
     {
       "id": "8rWIKKNmwbM",
       "title": "🐺スケジュール表🐺",
@@ -22,27 +43,6 @@
       "url": "https://www.youtube.com/watch?v=Qe1QIETlsSs",
       "published": "2026-08-14T09:35:11+00:00",
       "thumbnail": "https://i.ytimg.com/vi/Qe1QIETlsSs/hqdefault.jpg"
-    },
-    {
-      "id": "tVNyrgJLdRU",
-      "title": "【 #タルコフ 】初心者です！がんばります！",
-      "url": "https://www.youtube.com/watch?v=tVNyrgJLdRU",
-      "published": "2026-08-13T09:38:53+00:00",
-      "thumbnail": "https://i.ytimg.com/vi/tVNyrgJLdRU/hqdefault.jpg"
-    },
-    {
-      "id": "yXjrH9DBGgk",
-      "title": "【 #パルワールド 】拠点を最強パルにしたい！",
-      "url": "https://www.youtube.com/watch?v=yXjrH9DBGgk",
-      "published": "2026-08-11T18:09:25+00:00",
-      "thumbnail": "https://i.ytimg.com/vi/yXjrH9DBGgk/hqdefault.jpg"
-    },
-    {
-      "id": "F5Sp6qohT1I",
-      "title": "【超自然スクワッドBB杯】参加〇 宝物たくさん見つける！",
-      "url": "https://www.youtube.com/watch?v=F5Sp6qohT1I",
-      "published": "2026-08-11T03:11:18+00:00",
-      "thumbnail": "https://i.ytimg.com/vi/F5Sp6qohT1I/hqdefault.jpg"
     }
   ]
 }
