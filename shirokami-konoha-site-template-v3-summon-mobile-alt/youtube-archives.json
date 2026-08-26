@@ -1,7 +1,21 @@
 {
-  "updated": "2026-08-26T03:57:46+09:00",
+  "updated": "2026-08-27T05:03:05+09:00",
   "source": "https://www.youtube.com/feeds/videos.xml?channel_id=UC_nYcejJ7nsVG_ppVLwNHsw",
   "items": [
+    {
+      "id": "vgV5JTBkhEE",
+      "title": "【 VALORANT 】ソロがんばってみる。。。",
+      "url": "https://www.youtube.com/watch?v=vgV5JTBkhEE",
+      "published": "2026-08-26T15:16:25+00:00",
+      "thumbnail": "https://i.ytimg.com/vi/vgV5JTBkhEE/hqdefault.jpg"
+    },
+    {
+      "id": "tZQAnHZGtjE",
+      "title": "【 パルワールド 】パル図鑑全部埋めたい！",
+      "url": "https://www.youtube.com/watch?v=tZQAnHZGtjE",
+      "published": "2026-08-26T05:07:46+00:00",
+      "thumbnail": "https://i.ytimg.com/vi/tZQAnHZGtjE/hqdefault.jpg"
+    },
     {
       "id": "mcd7vrvQGiU",
       "title": "【 LOL 】ADC以外やる！みんなおしえて！",
@@ -17,13 +31,6 @@
       "thumbnail": "https://i.ytimg.com/vi/Po-ZO4M6-7Y/hqdefault.jpg"
     },
     {
-      "id": "tZQAnHZGtjE",
-      "title": "【 #パルワールド 】パル図鑑全部埋めたい！",
-      "url": "https://www.youtube.com/watch?v=tZQAnHZGtjE",
-      "published": "2026-08-24T21:13:29+00:00",
-      "thumbnail": "https://i.ytimg.com/vi/tZQAnHZGtjE/hqdefault.jpg"
-    },
-    {
       "id": "8rWIKKNmwbM",
       "title": "🐺スケジュール表🐺",
       "url": "https://www.youtube.com/watch?v=8rWIKKNmwbM",
@@ -36,13 +43,6 @@
       "url": "https://www.youtube.com/shorts/LnNTistKRHM",
       "published": "2026-08-15T09:00:05+00:00",
       "thumbnail": "https://i.ytimg.com/vi/LnNTistKRHM/hqdefault.jpg"
-    },
-    {
-      "id": "Qe1QIETlsSs",
-      "title": "【 #パルワールド 】拠点アップデート！",
-      "url": "https://www.youtube.com/watch?v=Qe1QIETlsSs",
-      "published": "2026-08-14T09:35:11+00:00",
-      "thumbnail": "https://i.ytimg.com/vi/Qe1QIETlsSs/hqdefault.jpg"
     }
   ]
 }
