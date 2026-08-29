@@ -1,7 +1,35 @@
 {
-  "updated": "2026-08-27T05:03:05+09:00",
+  "updated": "2026-08-29T10:45:28+09:00",
   "source": "https://www.youtube.com/feeds/videos.xml?channel_id=UC_nYcejJ7nsVG_ppVLwNHsw",
   "items": [
+    {
+      "id": "3qBk-004XeY",
+      "title": "【 雑談 】 おはよ～ん！！！！",
+      "url": "https://www.youtube.com/watch?v=3qBk-004XeY",
+      "published": "2026-08-28T22:54:19+00:00",
+      "thumbnail": "https://i.ytimg.com/vi/3qBk-004XeY/hqdefault.jpg"
+    },
+    {
+      "id": "pNT09QJOaIU",
+      "title": "【超自然スクワッドBB杯】全てが半角カタカナなVtuber #shorts",
+      "url": "https://www.youtube.com/shorts/pNT09QJOaIU",
+      "published": "2026-08-28T09:00:19+00:00",
+      "thumbnail": "https://i.ytimg.com/vi/pNT09QJOaIU/hqdefault.jpg"
+    },
+    {
+      "id": "MvDC31pIWIM",
+      "title": "【 雑談 】おはよ～ん！1時間くらい！",
+      "url": "https://www.youtube.com/watch?v=MvDC31pIWIM",
+      "published": "2026-08-27T13:52:00+00:00",
+      "thumbnail": "https://i.ytimg.com/vi/MvDC31pIWIM/hqdefault.jpg"
+    },
+    {
+      "id": "fYsyjKWO1E8",
+      "title": "【超自然スクワッドBB杯】一緒に宝探し！",
+      "url": "https://www.youtube.com/watch?v=fYsyjKWO1E8",
+      "published": "2026-08-27T13:22:30+00:00",
+      "thumbnail": "https://i.ytimg.com/vi/fYsyjKWO1E8/hqdefault.jpg"
+    },
     {
       "id": "vgV5JTBkhEE",
       "title": "【 VALORANT 】ソロがんばってみる。。。",
@@ -15,34 +43,6 @@
       "url": "https://www.youtube.com/watch?v=tZQAnHZGtjE",
       "published": "2026-08-26T05:07:46+00:00",
       "thumbnail": "https://i.ytimg.com/vi/tZQAnHZGtjE/hqdefault.jpg"
-    },
-    {
-      "id": "mcd7vrvQGiU",
-      "title": "【 LOL 】ADC以外やる！みんなおしえて！",
-      "url": "https://www.youtube.com/watch?v=mcd7vrvQGiU",
-      "published": "2026-08-25T09:42:21+00:00",
-      "thumbnail": "https://i.ytimg.com/vi/mcd7vrvQGiU/hqdefault.jpg"
-    },
-    {
-      "id": "Po-ZO4M6-7Y",
-      "title": "【 #パルワールド 】みんなが思う最強パル教えて！",
-      "url": "https://www.youtube.com/watch?v=Po-ZO4M6-7Y",
-      "published": "2026-08-25T02:33:55+00:00",
-      "thumbnail": "https://i.ytimg.com/vi/Po-ZO4M6-7Y/hqdefault.jpg"
-    },
-    {
-      "id": "8rWIKKNmwbM",
-      "title": "🐺スケジュール表🐺",
-      "url": "https://www.youtube.com/watch?v=8rWIKKNmwbM",
-      "published": "2026-08-23T00:47:37+00:00",
-      "thumbnail": "https://i.ytimg.com/vi/8rWIKKNmwbM/hqdefault.jpg"
-    },
-    {
-      "id": "LnNTistKRHM",
-      "title": "【超自然スクワッドBB杯】びっ↑くり↓ #shorts",
-      "url": "https://www.youtube.com/shorts/LnNTistKRHM",
-      "published": "2026-08-15T09:00:05+00:00",
-      "thumbnail": "https://i.ytimg.com/vi/LnNTistKRHM/hqdefault.jpg"
     }
   ]
 }
