@@ -1,7 +1,14 @@
 {
-  "updated": "2026-08-30T05:56:19+09:00",
+  "updated": "2026-08-31T06:07:44+09:00",
   "source": "https://www.youtube.com/feeds/videos.xml?channel_id=UC_nYcejJ7nsVG_ppVLwNHsw",
   "items": [
+    {
+      "id": "N-cYh8Jw9Ww",
+      "title": "【超自然スクワッドBB杯】本番がんばる！",
+      "url": "https://www.youtube.com/watch?v=N-cYh8Jw9Ww",
+      "published": "2026-08-30T10:29:32+00:00",
+      "thumbnail": "https://i.ytimg.com/vi/N-cYh8Jw9Ww/hqdefault.jpg"
+    },
     {
       "id": "3qBk-004XeY",
       "title": "【 雑談 】 おはよ～ん！！！！",
@@ -36,13 +43,6 @@
       "url": "https://www.youtube.com/watch?v=vgV5JTBkhEE",
       "published": "2026-08-26T15:16:25+00:00",
       "thumbnail": "https://i.ytimg.com/vi/vgV5JTBkhEE/hqdefault.jpg"
-    },
-    {
-      "id": "tZQAnHZGtjE",
-      "title": "【 パルワールド 】パル図鑑全部埋めたい！",
-      "url": "https://www.youtube.com/watch?v=tZQAnHZGtjE",
-      "published": "2026-08-26T05:07:46+00:00",
-      "thumbnail": "https://i.ytimg.com/vi/tZQAnHZGtjE/hqdefault.jpg"
     }
   ]
 }
