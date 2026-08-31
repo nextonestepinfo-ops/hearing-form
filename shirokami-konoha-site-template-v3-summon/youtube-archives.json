@@ -1,12 +1,26 @@
 {
-  "updated": "2026-08-31T06:07:44+09:00",
+  "updated": "2026-09-01T07:52:07+09:00",
   "source": "https://www.youtube.com/feeds/videos.xml?channel_id=UC_nYcejJ7nsVG_ppVLwNHsw",
   "items": [
+    {
+      "id": "exeG6sgjBmQ",
+      "title": "【 雑談 】 お昼休みにどうですか？",
+      "url": "https://www.youtube.com/watch?v=exeG6sgjBmQ",
+      "published": "2026-08-31T17:15:14+00:00",
+      "thumbnail": "https://i.ytimg.com/vi/exeG6sgjBmQ/hqdefault.jpg"
+    },
+    {
+      "id": "c3MHwisZQSk",
+      "title": "【 龍が如く 極3 / 龍が如く3外伝 Dark Ties 】体験版をプレイしていく！※ネタバレ注意 #えらべるセガアトラス",
+      "url": "https://www.youtube.com/watch?v=c3MHwisZQSk",
+      "published": "2026-08-31T04:21:03+00:00",
+      "thumbnail": "https://i.ytimg.com/vi/c3MHwisZQSk/hqdefault.jpg"
+    },
     {
       "id": "N-cYh8Jw9Ww",
       "title": "【超自然スクワッドBB杯】本番がんばる！",
       "url": "https://www.youtube.com/watch?v=N-cYh8Jw9Ww",
-      "published": "2026-08-30T10:29:32+00:00",
+      "published": "2026-08-31T01:42:38+00:00",
       "thumbnail": "https://i.ytimg.com/vi/N-cYh8Jw9Ww/hqdefault.jpg"
     },
     {
@@ -29,20 +43,6 @@
       "url": "https://www.youtube.com/watch?v=MvDC31pIWIM",
       "published": "2026-08-27T13:52:00+00:00",
       "thumbnail": "https://i.ytimg.com/vi/MvDC31pIWIM/hqdefault.jpg"
-    },
-    {
-      "id": "fYsyjKWO1E8",
-      "title": "【超自然スクワッドBB杯】一緒に宝探し！",
-      "url": "https://www.youtube.com/watch?v=fYsyjKWO1E8",
-      "published": "2026-08-27T13:22:30+00:00",
-      "thumbnail": "https://i.ytimg.com/vi/fYsyjKWO1E8/hqdefault.jpg"
-    },
-    {
-      "id": "vgV5JTBkhEE",
-      "title": "【 VALORANT 】ソロがんばってみる。。。",
-      "url": "https://www.youtube.com/watch?v=vgV5JTBkhEE",
-      "published": "2026-08-26T15:16:25+00:00",
-      "thumbnail": "https://i.ytimg.com/vi/vgV5JTBkhEE/hqdefault.jpg"
     }
   ]
 }
