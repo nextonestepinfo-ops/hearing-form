@@ -1,20 +1,27 @@
 {
-  "updated": "2026-09-01T07:52:07+09:00",
+  "updated": "2026-09-02T06:03:04+09:00",
   "source": "https://www.youtube.com/feeds/videos.xml?channel_id=UC_nYcejJ7nsVG_ppVLwNHsw",
   "items": [
+    {
+      "id": "vCnh6KCJkZE",
+      "title": "【 雑談 】9/1 朝活雑談☀️おはよ～！！",
+      "url": "https://www.youtube.com/watch?v=vCnh6KCJkZE",
+      "published": "2026-09-01T12:15:33+00:00",
+      "thumbnail": "https://i.ytimg.com/vi/vCnh6KCJkZE/hqdefault.jpg"
+    },
+    {
+      "id": "c3MHwisZQSk",
+      "title": "【 龍が如く 極3 / 龍が如く3外伝 Dark Ties 】体験版をプレイしていく！※ネタバレ注意 #えらべるセガアトラス",
+      "url": "https://www.youtube.com/watch?v=c3MHwisZQSk",
+      "published": "2026-09-01T01:23:13+00:00",
+      "thumbnail": "https://i.ytimg.com/vi/c3MHwisZQSk/hqdefault.jpg"
+    },
     {
       "id": "exeG6sgjBmQ",
       "title": "【 雑談 】 お昼休みにどうですか？",
       "url": "https://www.youtube.com/watch?v=exeG6sgjBmQ",
       "published": "2026-08-31T17:15:14+00:00",
       "thumbnail": "https://i.ytimg.com/vi/exeG6sgjBmQ/hqdefault.jpg"
-    },
-    {
-      "id": "c3MHwisZQSk",
-      "title": "【 龍が如く 極3 / 龍が如く3外伝 Dark Ties 】体験版をプレイしていく！※ネタバレ注意 #えらべるセガアトラス",
-      "url": "https://www.youtube.com/watch?v=c3MHwisZQSk",
-      "published": "2026-08-31T04:21:03+00:00",
-      "thumbnail": "https://i.ytimg.com/vi/c3MHwisZQSk/hqdefault.jpg"
     },
     {
       "id": "N-cYh8Jw9Ww",
@@ -36,13 +43,6 @@
       "url": "https://www.youtube.com/shorts/pNT09QJOaIU",
       "published": "2026-08-28T09:00:19+00:00",
       "thumbnail": "https://i.ytimg.com/vi/pNT09QJOaIU/hqdefault.jpg"
-    },
-    {
-      "id": "MvDC31pIWIM",
-      "title": "【 雑談 】おはよ～ん！1時間くらい！",
-      "url": "https://www.youtube.com/watch?v=MvDC31pIWIM",
-      "published": "2026-08-27T13:52:00+00:00",
-      "thumbnail": "https://i.ytimg.com/vi/MvDC31pIWIM/hqdefault.jpg"
     }
   ]
 }
