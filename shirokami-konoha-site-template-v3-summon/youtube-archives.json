@@ -1,7 +1,21 @@
 {
-  "updated": "2026-09-05T05:46:43+09:00",
+  "updated": "2026-09-06T05:22:20+09:00",
   "source": "https://www.youtube.com/feeds/videos.xml?channel_id=UC_nYcejJ7nsVG_ppVLwNHsw",
   "items": [
+    {
+      "id": "Ypt3V_kXqOw",
+      "title": "【 SURGETown 】DAY2┊メカニックのお仕事たくさんする！",
+      "url": "https://www.youtube.com/watch?v=Ypt3V_kXqOw",
+      "published": "2026-09-05T17:22:40+00:00",
+      "thumbnail": "https://i.ytimg.com/vi/Ypt3V_kXqOw/hqdefault.jpg"
+    },
+    {
+      "id": "oJi2HRHH6Bc",
+      "title": "【 雑談 】9/5 朝活雑談☀️おはようだよ～！",
+      "url": "https://www.youtube.com/watch?v=oJi2HRHH6Bc",
+      "published": "2026-09-05T13:22:04+00:00",
+      "thumbnail": "https://i.ytimg.com/vi/oJi2HRHH6Bc/hqdefault.jpg"
+    },
     {
       "id": "5RmLnSmzDTc",
       "title": "【 SURGETown 】DAY1┊たくさんの人と仲良くなりたい…！",
@@ -29,20 +43,6 @@
       "url": "https://www.youtube.com/watch?v=vCnh6KCJkZE",
       "published": "2026-09-01T12:15:33+00:00",
       "thumbnail": "https://i.ytimg.com/vi/vCnh6KCJkZE/hqdefault.jpg"
-    },
-    {
-      "id": "c3MHwisZQSk",
-      "title": "【 龍が如く 極3 / 龍が如く3外伝 Dark Ties 】体験版をプレイしていく！※ネタバレ注意 #えらべるセガアトラス",
-      "url": "https://www.youtube.com/watch?v=c3MHwisZQSk",
-      "published": "2026-09-01T01:23:13+00:00",
-      "thumbnail": "https://i.ytimg.com/vi/c3MHwisZQSk/hqdefault.jpg"
-    },
-    {
-      "id": "exeG6sgjBmQ",
-      "title": "【 雑談 】 お昼休みにどうですか？",
-      "url": "https://www.youtube.com/watch?v=exeG6sgjBmQ",
-      "published": "2026-08-31T17:15:14+00:00",
-      "thumbnail": "https://i.ytimg.com/vi/exeG6sgjBmQ/hqdefault.jpg"
     }
   ]
 }
