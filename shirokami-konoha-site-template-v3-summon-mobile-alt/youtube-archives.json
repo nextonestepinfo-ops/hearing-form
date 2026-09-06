@@ -1,7 +1,21 @@
 {
-  "updated": "2026-09-06T05:22:20+09:00",
+  "updated": "2026-09-07T05:25:39+09:00",
   "source": "https://www.youtube.com/feeds/videos.xml?channel_id=UC_nYcejJ7nsVG_ppVLwNHsw",
   "items": [
+    {
+      "id": "CedwPSfLn-k",
+      "title": "【 SURGETown 】DAY3┊きょうはお出かけもしたい！",
+      "url": "https://www.youtube.com/watch?v=CedwPSfLn-k",
+      "published": "2026-09-06T17:22:16+00:00",
+      "thumbnail": "https://i.ytimg.com/vi/CedwPSfLn-k/hqdefault.jpg"
+    },
+    {
+      "id": "QLSVovyMYGg",
+      "title": "【 SURGETown 】おともだちになるまでのものがたり #shorts",
+      "url": "https://www.youtube.com/shorts/QLSVovyMYGg",
+      "published": "2026-09-06T09:00:22+00:00",
+      "thumbnail": "https://i.ytimg.com/vi/QLSVovyMYGg/hqdefault.jpg"
+    },
     {
       "id": "Ypt3V_kXqOw",
       "title": "【 SURGETown 】DAY2┊メカニックのお仕事たくさんする！",
@@ -29,20 +43,6 @@
       "url": "https://www.youtube.com/watch?v=H1hFhKFtbQU",
       "published": "2026-09-03T14:30:32+00:00",
       "thumbnail": "https://i.ytimg.com/vi/H1hFhKFtbQU/hqdefault.jpg"
-    },
-    {
-      "id": "Ulve-4j6orA",
-      "title": "【 LOL 】きままにあそぼうかなって！",
-      "url": "https://www.youtube.com/watch?v=Ulve-4j6orA",
-      "published": "2026-09-03T06:57:06+00:00",
-      "thumbnail": "https://i.ytimg.com/vi/Ulve-4j6orA/hqdefault.jpg"
-    },
-    {
-      "id": "vCnh6KCJkZE",
-      "title": "【 雑談 】9/1 朝活雑談☀️おはよ～！！",
-      "url": "https://www.youtube.com/watch?v=vCnh6KCJkZE",
-      "published": "2026-09-01T12:15:33+00:00",
-      "thumbnail": "https://i.ytimg.com/vi/vCnh6KCJkZE/hqdefault.jpg"
     }
   ]
 }
