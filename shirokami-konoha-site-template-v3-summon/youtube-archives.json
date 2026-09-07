@@ -1,7 +1,21 @@
 {
-  "updated": "2026-09-07T05:25:39+09:00",
+  "updated": "2026-09-08T06:31:59+09:00",
   "source": "https://www.youtube.com/feeds/videos.xml?channel_id=UC_nYcejJ7nsVG_ppVLwNHsw",
   "items": [
+    {
+      "id": "cR5r93iaDVg",
+      "title": "【 SURGETown 】DAY4┊車とバイクをカスタムして、ヘリも買いたい！",
+      "url": "https://www.youtube.com/watch?v=cR5r93iaDVg",
+      "published": "2026-09-07T17:28:40+00:00",
+      "thumbnail": "https://i.ytimg.com/vi/cR5r93iaDVg/hqdefault.jpg"
+    },
+    {
+      "id": "Z4a9zYLFRlM",
+      "title": "【 SURGETown 】謎のコンビニオーナー！？ #shorts",
+      "url": "https://www.youtube.com/shorts/Z4a9zYLFRlM",
+      "published": "2026-09-07T09:00:12+00:00",
+      "thumbnail": "https://i.ytimg.com/vi/Z4a9zYLFRlM/hqdefault.jpg"
+    },
     {
       "id": "CedwPSfLn-k",
       "title": "【 SURGETown 】DAY3┊きょうはお出かけもしたい！",
@@ -29,20 +43,6 @@
       "url": "https://www.youtube.com/watch?v=oJi2HRHH6Bc",
       "published": "2026-09-05T13:22:04+00:00",
       "thumbnail": "https://i.ytimg.com/vi/oJi2HRHH6Bc/hqdefault.jpg"
-    },
-    {
-      "id": "5RmLnSmzDTc",
-      "title": "【 SURGETown 】DAY1┊たくさんの人と仲良くなりたい…！",
-      "url": "https://www.youtube.com/watch?v=5RmLnSmzDTc",
-      "published": "2026-09-04T17:22:03+00:00",
-      "thumbnail": "https://i.ytimg.com/vi/5RmLnSmzDTc/hqdefault.jpg"
-    },
-    {
-      "id": "H1hFhKFtbQU",
-      "title": "【 雑談 】9/3 朝活雑談☀️おはようたくさん言わせて！",
-      "url": "https://www.youtube.com/watch?v=H1hFhKFtbQU",
-      "published": "2026-09-03T14:30:32+00:00",
-      "thumbnail": "https://i.ytimg.com/vi/H1hFhKFtbQU/hqdefault.jpg"
     }
   ]
 }
