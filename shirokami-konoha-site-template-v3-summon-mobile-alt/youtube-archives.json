@@ -1,7 +1,21 @@
 {
-  "updated": "2026-09-09T06:10:47+09:00",
+  "updated": "2026-09-10T05:57:15+09:00",
   "source": "https://www.youtube.com/feeds/videos.xml?channel_id=UC_nYcejJ7nsVG_ppVLwNHsw",
   "items": [
+    {
+      "id": "9lSc6pq1ANA",
+      "title": "【 SURGETown 】DAY6┊ためたお金でなにかおうか！",
+      "url": "https://www.youtube.com/watch?v=9lSc6pq1ANA",
+      "published": "2026-09-09T17:23:02+00:00",
+      "thumbnail": "https://i.ytimg.com/vi/9lSc6pq1ANA/hqdefault.jpg"
+    },
+    {
+      "id": "MaTLc9ZFhaU",
+      "title": "【 SURGETown 】搬送中トラブル発生！？ #shorts",
+      "url": "https://www.youtube.com/shorts/MaTLc9ZFhaU",
+      "published": "2026-09-09T09:30:02+00:00",
+      "thumbnail": "https://i.ytimg.com/vi/MaTLc9ZFhaU/hqdefault.jpg"
+    },
     {
       "id": "TvBR4w9J73k",
       "title": "【 SURGETown 】DAY5┊メカニックのお仕事がんばるます。",
@@ -29,20 +43,6 @@
       "url": "https://www.youtube.com/watch?v=cR5r93iaDVg",
       "published": "2026-09-07T17:28:40+00:00",
       "thumbnail": "https://i.ytimg.com/vi/cR5r93iaDVg/hqdefault.jpg"
-    },
-    {
-      "id": "Z4a9zYLFRlM",
-      "title": "【 SURGETown 】謎のコンビニオーナー！？ #shorts",
-      "url": "https://www.youtube.com/shorts/Z4a9zYLFRlM",
-      "published": "2026-09-07T09:00:12+00:00",
-      "thumbnail": "https://i.ytimg.com/vi/Z4a9zYLFRlM/hqdefault.jpg"
-    },
-    {
-      "id": "CedwPSfLn-k",
-      "title": "【 SURGETown 】DAY3┊きょうはお出かけもしたい！",
-      "url": "https://www.youtube.com/watch?v=CedwPSfLn-k",
-      "published": "2026-09-06T17:22:16+00:00",
-      "thumbnail": "https://i.ytimg.com/vi/CedwPSfLn-k/hqdefault.jpg"
     }
   ]
 }
