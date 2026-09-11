@@ -1,7 +1,21 @@
 {
-  "updated": "2026-09-11T05:53:06+09:00",
+  "updated": "2026-09-12T05:58:57+09:00",
   "source": "https://www.youtube.com/feeds/videos.xml?channel_id=UC_nYcejJ7nsVG_ppVLwNHsw",
   "items": [
+    {
+      "id": "kmnQI-P2t8g",
+      "title": "【 SURGETown 】DAY8┊次の8億目指して！おしごと！おしごと！",
+      "url": "https://www.youtube.com/watch?v=kmnQI-P2t8g",
+      "published": "2026-09-11T17:25:27+00:00",
+      "thumbnail": "https://i.ytimg.com/vi/kmnQI-P2t8g/hqdefault.jpg"
+    },
+    {
+      "id": "uBuUEK_ODKg",
+      "title": "【 SURGETown 】かわいいカスタムと〇〇のサービス #shorts",
+      "url": "https://www.youtube.com/shorts/uBuUEK_ODKg",
+      "published": "2026-09-11T09:00:25+00:00",
+      "thumbnail": "https://i.ytimg.com/vi/uBuUEK_ODKg/hqdefault.jpg"
+    },
     {
       "id": "D3vlnZs-oSc",
       "title": "【 SURGETown 】DAY7┊8億の車買ったらお金ない！",
@@ -29,20 +43,6 @@
       "url": "https://www.youtube.com/watch?v=9lSc6pq1ANA",
       "published": "2026-09-09T17:23:02+00:00",
       "thumbnail": "https://i.ytimg.com/vi/9lSc6pq1ANA/hqdefault.jpg"
-    },
-    {
-      "id": "MaTLc9ZFhaU",
-      "title": "【 SURGETown 】搬送中トラブル発生！？ #shorts",
-      "url": "https://www.youtube.com/shorts/MaTLc9ZFhaU",
-      "published": "2026-09-09T09:30:02+00:00",
-      "thumbnail": "https://i.ytimg.com/vi/MaTLc9ZFhaU/hqdefault.jpg"
-    },
-    {
-      "id": "TvBR4w9J73k",
-      "title": "【 SURGETown 】DAY5┊メカニックのお仕事がんばるます。",
-      "url": "https://www.youtube.com/watch?v=TvBR4w9J73k",
-      "published": "2026-09-08T17:52:29+00:00",
-      "thumbnail": "https://i.ytimg.com/vi/TvBR4w9J73k/hqdefault.jpg"
     }
   ]
 }
