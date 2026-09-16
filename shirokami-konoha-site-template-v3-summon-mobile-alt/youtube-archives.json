@@ -1,7 +1,21 @@
 {
-  "updated": "2026-09-16T06:22:26+09:00",
+  "updated": "2026-09-17T06:19:31+09:00",
   "source": "https://www.youtube.com/feeds/videos.xml?channel_id=UC_nYcejJ7nsVG_ppVLwNHsw",
   "items": [
+    {
+      "id": "vaRP04zerMo",
+      "title": "【 SURGETown 】DAY13┊ホストがあるみたい！",
+      "url": "https://www.youtube.com/watch?v=vaRP04zerMo",
+      "published": "2026-09-16T17:19:39+00:00",
+      "thumbnail": "https://i.ytimg.com/vi/vaRP04zerMo/hqdefault.jpg"
+    },
+    {
+      "id": "uU4RjMFGnys",
+      "title": "【 SURGETown 】消えるしろまんたと飛ぶバイク #shorts",
+      "url": "https://www.youtube.com/shorts/uU4RjMFGnys",
+      "published": "2026-09-15T22:30:32+00:00",
+      "thumbnail": "https://i.ytimg.com/vi/uU4RjMFGnys/hqdefault.jpg"
+    },
     {
       "id": "zf6QqGjeg2o",
       "title": "【 SURGETown 】DAY12┊しごと！おかねかせぎ！→VALORANT",
@@ -29,20 +43,6 @@
       "url": "https://www.youtube.com/watch?v=xUE8NKgJMiw",
       "published": "2026-09-14T17:22:23+00:00",
       "thumbnail": "https://i.ytimg.com/vi/xUE8NKgJMiw/hqdefault.jpg"
-    },
-    {
-      "id": "TaWuCmy3RPI",
-      "title": "【 雑談 】9/14 朝活雑談☀️おはよう！",
-      "url": "https://www.youtube.com/watch?v=TaWuCmy3RPI",
-      "published": "2026-09-14T01:16:59+00:00",
-      "thumbnail": "https://i.ytimg.com/vi/TaWuCmy3RPI/hqdefault.jpg"
-    },
-    {
-      "id": "38A44P3Os0A",
-      "title": "【 SURGETown 】とあるバーで〇〇と出会う #shorts",
-      "url": "https://www.youtube.com/shorts/38A44P3Os0A",
-      "published": "2026-09-13T22:30:16+00:00",
-      "thumbnail": "https://i.ytimg.com/vi/38A44P3Os0A/hqdefault.jpg"
     }
   ]
 }
