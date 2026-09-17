@@ -1,7 +1,21 @@
 {
-  "updated": "2026-09-17T06:19:31+09:00",
+  "updated": "2026-09-18T06:23:45+09:00",
   "source": "https://www.youtube.com/feeds/videos.xml?channel_id=UC_nYcejJ7nsVG_ppVLwNHsw",
   "items": [
+    {
+      "id": "-UcFEjSjUQI",
+      "title": "【 SURGETown 】DAY14┊あと少し…",
+      "url": "https://www.youtube.com/watch?v=-UcFEjSjUQI",
+      "published": "2026-09-17T17:29:04+00:00",
+      "thumbnail": "https://i.ytimg.com/vi/-UcFEjSjUQI/hqdefault.jpg"
+    },
+    {
+      "id": "De4TcZSaO6A",
+      "title": "【 SURGETown 】SHAKAさんの人質に…衝撃のラスト！？ #shorts",
+      "url": "https://www.youtube.com/shorts/De4TcZSaO6A",
+      "published": "2026-09-16T22:30:31+00:00",
+      "thumbnail": "https://i.ytimg.com/vi/De4TcZSaO6A/hqdefault.jpg"
+    },
     {
       "id": "vaRP04zerMo",
       "title": "【 SURGETown 】DAY13┊ホストがあるみたい！",
@@ -29,20 +43,6 @@
       "url": "https://www.youtube.com/shorts/bD6eOQzRuYI",
       "published": "2026-09-15T03:00:01+00:00",
       "thumbnail": "https://i.ytimg.com/vi/bD6eOQzRuYI/hqdefault.jpg"
-    },
-    {
-      "id": "d-Hk0lbz4vk",
-      "title": "【 切り抜き 】SURGETown 1日目2日目濃すぎるメンバーと友情を育む白狼このは",
-      "url": "https://www.youtube.com/watch?v=d-Hk0lbz4vk",
-      "published": "2026-09-14T23:00:07+00:00",
-      "thumbnail": "https://i.ytimg.com/vi/d-Hk0lbz4vk/hqdefault.jpg"
-    },
-    {
-      "id": "xUE8NKgJMiw",
-      "title": "【 SURGETown 】DAY11┊たくさんたのしむ！",
-      "url": "https://www.youtube.com/watch?v=xUE8NKgJMiw",
-      "published": "2026-09-14T17:22:23+00:00",
-      "thumbnail": "https://i.ytimg.com/vi/xUE8NKgJMiw/hqdefault.jpg"
     }
   ]
 }
