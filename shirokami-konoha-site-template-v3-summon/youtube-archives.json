@@ -1,7 +1,14 @@
 {
-  "updated": "2026-09-19T05:55:35+09:00",
+  "updated": "2026-09-20T05:42:25+09:00",
   "source": "https://www.youtube.com/feeds/videos.xml?channel_id=UC_nYcejJ7nsVG_ppVLwNHsw",
   "items": [
+    {
+      "id": "PREutHHN5Uc",
+      "title": "【 SURGETown 】DAY16┊後悔しないようにね！→LOLカスタム",
+      "url": "https://www.youtube.com/watch?v=PREutHHN5Uc",
+      "published": "2026-09-19T19:38:16+00:00",
+      "thumbnail": "https://i.ytimg.com/vi/PREutHHN5Uc/hqdefault.jpg"
+    },
     {
       "id": "VJCEP-nWa_A",
       "title": "【 SURGETown 】DAY15┊たのしむ！",
@@ -36,13 +43,6 @@
       "url": "https://www.youtube.com/shorts/De4TcZSaO6A",
       "published": "2026-09-16T22:30:31+00:00",
       "thumbnail": "https://i.ytimg.com/vi/De4TcZSaO6A/hqdefault.jpg"
-    },
-    {
-      "id": "vaRP04zerMo",
-      "title": "【 SURGETown 】DAY13┊ホストがあるみたい！",
-      "url": "https://www.youtube.com/watch?v=vaRP04zerMo",
-      "published": "2026-09-16T17:19:39+00:00",
-      "thumbnail": "https://i.ytimg.com/vi/vaRP04zerMo/hqdefault.jpg"
     }
   ]
 }
