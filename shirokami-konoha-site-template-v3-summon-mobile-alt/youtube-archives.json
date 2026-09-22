@@ -1,7 +1,28 @@
 {
-  "updated": "2026-09-22T06:59:16+09:00",
+  "updated": "2026-09-23T06:20:47+09:00",
   "source": "https://www.youtube.com/feeds/videos.xml?channel_id=UC_nYcejJ7nsVG_ppVLwNHsw",
   "items": [
+    {
+      "id": "Kvwqz1vKDkY",
+      "title": "【 雑談 】おきてる？深夜にはなそ～",
+      "url": "https://www.youtube.com/watch?v=Kvwqz1vKDkY",
+      "published": "2026-09-22T18:50:51+00:00",
+      "thumbnail": "https://i.ytimg.com/vi/Kvwqz1vKDkY/hqdefault.jpg"
+    },
+    {
+      "id": "nEI31TtYlHI",
+      "title": "【 VALORANT 】久しぶりに！スイフトとかやる！",
+      "url": "https://www.youtube.com/watch?v=nEI31TtYlHI",
+      "published": "2026-09-22T01:50:34+00:00",
+      "thumbnail": "https://i.ytimg.com/vi/nEI31TtYlHI/hqdefault.jpg"
+    },
+    {
+      "id": "ePhuLezHWV8",
+      "title": "【 SURGETown 】メカニックこのはの１日対応件数は●●件！？ #shorts",
+      "url": "https://www.youtube.com/shorts/ePhuLezHWV8",
+      "published": "2026-09-21T22:03:51+00:00",
+      "thumbnail": "https://i.ytimg.com/vi/ePhuLezHWV8/hqdefault.jpg"
+    },
     {
       "id": "n6UGXC5SUlg",
       "title": "【 LOL 】ぜろふろカスタム！楽しむぞ！",
@@ -22,27 +43,6 @@
       "url": "https://www.youtube.com/shorts/NN1gwLJZkpo",
       "published": "2026-09-20T23:00:28+00:00",
       "thumbnail": "https://i.ytimg.com/vi/NN1gwLJZkpo/hqdefault.jpg"
-    },
-    {
-      "id": "d4GUSWCibSQ",
-      "title": "【 SURGETown 】DAY17┊最終日！すごく幸せな時間でした！ありがとう！",
-      "url": "https://www.youtube.com/watch?v=d4GUSWCibSQ",
-      "published": "2026-09-20T18:05:28+00:00",
-      "thumbnail": "https://i.ytimg.com/vi/d4GUSWCibSQ/hqdefault.jpg"
-    },
-    {
-      "id": "DWg_6gMeKI0",
-      "title": "【 SURGETown 】叶さんへのおこづかい廃止！？ #shorts",
-      "url": "https://www.youtube.com/shorts/DWg_6gMeKI0",
-      "published": "2026-09-20T03:00:08+00:00",
-      "thumbnail": "https://i.ytimg.com/vi/DWg_6gMeKI0/hqdefault.jpg"
-    },
-    {
-      "id": "PREutHHN5Uc",
-      "title": "【 SURGETown 】DAY16┊後悔しないようにね！→LOLカスタム",
-      "url": "https://www.youtube.com/watch?v=PREutHHN5Uc",
-      "published": "2026-09-19T19:38:16+00:00",
-      "thumbnail": "https://i.ytimg.com/vi/PREutHHN5Uc/hqdefault.jpg"
     }
   ]
 }
