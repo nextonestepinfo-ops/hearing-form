@@ -1,7 +1,28 @@
 {
-  "updated": "2026-09-24T06:31:02+09:00",
+  "updated": "2026-09-25T06:32:14+09:00",
   "source": "https://www.youtube.com/feeds/videos.xml?channel_id=UC_nYcejJ7nsVG_ppVLwNHsw",
   "items": [
+    {
+      "id": "SWZj35s6vAc",
+      "title": "【 LOL 】メイヘムで色んなキャラさわる！",
+      "url": "https://www.youtube.com/watch?v=SWZj35s6vAc",
+      "published": "2026-09-24T16:16:05+00:00",
+      "thumbnail": "https://i.ytimg.com/vi/SWZj35s6vAc/hqdefault.jpg"
+    },
+    {
+      "id": "wcbPWoDdayA",
+      "title": "【 VALORANT 】れんしゅう！",
+      "url": "https://www.youtube.com/watch?v=wcbPWoDdayA",
+      "published": "2026-09-24T01:37:04+00:00",
+      "thumbnail": "https://i.ytimg.com/vi/wcbPWoDdayA/hqdefault.jpg"
+    },
+    {
+      "id": "Ph7YunlOxO0",
+      "title": "【 SURGETown 】出張修理先で出会った抱腹絶倒ギャグ辞典 #shorts",
+      "url": "https://www.youtube.com/shorts/Ph7YunlOxO0",
+      "published": "2026-09-23T22:00:03+00:00",
+      "thumbnail": "https://i.ytimg.com/vi/Ph7YunlOxO0/hqdefault.jpg"
+    },
     {
       "id": "OwN7_yBErgY",
       "title": "【 VALORANT 】「e-VALT Custom」Bチーム顔合わせ！",
@@ -22,27 +43,6 @@
       "url": "https://www.youtube.com/watch?v=Kvwqz1vKDkY",
       "published": "2026-09-22T18:50:51+00:00",
       "thumbnail": "https://i.ytimg.com/vi/Kvwqz1vKDkY/hqdefault.jpg"
-    },
-    {
-      "id": "nEI31TtYlHI",
-      "title": "【 VALORANT 】久しぶりに！スイフトとかやる！",
-      "url": "https://www.youtube.com/watch?v=nEI31TtYlHI",
-      "published": "2026-09-22T01:50:34+00:00",
-      "thumbnail": "https://i.ytimg.com/vi/nEI31TtYlHI/hqdefault.jpg"
-    },
-    {
-      "id": "ePhuLezHWV8",
-      "title": "【 SURGETown 】メカニックこのはの１日対応件数は●●件！？ #shorts",
-      "url": "https://www.youtube.com/shorts/ePhuLezHWV8",
-      "published": "2026-09-21T22:03:51+00:00",
-      "thumbnail": "https://i.ytimg.com/vi/ePhuLezHWV8/hqdefault.jpg"
-    },
-    {
-      "id": "n6UGXC5SUlg",
-      "title": "【 LOL 】ぜろふろカスタム！楽しむぞ！",
-      "url": "https://www.youtube.com/watch?v=n6UGXC5SUlg",
-      "published": "2026-09-21T16:24:08+00:00",
-      "thumbnail": "https://i.ytimg.com/vi/n6UGXC5SUlg/hqdefault.jpg"
     }
   ]
 }
