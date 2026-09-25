@@ -1,7 +1,21 @@
 {
-  "updated": "2026-09-25T06:32:14+09:00",
+  "updated": "2026-09-26T06:36:02+09:00",
   "source": "https://www.youtube.com/feeds/videos.xml?channel_id=UC_nYcejJ7nsVG_ppVLwNHsw",
   "items": [
+    {
+      "id": "2W-U0ZHF3mI",
+      "title": "【 雑談 】9/25 朝活雑談☀️おはよー！",
+      "url": "https://www.youtube.com/watch?v=2W-U0ZHF3mI",
+      "published": "2026-09-25T01:36:01+00:00",
+      "thumbnail": "https://i.ytimg.com/vi/2W-U0ZHF3mI/hqdefault.jpg"
+    },
+    {
+      "id": "6j2agoucR08",
+      "title": "【 SURGETown 】マコジョコスクーターをイジり倒す白狼このは #shorts",
+      "url": "https://www.youtube.com/shorts/6j2agoucR08",
+      "published": "2026-09-24T22:00:22+00:00",
+      "thumbnail": "https://i.ytimg.com/vi/6j2agoucR08/hqdefault.jpg"
+    },
     {
       "id": "SWZj35s6vAc",
       "title": "【 LOL 】メイヘムで色んなキャラさわる！",
@@ -29,20 +43,6 @@
       "url": "https://www.youtube.com/watch?v=OwN7_yBErgY",
       "published": "2026-09-23T16:07:48+00:00",
       "thumbnail": "https://i.ytimg.com/vi/OwN7_yBErgY/hqdefault.jpg"
-    },
-    {
-      "id": "WHhrih9mKso",
-      "title": "【 SURGETown 】血気盛んなメカニック #shorts",
-      "url": "https://www.youtube.com/shorts/WHhrih9mKso",
-      "published": "2026-09-22T22:00:23+00:00",
-      "thumbnail": "https://i.ytimg.com/vi/WHhrih9mKso/hqdefault.jpg"
-    },
-    {
-      "id": "Kvwqz1vKDkY",
-      "title": "【 雑談 】おきてる？深夜にはなそ～",
-      "url": "https://www.youtube.com/watch?v=Kvwqz1vKDkY",
-      "published": "2026-09-22T18:50:51+00:00",
-      "thumbnail": "https://i.ytimg.com/vi/Kvwqz1vKDkY/hqdefault.jpg"
     }
   ]
 }
