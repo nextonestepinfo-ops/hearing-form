@@ -1,7 +1,28 @@
 {
-  "updated": "2026-09-26T06:36:02+09:00",
+  "updated": "2026-09-27T06:11:52+09:00",
   "source": "https://www.youtube.com/feeds/videos.xml?channel_id=UC_nYcejJ7nsVG_ppVLwNHsw",
   "items": [
+    {
+      "id": "1JEEwZSTGVg",
+      "title": "【 VALORANT 】「e-VALT Custom」本番！",
+      "url": "https://www.youtube.com/watch?v=1JEEwZSTGVg",
+      "published": "2026-09-26T12:43:04+00:00",
+      "thumbnail": "https://i.ytimg.com/vi/1JEEwZSTGVg/hqdefault.jpg"
+    },
+    {
+      "id": "c_C_p1bNtaI",
+      "title": "【 VALORANT 】ゴールド抜け出したいよね～！",
+      "url": "https://www.youtube.com/watch?v=c_C_p1bNtaI",
+      "published": "2026-09-26T03:13:08+00:00",
+      "thumbnail": "https://i.ytimg.com/vi/c_C_p1bNtaI/hqdefault.jpg"
+    },
+    {
+      "id": "7cOBch7gGKw",
+      "title": "【 SURGETown 】遊園地（？）に連行される勤務中の白狼このは #shorts",
+      "url": "https://www.youtube.com/shorts/7cOBch7gGKw",
+      "published": "2026-09-25T22:00:00+00:00",
+      "thumbnail": "https://i.ytimg.com/vi/7cOBch7gGKw/hqdefault.jpg"
+    },
     {
       "id": "2W-U0ZHF3mI",
       "title": "【 雑談 】9/25 朝活雑談☀️おはよー！",
@@ -22,27 +43,6 @@
       "url": "https://www.youtube.com/watch?v=SWZj35s6vAc",
       "published": "2026-09-24T16:16:05+00:00",
       "thumbnail": "https://i.ytimg.com/vi/SWZj35s6vAc/hqdefault.jpg"
-    },
-    {
-      "id": "wcbPWoDdayA",
-      "title": "【 VALORANT 】れんしゅう！",
-      "url": "https://www.youtube.com/watch?v=wcbPWoDdayA",
-      "published": "2026-09-24T01:37:04+00:00",
-      "thumbnail": "https://i.ytimg.com/vi/wcbPWoDdayA/hqdefault.jpg"
-    },
-    {
-      "id": "Ph7YunlOxO0",
-      "title": "【 SURGETown 】出張修理先で出会った抱腹絶倒ギャグ辞典 #shorts",
-      "url": "https://www.youtube.com/shorts/Ph7YunlOxO0",
-      "published": "2026-09-23T22:00:03+00:00",
-      "thumbnail": "https://i.ytimg.com/vi/Ph7YunlOxO0/hqdefault.jpg"
-    },
-    {
-      "id": "OwN7_yBErgY",
-      "title": "【 VALORANT 】「e-VALT Custom」Bチーム顔合わせ！",
-      "url": "https://www.youtube.com/watch?v=OwN7_yBErgY",
-      "published": "2026-09-23T16:07:48+00:00",
-      "thumbnail": "https://i.ytimg.com/vi/OwN7_yBErgY/hqdefault.jpg"
     }
   ]
 }
