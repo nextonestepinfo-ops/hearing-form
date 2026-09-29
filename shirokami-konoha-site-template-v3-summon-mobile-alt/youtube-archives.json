@@ -1,7 +1,21 @@
 {
-  "updated": "2026-09-29T08:17:42+09:00",
+  "updated": "2026-09-30T07:16:50+09:00",
   "source": "https://www.youtube.com/feeds/videos.xml?channel_id=UC_nYcejJ7nsVG_ppVLwNHsw",
   "items": [
+    {
+      "id": "N7-wy0pgPlg",
+      "title": "【 SURGETown 】偽メカニックとなったBobSappAimさん #shorts",
+      "url": "https://www.youtube.com/shorts/N7-wy0pgPlg",
+      "published": "2026-09-29T22:00:07+00:00",
+      "thumbnail": "https://i.ytimg.com/vi/N7-wy0pgPlg/hqdefault.jpg"
+    },
+    {
+      "id": "TgCYBP7v2no",
+      "title": "【 WARDOGS 】まだまだ分からないことばかり！",
+      "url": "https://www.youtube.com/watch?v=TgCYBP7v2no",
+      "published": "2026-09-29T07:51:03+00:00",
+      "thumbnail": "https://i.ytimg.com/vi/TgCYBP7v2no/hqdefault.jpg"
+    },
     {
       "id": "ZZ_pvRfroxQ",
       "title": "【 WARDOGS 】気になってたから始めてみる！",
@@ -29,20 +43,6 @@
       "url": "https://www.youtube.com/watch?v=90YY5mmLukU",
       "published": "2026-09-27T15:51:14+00:00",
       "thumbnail": "https://i.ytimg.com/vi/90YY5mmLukU/hqdefault.jpg"
-    },
-    {
-      "id": "xknQzt3xBiQ",
-      "title": "【 SURGETown 】メカニック女子二人のイチャイチャ姉妹（？）劇 #shorts",
-      "url": "https://www.youtube.com/shorts/xknQzt3xBiQ",
-      "published": "2026-09-26T22:00:34+00:00",
-      "thumbnail": "https://i.ytimg.com/vi/xknQzt3xBiQ/hqdefault.jpg"
-    },
-    {
-      "id": "1JEEwZSTGVg",
-      "title": "【 VALORANT 】「e-VALT Custom」本番！",
-      "url": "https://www.youtube.com/watch?v=1JEEwZSTGVg",
-      "published": "2026-09-26T12:43:04+00:00",
-      "thumbnail": "https://i.ytimg.com/vi/1JEEwZSTGVg/hqdefault.jpg"
     }
   ]
 }
