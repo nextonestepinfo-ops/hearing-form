@@ -1,7 +1,21 @@
 {
-  "updated": "2026-09-30T07:16:50+09:00",
+  "updated": "2026-10-02T07:42:23+09:00",
   "source": "https://www.youtube.com/feeds/videos.xml?channel_id=UC_nYcejJ7nsVG_ppVLwNHsw",
   "items": [
+    {
+      "id": "9fOT3CvZwus",
+      "title": "【 VALORANT 】頑張らなきゃ！",
+      "url": "https://www.youtube.com/watch?v=9fOT3CvZwus",
+      "published": "2026-10-01T22:27:08+00:00",
+      "thumbnail": "https://i.ytimg.com/vi/9fOT3CvZwus/hqdefault.jpg"
+    },
+    {
+      "id": "n3Ujd7tFWIw",
+      "title": "【 SURGETown 】日ノ隈らんに二股される白狼このはと柚鳥ペケ #shorts",
+      "url": "https://www.youtube.com/shorts/n3Ujd7tFWIw",
+      "published": "2026-10-01T22:00:02+00:00",
+      "thumbnail": "https://i.ytimg.com/vi/n3Ujd7tFWIw/hqdefault.jpg"
+    },
     {
       "id": "N7-wy0pgPlg",
       "title": "【 SURGETown 】偽メカニックとなったBobSappAimさん #shorts",
@@ -29,20 +43,6 @@
       "url": "https://www.youtube.com/watch?v=XVOESqCU2WA",
       "published": "2026-09-27T23:36:52+00:00",
       "thumbnail": "https://i.ytimg.com/vi/XVOESqCU2WA/hqdefault.jpg"
-    },
-    {
-      "id": "bNrL2cgaTzE",
-      "title": "【 SURGETown 】捨てられた？叶さんを発見する白狼このは #shorts",
-      "url": "https://www.youtube.com/shorts/bNrL2cgaTzE",
-      "published": "2026-09-27T22:00:05+00:00",
-      "thumbnail": "https://i.ytimg.com/vi/bNrL2cgaTzE/hqdefault.jpg"
-    },
-    {
-      "id": "90YY5mmLukU",
-      "title": "【 VALORANT 】「あらいぐま杯」顔合わせ！",
-      "url": "https://www.youtube.com/watch?v=90YY5mmLukU",
-      "published": "2026-09-27T15:51:14+00:00",
-      "thumbnail": "https://i.ytimg.com/vi/90YY5mmLukU/hqdefault.jpg"
     }
   ]
 }
