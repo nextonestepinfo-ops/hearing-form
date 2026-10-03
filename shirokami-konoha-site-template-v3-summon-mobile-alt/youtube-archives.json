@@ -1,7 +1,14 @@
 {
-  "updated": "2026-10-03T07:15:41+09:00",
+  "updated": "2026-10-04T06:18:14+09:00",
   "source": "https://www.youtube.com/feeds/videos.xml?channel_id=UC_nYcejJ7nsVG_ppVLwNHsw",
   "items": [
+    {
+      "id": "Qjh-20ESusg",
+      "title": "【 WARDOGS 】ていさつ！がんばる！わんわん！",
+      "url": "https://www.youtube.com/watch?v=Qjh-20ESusg",
+      "published": "2026-10-03T05:24:08+00:00",
+      "thumbnail": "https://i.ytimg.com/vi/Qjh-20ESusg/hqdefault.jpg"
+    },
     {
       "id": "9fOT3CvZwus",
       "title": "【 VALORANT 】頑張らなきゃ！",
@@ -36,13 +43,6 @@
       "url": "https://www.youtube.com/watch?v=ZZ_pvRfroxQ",
       "published": "2026-09-28T05:34:50+00:00",
       "thumbnail": "https://i.ytimg.com/vi/ZZ_pvRfroxQ/hqdefault.jpg"
-    },
-    {
-      "id": "XVOESqCU2WA",
-      "title": "【 雑談 】9/28 朝活雑談☀️おはよー！今週の予定とかはなそ！",
-      "url": "https://www.youtube.com/watch?v=XVOESqCU2WA",
-      "published": "2026-09-27T23:36:52+00:00",
-      "thumbnail": "https://i.ytimg.com/vi/XVOESqCU2WA/hqdefault.jpg"
     }
   ]
 }
