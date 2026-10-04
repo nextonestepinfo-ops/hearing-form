@@ -1,7 +1,21 @@
 {
-  "updated": "2026-10-04T06:18:14+09:00",
+  "updated": "2026-10-05T06:27:48+09:00",
   "source": "https://www.youtube.com/feeds/videos.xml?channel_id=UC_nYcejJ7nsVG_ppVLwNHsw",
   "items": [
+    {
+      "id": "FOcypWZct3U",
+      "title": "【 VALORANT 】プラチナいきたいよね～！",
+      "url": "https://www.youtube.com/watch?v=FOcypWZct3U",
+      "published": "2026-10-04T02:25:17+00:00",
+      "thumbnail": "https://i.ytimg.com/vi/FOcypWZct3U/hqdefault.jpg"
+    },
+    {
+      "id": "O_KQuKzq-bM",
+      "title": "【 SURGETown 】不憫、ひさーめ #shorts",
+      "url": "https://www.youtube.com/shorts/O_KQuKzq-bM",
+      "published": "2026-10-03T21:59:48+00:00",
+      "thumbnail": "https://i.ytimg.com/vi/O_KQuKzq-bM/hqdefault.jpg"
+    },
     {
       "id": "Qjh-20ESusg",
       "title": "【 WARDOGS 】ていさつ！がんばる！わんわん！",
@@ -29,20 +43,6 @@
       "url": "https://www.youtube.com/shorts/N7-wy0pgPlg",
       "published": "2026-09-29T22:00:07+00:00",
       "thumbnail": "https://i.ytimg.com/vi/N7-wy0pgPlg/hqdefault.jpg"
-    },
-    {
-      "id": "TgCYBP7v2no",
-      "title": "【 WARDOGS 】まだまだ分からないことばかり！",
-      "url": "https://www.youtube.com/watch?v=TgCYBP7v2no",
-      "published": "2026-09-29T07:51:03+00:00",
-      "thumbnail": "https://i.ytimg.com/vi/TgCYBP7v2no/hqdefault.jpg"
-    },
-    {
-      "id": "ZZ_pvRfroxQ",
-      "title": "【 WARDOGS 】気になってたから始めてみる！",
-      "url": "https://www.youtube.com/watch?v=ZZ_pvRfroxQ",
-      "published": "2026-09-28T05:34:50+00:00",
-      "thumbnail": "https://i.ytimg.com/vi/ZZ_pvRfroxQ/hqdefault.jpg"
     }
   ]
 }
