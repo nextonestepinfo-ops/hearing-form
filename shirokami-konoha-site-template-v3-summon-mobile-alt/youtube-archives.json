@@ -1,7 +1,28 @@
 {
-  "updated": "2026-10-05T06:27:48+09:00",
+  "updated": "2026-10-06T09:04:38+09:00",
   "source": "https://www.youtube.com/feeds/videos.xml?channel_id=UC_nYcejJ7nsVG_ppVLwNHsw",
   "items": [
+    {
+      "id": "Oot7B0ouh_Y",
+      "title": "【 LOL 】朝からLOL！",
+      "url": "https://www.youtube.com/watch?v=Oot7B0ouh_Y",
+      "published": "2026-10-05T23:30:52+00:00",
+      "thumbnail": "https://i.ytimg.com/vi/Oot7B0ouh_Y/hqdefault.jpg"
+    },
+    {
+      "id": "dngyrXan-1g",
+      "title": "【 VALORANT 】SURGETownメンバーで女子会フルパ！",
+      "url": "https://www.youtube.com/watch?v=dngyrXan-1g",
+      "published": "2026-10-05T23:26:54+00:00",
+      "thumbnail": "https://i.ytimg.com/vi/dngyrXan-1g/hqdefault.jpg"
+    },
+    {
+      "id": "HWoNVNodYjI",
+      "title": "【 切り抜き 】SURGETown 3~5日目捨てられた(？)叶さんに遭遇する白狼このは",
+      "url": "https://www.youtube.com/watch?v=HWoNVNodYjI",
+      "published": "2026-10-05T22:30:11+00:00",
+      "thumbnail": "https://i.ytimg.com/vi/HWoNVNodYjI/hqdefault.jpg"
+    },
     {
       "id": "FOcypWZct3U",
       "title": "【 VALORANT 】プラチナいきたいよね～！",
@@ -22,27 +43,6 @@
       "url": "https://www.youtube.com/watch?v=Qjh-20ESusg",
       "published": "2026-10-03T05:24:08+00:00",
       "thumbnail": "https://i.ytimg.com/vi/Qjh-20ESusg/hqdefault.jpg"
-    },
-    {
-      "id": "9fOT3CvZwus",
-      "title": "【 VALORANT 】頑張らなきゃ！",
-      "url": "https://www.youtube.com/watch?v=9fOT3CvZwus",
-      "published": "2026-10-02T02:19:01+00:00",
-      "thumbnail": "https://i.ytimg.com/vi/9fOT3CvZwus/hqdefault.jpg"
-    },
-    {
-      "id": "n3Ujd7tFWIw",
-      "title": "【 SURGETown 】日ノ隈らんに二股される白狼このはと柚鳥ペケ #shorts",
-      "url": "https://www.youtube.com/shorts/n3Ujd7tFWIw",
-      "published": "2026-10-01T22:00:02+00:00",
-      "thumbnail": "https://i.ytimg.com/vi/n3Ujd7tFWIw/hqdefault.jpg"
-    },
-    {
-      "id": "N7-wy0pgPlg",
-      "title": "【 SURGETown 】偽メカニックとなったBobSappAimさん #shorts",
-      "url": "https://www.youtube.com/shorts/N7-wy0pgPlg",
-      "published": "2026-09-29T22:00:07+00:00",
-      "thumbnail": "https://i.ytimg.com/vi/N7-wy0pgPlg/hqdefault.jpg"
     }
   ]
 }
