@@ -1,7 +1,28 @@
 {
-  "updated": "2026-10-07T07:39:52+09:00",
+  "updated": "2026-10-09T08:22:11+09:00",
   "source": "https://www.youtube.com/feeds/videos.xml?channel_id=UC_nYcejJ7nsVG_ppVLwNHsw",
   "items": [
+    {
+      "id": "fUDyUGO5YCc",
+      "title": "【 LOL 】色んなレーンさわってみたい！",
+      "url": "https://www.youtube.com/watch?v=fUDyUGO5YCc",
+      "published": "2026-10-08T22:59:28+00:00",
+      "thumbnail": "https://i.ytimg.com/vi/fUDyUGO5YCc/hqdefault.jpg"
+    },
+    {
+      "id": "uTMx6WTuZtc",
+      "title": "【 SURGETown 】抱腹絶倒ギャグ、再来。ウケる？ウケない？ #shorts",
+      "url": "https://www.youtube.com/shorts/uTMx6WTuZtc",
+      "published": "2026-10-08T22:33:39+00:00",
+      "thumbnail": "https://i.ytimg.com/vi/uTMx6WTuZtc/hqdefault.jpg"
+    },
+    {
+      "id": "AWYyqblGKNs",
+      "title": "【 WARDOGS 】救助したり、索敵したり！",
+      "url": "https://www.youtube.com/watch?v=AWYyqblGKNs",
+      "published": "2026-10-08T07:45:54+00:00",
+      "thumbnail": "https://i.ytimg.com/vi/AWYyqblGKNs/hqdefault.jpg"
+    },
     {
       "id": "dngyrXan-1g",
       "title": "【 VALORANT 】SURGETownメンバーで女子会フルパ！",
@@ -22,27 +43,6 @@
       "url": "https://www.youtube.com/watch?v=HWoNVNodYjI",
       "published": "2026-10-05T22:30:11+00:00",
       "thumbnail": "https://i.ytimg.com/vi/HWoNVNodYjI/hqdefault.jpg"
-    },
-    {
-      "id": "FOcypWZct3U",
-      "title": "【 VALORANT 】プラチナいきたいよね～！",
-      "url": "https://www.youtube.com/watch?v=FOcypWZct3U",
-      "published": "2026-10-04T02:25:17+00:00",
-      "thumbnail": "https://i.ytimg.com/vi/FOcypWZct3U/hqdefault.jpg"
-    },
-    {
-      "id": "O_KQuKzq-bM",
-      "title": "【 SURGETown 】不憫、ひさーめ #shorts",
-      "url": "https://www.youtube.com/shorts/O_KQuKzq-bM",
-      "published": "2026-10-03T21:59:48+00:00",
-      "thumbnail": "https://i.ytimg.com/vi/O_KQuKzq-bM/hqdefault.jpg"
-    },
-    {
-      "id": "Qjh-20ESusg",
-      "title": "【 WARDOGS 】ていさつ！がんばる！わんわん！",
-      "url": "https://www.youtube.com/watch?v=Qjh-20ESusg",
-      "published": "2026-10-03T05:24:08+00:00",
-      "thumbnail": "https://i.ytimg.com/vi/Qjh-20ESusg/hqdefault.jpg"
     }
   ]
 }
