@@ -1,7 +1,28 @@
 {
-  "updated": "2026-10-10T07:40:01+09:00",
+  "updated": "2026-10-12T06:59:29+09:00",
   "source": "https://www.youtube.com/feeds/videos.xml?channel_id=UC_nYcejJ7nsVG_ppVLwNHsw",
   "items": [
+    {
+      "id": "omJ4_2-2m2E",
+      "title": "【 雑談 】10/11 夜雑談🌙こんばんわ～",
+      "url": "https://www.youtube.com/watch?v=omJ4_2-2m2E",
+      "published": "2026-10-11T11:38:16+00:00",
+      "thumbnail": "https://i.ytimg.com/vi/omJ4_2-2m2E/hqdefault.jpg"
+    },
+    {
+      "id": "7dqqGuWvuqA",
+      "title": "【 モンハンワイルズ 】狩猟笛っていまどうなの？",
+      "url": "https://www.youtube.com/watch?v=7dqqGuWvuqA",
+      "published": "2026-10-11T04:38:02+00:00",
+      "thumbnail": "https://i.ytimg.com/vi/7dqqGuWvuqA/hqdefault.jpg"
+    },
+    {
+      "id": "h3W-w2zqPBk",
+      "title": "【 SURGETown 】サーバー再起動後に起きたじわじわくる悲劇 #shorts",
+      "url": "https://www.youtube.com/shorts/h3W-w2zqPBk",
+      "published": "2026-10-10T22:00:22+00:00",
+      "thumbnail": "https://i.ytimg.com/vi/h3W-w2zqPBk/hqdefault.jpg"
+    },
     {
       "id": "fUDyUGO5YCc",
       "title": "【 LOL 】色んなレーンさわってみたい！",
@@ -22,27 +43,6 @@
       "url": "https://www.youtube.com/watch?v=AWYyqblGKNs",
       "published": "2026-10-08T07:45:54+00:00",
       "thumbnail": "https://i.ytimg.com/vi/AWYyqblGKNs/hqdefault.jpg"
-    },
-    {
-      "id": "dngyrXan-1g",
-      "title": "【 VALORANT 】SURGETownメンバーで女子会フルパ！",
-      "url": "https://www.youtube.com/watch?v=dngyrXan-1g",
-      "published": "2026-10-06T12:24:02+00:00",
-      "thumbnail": "https://i.ytimg.com/vi/dngyrXan-1g/hqdefault.jpg"
-    },
-    {
-      "id": "Oot7B0ouh_Y",
-      "title": "【 LOL 】朝からLOL！",
-      "url": "https://www.youtube.com/watch?v=Oot7B0ouh_Y",
-      "published": "2026-10-06T03:40:03+00:00",
-      "thumbnail": "https://i.ytimg.com/vi/Oot7B0ouh_Y/hqdefault.jpg"
-    },
-    {
-      "id": "HWoNVNodYjI",
-      "title": "【 切り抜き 】SURGETown 3~5日目捨てられた(？)叶さんに遭遇する白狼このは",
-      "url": "https://www.youtube.com/watch?v=HWoNVNodYjI",
-      "published": "2026-10-05T22:30:11+00:00",
-      "thumbnail": "https://i.ytimg.com/vi/HWoNVNodYjI/hqdefault.jpg"
     }
   ]
 }
