@@ -1,12 +1,26 @@
 {
-  "updated": "2026-10-12T06:59:29+09:00",
+  "updated": "2026-10-15T06:42:24+09:00",
   "source": "https://www.youtube.com/feeds/videos.xml?channel_id=UC_nYcejJ7nsVG_ppVLwNHsw",
   "items": [
+    {
+      "id": "fBonUaCPpag",
+      "title": "【 SURGETown 】おこづかいと8億の車をおねだりする叶さん #shorts",
+      "url": "https://www.youtube.com/shorts/fBonUaCPpag",
+      "published": "2026-10-12T22:00:31+00:00",
+      "thumbnail": "https://i.ytimg.com/vi/fBonUaCPpag/hqdefault.jpg"
+    },
+    {
+      "id": "qchuZN2Y_DM",
+      "title": "【 LOL 】おはよ～やるぞ～",
+      "url": "https://www.youtube.com/watch?v=qchuZN2Y_DM",
+      "published": "2026-10-12T02:25:17+00:00",
+      "thumbnail": "https://i.ytimg.com/vi/qchuZN2Y_DM/hqdefault.jpg"
+    },
     {
       "id": "omJ4_2-2m2E",
       "title": "【 雑談 】10/11 夜雑談🌙こんばんわ～",
       "url": "https://www.youtube.com/watch?v=omJ4_2-2m2E",
-      "published": "2026-10-11T11:38:16+00:00",
+      "published": "2026-10-12T02:02:12+00:00",
       "thumbnail": "https://i.ytimg.com/vi/omJ4_2-2m2E/hqdefault.jpg"
     },
     {
@@ -29,20 +43,6 @@
       "url": "https://www.youtube.com/watch?v=fUDyUGO5YCc",
       "published": "2026-10-09T04:23:05+00:00",
       "thumbnail": "https://i.ytimg.com/vi/fUDyUGO5YCc/hqdefault.jpg"
-    },
-    {
-      "id": "uTMx6WTuZtc",
-      "title": "【 SURGETown 】抱腹絶倒ギャグ、再来。ウケる？ウケない？ #shorts",
-      "url": "https://www.youtube.com/shorts/uTMx6WTuZtc",
-      "published": "2026-10-08T22:33:39+00:00",
-      "thumbnail": "https://i.ytimg.com/vi/uTMx6WTuZtc/hqdefault.jpg"
-    },
-    {
-      "id": "AWYyqblGKNs",
-      "title": "【 WARDOGS 】救助したり、索敵したり！",
-      "url": "https://www.youtube.com/watch?v=AWYyqblGKNs",
-      "published": "2026-10-08T07:45:54+00:00",
-      "thumbnail": "https://i.ytimg.com/vi/AWYyqblGKNs/hqdefault.jpg"
     }
   ]
 }
