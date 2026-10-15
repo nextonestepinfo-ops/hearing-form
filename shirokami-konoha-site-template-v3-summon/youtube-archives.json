@@ -1,7 +1,14 @@
 {
-  "updated": "2026-10-15T06:42:24+09:00",
+  "updated": "2026-10-16T06:24:30+09:00",
   "source": "https://www.youtube.com/feeds/videos.xml?channel_id=UC_nYcejJ7nsVG_ppVLwNHsw",
   "items": [
+    {
+      "id": "fJaMf56KhKE",
+      "title": "【 LOL 】ADCを少しでもうまくなりたい！",
+      "url": "https://www.youtube.com/watch?v=fJaMf56KhKE",
+      "published": "2026-10-15T07:53:28+00:00",
+      "thumbnail": "https://i.ytimg.com/vi/fJaMf56KhKE/hqdefault.jpg"
+    },
     {
       "id": "fBonUaCPpag",
       "title": "【 SURGETown 】おこづかいと8億の車をおねだりする叶さん #shorts",
@@ -36,13 +43,6 @@
       "url": "https://www.youtube.com/shorts/h3W-w2zqPBk",
       "published": "2026-10-10T22:00:22+00:00",
       "thumbnail": "https://i.ytimg.com/vi/h3W-w2zqPBk/hqdefault.jpg"
-    },
-    {
-      "id": "fUDyUGO5YCc",
-      "title": "【 LOL 】色んなレーンさわってみたい！",
-      "url": "https://www.youtube.com/watch?v=fUDyUGO5YCc",
-      "published": "2026-10-09T04:23:05+00:00",
-      "thumbnail": "https://i.ytimg.com/vi/fUDyUGO5YCc/hqdefault.jpg"
     }
   ]
 }
