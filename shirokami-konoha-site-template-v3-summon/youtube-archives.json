@@ -1,7 +1,21 @@
 {
-  "updated": "2026-10-16T06:24:30+09:00",
+  "updated": "2026-10-17T06:11:05+09:00",
   "source": "https://www.youtube.com/feeds/videos.xml?channel_id=UC_nYcejJ7nsVG_ppVLwNHsw",
   "items": [
+    {
+      "id": "5BGmLNtV7zY",
+      "title": "【 WARDOGS 】ていさつぶたい！いきます！",
+      "url": "https://www.youtube.com/watch?v=5BGmLNtV7zY",
+      "published": "2026-10-16T04:17:28+00:00",
+      "thumbnail": "https://i.ytimg.com/vi/5BGmLNtV7zY/hqdefault.jpg"
+    },
+    {
+      "id": "ALaB4qg4Ntg",
+      "title": "【 SURGETown 】事故るといい音を奏でる白狼このは事故集 #shorts",
+      "url": "https://www.youtube.com/shorts/ALaB4qg4Ntg",
+      "published": "2026-10-15T22:00:05+00:00",
+      "thumbnail": "https://i.ytimg.com/vi/ALaB4qg4Ntg/hqdefault.jpg"
+    },
     {
       "id": "fJaMf56KhKE",
       "title": "【 LOL 】ADCを少しでもうまくなりたい！",
@@ -29,20 +43,6 @@
       "url": "https://www.youtube.com/watch?v=omJ4_2-2m2E",
       "published": "2026-10-12T02:02:12+00:00",
       "thumbnail": "https://i.ytimg.com/vi/omJ4_2-2m2E/hqdefault.jpg"
-    },
-    {
-      "id": "7dqqGuWvuqA",
-      "title": "【 モンハンワイルズ 】狩猟笛っていまどうなの？",
-      "url": "https://www.youtube.com/watch?v=7dqqGuWvuqA",
-      "published": "2026-10-11T04:38:02+00:00",
-      "thumbnail": "https://i.ytimg.com/vi/7dqqGuWvuqA/hqdefault.jpg"
-    },
-    {
-      "id": "h3W-w2zqPBk",
-      "title": "【 SURGETown 】サーバー再起動後に起きたじわじわくる悲劇 #shorts",
-      "url": "https://www.youtube.com/shorts/h3W-w2zqPBk",
-      "published": "2026-10-10T22:00:22+00:00",
-      "thumbnail": "https://i.ytimg.com/vi/h3W-w2zqPBk/hqdefault.jpg"
     }
   ]
 }
