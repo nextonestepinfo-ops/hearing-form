@@ -1,7 +1,14 @@
 {
-  "updated": "2026-10-17T06:11:05+09:00",
+  "updated": "2026-10-20T07:22:09+09:00",
   "source": "https://www.youtube.com/feeds/videos.xml?channel_id=UC_nYcejJ7nsVG_ppVLwNHsw",
   "items": [
+    {
+      "id": "krQJSOywN2s",
+      "title": "【 WARDOGS 】STREAMER CUSTOM楽しむぞ～！",
+      "url": "https://www.youtube.com/watch?v=krQJSOywN2s",
+      "published": "2026-10-19T15:36:31+00:00",
+      "thumbnail": "https://i.ytimg.com/vi/krQJSOywN2s/hqdefault.jpg"
+    },
     {
       "id": "5BGmLNtV7zY",
       "title": "【 WARDOGS 】ていさつぶたい！いきます！",
@@ -36,13 +43,6 @@
       "url": "https://www.youtube.com/watch?v=qchuZN2Y_DM",
       "published": "2026-10-12T02:25:17+00:00",
       "thumbnail": "https://i.ytimg.com/vi/qchuZN2Y_DM/hqdefault.jpg"
-    },
-    {
-      "id": "omJ4_2-2m2E",
-      "title": "【 雑談 】10/11 夜雑談🌙こんばんわ～",
-      "url": "https://www.youtube.com/watch?v=omJ4_2-2m2E",
-      "published": "2026-10-12T02:02:12+00:00",
-      "thumbnail": "https://i.ytimg.com/vi/omJ4_2-2m2E/hqdefault.jpg"
     }
   ]
 }
