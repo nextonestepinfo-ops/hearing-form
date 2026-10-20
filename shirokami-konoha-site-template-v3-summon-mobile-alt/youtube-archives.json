@@ -1,7 +1,21 @@
 {
-  "updated": "2026-10-20T07:22:10+09:00",
+  "updated": "2026-10-21T06:38:22+09:00",
   "source": "https://www.youtube.com/feeds/videos.xml?channel_id=UC_nYcejJ7nsVG_ppVLwNHsw",
   "items": [
+    {
+      "id": "LVnD0FzBDf0",
+      "title": "【 LOL 】アイアンに落ちたくないソロランク",
+      "url": "https://www.youtube.com/watch?v=LVnD0FzBDf0",
+      "published": "2026-10-20T06:42:24+00:00",
+      "thumbnail": "https://i.ytimg.com/vi/LVnD0FzBDf0/hqdefault.jpg"
+    },
+    {
+      "id": "ph5l0s-PrQw",
+      "title": "【 SURGETown 】8億円の車を購入して叶さんに貸す白狼このは #shorts",
+      "url": "https://www.youtube.com/shorts/ph5l0s-PrQw",
+      "published": "2026-10-19T22:34:13+00:00",
+      "thumbnail": "https://i.ytimg.com/vi/ph5l0s-PrQw/hqdefault.jpg"
+    },
     {
       "id": "krQJSOywN2s",
       "title": "【 WARDOGS 】STREAMER CUSTOM楽しむぞ～！",
@@ -29,20 +43,6 @@
       "url": "https://www.youtube.com/watch?v=fJaMf56KhKE",
       "published": "2026-10-15T07:53:28+00:00",
       "thumbnail": "https://i.ytimg.com/vi/fJaMf56KhKE/hqdefault.jpg"
-    },
-    {
-      "id": "fBonUaCPpag",
-      "title": "【 SURGETown 】おこづかいと8億の車をおねだりする叶さん #shorts",
-      "url": "https://www.youtube.com/shorts/fBonUaCPpag",
-      "published": "2026-10-12T22:00:31+00:00",
-      "thumbnail": "https://i.ytimg.com/vi/fBonUaCPpag/hqdefault.jpg"
-    },
-    {
-      "id": "qchuZN2Y_DM",
-      "title": "【 LOL 】おはよ～やるぞ～",
-      "url": "https://www.youtube.com/watch?v=qchuZN2Y_DM",
-      "published": "2026-10-12T02:25:17+00:00",
-      "thumbnail": "https://i.ytimg.com/vi/qchuZN2Y_DM/hqdefault.jpg"
     }
   ]
 }
