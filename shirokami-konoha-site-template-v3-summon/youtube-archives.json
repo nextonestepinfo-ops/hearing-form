@@ -1,7 +1,14 @@
 {
-  "updated": "2026-10-23T06:37:25+09:00",
+  "updated": "2026-10-25T05:51:57+09:00",
   "source": "https://www.youtube.com/feeds/videos.xml?channel_id=UC_nYcejJ7nsVG_ppVLwNHsw",
   "items": [
+    {
+      "id": "t60zcBahwuE",
+      "title": "【 雑談 】10/24 夜雑談！まったりと",
+      "url": "https://www.youtube.com/watch?v=t60zcBahwuE",
+      "published": "2026-10-24T12:59:34+00:00",
+      "thumbnail": "https://i.ytimg.com/vi/t60zcBahwuE/hqdefault.jpg"
+    },
     {
       "id": "4AVTyr4zESU",
       "title": "【 BOMBANANA! 】3人で仲良く爆弾解除できるよね？",
@@ -36,13 +43,6 @@
       "url": "https://www.youtube.com/watch?v=LVnD0FzBDf0",
       "published": "2026-10-20T06:42:24+00:00",
       "thumbnail": "https://i.ytimg.com/vi/LVnD0FzBDf0/hqdefault.jpg"
-    },
-    {
-      "id": "ph5l0s-PrQw",
-      "title": "【 SURGETown 】8億円の車を購入して叶さんに貸す白狼このは #shorts",
-      "url": "https://www.youtube.com/shorts/ph5l0s-PrQw",
-      "published": "2026-10-19T22:34:13+00:00",
-      "thumbnail": "https://i.ytimg.com/vi/ph5l0s-PrQw/hqdefault.jpg"
     }
   ]
 }
