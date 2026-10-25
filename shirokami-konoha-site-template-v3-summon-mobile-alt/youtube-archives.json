@@ -1,13 +1,27 @@
 {
-  "updated": "2026-10-25T05:51:58+09:00",
+  "updated": "2026-10-26T05:52:52+09:00",
   "source": "https://www.youtube.com/feeds/videos.xml?channel_id=UC_nYcejJ7nsVG_ppVLwNHsw",
   "items": [
+    {
+      "id": "0FN1nLycrnE",
+      "title": "【 ston s 】集中したい時リラックスしたい時におすすめな商品 #PR",
+      "url": "https://www.youtube.com/watch?v=0FN1nLycrnE",
+      "published": "2026-10-12T18:17:41+00:00",
+      "thumbnail": "https://i.ytimg.com/vi/0FN1nLycrnE/hqdefault.jpg"
+    },
     {
       "id": "t60zcBahwuE",
       "title": "【 雑談 】10/24 夜雑談！まったりと",
       "url": "https://www.youtube.com/watch?v=t60zcBahwuE",
-      "published": "2026-10-24T12:59:34+00:00",
+      "published": "2026-10-25T02:27:17+00:00",
       "thumbnail": "https://i.ytimg.com/vi/t60zcBahwuE/hqdefault.jpg"
+    },
+    {
+      "id": "bTLmztlaTmc",
+      "title": "【 SURGETown 】殴られ続け、車に撥ねられ、生まれた大技 #shorts",
+      "url": "https://www.youtube.com/shorts/bTLmztlaTmc",
+      "published": "2026-10-25T00:00:15+00:00",
+      "thumbnail": "https://i.ytimg.com/vi/bTLmztlaTmc/hqdefault.jpg"
     },
     {
       "id": "4AVTyr4zESU",
@@ -29,20 +43,6 @@
       "url": "https://www.youtube.com/watch?v=CN7lcy4RCBw",
       "published": "2026-10-22T08:34:30+00:00",
       "thumbnail": "https://i.ytimg.com/vi/CN7lcy4RCBw/hqdefault.jpg"
-    },
-    {
-      "id": "PwwP4sbTUdI",
-      "title": "【 SURGETown 】ボートにニトロを取り付けたらまさかの結果に #shorts",
-      "url": "https://www.youtube.com/shorts/PwwP4sbTUdI",
-      "published": "2026-10-21T22:30:00+00:00",
-      "thumbnail": "https://i.ytimg.com/vi/PwwP4sbTUdI/hqdefault.jpg"
-    },
-    {
-      "id": "LVnD0FzBDf0",
-      "title": "【 LOL 】アイアンに落ちたくないソロランク",
-      "url": "https://www.youtube.com/watch?v=LVnD0FzBDf0",
-      "published": "2026-10-20T06:42:24+00:00",
-      "thumbnail": "https://i.ytimg.com/vi/LVnD0FzBDf0/hqdefault.jpg"
     }
   ]
 }
