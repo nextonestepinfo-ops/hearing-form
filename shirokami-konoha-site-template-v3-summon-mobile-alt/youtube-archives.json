@@ -1,20 +1,27 @@
 {
-  "updated": "2026-11-11T08:24:17+09:00",
+  "updated": "2026-11-12T09:45:00+09:00",
   "source": "https://www.youtube.com/feeds/videos.xml?channel_id=UC_nYcejJ7nsVG_ppVLwNHsw",
   "items": [
+    {
+      "id": "vYOGiznbsrU",
+      "title": "【 ガチグラ2 】DAY5┊なかまのためにがんばる！",
+      "url": "https://www.youtube.com/watch?v=vYOGiznbsrU",
+      "published": "2026-11-12T00:25:22+00:00",
+      "thumbnail": "https://i.ytimg.com/vi/vYOGiznbsrU/hqdefault.jpg"
+    },
+    {
+      "id": "Er3rPxB2kxo",
+      "title": "【 切り抜き 】SURGETown 6~9日目いつもの叫びで驚かせてしまう白狼このは",
+      "url": "https://www.youtube.com/watch?v=Er3rPxB2kxo",
+      "published": "2026-11-11T10:00:07+00:00",
+      "thumbnail": "https://i.ytimg.com/vi/Er3rPxB2kxo/hqdefault.jpg"
+    },
     {
       "id": "fPAbcOYjsv8",
       "title": "【 BOMBANANA! 】人違い #shorts",
       "url": "https://www.youtube.com/shorts/fPAbcOYjsv8",
       "published": "2026-11-10T23:00:36+00:00",
       "thumbnail": "https://i.ytimg.com/vi/fPAbcOYjsv8/hqdefault.jpg"
-    },
-    {
-      "id": "ccPcL6XEw5Q",
-      "title": "【 ガチグラ2 】DAY4┊いっぱい悪いことしたい！",
-      "url": "https://www.youtube.com/watch?v=ccPcL6XEw5Q",
-      "published": "2026-11-10T19:29:28+00:00",
-      "thumbnail": "https://i.ytimg.com/vi/ccPcL6XEw5Q/hqdefault.jpg"
     },
     {
       "id": "2sOf7urYSfQ",
@@ -36,13 +43,6 @@
       "url": "https://www.youtube.com/watch?v=9FzQdVSe4EU",
       "published": "2026-11-03T13:22:11+00:00",
       "thumbnail": "https://i.ytimg.com/vi/9FzQdVSe4EU/hqdefault.jpg"
-    },
-    {
-      "id": "BAlf_pLPCTA",
-      "title": "【 雑談 】11/2 朝雑談！おはよ～！",
-      "url": "https://www.youtube.com/watch?v=BAlf_pLPCTA",
-      "published": "2026-11-02T12:57:58+00:00",
-      "thumbnail": "https://i.ytimg.com/vi/BAlf_pLPCTA/hqdefault.jpg"
     }
   ]
 }
