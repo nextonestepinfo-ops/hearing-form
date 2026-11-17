@@ -1,7 +1,14 @@
 {
-  "updated": "2026-11-16T07:50:09+09:00",
+  "updated": "2026-11-17T10:52:11+09:00",
   "source": "https://www.youtube.com/feeds/videos.xml?channel_id=UC_nYcejJ7nsVG_ppVLwNHsw",
   "items": [
+    {
+      "id": "qzSRrqGaVhs",
+      "title": "【 ガチグラ2 】DAY9┊つよくなる！",
+      "url": "https://www.youtube.com/watch?v=qzSRrqGaVhs",
+      "published": "2026-11-16T22:28:08+00:00",
+      "thumbnail": "https://i.ytimg.com/vi/qzSRrqGaVhs/hqdefault.jpg"
+    },
     {
       "id": "L5W1XvtAmCE",
       "title": "【 ガチグラ2 】DAY8┊たのしむ！",
@@ -36,13 +43,6 @@
       "url": "https://www.youtube.com/shorts/2sOf7urYSfQ",
       "published": "2026-11-05T23:00:04+00:00",
       "thumbnail": "https://i.ytimg.com/vi/2sOf7urYSfQ/hqdefault.jpg"
-    },
-    {
-      "id": "53wSM0_cbBQ",
-      "title": "【 SURGETown 】柚原いづみさんの無線ムーブに爆笑する白狼このは #shorts",
-      "url": "https://www.youtube.com/shorts/53wSM0_cbBQ",
-      "published": "2026-11-03T23:00:40+00:00",
-      "thumbnail": "https://i.ytimg.com/vi/53wSM0_cbBQ/hqdefault.jpg"
     }
   ]
 }
