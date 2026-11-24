@@ -1,14 +1,7 @@
 {
-  "updated": "2026-11-23T08:37:19+09:00",
+  "updated": "2026-11-24T12:57:50+09:00",
   "source": "https://www.youtube.com/feeds/videos.xml?channel_id=UC_nYcejJ7nsVG_ppVLwNHsw",
   "items": [
-    {
-      "id": "-w6sQyE3QD8",
-      "title": "【 ガチグラ2 】最終日┊ちょでよかった！",
-      "url": "https://www.youtube.com/watch?v=-w6sQyE3QD8",
-      "published": "2026-11-21T19:05:09+00:00",
-      "thumbnail": "https://i.ytimg.com/vi/-w6sQyE3QD8/hqdefault.jpg"
-    },
     {
       "id": "NkDhgdHS77w",
       "title": "【 白狼このは生誕祭 】誕生日だああああ！",
@@ -43,6 +36,13 @@
       "url": "https://www.youtube.com/shorts/53wSM0_cbBQ",
       "published": "2026-11-03T23:00:40+00:00",
       "thumbnail": "https://i.ytimg.com/vi/53wSM0_cbBQ/hqdefault.jpg"
+    },
+    {
+      "id": "9FzQdVSe4EU",
+      "title": "【 タンポポは耐える。 】おはよ～！なんのゲームか知らないけどやってみよう！",
+      "url": "https://www.youtube.com/watch?v=9FzQdVSe4EU",
+      "published": "2026-11-03T13:22:11+00:00",
+      "thumbnail": "https://i.ytimg.com/vi/9FzQdVSe4EU/hqdefault.jpg"
     }
   ]
 }
