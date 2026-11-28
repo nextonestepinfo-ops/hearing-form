@@ -1,12 +1,19 @@
 {
-  "updated": "2026-11-27T10:44:32+09:00",
+  "updated": "2026-11-28T10:27:55+09:00",
   "source": "https://www.youtube.com/feeds/videos.xml?channel_id=UC_nYcejJ7nsVG_ppVLwNHsw",
   "items": [
+    {
+      "id": "b1OhOPtLwuI",
+      "title": "【 カピバラを整理しよう！ 】かわいいカピバラたちをお片付け！",
+      "url": "https://www.youtube.com/watch?v=b1OhOPtLwuI",
+      "published": "2026-11-27T22:55:25+00:00",
+      "thumbnail": "https://i.ytimg.com/vi/b1OhOPtLwuI/hqdefault.jpg"
+    },
     {
       "id": "J3SqHWNO6SE",
       "title": "【 potato please 】じゃがいもむきむき！",
       "url": "https://www.youtube.com/watch?v=J3SqHWNO6SE",
-      "published": "2026-11-26T23:56:36+00:00",
+      "published": "2026-11-27T04:58:52+00:00",
       "thumbnail": "https://i.ytimg.com/vi/J3SqHWNO6SE/hqdefault.jpg"
     },
     {
@@ -36,13 +43,6 @@
       "url": "https://www.youtube.com/watch?v=Er3rPxB2kxo",
       "published": "2026-11-11T10:00:07+00:00",
       "thumbnail": "https://i.ytimg.com/vi/Er3rPxB2kxo/hqdefault.jpg"
-    },
-    {
-      "id": "fPAbcOYjsv8",
-      "title": "【 BOMBANANA! 】人違い #shorts",
-      "url": "https://www.youtube.com/shorts/fPAbcOYjsv8",
-      "published": "2026-11-10T23:00:36+00:00",
-      "thumbnail": "https://i.ytimg.com/vi/fPAbcOYjsv8/hqdefault.jpg"
     }
   ]
 }
